@@ -1,0 +1,31 @@
+.search-form {
+	background: transparent;
+	clear: both;
+	position: relative;
+
+	input[type="search"] {
+		border-color: $color__base-xlight;
+		display: inline-block;
+	}
+
+	input[type="submit"] {
+		background: transparent;
+		border: none;
+		border-left: 1px solid $color__base-xlight;
+		border-right: 1px solid $color__base-xlight;
+		border-radius: 0;
+		color: $color__base;
+		display: inline-block;
+		padding: .313em .75em .438em;
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include font-size(1.25);
+
+		&:hover,
+		&:focus {
+			background: $color__highlight;
+			color: #fff;
+		}
+	}
+}

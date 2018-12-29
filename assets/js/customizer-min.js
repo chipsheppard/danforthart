@@ -1,0 +1,10 @@
+/**
+ * Customizer JS
+ *
+ * @package  danforthart
+ * @subpackage danforthart/assets/js
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
+ */
+!function(t){wp.customize("blogname",function(o){o.bind(function(o){t(".site-title a").text(o)})}),wp.customize("blogdescription",function(o){o.bind(function(o){t(".site-description").text(o)})}),wp.customize("danforthart_settings[color_1]",function(o){o.bind(function(o){t("body.color1, .site-navigation .color1 a:hover,.site-navigation .color1.current-menu-item > a,.site-navigation .color1.current-menu-ancestor > a").css("background-color",o),t(".site-navigation .color1 a").css("border-bottom-color",o)})}),wp.customize("danforthart_settings[color_2]",function(o){o.bind(function(o){t("body.color2, .site-navigation .color2 a:hover,.site-navigation .color2.current-menu-item > a,.site-navigation .color2.current-menu-ancestor > a").css("background-color",o),t(".site-navigation .color2 a").css("border-bottom-color",o)})}),wp.customize("danforthart_settings[color_3]",function(o){o.bind(function(o){t("body.color3, .site-navigation .color3 a:hover,.site-navigation .color3.current-menu-item > a,.site-navigation .color3.current-menu-ancestor > a").css("background-color",o),t(".site-navigation .color3 a").css("border-bottom-color",o)})}),wp.customize("danforthart_settings[color_4]",function(o){o.bind(function(o){t("body.color4, .site-navigation .color4 a:hover,.site-navigation .color4.current-menu-item > a,.site-navigation .color4.current-menu-ancestor > a").css("background-color",o),t(".site-navigation .color4 a").css("border-bottom-color",o)})}),wp.customize("danforthart_settings[color_5]",function(o){o.bind(function(o){t("body.color5, .site-navigation .color5 a:hover,.site-navigation .color5.current-menu-item > a,.site-navigation .color5.current-menu-ancestor > a").css("background-color",o),t(".site-navigation .color5 a").css("border-bottom-color",o)})})}(jQuery);

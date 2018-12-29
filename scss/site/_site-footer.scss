@@ -1,0 +1,66 @@
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+	padding: 0 3%;
+
+	.inner-wrap {
+		background-color: #000;
+	}
+}
+
+.site-info {
+	color: $color__base-light;
+	letter-spacing: 1px;
+	padding: 2em 0 .5em;
+	position: relative;
+
+	a {
+		color: $color__base-medium;
+
+		&:hover {
+			color: $color__base-light;
+		}
+	}
+}
+
+
+
+.site-footer .menu {
+
+	li {
+		float: left;
+		width: 20%;
+
+		a {
+			border-bottom: 1px solid #fff;
+			color: #fff;
+			display: inline;
+			font-weight: $font__weight-semi-bold;
+			letter-spacing: 2px;
+			padding-bottom: .25em;
+			text-transform: uppercase;
+			@include font-size(.875);
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+	.sub-menu {
+		margin: 1.5em 0 6em;
+
+		li {
+			float: none;
+			width: auto;
+		}
+
+		a {
+			font-weight: $font__weight-normal;
+			text-transform: none;
+			letter-spacing: 1px;
+			border-bottom: 0;
+			@include font-size(1);
+		}
+	}
+
+}

@@ -1,0 +1,104 @@
+@include breakpoint(tablet-min-v) {
+	.site-navigation {
+
+		.color1 {
+			a {
+				border-bottom: 12px solid $color__orange;
+			}
+			a:hover,
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background-color: $color__orange;
+			}
+			.sub-menu a {
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.color2 {
+			a {
+				border-bottom: 12px solid $color__green;
+			}
+			a:hover,
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background-color: $color__green;
+			}
+			.sub-menu a {
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.color3 {
+			a {
+				border-bottom: 12px solid $color__yellow;
+			}
+			a:hover,
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background-color: $color__yellow;
+			}
+			.sub-menu a {
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.color4 {
+			a {
+				border-bottom: 12px solid $color__tan;
+			}
+			a:hover,
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background-color: $color__tan;
+			}
+			.sub-menu a {
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.color5 {
+			a {
+				border-bottom: 12px solid $color__purple;
+			}
+			a:hover,
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background-color: $color__purple;
+			}
+			.sub-menu a {
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.color1,
+		.color2,
+		.color3,
+		.color4,
+		.color5 {
+			.sub-menu {
+				a:hover,
+				&.current-menu-item > a,
+				&.current-menu-ancestor > a {
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+body.color1 {
+	background-color: $color__orange;
+}
+body.color2 {
+	background-color: $color__green;
+}
+body.color3 {
+	background-color: $color__yellow;
+}
+body.color4 {
+	background-color: $color__tan;
+}
+body.color5 {
+	background-color: $color__purple;
+}
