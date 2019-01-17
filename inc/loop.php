@@ -22,23 +22,19 @@ function danforthart_default_loop() {
 
 		tha_content_while_before();
 
-		echo '<div class="loop-wrap">';
-
 		while ( have_posts() ) :
 			the_post();
 
 			tha_entry_before();
 
-			if ( is_front_page() ) :
-				get_template_part( 'template-parts/content', 'home' );
+			if ( is_page_template() ) :
+				get_template_part( 'template-parts/content', 'acf' );
 			else :
 				get_template_part( 'template-parts/content', get_post_format() );
 			endif;
 			tha_entry_after();
 
 		endwhile;
-
-		echo '</div>';
 
 		tha_content_while_after();
 
@@ -58,8 +54,7 @@ add_action( 'tha_content_loop', 'danforthart_default_loop' );
  */
 function danforthart_archive_page_titles() {
 	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
-		echo '<header class="page-header">';
-		echo '<div class="inner-wrap title-wrap">';
+		echo '<header class="page-header inner-wrap">';
 
 		if ( is_search() ) :
 			echo '<h1 class="page-title">';
@@ -71,11 +66,21 @@ function danforthart_archive_page_titles() {
 			the_archive_description( '<div class="archive-description">', '</div>' );
 		endif;
 
-		echo '</div>';
 		echo '</header>';
 	endif;
 }
 add_action( 'tha_content_while_before', 'danforthart_archive_page_titles' );
+
+
+/**
+ * Archive & Search end wrap
+ */
+function clct_archive_end_wrap() {
+	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
+		echo '</div>';
+	endif;
+}
+add_action( 'tha_content_while_after', 'clct_archive_end_wrap', 15 );
 
 
 /**
@@ -100,11 +105,13 @@ add_action( 'tha_content_while_after', 'danforthart_postpagination' );
  */
 function danforthart_postnav() {
 
-	if ( is_single() ) :
+	if ( is_single( 'post' ) ) :
+		echo '<div class="inner-wrap">';
 		the_post_navigation( array(
 			'prev_text' => __( '<span>previous</span> %title', 'danforthart' ),
 			'next_text' => __( '<span>next</span> %title', 'danforthart' ),
 		) );
+		echo '</div>';
 	endif;
 
 }
@@ -117,7 +124,9 @@ add_action( 'tha_entry_after', 'danforthart_postnav' );
 function danforthart_comments() {
 
 	if ( is_singular() && ( comments_open() || get_comments_number() ) ) {
+		echo '<div class="inner-wrap">';
 		comments_template();
+		echo '</div>';
 	}
 
 }

@@ -9,7 +9,6 @@
  */
 
 echo '</div>';
-echo '</div>';
 
 tha_footer_before();
 echo '<footer id="colophon" class="site-footer" role="contentinfo">';

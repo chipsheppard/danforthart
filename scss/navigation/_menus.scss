@@ -8,7 +8,7 @@
 	}
 
 	.menu {
-		font-size: 0;
+		font-size: 0; // this prevents gap.
 		line-height: 1;
 		display: inline-block;
 		position: relative;
@@ -18,7 +18,7 @@
 		display: inline-block;
 
 		&:hover > .sub-menu {
-			left: 0;
+			left: auto;
 			opacity: 1;
 		}
 	}
@@ -27,54 +27,92 @@
 		border-bottom: 12px solid $color__base-xlight;
 		color: $color__base;
 		display: inline-block;
-		font-weight: $font__weight-semi-bold;
+		font-weight: $font__weight-bold;
 		letter-spacing: 2px;
 		padding: 1.75em 1em 1.5em;
 		text-transform: uppercase;
 		@include font-size(1);
 	}
 
-	a:hover,
-	.current-menu-item > a,
-	.current-menu-ancestor > a {
-		background-color: $color__base-xlight;
+	.current-menu-item,
+	.current-menu-ancestor {
+		border-color: $color__base;
+		border-style: solid;
+		border-width: 1px 1px 0 1px;
 	}
 
 	/* SUB MENU -------------------- */
 	.sub-menu {
+		background:#ffffff;
+		border-bottom: 1px solid $color__base;
+		border-left: 1px solid $color__base;
+		border-right: 1px solid $color__base;
+		display: block;
 		left: -9999px;
+		margin-left: -1px;
 		opacity: 0;
 		position: absolute;
 		text-align: left;
 		top: 100%;
-		//transition: all .2s ease-in;
-		width: 100%;
+		transition: all .2s ease-in;
+		width: 220px;
 		z-index: 2;
 
 		a {
-			font-weight: $font__weight-normal;
-			letter-spacing: 1px;
+			color: $color__base !important;
 			line-height: 1.25;
-			padding: 2em 0 .25em;
-			margin: 0 1em;
+			padding: .75em 1.125em;
 			text-transform: none;
 			transition: all .2s ease-in-out;
-			@include font-size(1.125);
+			width: 220px;
+			@include font-size(.875);
 		}
 
-		a:hover,
-		.current-menu-item > a,
-		.current-menu-ancestor > a {
-			background: none;
-			opacity: .7;
+		.current-menu-item,
+		.current-menu-ancestor {
+			border: none;
 		}
 
 		.sub-menu {
-			margin: 0 0 0 10%;
+			margin: -14% 0 0 90%;
 		}
 	}
+}
 
-	.dropdown-toggle {
-		display: none;
+@include breakpoint(tablet-min-v) {
+	.seeart .site-navigation .color1,
+	.learncreate .site-navigation .color2,
+	.vis .site-navigation .color3,
+	.joinsupport .site-navigation .color4,
+	.meetus .site-navigation .color5 {
+		border-color: $color__base;
+		border-style: solid;
+		border-width: 1px 1px 0 1px;
+		a {
+			border-bottom-color: #ffffff;
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
 	}
+}
+
+@include breakpoint(tablet-v) {
+	.seeart .site-navigation .color1 a {
+		background-color: $color__orange;
+	}
+	.learncreate .site-navigation .color2 a {
+		background-color: $color__green;
+	}
+	.vis .site-navigation .color3 a {
+		background-color: $color__yellow;
+	}
+	.joinsupport .site-navigation .color4 a {
+		background-color: $color__tan;
+	}
+	.meetus .site-navigation .color5 a {
+		background-color: $color__purple;
+	}
+
 }

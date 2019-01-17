@@ -19,16 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function danforthart_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Posts Sidebar Widget Area', 'danforthart' ),
-		'id'            => 'sidebar',
-		'description'   => esc_html__( 'Posts Sidebar Widget', 'danforthart' ),
-		'before_widget' => '<section id="%1$s" class="sidebar-widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h5 class="widget-title">',
-		'after_title'   => '</h5>',
-	) );
-
-	register_sidebar( array(
 		'name' => esc_html__( 'Footer Widget Area', 'danforthart' ),
 		'id' => 'footer',
 		'description' => esc_html__( 'An optional widget area for your site footer. Displays at the very bottom of your website.', 'danforthart' ),

@@ -48,63 +48,97 @@ if ( ! function_exists( 'danforthart_base_css' ) ) {
 		if ( $default_color_1 !== $color_1 ) :
 			// Backgrounds.
 			$css->set_selector(
-				'body.color1, .site-navigation .color1 a:hover,.site-navigation .color1.current-menu-item > a,.site-navigation .color1.current-menu-ancestor > a'
+				'body.color1, .site-navigation .color1 a:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_1'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation .color1 a'
+				'.site-navigation .color1 a, .site-navigation .color1.current-menu-item > a:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $danforthart_settings['color_1'] ) );
 		endif;
 		if ( $default_color_2 !== $color_2 ) :
 			// Backgrounds.
 			$css->set_selector(
-				'body.color2, .site-navigation .color2 a:hover,.site-navigation .color2.current-menu-item > a,.site-navigation .color2.current-menu-ancestor > a'
+				'body.color2, .site-navigation .color2 a:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_2'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation .color2 a'
+				'.site-navigation .color2 a, .site-navigation .color2.current-menu-item > a:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $danforthart_settings['color_2'] ) );
 		endif;
 		if ( $default_color_3 !== $color_3 ) :
 			// Backgrounds.
 			$css->set_selector(
-				'body.color3, .site-navigation .color3 a:hover,.site-navigation .color3.current-menu-item > a,.site-navigation .color3.current-menu-ancestor > a'
+				'body.color3, .site-navigation .color3 a:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_3'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation .color3 a'
+				'.site-navigation .color3 a, .site-navigation .color3.current-menu-item > a:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $danforthart_settings['color_3'] ) );
 		endif;
 		if ( $default_color_4 !== $color_4 ) :
 			// Backgrounds.
 			$css->set_selector(
-				'body.color4, .site-navigation .color4 a:hover,.site-navigation .color14current-menu-item > a,.site-navigation .color4.current-menu-ancestor > a'
+				'body.color4, .site-navigation .color4 a:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_4'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation .color4 a'
+				'.site-navigation .color4 a, .site-navigation .color4.current-menu-item > a:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $danforthart_settings['color_4'] ) );
 		endif;
 		if ( $default_color_5 !== $color_5 ) :
 			// Backgrounds.
 			$css->set_selector(
-				'body.color5, .site-navigation .color5 a:hover,.site-navigation .color5.current-menu-item > a,.site-navigation .color5.current-menu-ancestor > a'
+				'body.color5, .site-navigation .color5 a:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_5'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation .color5 a'
+				'.site-navigation .color5 a, .site-navigation .color5.current-menu-item > a:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $danforthart_settings['color_5'] ) );
 		endif;
+
+		// MEDIA QUERIES --------------------------------.
+		$css->start_media_query( 'all and (max-width: 768px)' );
+		if ( $default_color_1 !== $color_1 ) :
+			$css->set_selector(
+				'.seeart .site-navigation .color1 a'
+			);
+			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_1'] ) );
+		endif;
+		if ( $default_color_2 !== $color_2 ) :
+			$css->set_selector(
+				'.learncreate .site-navigation .color2 a'
+			);
+			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_2'] ) );
+		endif;
+		if ( $default_color_3 !== $color_3 ) :
+			$css->set_selector(
+				'.vis .site-navigation .color3 a'
+			);
+			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_3'] ) );
+		endif;
+		if ( $default_color_4 !== $color_4 ) :
+			$css->set_selector(
+				'.joinsupport .site-navigation .color4 a'
+			);
+			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_4'] ) );
+		endif;
+		if ( $default_color_5 !== $color_5 ) :
+			$css->set_selector(
+				'.meetus .site-navigation .color5 a'
+			);
+			$css->add_property( 'background-color', esc_attr( $danforthart_settings['color_5'] ) );
+		endif;
+		$css->stop_media_query();
 
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?
 		do_action( 'danforthart_base_css', $css );

@@ -82,7 +82,6 @@ function write_bgcolor() {
 		?>
 <style type="text/javascript">body {background-color:<?php echo esc_html( $blog_color ); ?>;}</style>
 		<?php
-		// Pages & Posts that have a featured image with checkbox checked.
 	elseif ( is_singular() && $color ) :
 		?>
 <style type="text/css">body {background-color:<?php echo esc_html( $color ); ?>;}</style>

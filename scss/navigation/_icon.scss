@@ -2,22 +2,12 @@
 	border: 0;
 	background: none;
 	cursor: pointer;
-	display: none;
-	position: absolute;
-	right: .125em;
-	top: 1em;
+	padding: 0;
 	overflow: visible;
 	transition-property: opacity, filter;
 	transition-duration: 0.15s;
 	transition-timing-function: linear;
 	z-index: 3;
-
-	@include breakpoint(tablet-v) {
-		display: block;
-	}
-	@include breakpoint(phone-h) {
-		right: .5em;
-	}
 
 	&:hover,
 	&:focus,
@@ -26,59 +16,38 @@
 		outline: 0;
 	}
 
-	.menu-icon-wrap {
-		width: 30px;
-		height: 24px;
-		display: inline-block;
-
-		@include breakpoint(phone-h) {
-			width: 20px;
-			height: 16px;
-		}
+	.menu-icon-wrap,
+	.menu-icon,
+	.menu-icon::before,
+	.menu-icon::after {
+		width: 40px;
+		height: 2px;
 	}
-
+	.menu-icon-wrap {
+		display: inline-block;
+	}
 	.menu-icon {
 		opacity: 1;
-		position: relative;
-		top: 13px;
 	}
 	.menu-icon,
 	.menu-icon::before,
 	.menu-icon::after {
-		background-color: #222222;
+		background-color: #555;
 		position: absolute;
-		height: 3px;
 		transition-property: transform;
 		transition-duration: 0.15s;
 		transition-timing-function: ease;
-		width: 30px;
-
-		@include breakpoint(phone-h) {
-			width: 20px;
-			height: 2px;
-		}
 	}
-
 	.menu-icon::before,
 	.menu-icon::after {
 		content: "";
 		display: block;
 	}
-
 	.menu-icon::before {
-		top: -8px;
-
-		@include breakpoint(phone-h) {
-			top: -6px;
-		}
+		top: -12px;
 	}
-
 	.menu-icon::after {
-		bottom: -8px;
-
-		@include breakpoint(phone-h) {
-			bottom: -6px;
-		}
+		bottom: -12px;
 	}
 
 	&:hover {
@@ -86,7 +55,24 @@
 			opacity: 0.8;
 		}
 	}
+
+	@include breakpoint(phone-h) {
+		.menu-icon-wrap,
+		.menu-icon,
+		.menu-icon::before,
+		.menu-icon::after {
+			width: 30px;
+		}
+		.menu-icon::before {
+			top: -9px;
+		}
+		.menu-icon::after {
+			bottom: -9px;
+		}
+
+	}
 }
+
 
 /*
  * Spin

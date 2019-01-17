@@ -35,4 +35,3 @@ echo '<div id="page" class="site">';
 	tha_header_after();
 
 	echo '<div id="content" class="site-content">';
-	echo '<div class="content-inner-wrap">';

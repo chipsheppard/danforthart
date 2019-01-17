@@ -19,23 +19,13 @@
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
 			.append( $( '<span />', { 'class': 'screen-reader-text', 'text': 'Expand child menu' } ) );
 
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
-
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'not-toggled' )
-			.attr( 'aria-expanded', 'false' )
-			.find( '.screen-reader-text' )
-			.text( 'Expand child menu' );
-
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'not-toggled' );
-
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+			_this.next( '.sub-menu' ).toggleClass( 'toggled-on' );
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
@@ -43,7 +33,7 @@
 		});
 	}
 
-	initMainNavigation( $( '.site-navigation, .topbar-widget.widget_nav_menu' ) );
+	initMainNavigation( $( '.site-navigation' ) );
 
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.responsive-menu-icon' );

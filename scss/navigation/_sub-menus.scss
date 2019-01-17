@@ -1,0 +1,35 @@
+.sub-navigation {
+	text-align: right;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: inline-block;
+		border-bottom: 1px solid $color__base;
+		color: $color__base;
+		font-weight: $font__weight-normal;
+		letter-spacing: 1px;
+		line-height: 1.25;
+		padding: .5em 0 .5em;
+		margin: 0 1.25em;
+		text-transform: none;
+		@include font-size(1.125);
+	}
+
+	a:hover {
+		border-width: 2px;
+		padding-bottom: .4375em;
+	}
+
+	.current-menu-item,
+	.current-menu-ancestor {
+		background: #000000;
+		color: #ffffff;
+
+		a {
+			color: #ffffff;
+		}
+	}
+}

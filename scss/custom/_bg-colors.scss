@@ -1,0 +1,99 @@
+
+body.color1 {
+	background-color: $color__orange;
+}
+body.color2 {
+	background-color: $color__green;
+}
+body.color3 {
+	background-color: $color__yellow;
+}
+body.color4 {
+	background-color: $color__tan;
+}
+body.color5 {
+	background-color: $color__purple;
+}
+
+.site-navigation {
+
+	.color1 a:hover {
+		background-color: $color__orange;
+	}
+	.color2 a:hover {
+		background-color: $color__green;
+	}
+	.color3 a:hover {
+		background-color: $color__yellow;
+	}
+	.color4 a:hover {
+		background-color: $color__tan;
+	}
+	.color5 a:hover {
+		background-color: $color__purple;
+	}
+}
+
+@include breakpoint(tablet-v) {
+	.site-navigation {
+
+		.color1.current-menu-item > a {
+			background-color: $color__orange;
+		}
+		.color2.current-menu-item > a {
+			background-color: $color__green;
+		}
+		.color3.current-menu-item > a {
+			background-color: $color__yellow;
+		}
+		.color4.current-menu-item > a {
+			background-color: $color__tan;
+		}
+		.color5.current-menu-item > a {
+			background-color: $color__purple;
+		}
+	}
+}
+
+@include breakpoint(tablet-min-v) {
+	.site-navigation {
+
+		.color1 a {
+			border-bottom: 12px solid $color__orange;
+		}
+		.color2 a {
+			border-bottom: 12px solid $color__green;
+		}
+		.color3 a {
+			border-bottom: 12px solid $color__yellow;
+		}
+		.color4 a {
+			border-bottom: 12px solid $color__tan;
+		}
+		.color5 a {
+			border-bottom: 12px solid $color__purple;
+		}
+
+		.color1,
+		.color2,
+		.color3,
+		.color4,
+		.color5 {
+
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				border-bottom-color: #ffffff;
+
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+
+			.sub-menu {
+				a {
+					border: none;
+				}
+			}
+		}
+	}
+}

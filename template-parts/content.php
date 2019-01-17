@@ -9,8 +9,15 @@
  * @license  GPL-2.0+
  */
 
-echo '<article id="post-' . get_the_ID() . '" class="' . join( ' ', get_post_class() ) . '">'; // WPCS: XSS OK.
+if ( ! is_page_template() ) :
+	echo '<div class="inner-wrap">';
+endif;
+?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php
+// archive pages.
 if ( ! is_singular() && ! is_search() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
@@ -36,20 +43,17 @@ echo '<header class="entry-header">';
 if ( is_singular() ) :
 
 	// Title for posts, attachments, pages, custom post types.
-	echo '<div class="title-wrap">';
 	the_title( '<h1 class="entry-title">', '</h1>' );
 
 else :
 
 	// Title for archives & search.
-	echo '<div class="title-wrap">';
 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 endif;
 
 tha_entry_top();
 
-echo '</div>';
 echo '</header>';
 
 echo '<div class="entry-content">';
@@ -77,4 +81,10 @@ echo '</div>';
 
 tha_entry_bottom();
 
-echo '</article>';
+?>
+</article>
+
+<?php
+if ( ! is_page_template() ) :
+	echo '</div>';
+endif;

@@ -68,11 +68,11 @@ if ( ! function_exists( 'danforthart_display_nav' ) ) {
 		}
 
 		echo '<nav id="primary-navigation" class="site-navigation" role="navigation">';
+			echo '<div class="m-top">';
+			display_parent();
 			echo '<button class="responsive-menu-icon" aria-controls="mobile-navigation" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>';
-
-			echo '<div class="menu-wrap"><span>';
-
-				do_action( 'danforthart_inside_navigation' );
+			echo '</div>';
+			echo '<div class="menu-wrap">';
 
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -80,11 +80,50 @@ if ( ! function_exists( 'danforthart_display_nav' ) ) {
 					'container' => '',
 				) );
 
-			echo '</span></div>';
+			echo '</div>';
 		echo '</nav>';
 	}
 }
 add_action( 'tha_header_top', 'danforthart_display_nav' );
+
+
+/**
+ * DISPLAY the parent page nane
+ */
+function display_parent() {
+	$current = $post->ID;
+	$parent = $post->post_parent;
+	$grandparent_get = get_post( $parent );
+	$grandparent = $grandparent_get->post_parent;
+
+	if ( $grandparent ) :
+		printf( '<span class="section-title">%s</span>', get_the_title( $grandparent ) );
+	else :
+		printf( '<span class="section-title">%s</span>', get_the_title() );
+	endif;
+}
+
+/*
+ * DISPLAY Read More link
+-----------------------------------------------------------------
+*/
+if ( ! function_exists( 'danforthart_display_read_more' ) ) {
+	/**
+	 * The Read More link markup
+	 */
+	function danforthart_display_read_more() {
+		if ( is_archive() || is_home() || is_search() ) :
+			$link = sprintf( '<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+				get_permalink( get_the_ID() ),
+				/* translators: %s: Name of current post */
+				sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'danforthart' ), get_the_title( get_the_ID() ) )
+			);
+			echo wp_kses_post( $link );
+			echo '<div class="cf"></div>';
+		endif;
+	}
+}
+add_action( 'tha_entry_bottom', 'danforthart_display_read_more' );
 
 
 /*
@@ -136,57 +175,6 @@ if ( ! function_exists( 'danforthart_display_entry_footer' ) ) {
 	}
 }
 add_action( 'tha_entry_bottom', 'danforthart_display_entry_footer' );
-
-
-/*
- * DISPLAY Read More link
------------------------------------------------------------------
-*/
-if ( ! function_exists( 'danforthart_display_read_more' ) ) {
-	/**
-	 * The Read More link markup
-	 */
-	function danforthart_display_read_more() {
-		if ( is_archive() || is_home() || is_search() ) :
-			$link = sprintf( '<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
-				get_permalink( get_the_ID() ),
-				/* translators: %s: Name of current post */
-				sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'danforthart' ), get_the_title( get_the_ID() ) )
-			);
-			echo wp_kses_post( $link );
-			echo '<div class="cf"></div>';
-		endif;
-	}
-}
-add_action( 'tha_entry_bottom', 'danforthart_display_read_more' );
-
-
-/**
- * SIDEBAR Body Classes
- * -----------------------------------------------------------------
- *
- * @param array $classes The body classes.
- */
-function danforthart_sidebar_bodyclass( $classes ) {
-	if ( ! is_single() ) {
-		return $classes;
-	}
-	$classes[] = 'sidebar-right';
-	return $classes;
-}
-add_filter( 'body_class','danforthart_sidebar_bodyclass' );
-
-/**
- * DISPLAY Sidebar
- * -----------------------------------------------------------------
- */
-function danforthart_get_right_sidebar() {
-	if ( ! is_single() ) :
-		return;
-	endif;
-	get_sidebar();
-}
-add_action( 'tha_content_after', 'danforthart_get_right_sidebar' );
 
 
 /*
