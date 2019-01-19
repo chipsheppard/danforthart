@@ -3,20 +3,54 @@
   src: url('assets/fonts/Hellix-Light.eot');
   src: url('assets/fonts/Hellix-Light.woff2') format('woff2'),
        url('assets/fonts/Hellix-Light.woff') format('woff'),
-       url('assets/fonts/Hellix-Light.ttf') format('truetype'),
-       url('assets/fonts/Hellix-Light.svg#Hellix-Light') format('svg'),
        url('assets/fonts/Hellix-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hellix';
+  src: url('assets/fonts/Hellix-LightItalic.eot');
+  src: url('assets/fonts/Hellix-LightItalic.woff2') format('woff2'),
+       url('assets/fonts/Hellix-LightItalic.woff') format('woff'),
+       url('assets/fonts/Hellix-LightItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
+  src: url('assets/fonts/Hellix-Regular.eot');
+  src: url('assets/fonts/Hellix-Regular.woff2') format('woff2'),
+       url('assets/fonts/Hellix-Regular.woff') format('woff'),
+       url('assets/fonts/Hellix-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Hellix';
+  src: url('assets/fonts/Hellix-RegularItalic.eot');
+  src: url('assets/fonts/Hellix-RegularItalic.woff2') format('woff2'),
+       url('assets/fonts/Hellix-RegularItalic.woff') format('woff'),
+       url('assets/fonts/Hellix-RegularItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hellix';
   src: url('assets/fonts/Hellix-Bold.eot');
   src: url('assets/fonts/Hellix-Bold.woff2') format('woff2'),
        url('assets/fonts/Hellix-Bold.woff') format('woff'),
-       url('assets/fonts/Hellix-Bold.ttf') format('truetype'),
-       url('assets/fonts/Hellix-Bold.svg#Hellix-Bold') format('svg'),
        url('assets/fonts/Hellix-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Hellix';
+  src: url('assets/fonts/Hellix-BoldItalic.eot');
+  src: url('assets/fonts/Hellix-BoldItalic.woff2') format('woff2'),
+       url('assets/fonts/Hellix-BoldItalic.woff') format('woff'),
+       url('assets/fonts/Hellix-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: italic;
 }

@@ -1,5 +1,31 @@
 .sub-navigation {
-	text-align: right;
+	float: right;
+	margin-bottom: 5em;
+
+	@include breakpoint(tablet-v) {
+		float: none;
+		text-align: left;
+		margin-bottom: 2.5em;
+	}
+
+	@include breakpoint(phone-v) {
+		margin-bottom: 1.5em;
+	}
+
+	.menu {
+		display: inline-block;
+		position: relative;
+		left: -.25em;
+		text-align: left;
+		width: 656px;
+
+		@include breakpoint(tablet-v) {
+			width: auto;
+		}
+		@include breakpoint(phone-h) {
+			left: -.75em;
+		}
+	}
 
 	li {
 		display: inline-block;
@@ -12,15 +38,23 @@
 		font-weight: $font__weight-normal;
 		letter-spacing: 1px;
 		line-height: 1.25;
-		padding: .5em 0 .5em;
-		margin: 0 1.25em;
+		padding: .25em 0 .25em;
+		margin: 0 1em;
 		text-transform: none;
-		@include font-size(1.125);
+		@include font-size(1.375);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1);
+		}
+		@include breakpoint(phone-v) {
+			@include font-size(.875);
+			margin: 0 .5em;
+		}
 	}
 
 	a:hover {
 		border-width: 2px;
-		padding-bottom: .4375em;
+		padding-bottom: .1875em;
 	}
 
 	.current-menu-item,
@@ -31,5 +65,15 @@
 		a {
 			color: #ffffff;
 		}
+	}
+}
+
+.single-artwork .sub-navigation li:nth-child(2) {
+	background: #000000;
+	color: #ffffff;
+
+	a {
+		color: #ffffff;
+		font-weight: 300;
 	}
 }

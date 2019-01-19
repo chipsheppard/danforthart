@@ -14,6 +14,8 @@
 .site-content:after,
 .single .entry-content:before,
 .single .entry-content:after,
+.site-footer .menu:before,
+.site-footer .menu:after,
 .site-footer:before,
 .site-footer:after {
 	@include clearfix;
@@ -27,6 +29,7 @@
 .site-header:after,
 .site-content:after,
 .single .entry-content:after,
+.site-footer .menu:after,
 .site-footer:after {
 	@include clearfix-after;
 }

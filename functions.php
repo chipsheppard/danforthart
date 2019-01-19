@@ -38,7 +38,6 @@ require get_template_directory() . '/inc/css-output.php';
  */
 function danforthart_scripts() {
 	wp_enqueue_style( 'danforthart-style', get_stylesheet_uri(), array(), DANFORTHART_VERSION );
-	wp_enqueue_style( 'danforthart-fonts', danforthart_theme_fonts_url() );
 	wp_enqueue_script( 'danforthart-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), DANFORTHART_VERSION, true );
 	wp_enqueue_script( 'danforthart-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -51,19 +50,6 @@ function danforthart_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
 
-/**
- * Theme Fonts URL
- */
-function danforthart_theme_fonts_url() {
-	$gfonts = 'Poppins:300,300i,600,600i,700,700i';
-	$font_families = apply_filters( 'danforthart_theme_fonts', array( $gfonts ) );
-	$query_args = array(
-		'family' => implode( '|', $font_families ),
-		'subset' => 'latin,latin-ext',
-	);
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	return $fonts_url;
-}
 
 /**
  * Enqueue editor styles for Gutenberg

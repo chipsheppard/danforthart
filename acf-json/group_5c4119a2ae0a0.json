@@ -1,11 +1,30 @@
 {
-    "key": "group_5c3e7a6b91249",
-    "title": "Artworks Custom Content",
+    "key": "group_5c4119a2ae0a0",
+    "title": "Exhibitions Custom Content",
     "fields": [
         {
-            "key": "field_5c3e7b4110987",
-            "label": "Artist Name",
-            "name": "artist_name",
+            "key": "field_5c4119b7d3b63",
+            "label": "Intro",
+            "name": "intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5c411a49d3b64",
+            "label": "Gallery",
+            "name": "gallery",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,45 +41,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c3e7b6110988",
-            "label": "Artist Info",
-            "name": "artist_info",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5c4150424d8ed",
-            "label": "Artwork Info",
-            "name": "artwork_info",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5c3e7bb610989",
+            "key": "field_5c411a54d3b65",
             "label": "Date",
             "name": "date",
             "type": "text",
@@ -79,9 +60,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c413af37951b",
-            "label": "Medium",
-            "name": "medium",
+            "key": "field_5c411a61d3b66",
+            "label": "Artist Listing",
+            "name": "artist_listing",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -98,9 +79,76 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c4118eb0d145",
-            "label": "More Info Left",
-            "name": "more_left",
+            "key": "field_5c412878d471d",
+            "label": "ArtWorks",
+            "name": "artworks",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "artwork"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5c411a7ed3b67",
+            "label": "Quote",
+            "name": "quote",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c412665d3b69",
+            "label": "Quote Citation",
+            "name": "quote_citation",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c412681d3b6a",
+            "label": "More Content Left",
+            "name": "more_content_left",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -117,9 +165,9 @@
             "delay": 0
         },
         {
-            "key": "field_5c41190d0d146",
-            "label": "More Info Right",
-            "name": "more_right",
+            "key": "field_5c412690d3b6b",
+            "label": "More Content Right",
+            "name": "more_content_right",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -141,7 +189,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "artwork"
+                "value": "exhibition"
             }
         ]
     ],
@@ -153,5 +201,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547784276
+    "modified": 1547774155
 }

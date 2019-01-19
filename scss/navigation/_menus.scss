@@ -97,22 +97,3 @@
 		}
 	}
 }
-
-@include breakpoint(tablet-v) {
-	.seeart .site-navigation .color1 a {
-		background-color: $color__orange;
-	}
-	.learncreate .site-navigation .color2 a {
-		background-color: $color__green;
-	}
-	.vis .site-navigation .color3 a {
-		background-color: $color__yellow;
-	}
-	.joinsupport .site-navigation .color4 a {
-		background-color: $color__tan;
-	}
-	.meetus .site-navigation .color5 a {
-		background-color: $color__purple;
-	}
-
-}

@@ -6,13 +6,6 @@
 	.inner-wrap {
 		background-color: #000;
 	}
-}
-
-.site-info {
-	color: $color__base-light;
-	letter-spacing: 1px;
-	padding: 2em 0 .5em;
-	position: relative;
 
 	a {
 		color: $color__base-medium;
@@ -21,14 +14,31 @@
 			color: $color__base-light;
 		}
 	}
+
+	.social {
+		font-weight: $font__weight-bold;
+	}
+
+	.copyright {
+		margin-top: .5em;
+		@include font-size(.75);
+	}
 }
 
+.site-info {
+	color: $color__base-light;
+	letter-spacing: 1px;
+	padding: 2em 0 .5em;
+	position: relative;
 
+}
 
 .site-footer .menu {
+	margin-bottom: 3em;
 
 	li {
 		float: left;
+		padding-right: 1em;
 		width: 20%;
 
 		a {
@@ -37,30 +47,74 @@
 			display: inline;
 			font-weight: $font__weight-bold;
 			letter-spacing: 2px;
-			padding-bottom: .25em;
+			padding: .25em 0;
 			text-transform: uppercase;
-			@include font-size(.875);
 
 			&:hover {
 				opacity: .75;
 			}
 		}
+
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			background-color: #fff;
+			color: #000;
+			padding-left: .75em;
+			padding-right: .75em;
+			margin-left: -.75em;
+		}
 	}
+
 	.sub-menu {
-		margin: 1.5em 0 6em;
+		margin: 1.5em 0 3em;
+
+		@include breakpoint(tablet-v) {
+			margin: 1.5em 0;
+		}
 
 		li {
 			float: none;
 			width: auto;
+			padding: 0 0 1.25em 0;
+
+			@include breakpoint(phone-h) {
+				padding: 0 0 .5em 0;
+			}
+
+			&.current-menu-item > a,
+			&.current-menu-ancestor > a {
+				background: none;
+				color: #ffffff;
+				border-bottom: 1px solid #fff;
+				padding-left: 0;
+				padding-right: 0;
+				margin-left: 0;
+			}
 		}
 
 		a {
+			border: none;
 			font-weight: $font__weight-normal;
 			text-transform: none;
 			letter-spacing: 1px;
-			border-bottom: 0;
 			@include font-size(1);
 		}
 	}
 
+	@include breakpoint(tablet-m) {
+		li {
+			width: 33%;
+		}
+	}
+	@include breakpoint(phone-h) {
+		li {
+			width: 50%;
+		}
+	}
+	@include breakpoint(phone-v) {
+		li {
+			float: none;
+			width: 100%;
+		}
+	}
 }

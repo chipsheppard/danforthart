@@ -3,7 +3,11 @@
 
 	.content-area {
 		width: 100%;
-		padding: 2.5em 0 3em;
+		padding: 2.5em 0 0;
+
+		@include breakpoint(phone-v) {
+			padding-top: 1em;
+		}
 	}
 }
 

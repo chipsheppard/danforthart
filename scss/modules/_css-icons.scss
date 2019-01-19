@@ -1,0 +1,380 @@
+[class*=cssicon-] {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: currentColor;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+}
+[class*=cssicon-]:after, [class*=cssicon-]:before {
+    content: '';
+    pointer-events: none;
+}
+
+
+// ARROWS - - - - - - - - - - - - - - - - - -
+
+// PlusMinus
+.cssicon-plusminus {
+    background-color: #6d7e69;
+	border: 2px solid #ffffff;
+    border-radius: 50%;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: $font__weight-normal;
+    margin: 0;
+	text-indent: 0;
+
+	&:hover {
+		background-color: #d0d5d2;
+	}
+
+	&.plus {
+		padding: .5em .5em .375em;
+	}
+	&.minus {
+		padding: .438em .4375em .4375em .5em;
+	}
+	&.plus:before,
+	&.minus:before {
+		display: inline-block;
+		line-height: .5;
+		position: relative;
+		@include font-size(3);
+	}
+	&.plus:before {
+		content: '+';
+		top: 7px;
+	}
+	&.minus:before {
+		content: '–'; // n-dash.
+		top: 5px;
+	}
+}
+
+// LEFT
+.cssicon-arrow-l {
+	color: currentColor;
+	text-indent: 0;
+	margin-right: .5em;
+	width: 10px;
+	height: 16px;
+}
+.cssicon-arrow-l:before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 8px;
+	height: 1px;
+	background-color: currentColor;
+	transform: rotate(45deg);
+}
+.cssicon-arrow-l:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+
+// RIGHT
+.cssicon-arrow-r {
+	background-color: $color__base-light;
+	border: 2px solid $color__base;
+    border-radius: 50%;
+	color: #ffffff;
+	text-indent: 0;
+	margin-top: 0;
+	margin-left: 0;
+	width: 42px;
+	height: 42px;
+}
+.cssicon-arrow-r:before {
+	content: '';
+	position: absolute;
+	top: 23px;
+	left: 12px;
+	width: 15px;
+	height: 2px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
+}
+.cssicon-arrow-r:after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 13px;
+  width: 15px;
+  height: 2px;
+  background-color: currentColor;
+  transform: rotate(45deg);
+}
+
+// DOWN
+.cssicon-arrow-d {
+	border: 2px solid #ffffff;
+    border-radius: 50%;
+	color: #ffffff;
+	text-indent: 0;
+	margin-top: 0;
+	margin-left: 0;
+	width: 25px;
+	height: 25px;
+}
+
+.cssicon-arrow-d:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 8px;
+  height: 2px;
+  background-color: currentColor;
+  transform: rotate(45deg);
+}
+
+.cssicon-arrow-d:after {
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 10px;
+	width: 8px;
+	height: 2px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
+}
+
+// FILE
+.cssicon-file {
+	background: transparent;
+	border: 1px solid currentColor;
+	height: 21px;
+	width: 16px;
+	top: -2px;
+
+	&:before {
+		background: #fff;
+		border-width: 1px;
+	    border-style: solid;
+	    border-color: transparent transparent currentColor transparent;
+		height: 9px;
+		left: 9px;
+		position: absolute;
+	    top: -5px;
+		width: 11px;
+		transform: rotate(45deg);
+	}
+	&:after {
+	    background: transparent;
+	    border-width: 1px;
+	    border-style: solid;
+	    border-color: transparent transparent currentColor currentColor;
+		height: 7px;
+	    left: 8px;
+		position: absolute;
+		top: -1px;
+		width: 7px;
+	}
+
+	&.green:before {
+		background: $color__green;
+	}
+}
+
+// CART
+/*
+.cssicon-cart {
+    width: 19px;
+    height: 0;
+    border-width: 10px 6px 0 2px;
+    border-style: solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    margin: 0 6px 2px;
+}
+.cssicon-cart:before {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 12px, 12px 0, -2px -13px 0 0;
+    top: 0;
+    left: -2px;
+}
+
+
+// TAGS
+.cssicon-tag {
+	background-color: currentColor;
+	border-radius: 1px 0 0 0;
+	border-left: solid 1px currentColor;
+	border-top: solid 1px currentColor;
+	color: currentColor;
+	height: 7px;
+	margin-right: 10px;
+	top: -2px;
+	width: 7px;
+}
+.cssicon-tag:before {
+	content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    border-left: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
+    background-color: currentColor;
+    transform: rotate(-45deg);
+}
+.cssicon-tag:after {
+	content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    color: white;
+    background-color: currentColor;
+}
+
+
+// GATEGORIES (folder)
+.cssicon-folder {
+	width: 15px;
+    height: 10px;
+	margin-right: 4px;
+    margin-top: 2px;
+    position: relative;
+    background-color: currentColor;
+    border-radius: 0 1px 1px 1px;
+}
+.cssicon-folder:before {
+	content: '';
+    width: 60%;
+    height: 3px;
+    border-radius: 0 2px 0 0;
+    background-color: currentColor;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+*/
+
+// SOCIAL - - - - - - -
+// INSTAGRAM
+.cssicon-instagram {
+    background-color: transparent;
+    border-radius: .5em;
+    border: 3px solid currentColor;
+    height: 2.375em;
+    margin: 0;
+    width: 2.375em;
+}
+.cssicon-instagram:before,
+.cssicon-instagram:after {
+	border-width: 0;
+	position: absolute;
+}
+.cssicon-instagram:after {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid currentColor;
+    box-shadow: .625em -.625em 0 -.5em;
+    height: 1.25em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.25em;
+}
+
+// FACEBOOK
+.cssicon-facebook {
+    background-color: currentColor;
+    height: 2.375em;
+    border-radius: .375em;
+    margin: 0;
+	width: 2.375em;
+}
+.cssicon-facebook:after {
+	content: 'f';
+	color: #ffffff;
+	font-weight: $font__weight-bold;
+	left: 3px;
+	line-height: 1;
+	position: absolute;
+	text-indent: 0;
+	text-align: center;
+	top: 16%;
+	width: 100%;
+	@include font-size(2.25);
+}
+
+// LINKEDIN
+.cssicon-linkedin {
+    background-color: currentColor;
+    height: 2.375em;
+    border-radius: .375em;
+    margin: 0;
+	width: 2.375em;
+
+	&:after {
+		content: 'in';
+		color: #ffffff;
+		font-weight: $font__weight-bold;
+		left: 1px;
+		line-height: 1;
+		position: absolute;
+		text-indent: 0;
+		text-align: center;
+		top: 9px;
+		width: 100%;
+		@include font-size(1.75);
+	}
+}
+
+
+
+// TWITTER
+.icon-wrap {
+	display: inline-block;
+	border-radius: .375em;
+	background-color: currentColor;
+	position: relative;
+	top: -1em;
+}
+.cssicon-twitter {
+	top: 2px;
+	color: #ffffff;
+    width: 14px;
+    height: 23px;
+    border-radius: 0 0 0 8px;
+    box-shadow: -6px 2px 0 0;
+    margin: 4px 7px 7px 13px;
+}
+.cssicon-twitter:before {
+    position: absolute;
+    bottom: -2px;
+    left: -6px;
+    width: 17px;
+    height: 6px;
+    border-radius: 0 0 0 8px;
+    box-shadow: inset 4px -6px, 0 -11px;
+}
+.cssicon-twitter:after {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    box-shadow: inset 0 0 0 32px, 13px 8px, 13px 19px;
+    border-radius: 50%;
+    left: -6px;
+}

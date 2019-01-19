@@ -53,6 +53,9 @@
 			max-height: 32px;
 			width: auto;
 		}
+		@include breakpoint(phone-v) {
+			max-height: 24px;
+		}
 	}
 
 	a:hover {

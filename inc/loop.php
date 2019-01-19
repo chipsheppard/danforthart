@@ -27,7 +27,7 @@ function danforthart_default_loop() {
 
 			tha_entry_before();
 
-			if ( is_page_template() ) :
+			if ( is_page_template() || is_singular( array( 'artwork', 'event', 'exhibition' ) ) ) :
 				get_template_part( 'template-parts/content', 'acf' );
 			else :
 				get_template_part( 'template-parts/content', get_post_format() );

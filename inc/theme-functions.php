@@ -98,6 +98,8 @@ function display_parent() {
 
 	if ( $grandparent ) :
 		printf( '<span class="section-title">%s</span>', get_the_title( $grandparent ) );
+	elseif ( is_singular( 'artwork' ) ) :
+		printf( '<span class="section-title">%s</span>', 'SEE ART' );
 	else :
 		printf( '<span class="section-title">%s</span>', get_the_title() );
 	endif;
