@@ -2,13 +2,13 @@
  * Utility
 --------------------------------------------- */
 
-@media only screen and (min-width:1024px) {
+@include breakpoint(tablet-min-v) {
 	.mobile-only {
 		display: none;
 	}
 }
 
-@include breakpoint(tablet-h) {
+@include breakpoint(tablet-v) {
 	.desktop-only {
 		display: none;
 	}

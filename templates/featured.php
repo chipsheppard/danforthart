@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Special See Art.
  *
- * Template Name: Special
+ * Template Name: Featured Exhibit
  *
  * @package    danforthart
  * @subpackage danforthart/templates
@@ -12,13 +12,13 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'seeart special' ) );
+	return array_merge( $classes, array( 'seeart featured' ) );
 } );
 
 /**
  * Special
  */
-function da_special() {
+function da_featured() {
 
 	echo '<div class="inner-wrap">';
 
@@ -29,13 +29,13 @@ function da_special() {
 			) );
 		echo '</div>';
 
-		echo 'Special Collection';
+		echo 'Featured Collection';
 		the_content();
 
 	echo '</div>';
 
 }
-add_action( 'tha_entry_content_before', 'da_special' );
+add_action( 'tha_entry_content_before', 'da_featured' );
 
 
 // Build the page.

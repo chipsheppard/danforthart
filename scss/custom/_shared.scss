@@ -1,0 +1,193 @@
+.content-wrap {
+	background-color: #ffffff;
+}
+
+.return {
+	float: left;
+	font-weight: $font__weight-bold;
+	letter-spacing: 2px;
+	margin-bottom: 2em;
+	padding-top: 1em;
+	@include font-size(1);
+
+	@include breakpoint(tablet-v) {
+		float: none;
+		display: block;
+		padding-top: 0;
+	}
+	@include breakpoint(phone-h) {
+		@include font-size(.75);
+		letter-spacing: 1px;
+		margin-bottom: .5em;
+	}
+
+	a {
+		color: $color__base;
+		text-transform: uppercase;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+
+/* ANIMATED PROGRESS BAR */
+@keyframes fibg {
+    0% {
+        background-size:    0 12px,
+                            12px 0,
+                            0 12px,
+                            12px 0;
+    }
+    25% {
+        background-size:    100% 12px,
+                            12px 0,
+                            0 12px,
+                            12px 0;
+    }
+    50% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            0 12px,
+                            12px 0;
+    }
+    75% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            100% 12px,
+                            12px 0;
+    }
+    100% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            100% 12px,
+                            12px 100%;
+    }
+}
+.artwork-img {
+	position: relative;
+}
+.artwork-img:hover .progbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to bottom, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to right, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to bottom, $color__orange 100%, $color__orange 100%);
+    background-size:    100% 12px,
+                        12px 100%,
+                        100% 12px,
+                        12px 100%;
+    background-position:    0 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+
+    animation: fibg 1s;
+
+	&.green {
+		background-image:   linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%);
+	}
+	&.yellow {
+		background-image:   linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%);
+	}
+	&.blue {
+		background-image:   linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%);
+	}
+	&.tan {
+		background-image:   linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%);
+	}
+	&.purple {
+		background-image:   linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%);
+	}
+}
+
+
+
+
+.exhibit-modal {
+	background-color: #ffffff;
+	border: 2px solid $color__base;
+	position: absolute;
+	z-index: 999;
+	left: 1%;
+	top: 1%;
+	display: none;
+	width: 98%;
+	height: 98vh;
+	padding: 4em 15%;
+
+	&.show {
+    	display: block!important;
+ 	}
+
+	.close-modal {
+		cursor: pointer;
+		font-weight: $font__weight-light;
+		opacity: .5;
+		position: absolute;
+		top: .25em;
+		right: .5em;
+		@include font-size(3);
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.modal-img {
+		text-align: center;
+
+		.modal-image {
+			display: inline-block;
+			width: auto;
+			max-height: 65vh;
+			margin: auto 0;
+		}
+	}
+
+	.artwork-info {
+		text-align: center;
+	}
+}
+
+.modal-nav {
+	position: absolute;
+	bottom: 0;
+	right: 3em;
+}
+.pagingInfo {
+	color: $color__base;
+	font-weight: $font__weight-light;
+	margin-right: 2.5em;
+	@include font-size(3);
+}
+
+.slickeroo {
+	visibility: hidden;
+	&.slick-initialized {
+		visibility: visible;
+	}
+}

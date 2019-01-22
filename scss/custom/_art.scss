@@ -1,35 +1,6 @@
 body.single-artwork {
 	background-color: $color__green;
 
-	.return {
-		float: left;
-		font-weight: $font__weight-bold;
-		letter-spacing: 2px;
-		margin-bottom: 2em;
-		padding-top: 1em;
-		@include font-size(1);
-
-		@include breakpoint(tablet-v) {
-			float: none;
-			display: block;
-			padding-top: 0;
-		}
-		@include breakpoint(phone-h) {
-			@include font-size(.75);
-			letter-spacing: 1px;
-			margin-bottom: .5em;
-		}
-
-		a {
-			color: $color__base;
-			text-transform: uppercase;
-
-			&:hover {
-				color: #ffffff;
-			}
-		}
-	}
-
 	.print-info {
 		text-align: right;
 		font-weight: $font__weight-bold;
@@ -53,41 +24,34 @@ body.single-artwork {
 		}
 	}
 
-	.content-wrap {
-		background-color: #ffffff;
-
-		.artist-name {
-			@include font-size(1.625);
+	.artist-name {
+		@include font-size(1.625);
+	}
+	.artist-info {
+		margin-bottom: 3em;
+		@include breakpoint(phone-h) {
+			margin-bottom: 1.5em;
 		}
-		.artist-info {
-			margin-bottom: 3em;
-			@include breakpoint(phone-h) {
-				margin-bottom: 1.5em;
-			}
-		}
+	}
 
-		.artwork-title {
-			font-weight: $font__weight-light;
-			margin-bottom:.25em;
-			@include font-size(1.625);
-		}
+	.artwork-title {
+		font-weight: $font__weight-light;
+		margin-bottom:.25em;
+		@include font-size(1.625);
+	}
 
-		.artwork-info {
-			margin-bottom: 1em;
+	.artwork-info {
+		margin-bottom: 1em;
+	}
 
-			.artwork-date {}
-			.artwork-medium {}
-		}
+	.art-left,
+	.art-right,
+	.more-left,
+	.more-right {
+		padding: 3em 0;
 
-		.art-left,
-		.art-right,
-		.more-left,
-		.more-right {
-			padding: 3em 0;
-
-			@include breakpoint(phone-h) {
-				padding: .5em 0;
-			}
+		@include breakpoint(phone-h) {
+			padding: .5em 0;
 		}
 	}
 
@@ -116,7 +80,6 @@ body.single-artwork {
 				max-width: none;
 				width: 107%;
 			}
-
 		}
 	}
 }

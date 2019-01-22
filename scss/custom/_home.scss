@@ -39,3 +39,69 @@
 
 	}
 }
+
+
+/* ANIMATED PROGRESS BAR */
+@keyframes bg {
+    0% {
+        background-size:    0 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    25% {
+        background-size:    100% 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    50% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            0 24px,
+                            24px 0;
+    }
+    75% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 0;
+    }
+    100% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 100%;
+    }
+}
+.sl {
+	position: relative;
+}
+.sl.slick-current .progbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, #f1a676 100%, #f1a676 100%),
+                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%),
+                        linear-gradient(to right, #f1a676 100%, #f1a676 100%),
+                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%);
+    background-size:    100% 24px,
+                        24px 100%,
+                        100% 24px,
+                        24px 100%;
+    background-position:    0 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+    animation: bg 6s linear;
+    animation-play-state: running;
+}
+
+.sl.slick-current:hover .progbar {
+    animation-play-state: paused;
+}

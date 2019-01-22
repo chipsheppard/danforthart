@@ -83,6 +83,46 @@
   transform: rotate(-45deg);
 }
 
+
+// FILE
+.cssicon-file {
+	background: transparent;
+	border: 1px solid currentColor;
+	height: 21px;
+	width: 16px;
+	top: -2px;
+
+	&:before {
+		background: #fff;
+		border-width: 1px;
+	    border-style: solid;
+	    border-color: transparent transparent currentColor transparent;
+		height: 9px;
+		left: 9px;
+		position: absolute;
+	    top: -5px;
+		width: 11px;
+		transform: rotate(45deg);
+	}
+	&:after {
+	    background: transparent;
+	    border-width: 1px;
+	    border-style: solid;
+	    border-color: transparent transparent currentColor currentColor;
+		height: 7px;
+	    left: 8px;
+		position: absolute;
+		top: -1px;
+		width: 7px;
+	}
+
+	&.green:before {
+		background: $color__green;
+	}
+}
+
+
+/*
 // RIGHT
 .cssicon-arrow-r {
 	background-color: $color__base-light;
@@ -150,45 +190,8 @@
 	transform: rotate(-45deg);
 }
 
-// FILE
-.cssicon-file {
-	background: transparent;
-	border: 1px solid currentColor;
-	height: 21px;
-	width: 16px;
-	top: -2px;
-
-	&:before {
-		background: #fff;
-		border-width: 1px;
-	    border-style: solid;
-	    border-color: transparent transparent currentColor transparent;
-		height: 9px;
-		left: 9px;
-		position: absolute;
-	    top: -5px;
-		width: 11px;
-		transform: rotate(45deg);
-	}
-	&:after {
-	    background: transparent;
-	    border-width: 1px;
-	    border-style: solid;
-	    border-color: transparent transparent currentColor currentColor;
-		height: 7px;
-	    left: 8px;
-		position: absolute;
-		top: -1px;
-		width: 7px;
-	}
-
-	&.green:before {
-		background: $color__green;
-	}
-}
 
 // CART
-/*
 .cssicon-cart {
     width: 19px;
     height: 0;
@@ -274,107 +277,117 @@
 // INSTAGRAM
 .cssicon-instagram {
     background-color: transparent;
-    border-radius: .5em;
-    border: 3px solid currentColor;
-    height: 2.375em;
+    border-radius: .375em;
+    border: 2px solid currentColor;
+    height: 1.5em;
     margin: 0;
-    width: 2.375em;
-}
-.cssicon-instagram:before,
-.cssicon-instagram:after {
-	border-width: 0;
-	position: absolute;
-}
-.cssicon-instagram:after {
-    background-color: transparent;
-    border-radius: 50%;
-    border: 3px solid currentColor;
-    box-shadow: .625em -.625em 0 -.5em;
-    height: 1.25em;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 1.25em;
+    width: 1.5em;
+
+	&:before,
+	&:after {
+		position: absolute;
+	}
+	&:before {
+		height: 2px;
+		width: 2px;
+		background-color: currentColor;
+		top: 3px;
+		right: 3px;
+	}
+	&:after {
+	    background-color: transparent;
+	    border-radius: 50%;
+	    border: 2px solid currentColor;
+	    height: .75em;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    width: .75em;
+	}
 }
 
 // FACEBOOK
 .cssicon-facebook {
     background-color: currentColor;
-    height: 2.375em;
-    border-radius: .375em;
+    height: 1.5em;
+    border-radius: .125em;
     margin: 0;
-	width: 2.375em;
-}
-.cssicon-facebook:after {
-	content: 'f';
-	color: #ffffff;
-	font-weight: $font__weight-bold;
-	left: 3px;
-	line-height: 1;
-	position: absolute;
-	text-indent: 0;
-	text-align: center;
-	top: 16%;
-	width: 100%;
-	@include font-size(2.25);
+	width: 1.5em;
+
+	&:after {
+		content: 'f';
+		color: #000000;
+		font-weight: $font__weight-bold;
+		left: 3px;
+		line-height: 1;
+		position: absolute;
+		text-indent: 0;
+		text-align: center;
+		top: 0;
+		width: 100%;
+		@include font-size(1.625);
+	}
 }
 
 // LINKEDIN
 .cssicon-linkedin {
     background-color: currentColor;
-    height: 2.375em;
-    border-radius: .375em;
+    height: 1.5em;
+    border-radius: .125em;
     margin: 0;
-	width: 2.375em;
+	width: 1.5em;
 
 	&:after {
 		content: 'in';
-		color: #ffffff;
+		color: #000000;
 		font-weight: $font__weight-bold;
 		left: 1px;
 		line-height: 1;
 		position: absolute;
 		text-indent: 0;
 		text-align: center;
-		top: 9px;
+		top: 0;
 		width: 100%;
-		@include font-size(1.75);
+		@include font-size(1.5);
 	}
 }
 
 
 
 // TWITTER
-.icon-wrap {
-	display: inline-block;
-	border-radius: .375em;
-	background-color: currentColor;
-	position: relative;
-	top: -1em;
-}
 .cssicon-twitter {
-	top: 2px;
-	color: #ffffff;
-    width: 14px;
-    height: 23px;
-    border-radius: 0 0 0 8px;
-    box-shadow: -6px 2px 0 0;
-    margin: 4px 7px 7px 13px;
+	color: currentColor;
+    width: 8px;
+    height: 16px;
+    border-radius: 0 0 0 5px;
+    box-shadow: -4px 2px 0 0;
+    margin: 0 5px 0 10px;
+
+	&:before {
+	    position: absolute;
+	    bottom: -2px;
+	    left: 0;
+	    width: 4px;
+	    height: 4px;
+	    border-radius: 0;
+	    box-shadow: inset 0 5px, 0 -8px;
+	}
+	&:after {
+	    position: absolute;
+	    width: 4px;
+	    height: 4px;
+	    box-shadow: inset 0 0 0 12px, 6px 6px, 6px 14px;
+	    border-radius: 50%;
+	    left: -4px;
+	}
 }
-.cssicon-twitter:before {
-    position: absolute;
-    bottom: -2px;
-    left: -6px;
-    width: 17px;
-    height: 6px;
-    border-radius: 0 0 0 8px;
-    box-shadow: inset 4px -6px, 0 -11px;
-}
-.cssicon-twitter:after {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    box-shadow: inset 0 0 0 32px, 13px 8px, 13px 19px;
-    border-radius: 50%;
-    left: -6px;
+
+.iconwrap {
+	padding: .625em .625em .875em;
+	margin-right: 1em;
+	border: 1px solid currentColor;
+
+	&.c {
+		border-radius: 50%;
+	}
 }

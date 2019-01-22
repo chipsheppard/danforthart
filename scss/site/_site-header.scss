@@ -43,18 +43,16 @@
 
 	img {
 		display: block;
-		max-height: 300px;
-		max-width: 300px;
-		width: 100%;
 		height: auto;
+		max-width: 200px;
+		width: 100%;
 		transition: max-height 0.2s;
 
 		@include breakpoint(phone-h) {
-			max-height: 32px;
-			width: auto;
+			max-width: 150px;
 		}
 		@include breakpoint(phone-v) {
-			max-height: 24px;
+			max-width: 100px;
 		}
 	}
 

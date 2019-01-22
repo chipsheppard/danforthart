@@ -106,8 +106,8 @@
 }
 
 /* Arrows */
-.slick-prev,
-.slick-next {
+.prev,
+.next {
 	background: transparent;
 	border: none;
 	color: transparent;
@@ -123,83 +123,53 @@
 	transform: translate(0, -50%);
 	outline: none;
 }
-.slick-prev:hover,
-.slick-next:hover {
-	background: transparent;
-	color: transparent;
-	outline: none;
-	border: 0;
-}
-.slick-prev:hover:before,
-.slick-next:hover:before  {
-	opacity: 1;
-	outline: none;
-}
 
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
+.prev.slick-disabled:before,
+.next.slick-disabled:before {
 	opacity: .15;
 }
 
-.slick-prev:before,
-.slick-next:before {
+.prev:before,
+.next:before {
+	background: transparent;
+	border: 0;
+	color: transparent;
     content: "";
     display: inline-block;
-    font-size: 150px;
-    height: 0.4em;
+	font-weight: $font__weight-light;
+    height: 1em;
     line-height: 1;
-    opacity: .40;
+	outline: none;
     position: relative;
-    top: 3pt;
+    top: .25em;
     transform: rotate(45deg);
-    width: 0.4em;
+    width: 1em;
+	@include font-size(1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media all and (max-width: 768px) {
-	.slick-prev:before,
-	.slick-next:before {
-		font-size: 100px;
-	}
-}
-
 /* Arrows */
 
-.slick-prev {
-	left: 24px;
+.prev {
+	right: 50px;
 }
-[dir='rtl'] .slick-prev {
-	right: 24px;
-	left: auto;
+.prev:before {
+	border-left: 1px solid $color__base;
+	border-bottom: 1px solid $color__base;
 }
-.slick-prev:before {
-	border-left: 0.05em solid #999;
-	border-bottom: 0.05em solid #999;
-	margin-right: 0.5em;
+.next {
+	right: 0;
 }
-[dir='rtl'] .slick-prev:before {
-	border-right: 0.05em solid #999;
-	border-top: 0.05em solid #999;
-	margin-left: 0.5em;
+.next:before {
+	border-right: 1px solid $color__base;
+	border-top: 1px solid $color__base;
 }
 
-.slick-next {
-	right: 24px;
-}
-[dir='rtl'] .slick-next {
-	right: auto;
-	left: 24px;
-}
-.slick-next:before {
-	border-right: 0.05em solid #999;
-	border-top: 0.05em solid #999;
-	margin-left: 0.5em;
-}
-[dir='rtl'] .slick-next:before {
-	border-left: 0.05em solid #999;
-	border-bottom: 0.05em solid #999;
-	margin-right: 0.5em;
+.prev:hover:before,
+.next:hover:before  {
+	outline: none;
+	opacity: .70;
 }
 
 
@@ -248,7 +218,7 @@
 	height: 22px;
 }
 .slick-dots li button:hover {
-	opacity: .70;
+	opacity: 1;
 }
 .slick-dots li button:focus {
 	outline: none;
@@ -266,69 +236,4 @@
 
 li.slick-active button:before {
 	background: #000000;
-}
-
-/* ANIMATED PROGRESS BAR */
-@keyframes bg {
-    0% {
-        background-size:    0 24px,
-                            24px 0,
-                            0 24px,
-                            24px 0;
-    }
-    25% {
-        background-size:    100% 24px,
-                            24px 0,
-                            0 24px,
-                            24px 0;
-    }
-    50% {
-        background-size:    100% 24px,
-                            24px 100%,
-                            0 24px,
-                            24px 0;
-    }
-    75% {
-        background-size:    100% 24px,
-                            24px 100%,
-                            100% 24px,
-                            24px 0;
-    }
-    100% {
-        background-size:    100% 24px,
-                            24px 100%,
-                            100% 24px,
-                            24px 100%;
-    }
-}
-.sl {
-	position: relative;
-}
-.sl.slick-current .progbar {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 2;
-
-    background-repeat: no-repeat;
-    background-image:   linear-gradient(to right, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to right, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%);
-    background-size:    100% 24px,
-                        24px 100%,
-                        100% 24px,
-                        24px 100%;
-    background-position:    0 0,
-                            100% 0,
-                            100% 100%,
-                            0 100%;
-    animation: bg 6s linear;
-    animation-play-state: running;
-}
-
-.sl.slick-current:hover .prog {
-    animation-play-state: paused;
 }

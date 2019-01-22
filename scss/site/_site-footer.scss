@@ -4,29 +4,73 @@
 	padding: 0 3%;
 
 	.inner-wrap {
-		background-color: #000;
+		background-color: #000000;
 	}
 
 	a {
-		color: $color__base-medium;
-
-		&:hover {
-			color: $color__base-light;
-		}
+		color: #ffffff;
 	}
 
 	.social {
 		font-weight: $font__weight-bold;
+		margin-bottom: 2em;
 	}
 
 	.copyright {
 		margin-top: .5em;
 		@include font-size(.75);
 	}
+
+	.fsu-logo {
+		img {
+			width: 230px;
+		}
+	}
+
+	.social a:hover {
+
+		.iconwrap {
+			border-color: #000000;
+			background-color: #ffffff;
+		}
+
+		.cssicon-instagram {
+			background-color: #ffffff;
+			border-color: #000000;
+
+			&:before {
+				background-color: #000000;
+			}
+			&:after {
+			    border-color: #000000;
+			}
+		}
+
+		.cssicon-facebook {
+			background-color: #000000;
+			&:after {
+				color: #ffffff;
+			}
+		}
+
+		.cssicon-linkedin {
+			background-color: #000000;
+			&:after {
+				color: #ffffff;
+			}
+		}
+
+		.cssicon-twitter {
+			color: #000000;
+			&:after {
+				box-shadow: inset 255 255 255 12px, 6px 6px, 6px 14px;
+			}
+		}
+	}
 }
 
 .site-info {
-	color: $color__base-light;
+	color: #ffffff;
 	letter-spacing: 1px;
 	padding: 2em 0 .5em;
 	position: relative;
@@ -40,10 +84,11 @@
 		float: left;
 		padding-right: 1em;
 		width: 20%;
+		line-height: 1.5em;
 
 		a {
-			border-bottom: 1px solid #fff;
-			color: #fff;
+			border-bottom: 1px solid #ffffff;
+			color: #ffffff;
 			display: inline;
 			font-weight: $font__weight-bold;
 			letter-spacing: 2px;
@@ -51,7 +96,7 @@
 			text-transform: uppercase;
 
 			&:hover {
-				opacity: .75;
+				border-width: 2px;
 			}
 		}
 
@@ -98,6 +143,10 @@
 			text-transform: none;
 			letter-spacing: 1px;
 			@include font-size(1);
+
+			&:hover {
+				border-bottom: 1px solid currentColor;
+			}
 		}
 	}
 

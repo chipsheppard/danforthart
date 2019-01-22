@@ -1,0 +1,213 @@
+.calltoaction {
+	background-color: $color__tan-xxlt;
+	padding: 3rem 0;
+
+	@include breakpoint(tablet-min-v) {
+		.inner-wrap {
+			display: flex;
+			overflow: hidden;
+			flex-wrap: wrap;
+
+			.ctablock {
+				flex: 1;
+			}
+		}
+	}
+
+	.ctablock {
+		padding: 1em;
+		margin-bottom: 1.5em;
+
+		.cta-wrap {
+			background-color: #ffffff;
+			height: 100%;
+		}
+
+		.card-title {
+			display: inline-block;
+			font-weight: $font__weight-bold;
+			letter-spacing: 1px;
+			line-height: 1;
+			padding: 0 .5em .75em 1.5em;
+			text-transform: uppercase;
+			float: right;
+			@include font-size(.875);
+		}
+
+		.card-info {
+			padding: 4.5em 3em 3em;
+			font-weight: $font__weight-light;
+
+			@include breakpoint(tablet-v) {
+				padding: 2.5em 1.75em 1.75em;
+			}
+			@include breakpoint(tablet-h) {
+				padding: 2em 1em 1em;
+			}
+		}
+
+		.card-text {
+			line-height: 1.5;
+			margin-bottom: .75em;
+			@include font-size(2.1875);
+
+			@include breakpoint(tablet-v) {
+				@include font-size(1.375);
+			}
+		}
+
+		.card-date {
+			@include font-size(1.4375);
+
+			@include breakpoint(tablet-v) {
+				@include font-size(1.25);
+			}
+		}
+
+		.card-link {
+			border-bottom: 1px solid $color__base;
+			font-weight: $font__weight-bold;
+			letter-spacing: 1px;
+			padding-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		a {
+			color: $color__base;
+		}
+
+		a:hover {
+			.cta-wrap {
+				background-color: transparent;
+			}
+			.card-link {
+				border-width: 2px;
+				padding-top: 0;
+			}
+		}
+	}
+
+	.ctablock:first-of-type {
+		margin-left: 0;
+	}
+
+	.cta-event {
+		background-color: $color__yellow;
+
+		.card-title {
+			background-color: $color__yellow;
+		}
+	}
+
+
+	.cta-learn {
+		background-color: $color__green;
+
+		.card-title {
+			background-color: $color__green;
+		}
+	}
+
+
+	.cta-exhibit {
+
+		&.orange {
+			background-color: $color__orange;
+			.card-title {
+				background-color: $color__orange;
+			}
+		}
+		&.green {
+			background-color: $color__green;
+			.card-title {
+				background-color: $color__green;
+			}
+		}
+		&.yellow {
+			background-color: $color__yellow;
+			.card-title {
+				background-color: $color__yellow;
+			}
+		}
+		&.blue {
+			background-color: $color__blue;
+			.card-title {
+				background-color: $color__blue;
+			}
+		}
+		&.tan {
+			background-color: $color__tan;
+			.card-title {
+				background-color: $color__tan;
+			}
+		}
+		&.purple {
+			background-color: $color__purple;
+			.card-title {
+				background-color: $color__purple;
+			}
+		}
+
+		.img-bg {
+			width: 100%;
+			min-height: 200px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.sub-head {
+			font-weight: $font__weight-bold;
+			letter-spacing: 1px;
+			padding-bottom: .5em;
+			text-transform: uppercase;
+		}
+		.card-text {
+			margin-bottom: 1.5em;
+		}
+
+		@include breakpoint(tablet-v) {
+			.card-info {
+				padding-top: 56%;
+			}
+			.img-bg {
+				background-size: 100% 50%;
+				background-position: center top;
+			}
+		}
+
+		@include breakpoint(phone-v) {
+			.card-info {
+				padding-top: 100%;
+			}
+		}
+
+		@include breakpoint(tablet-min-v) {
+			.img-bg {
+				height: 100%;
+			}
+			a:hover .img-bg {
+				background: none !important;
+			}
+
+			.sub-head,
+			.card-text,
+			.card-link {
+				color: transparent;
+			}
+			.card-link {
+				border-color: transparent;
+			}
+
+			a:hover {
+				.sub-head,
+				.card-text,
+				.card-link {
+					color: $color__base;;
+				}
+				.card-link {
+					border-color: $color__base;;
+				}
+			}
+		}
+	}
+}
