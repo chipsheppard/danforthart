@@ -43,14 +43,14 @@ function danforthart_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	if ( is_front_page() || is_singular( 'exhibition' ) ) {
+	if ( is_front_page() ) {
 		wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
-		wp_enqueue_script( 'slick-functions', get_template_directory_uri() . '/assets/js/slick-functions.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'slick-homepage', get_template_directory_uri() . '/assets/js/slick-homepage-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
 	if ( is_singular( 'exhibition' ) ) {
 		wp_enqueue_script( 'masonry' );
-		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), DANFORTHART_VERSION, true );
-		wp_enqueue_script( 'exhibit-modals-js', get_template_directory_uri() . '/assets/js/exhibit-modals-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'exhibits-js', get_template_directory_uri() . '/assets/js/exhibits-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );

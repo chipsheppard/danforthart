@@ -18,39 +18,41 @@
 
 // PlusMinus
 .cssicon-plusminus {
-    background-color: #6d7e69;
-	border: 2px solid #ffffff;
-    border-radius: 50%;
-	color: #ffffff;
+	color: currentColor;
 	cursor: pointer;
-	font-weight: $font__weight-normal;
-    margin: 0;
-	text-indent: 0;
+	font-weight: $font__weight-light;
+	height: 40px;
+	width: 40px;
+
 
 	&:hover {
-		background-color: #d0d5d2;
-	}
-
-	&.plus {
-		padding: .5em .5em .375em;
-	}
-	&.minus {
-		padding: .438em .4375em .4375em .5em;
-	}
-	&.plus:before,
-	&.minus:before {
-		display: inline-block;
-		line-height: .5;
-		position: relative;
-		@include font-size(3);
+		opacity: .75;
 	}
 	&.plus:before {
-		content: '+';
-		top: 7px;
+		background-color: currentColor;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		width: 40px;
+		height: 1px;
+	}
+	&.plus:after {
+		background-color: currentColor;
+ 		position: absolute;
+		top: 20px;
+		left: 0;
+		width: 40px;
+		height: 1px;
+		transform: rotate(90deg);
 	}
 	&.minus:before {
-		content: '–'; // n-dash.
-		top: 5px;
+		color: #000;
+	    width: 40px;
+	    height: 1px;
+	    background-color: currentColor;
+		position: absolute;
+		top: 20px;
+		left: 0;
 	}
 }
 

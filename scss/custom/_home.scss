@@ -11,34 +11,6 @@
 	}
 }
 
-.hero-wrap {
-	position: relative;
-}
-.hero-callout {
-	background-color: $color__orange;
-	padding: 1.5em;
-	width: 40%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 5;
-
-	.link {
-		float:left;
-		width: 50%;
-	}
-	.date {
-		float:right;
-		text-align: right;
-		width: 50%;
-	}
-	.text {
-		clear: both;
-		padding-top: 1em;
-		@include font-size(1.5);
-
-	}
-}
 
 
 /* ANIMATED PROGRESS BAR */

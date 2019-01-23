@@ -79,12 +79,14 @@ function da_exhibition() {
 			<?php
 			$posts = get_field( 'artworks' );
 			if ( $posts ) :
+				$c = 0;
 				?>
 				<div class="artworks">
 				<?php
 				global $post;
 				foreach ( $posts as $post ) :
 					setup_postdata( $post );
+					$c++;
 					?>
 					<div class="artwork">
 						<?php
@@ -94,7 +96,7 @@ function da_exhibition() {
 							else :
 								$color = '';
 							endif;
-							echo '<div class="artwork-img modal-link"><a href="' . esc_url( get_the_permalink() ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
+							echo '<div class="artwork-img"><a href="#' . esc_html( $c ) . '" class="modal-link" data-index="' . esc_html( $c ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
 							the_post_thumbnail( 'medium', [
 								'class' => 'artwork-image',
 							] );

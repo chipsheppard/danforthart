@@ -14,27 +14,6 @@
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
 
-	function initMainNavigation( container ) {
-
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
-			.append( $( '<span />', { 'class': 'screen-reader-text', 'text': 'Expand child menu' } ) );
-
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
-
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.sub-menu' ).toggleClass( 'toggled-on' );
-
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-
-			screenReaderSpan.text( screenReaderSpan.text() === 'Expand child menu' ? 'Collapse child menu' : 'Expand child menu' );
-		});
-	}
-
-	initMainNavigation( $( '.site-navigation' ) );
-
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.responsive-menu-icon' );
 	siteNavContain = masthead.find( '.site-navigation' );
@@ -95,3 +74,23 @@
 		} );
 	} )();
 } )( jQuery );
+
+
+
+/*
+ * Project List show/hide
+ */
+jQuery(function( $ ){
+	$('.l').hide();
+	$( '.cssicon-plusminus' ).click(function() {
+		if ( $(this).hasClass( 'plus' ) ) {
+			$(this).removeClass( 'plus' );
+			$(this).addClass( 'minus' );
+			$('.extended').slideDown(200);
+		} else {
+			$(this).removeClass( 'minus' );
+			$(this).addClass( 'plus' );
+			$('.extended').slideUp(200);
+		}
+	} );
+} );

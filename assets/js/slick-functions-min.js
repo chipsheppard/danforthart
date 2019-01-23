@@ -1,1 +1,0 @@
-jQuery(function(e){e(".heroslider").slick({arrows:!1,infinite:!0,autoplay:!0,slidesToShow:1,speed:600,autoplaySpeed:6e3})}),jQuery(function(e){var t=e(".pagingInfo"),i=e(".slickeroo");i.on("init reInit afterChange",function(e,i,n,o){var r=(n||0)+1;t.text(r+"/"+i.slideCount)}),i.slick({nextArrow:".next",prevArrow:".prev",dots:!1,speed:600,initialSlide:7})});

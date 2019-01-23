@@ -54,3 +54,19 @@
   font-weight: bold;
   font-style: italic;
 }
+
+.salt {
+  -moz-font-feature-settings: "salt";
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt";
+}
+.salt2 {
+  -moz-font-feature-settings: "salt" 2;
+  -webkit-font-feature-settings: "salt" 2;
+  font-feature-settings: "salt" 2;
+}
+.ss01 {
+  -moz-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
+}

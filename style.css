@@ -481,6 +481,21 @@ template {
   font-style: italic;
 }
 
+.salt {
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt";
+}
+
+.salt2 {
+  -webkit-font-feature-settings: "salt" 2;
+  font-feature-settings: "salt" 2;
+}
+
+.ss01 {
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -2531,13 +2546,14 @@ img.flex {
 
 .slick-track {
   position: relative;
-  top: 0;
   left: 0;
+  top: 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.slick-track:before,
-.slick-track:after {
+.slick-track:before, .slick-track:after {
   display: table;
   content: '';
 }
@@ -2551,28 +2567,19 @@ img.flex {
 }
 
 .slick-slide {
+  background-color: #ffffff;
   float: left;
-  background-color: #fff;
   height: 100%;
   min-height: 1px;
-  margin: 0;
+  display: none;
 }
 
-.slick-slide:focus {
-  outline: none;
-}
-
-.slick-slide.slick-active {
-  opacity: 1;
-}
-
-[dir='rtl'] .slick-slide {
+[dir="rtl"] .slick-slide {
   float: right;
 }
 
 .slick-slide img {
   display: block;
-  width: 100%;
 }
 
 .slick-slide.slick-loading img {
@@ -2601,10 +2608,6 @@ img.flex {
   display: none;
 }
 
-.slick-loading .slick-list {
-  background: #fff url(assets/images/ajax-loader.gif) center center no-repeat;
-}
-
 .heroslider {
   overflow: hidden;
 }
@@ -2625,7 +2628,7 @@ img.flex {
   visibility: visible;
 }
 
-/* Arrows */
+/* Arrows ------------------------------------- */
 .prev,
 .next {
   background: transparent;
@@ -2673,7 +2676,6 @@ img.flex {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Arrows */
 .prev {
   right: 50px;
 }
@@ -2787,44 +2789,45 @@ li.slick-active button:before {
 }
 
 .cssicon-plusminus {
-  background-color: #6d7e69;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  color: #ffffff;
+  color: currentColor;
   cursor: pointer;
-  font-weight: normal;
-  margin: 0;
-  text-indent: 0;
+  font-weight: 300;
+  height: 40px;
+  width: 40px;
 }
 
 .cssicon-plusminus:hover {
-  background-color: #d0d5d2;
-}
-
-.cssicon-plusminus.plus {
-  padding: .5em .5em .375em;
-}
-
-.cssicon-plusminus.minus {
-  padding: .438em .4375em .4375em .5em;
-}
-
-.cssicon-plusminus.plus:before, .cssicon-plusminus.minus:before {
-  display: inline-block;
-  line-height: .5;
-  position: relative;
-  font-size: 48px;
-  font-size: 3rem;
+  opacity: .75;
 }
 
 .cssicon-plusminus.plus:before {
-  content: '+';
-  top: 7px;
+  background-color: currentColor;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+}
+
+.cssicon-plusminus.plus:after {
+  background-color: currentColor;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .cssicon-plusminus.minus:before {
-  content: '–';
-  top: 5px;
+  color: #000;
+  width: 40px;
+  height: 1px;
+  background-color: currentColor;
+  position: absolute;
+  top: 20px;
+  left: 0;
 }
 
 .cssicon-arrow-l {
@@ -4321,6 +4324,38 @@ body.color5 {
   }
 }
 
+.hero-wrap {
+  position: relative;
+}
+
+.hero-callout {
+  background-color: #fcb080;
+  padding: 1.5em;
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.hero-callout .link {
+  float: left;
+  width: 50%;
+}
+
+.hero-callout .date {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+.hero-callout .text {
+  clear: both;
+  padding-top: 1em;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
 .content-wrap {
   background-color: #ffffff;
 }
@@ -4511,38 +4546,6 @@ body.color5 {
 
 .home .site-content .content-area {
   padding-top: 0;
-}
-
-.hero-wrap {
-  position: relative;
-}
-
-.hero-callout {
-  background-color: #fcb080;
-  padding: 1.5em;
-  width: 40%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 5;
-}
-
-.hero-callout .link {
-  float: left;
-  width: 50%;
-}
-
-.hero-callout .date {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
-.hero-callout .text {
-  clear: both;
-  padding-top: 1em;
-  font-size: 24px;
-  font-size: 1.5rem;
 }
 
 /* ANIMATED PROGRESS BAR */
@@ -5127,4 +5130,8 @@ body.single-artwork .artwork-img {
   .calltoaction .cta-exhibit a:hover .card-link {
     border-color: #222222;
   }
+}
+
+body.seeart .ucu-button {
+  display: inline-block;
 }

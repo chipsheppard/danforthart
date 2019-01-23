@@ -1,1 +1,0 @@
-jQuery(window).load(function(){var r=document.querySelector(".artworks"),o=new Masonry(r,{itemSelector:".artwork",columnWidth:".artwork"})});
