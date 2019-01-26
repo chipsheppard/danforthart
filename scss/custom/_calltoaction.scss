@@ -1,12 +1,16 @@
 .calltoaction {
 	background-color: $color__tan-xxlt;
-	padding: 3rem 0;
+	padding: 4em 0 0;
 
 	@include breakpoint(tablet-min-v) {
+		padding-bottom: .5em;
+
 		.inner-wrap {
 			display: flex;
 			overflow: hidden;
 			flex-wrap: wrap;
+			max-width: none;
+			overflow: visible;
 
 			.ctablock {
 				flex: 1;
@@ -18,6 +22,10 @@
 		padding: 1em;
 		margin-bottom: 1.5em;
 
+		@include breakpoint(tablet-v) {
+			margin-bottom: 0;
+		}
+
 		.cta-wrap {
 			background-color: #ffffff;
 			height: 100%;
@@ -25,12 +33,10 @@
 
 		.card-title {
 			display: inline-block;
-			font-weight: $font__weight-bold;
-			letter-spacing: 1px;
 			line-height: 1;
 			padding: 0 .5em .75em 1.5em;
-			text-transform: uppercase;
 			float: right;
+			@include bigtext();
 			@include font-size(.875);
 		}
 
@@ -66,10 +72,8 @@
 
 		.card-link {
 			border-bottom: 1px solid $color__base;
-			font-weight: $font__weight-bold;
-			letter-spacing: 1px;
 			padding-bottom: 4px;
-			text-transform: uppercase;
+			@include bigtext();
 		}
 
 		a {
@@ -88,7 +92,11 @@
 	}
 
 	.ctablock:first-of-type {
-		margin-left: 0;
+		margin-left: -4.5em;
+
+		@include breakpoint(tablet-v) {
+			margin-left: 0;
+		}
 	}
 
 	.cta-event {
@@ -156,10 +164,8 @@
 			background-size: cover;
 		}
 		.sub-head {
-			font-weight: $font__weight-bold;
-			letter-spacing: 1px;
 			padding-bottom: .5em;
-			text-transform: uppercase;
+			@include bigtext();
 		}
 		.card-text {
 			margin-bottom: 1.5em;

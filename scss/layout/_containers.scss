@@ -5,16 +5,21 @@
 		width: 100%;
 		padding: 2.5em 0 0;
 
-		@include breakpoint(phone-v) {
-			padding-top: 1em;
+		@include breakpoint(tablet-v) {
+			padding-top: 1.25em;
 		}
 	}
 }
 
 .inner-wrap {
+	clear: both;
 	margin: 0 auto;
 	padding: 0 3%;
 	position: relative;
 	width: 100%;
 	max-width: $size__site-max;
+
+	&.np {
+		padding: 0;
+	}
 }

@@ -12,8 +12,7 @@
 ?>
 
 <div class="calltoaction">
-	<div class="inner-wrap">
-
+<div class="inner-wrap">
 	<?php
 	if ( have_rows( 'cta_block', 'option' ) ) :
 		while ( have_rows( 'cta_block', 'option' ) ) :
@@ -102,5 +101,5 @@
 	?>
 
 	<div class="cf"></div>
-	</div>
+</div>
 </div>

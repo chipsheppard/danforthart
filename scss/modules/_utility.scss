@@ -7,15 +7,10 @@
 		display: none;
 	}
 }
-
 @include breakpoint(tablet-v) {
 	.desktop-only {
 		display: none;
 	}
-}
-
-.pad {
-	padding: 1em;
 }
 
 .ta-center {
@@ -24,156 +19,6 @@
 .ta-right {
 	text-align: right;
 }
-
-.intro {
-	margin-bottom: 1.25em;
-	font-size: 150%;
-}
-
 img.flex {
 	width: 100%;
-}
-
-.bg-base {
-	background-color:$color__base;
-}
-.bg-base-medium {
-	background-color:$color__base-medium;
-}
-.bg-base-light {
-	background-color:$color__base-light;
-}
-.bg-base-xlight {
-	background-color:$color__base-xlight;
-}
-.bg-base-xxlight {
-	background-color:$color__base-xxlight;
-}
-.text-highlight {
-	color:$color__highlight;
-}
-.bg-highlight {
-	background-color:$color__highlight;
-}
-.bb-highlight {
-	border-bottom: 2px solid $color__highlight;
-}
-.text-secondary {
-	color:$color__secondary;
-}
-.bg-secondary {
-	background-color:$color__secondary;
-}
-.bb-secondary {
-	border-bottom: 2px solid $color__secondary;
-}
-.bg-white {
-	background-color: #ffffff;
-}
-.text-white {
-	color: #ffffff;
-}
-.bg-black {
-	background-color: #000000;
-}
-.text-black {
-	color: #000000;
-}
-
-/*
- * CSS Icons
---------------------------------------------- */
-[class*=cssicon-] {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    font-style: normal;
-    color: currentColor;
-    text-align: left;
-    text-indent: -9999px;
-    direction: ltr;
-}
-[class*=cssicon-]:after, [class*=cssicon-]:before {
-    content: '';
-    pointer-events: none;
-}
-
-// CART
-.cssicon-cart {
-    width: 19px;
-    height: 0;
-    border-width: 10px 6px 0 2px;
-    border-style: solid;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    margin: 0 6px 2px;
-}
-.cssicon-cart:before {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 12px, 12px 0, -2px -13px 0 0;
-    top: 0;
-    left: -2px;
-}
-
-
-// TAGS
-.cssicon-tag {
-	background-color: currentColor;
-	border-radius: 1px 0 0 0;
-	border-left: solid 1px currentColor;
-	border-top: solid 1px currentColor;
-	color: currentColor;
-	height: 7px;
-	margin-right: 10px;
-	top: -2px;
-	width: 7px;
-}
-.cssicon-tag:before {
-	content: '';
-    position: absolute;
-    left: 1px;
-    top: 1px;
-    width: 10px;
-    height: 10px;
-    border-radius: 1px;
-    border-left: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-    border-bottom: solid 1px currentColor;
-    background-color: currentColor;
-    transform: rotate(-45deg);
-}
-.cssicon-tag:after {
-	content: '';
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    color: white;
-    background-color: currentColor;
-}
-
-// GATEGORIES (folder)
-.cssicon-folder {
-	width: 15px;
-    height: 10px;
-	margin-right: 4px;
-    margin-top: 2px;
-    position: relative;
-    background-color: currentColor;
-    border-radius: 0 1px 1px 1px;
-}
-.cssicon-folder:before {
-	content: '';
-    width: 60%;
-    height: 3px;
-    border-radius: 0 2px 0 0;
-    background-color: currentColor;
-    position: absolute;
-    top: -2px;
-    left: 0px;
 }

@@ -53,12 +53,10 @@
 				opacity: .5;
 			}
 
-			.link {
+			.slink {
 				border-bottom: 1px solid currentColor;
-				font-weight: $font__weight-bold;
-				letter-spacing: 2px;
 				padding-bottom: 3px;
-				text-transform: uppercase;
+				@include bigtext();
 			}
 		}
 	}
@@ -90,6 +88,7 @@
 			margin-right: 0;
 		}
 	}
+
 	.artwork-img {
 		margin-bottom: .5em;
 

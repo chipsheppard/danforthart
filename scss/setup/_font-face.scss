@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-Light.eot');
   src: url('assets/fonts/Hellix-Light.woff2') format('woff2'),
        url('assets/fonts/Hellix-Light.woff') format('woff'),
@@ -8,7 +8,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-LightItalic.eot');
   src: url('assets/fonts/Hellix-LightItalic.woff2') format('woff2'),
        url('assets/fonts/Hellix-LightItalic.woff') format('woff'),
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-Regular.eot');
   src: url('assets/fonts/Hellix-Regular.woff2') format('woff2'),
        url('assets/fonts/Hellix-Regular.woff') format('woff'),
@@ -27,7 +27,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-RegularItalic.eot');
   src: url('assets/fonts/Hellix-RegularItalic.woff2') format('woff2'),
        url('assets/fonts/Hellix-RegularItalic.woff') format('woff'),
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-Bold.eot');
   src: url('assets/fonts/Hellix-Bold.woff2') format('woff2'),
        url('assets/fonts/Hellix-Bold.woff') format('woff'),
@@ -46,7 +46,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Hellix';
+  font-family: 'DFHellix';
   src: url('assets/fonts/Hellix-BoldItalic.eot');
   src: url('assets/fonts/Hellix-BoldItalic.woff2') format('woff2'),
        url('assets/fonts/Hellix-BoldItalic.woff') format('woff'),
@@ -55,18 +55,25 @@
   font-style: italic;
 }
 
-.salt {
-  -moz-font-feature-settings: "salt";
-  -webkit-font-feature-settings: "salt";
-  font-feature-settings: "salt";
-}
-.salt2 {
-  -moz-font-feature-settings: "salt" 2;
-  -webkit-font-feature-settings: "salt" 2;
-  font-feature-settings: "salt" 2;
-}
-.ss01 {
-  -moz-font-feature-settings: "ss01";
-  -webkit-font-feature-settings: "ss01";
-  font-feature-settings: "ss01";
-}
+.alt-font { font-feature-settings: "ss02", "ss04", "ss05", "ss06", "ss07", "ss08", "ss13", "ss15"; }
+.alt-font-all { font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15"; }
+.ss01 { font-feature-settings: "ss01"; } // a
+.ss02 { font-feature-settings: "ss02"; } // a2 ( sq )
+.ss03 { font-feature-settings: "ss03"; } // c
+.ss04 { font-feature-settings: "ss04"; } // g
+.ss05 { font-feature-settings: "ss05"; } // h
+.ss06 { font-feature-settings: "ss06"; } // j
+.ss07 { font-feature-settings: "ss07"; } // l
+.ss08 { font-feature-settings: "ss08"; } // m
+//.ss09 {}
+.ss10 { font-feature-settings: "ss10"; } // o O
+//.ss11 {}
+//.ss12 {}
+.ss13 { font-feature-settings: "ss13"; } // t
+.ss14 { font-feature-settings: "ss14"; } // u
+.ss15 { font-feature-settings: "ss15"; } // u2 ( sq )
+//.ss16 {}
+.ss17 { font-feature-settings: "ss17"; } // J
+.ss18 { font-feature-settings: "ss18"; } // L
+//.ss19 {}
+//.ss20 {}

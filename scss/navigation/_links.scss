@@ -1,17 +1,26 @@
 a {
-	color: $color__highlight;
+	color: $color__base;
 	text-decoration: none;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__secondary;
+		outline: 0;
 	}
 	&:focus {
 		outline: thin dotted;
 	}
+}
+
+.site-content a:not(.btn) {
+	border-bottom: 1px solid $color__base;
+	padding-bottom: .25em;
+
 	&:hover,
+	&:focus,
 	&:active {
-		outline: 0;
+		border-width: 2px;
+		padding-bottom: .1875em;
 	}
+
 }

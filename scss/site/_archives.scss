@@ -19,14 +19,12 @@
 		}
 
 		&.sticky {
-			border-top:2px solid $color__highlight;
+			border-top:2px solid $color__green;
 		}
 	}
 
-	.entry-content {
-		p {
-			margin-bottom: .25em;
-		}
+	.entry-content p {
+		margin-bottom: .25em;
 	}
 
 	.format-status .entry-content p {
@@ -61,18 +59,13 @@
 
 .featured-image {
 	display: inline-block;
-	transition: all 0.25s ease-in-out;
-
-	&:hover {
-		transform: scale(1.15,1.15);
-	}
 }
 
 .archive-description {
 	line-height: 1.2;
 }
 
-/* READ MORE LINKS */
+/* READ MORE */
 .more-link {
 	display: block;
 	font-weight: $font__weight-bold;

@@ -3,6 +3,25 @@
     "title": "Exhibitions Custom Content",
     "fields": [
         {
+            "key": "field_5c49157d24092",
+            "label": "Sub Heading",
+            "name": "sub_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c4119b7d3b63",
             "label": "Intro",
             "name": "intro",
@@ -182,6 +201,34 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5c4b75776dc5d",
+            "label": "Highlight Color",
+            "name": "highlight_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "green": "Aquamarine",
+                "yellow": "Goldenrod",
+                "blue": "Sky",
+                "purple": "Pansy",
+                "tan": "Mocha"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -201,5 +248,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547774155
+    "modified": 1548449177
 }

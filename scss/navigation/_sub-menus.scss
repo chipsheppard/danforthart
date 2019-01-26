@@ -1,14 +1,11 @@
 .sub-navigation {
 	float: right;
-	margin-bottom: 5em;
+	margin-bottom: 1.25em;
 
 	@include breakpoint(tablet-v) {
 		float: none;
 		text-align: left;
-		margin-bottom: 2.5em;
-	}
-
-	@include breakpoint(phone-v) {
+		margin-left: 1.25em;
 		margin-bottom: 1.5em;
 	}
 
@@ -33,14 +30,12 @@
 
 	a {
 		display: inline-block;
-		border-bottom: 1px solid $color__base;
 		color: $color__base;
 		font-weight: $font__weight-normal;
 		letter-spacing: 1px;
 		line-height: 1.25;
-		padding: .25em 0 .25em;
+		padding-top: .25em;
 		margin: 0 1em;
-		text-transform: none;
 		@include font-size(1.375);
 
 		@include breakpoint(tablet-v) {
@@ -50,11 +45,6 @@
 			@include font-size(.875);
 			margin: 0 .5em;
 		}
-	}
-
-	a:hover {
-		border-width: 2px;
-		padding-bottom: .1875em;
 	}
 
 	.current-menu-item,

@@ -1,20 +1,16 @@
 .search-form {
-	background: transparent;
 	clear: both;
 	position: relative;
 
 	input[type="search"] {
-		border-color: $color__base-xlight;
+		border-color: $color__base-medium;
 		display: inline-block;
 	}
 
 	input[type="submit"] {
 		background: transparent;
 		border: none;
-		border-left: 1px solid $color__base-xlight;
-		border-right: 1px solid $color__base-xlight;
-		border-radius: 0;
-		color: $color__base;
+		border: 1px solid $color__base;
 		display: inline-block;
 		padding: .313em .75em .438em;
 		position: absolute;
@@ -24,8 +20,7 @@
 
 		&:hover,
 		&:focus {
-			background: $color__highlight;
-			color: #fff;
+			border-color: $color__base;
 		}
 	}
 }

@@ -29,12 +29,9 @@ $color__tan-xxlt: #fbf0e3;    // CTA block
 $color__blue-lt: #accaff;     // team
 $color__blue-xlt: #dde9ff;    // fsu comm
 
-$color__highlight: $color__green;
-$color__secondary: $color__orange;
-
 // Font Family
-$font__main: "Hellix", Arial, Helvetica, sans-serif;
-$font__headers: "Hellix", Arial, Helvetica, sans-serif;
+$font__main: "DFHellix", Arial, Helvetica, sans-serif;
+$font__headers: "DFHellix", Arial, Helvetica, sans-serif;
 
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
@@ -50,7 +47,6 @@ $font__line-height-body: 1.75;
 $font__line-height-pre: 1.6;
 
 // Structutal
-$size__site-max: 87.5em; //80em(1280);
-$size__site-main: 100%;
+$size__site-max: 100em; // 1600px - 80em=1280px - 87.5=1400px
 $size__site-content: 70%;
 $size__site-sidebar: 29%;

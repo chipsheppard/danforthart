@@ -1,0 +1,134 @@
+/* 24px PROGRESS BAR */
+@keyframes bg {
+    0% {
+        background-size:    0 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    25% {
+        background-size:    100% 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    50% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            0 24px,
+                            24px 0;
+    }
+    75% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 0;
+    }
+    100% {
+        background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 100%;
+    }
+}
+
+/* 12px PROGRESS BAR */
+@keyframes fibg {
+    0% {
+        background-size:    0 12px,
+                            12px 0,
+                            0 12px,
+                            12px 0;
+    }
+    25% {
+        background-size:    100% 12px,
+                            12px 0,
+                            0 12px,
+                            12px 0;
+    }
+    50% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            0 12px,
+                            12px 0;
+    }
+    75% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            100% 12px,
+                            12px 0;
+    }
+    100% {
+        background-size:    100% 12px,
+                            12px 100%,
+                            100% 12px,
+                            12px 100%;
+    }
+}
+
+.progbar-trigger {
+	position: relative;
+}
+.progbar-trigger:hover .progbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to bottom, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to right, $color__orange 100%, $color__orange 100%),
+                        linear-gradient(to bottom, $color__orange 100%, $color__orange 100%);
+    background-size:    100% 12px,
+                        12px 100%,
+                        100% 12px,
+                        12px 100%;
+    background-position:    0 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+
+    animation: fibg 1s;
+
+	&.big {
+		animation: bg 1s;
+		background-size:    100% 24px,
+	                        24px 100%,
+	                        100% 24px,
+	                        24px 100%;
+	}
+
+	&.green {
+		background-image:   linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%);
+	}
+	&.yellow {
+		background-image:   linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%);
+	}
+	&.blue {
+		background-image:   linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%);
+	}
+	&.tan {
+		background-image:   linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%);
+	}
+	&.purple {
+		background-image:   linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%);
+	}
+}

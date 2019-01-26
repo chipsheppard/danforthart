@@ -1,6 +1,344 @@
 body.seeart {
 
-	.ucu-button {
-		display: inline-block;
+	.intro {
+		font-weight: $font__weight-bold;
+		line-height: 1.25;
+		padding: 2em 0 5em 1em;
+		width: 50%;
+		@include font-size(2.8125);
+
+		@include breakpoint(tablet-v) {
+			padding-top: 2em;
+			padding-left: 0;
+			width: 100%;
+ 			@include font-size(1.375);
+		}
 	}
+
+	.el-text,
+	.ert-date,
+	.erb-date {
+		font-weight: $font__weight-light;
+		padding: 0 1em .75em;
+		@include font-size(1.375);
+
+	}
+
+	.ert-date,
+	.erb-date {
+		text-align: right;
+
+		@include breakpoint(tablet-v) {
+			display: none;
+		}
+	}
+
+	.el-image,
+	.ert-image,
+	.erb-image {
+		position: relative;
+
+		a {
+			@include nb();
+			display: inline-block;
+		}
+
+		img {
+			display: block;
+		}
+	}
+
+	.el-callout,
+	.ert-callout,
+	.erb-callout {
+		background-color:  #ffffff;;
+		bottom: 0;
+		left: 0;
+		max-width: 90%;
+		padding: 1.5em 2em;
+		position: absolute;
+		z-index: 5;
+
+		.sub-title {
+			@include bigtext();
+		}
+
+		.title {
+			font-weight: $font__weight-light;
+			line-height: 1.25;
+			@include font-size(1.625);
+		}
+
+		@include breakpoint(tablet-v) {
+			padding: .5em 1.5em 2em;
+			position: relative;
+
+			.sub-title {
+				display: none;
+			}
+
+			.title {
+				@include font-size(1.375);
+			}
+		}
+	}
+
+	.exhibit-left {
+		margin-top: -3.375em;
+	}
+
+	.exhibit-right-top {
+		margin-top: -18em;
+		margin-bottom: 12em;
+	}
+
+
+
+	.quote-block {
+		margin: 15em 0 10em;
+
+		@include breakpoint(tablet-v) {
+			margin: 5em 0 0;
+		}
+
+		.large-link {
+			padding: 2em 0 3em 3em;
+
+			a {
+				font-weight: $font__weight-bold;
+				@include font-size(1.6875);
+			}
+
+			@include breakpoint(tablet-v) {
+				padding: 0 0 2.5em 3%;
+
+				a {
+					@include font-size(1.375);
+				}
+			}
+		}
+
+		blockquote {
+			line-height: 1.375;
+			margin-top: 0;
+			padding-top: 0;
+			@include font-size(2.8125);
+
+			cite {
+				@include font-size(1.4375);
+
+				a {
+					@include font-size(1);
+				}
+			}
+
+			&:before {
+				top: -0.25em;
+			}
+
+			@include breakpoint(tablet-v) {
+				@include font-size(1.875);
+
+				cite {
+					@include font-size(1.25);
+				}
+			}
+		}
+	}
+
+
+
+	.upcoming-top {
+		margin-bottom: 4em;
+
+		h3 {
+			@include font-size(5);
+
+			@include breakpoint(tablet-v) {
+				margin-left: 3%;
+				@include font-size(2.5);
+			}
+		}
+
+		.view-past {
+			padding-top: 2em;
+			text-align: right;
+
+			@include breakpoint(tablet-v) {
+				padding-top: 1em;
+				margin-left: 3%;
+				text-align: left;
+			}
+		}
+	}
+
+
+	.upcoming-exhibits {
+		margin-bottom: 20em;
+
+		@include breakpoint(tablet-v) {
+			margin-bottom: 5em;
+		}
+	}
+
+	.u-exhibit {
+		border-style: solid;
+		border-width: 1px 1px 0 1px;
+		clear: both;
+
+		&:nth-last-of-type(1) {
+			border-bottom-width: 1px;
+		}
+
+		&.orange {
+			border-color: $color__orange;
+			&:hover {
+				background-color: $color__orange;
+			}
+		}
+		&.green {
+			border-color: $color__green;
+			&:hover {
+				background-color: $color__green;
+			}
+		}
+		&.yellow {
+			border-color: $color__yellow;
+			&:hover {
+				background-color: $color__yellow;
+			}
+		}
+		&.blue {
+			border-color: $color__blue;
+			&:hover {
+				background-color: $color__blue;
+			}
+		}
+		&.tan {
+			border-color: $color__tan;
+			&:hover {
+				background-color: $color__tan;
+			}
+		}
+
+		h4 {
+			@include font-size(1);
+			@include bigtext();
+
+			@include breakpoint(tablet-v) {
+				display: none;
+			}
+		}
+
+		h3 {
+			font-weight: $font__weight-light;
+
+			@include breakpoint(tablet-v) {
+				font-weight: $font__weight-bold;
+				padding: .25em 3%;
+			}
+		}
+
+		&:nth-child(2n+2) {
+			.ue-image,
+			.ue-caption {
+				float: right;
+				order: 3;
+
+				@include breakpoint(tablet-v) {
+					float: none;
+					order: 0;
+				}
+			}
+		}
+	}
+
+	.ue-upper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.ue-image,
+	.ue-caption {
+		margin-left: 0;
+		order: 0;
+	}
+	.ue-image img {
+		display: block;
+		max-width: none;
+		width: 100%;
+	}
+
+	.ue-date,
+	.ue-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	@include breakpoint(tablet-v) {
+		.ue-date,
+		.ue-button {
+			float: left;
+			margin-bottom: 2em;
+			width: 50%;
+		}
+		.ue-date {
+			justify-content: space-between;
+			padding-left: 3%;
+		}
+	}
+
+	.ue-lower {
+		clear: both;
+	}
+	.ue-caption {
+		line-height: 1.25;
+		padding: .5em 1em;
+	}
+	.ue-content {
+		margin-top: -2em;
+		padding-right: 3em;
+		padding-bottom: 3em;
+	}
+	.ue-social {
+		clear: both;
+		margin-top: 2em;
+
+		.social-link {
+			display: inline;
+			margin-right: 1.5em;
+
+			a:hover {
+				opacity: .70;
+			}
+			.cssicon-facebook:after {
+				color: #ffffff;
+			}
+		}
+	}
+
+	@include breakpoint(tablet-v) {
+		.content-wrap .inner-wrap {
+			padding: 0;
+		}
+		.el-text {
+			@include font-size(1);
+		}
+		.exhibit-right-top {
+			margin-top: 0;
+			margin-bottom: 2em;
+		}
+		.ue-caption {
+			display: none;
+		}
+		.ue-content {
+			margin-top: -1em;
+			padding-left: 3%;
+			padding-right: 3%;
+		}
+	}
+}
+
+.site-content .social-link a {
+	@include nb();
 }

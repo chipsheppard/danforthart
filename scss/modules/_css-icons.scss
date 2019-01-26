@@ -54,6 +54,23 @@
 		top: 20px;
 		left: 0;
 	}
+
+	@include breakpoint(tablet-v) {
+		height: 30px;
+		width: 30px;
+		&.plus:before {
+			top: 15px;
+			width: 30px;
+		}
+		&.plus:after {
+			top: 15px;
+			width: 30px;
+		}
+		&.minus:before {
+			top: 15px;
+		    width: 30px;
+		}
+	}
 }
 
 // LEFT
@@ -75,14 +92,14 @@
 	transform: rotate(45deg);
 }
 .cssicon-arrow-l:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 8px;
-  height: 1px;
-  background-color: currentColor;
-  transform: rotate(-45deg);
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 8px;
+	height: 1px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
 }
 
 
@@ -386,7 +403,7 @@
 
 .iconwrap {
 	padding: .625em .625em .875em;
-	margin-right: 1em;
+	margin-right: .5em;
 	border: 1px solid currentColor;
 
 	&.c {

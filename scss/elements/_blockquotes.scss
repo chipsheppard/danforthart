@@ -9,6 +9,7 @@ q:after {
 }
 
 blockquote {
+	font-weight: $font__weight-light;
 	margin: .75em 1.5em 1.5em 0;
 	padding: 1.5em 1em 1.5em;
 	position: relative;
@@ -42,9 +43,7 @@ blockquote {
 
 		a {
 			color: $color__base;
-			padding-bottom: 3px;
-			border-bottom: 1px solid $color__base;
-			font-weight: $font__weight-bold;
+			@include bigtext();
 		}
 	}
 

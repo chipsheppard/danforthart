@@ -81,16 +81,15 @@
  * Project List show/hide
  */
 jQuery(function( $ ){
-	$('.l').hide();
-	$( '.cssicon-plusminus' ).click(function() {
+	$('.u-exhibit').find('.cssicon-plusminus').click(function() {
 		if ( $(this).hasClass( 'plus' ) ) {
 			$(this).removeClass( 'plus' );
 			$(this).addClass( 'minus' );
-			$('.extended').slideDown(200);
+			$(this).parents().children('.extended').slideDown(200);
 		} else {
 			$(this).removeClass( 'minus' );
 			$(this).addClass( 'plus' );
-			$('.extended').slideUp(200);
+			$(this).parents().children('.extended').slideUp(200);
 		}
 	} );
 } );

@@ -1,0 +1,57 @@
+.exhibit-modal {
+	background-color: #ffffff;
+	border: 2px solid $color__base;
+	position: absolute;
+	z-index: 999;
+	left: 1%;
+	top: 1%;
+	display: none;
+	width: 98%;
+	height: 98vh;
+	padding: 4em 15%;
+
+	&.show {
+    	display: block!important;
+ 	}
+
+	.close-modal {
+		cursor: pointer;
+		font-weight: $font__weight-light;
+		opacity: .5;
+		position: absolute;
+		top: .25em;
+		right: .5em;
+		@include font-size(3);
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.modal-img {
+		text-align: center;
+
+		.modal-image {
+			display: inline-block;
+			width: auto;
+			max-height: 65vh;
+			margin: auto 0;
+		}
+	}
+
+	.artwork-info {
+		text-align: center;
+	}
+}
+
+.modal-nav {
+	position: absolute;
+	bottom: 0;
+	right: 3em;
+}
+.pagingInfo {
+	color: $color__base;
+	font-weight: $font__weight-light;
+	margin-right: 2.5em;
+	@include font-size(3);
+}

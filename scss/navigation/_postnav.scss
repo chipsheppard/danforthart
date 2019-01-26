@@ -19,7 +19,7 @@
 
 		a {
 			border-top: 1px solid $color__base-xlight;
-			color: $color__base;
+			color: $color__base-medium;
 			display: inline-block;
 			padding: 1em .5em;
 			position: relative;
@@ -27,7 +27,7 @@
 			word-break: break-word;
 
 			&:hover {
-				color: $color__highlight;
+				color: $color__base;
 			}
 
 			span {
@@ -105,7 +105,7 @@
 
 		a {
 			border-top: 1px solid $color__base-xlight;
-			color: $color__base;
+			color: $color__base-medium;
 			display: inline-block;
 			padding-top: 1em;
 			padding-bottom: 1em;
@@ -113,7 +113,7 @@
 			width: 100%;
 
 			&:hover {
-				color: $color__highlight;
+				color: $color__base;
 			}
 		}
 	}
