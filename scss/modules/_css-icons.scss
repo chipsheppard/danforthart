@@ -55,6 +55,23 @@
 		left: 0;
 	}
 
+	&.small {
+		height: 30px;
+		width: 30px;
+		&.plus:before {
+			top: 15px;
+			width: 30px;
+		}
+		&.plus:after {
+			top: 15px;
+			width: 30px;
+		}
+		&.minus:before {
+			top: 15px;
+		    width: 30px;
+		}
+	}
+
 	@include breakpoint(tablet-v) {
 		height: 30px;
 		width: 30px;
@@ -102,6 +119,35 @@
 	transform: rotate(-45deg);
 }
 
+// RIGHT
+.cssicon-arrow-r {
+	color: currentColor;
+	text-indent: 0;
+	margin-right: .5em;
+	width: 30px;
+	height: 40px;
+}
+.cssicon-arrow-r:before {
+	content: '';
+	position: absolute;
+	top: 29px;
+	left: 0;
+	width: 28px;
+	height: 1px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
+}
+.cssicon-arrow-r:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top:10px;
+	width: 28px;
+	height: 1px;
+	background-color: currentColor;
+	transform: rotate(45deg);
+}
+
 
 // FILE
 .cssicon-file {
@@ -142,38 +188,6 @@
 
 
 /*
-// RIGHT
-.cssicon-arrow-r {
-	background-color: $color__base-light;
-	border: 2px solid $color__base;
-    border-radius: 50%;
-	color: #ffffff;
-	text-indent: 0;
-	margin-top: 0;
-	margin-left: 0;
-	width: 42px;
-	height: 42px;
-}
-.cssicon-arrow-r:before {
-	content: '';
-	position: absolute;
-	top: 23px;
-	left: 12px;
-	width: 15px;
-	height: 2px;
-	background-color: currentColor;
-	transform: rotate(-45deg);
-}
-.cssicon-arrow-r:after {
-  content: '';
-  position: absolute;
-  left: 12px;
-  top: 13px;
-  width: 15px;
-  height: 2px;
-  background-color: currentColor;
-  transform: rotate(45deg);
-}
 
 // DOWN
 .cssicon-arrow-d {

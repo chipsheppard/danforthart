@@ -10,7 +10,11 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'single-exhibition seeart' ) );
+	if ( has_term( 'special-collection' ,'exhibition_type' ) ) {
+		$classes[] = 'special-collection';
+	}
+	$classes[] = 'seeart';
+	return $classes;
 } );
 
 /**
@@ -29,7 +33,15 @@ function da_exhibition() {
 		</div>
 
 		<div class="return">
+		<?php
+		$body_classes = get_body_class();
+		if ( in_array( 'special-collection', $body_classes, true ) ) :
+		?>
+			<a href="/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+		<?php else : ?>
 			<a href="/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
+		<?php endif; ?>
+
 		</div>
 
 		<div class="cf"></div>

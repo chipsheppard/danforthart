@@ -1,15 +1,14 @@
 .hero-wrap {
 	clear: both;
 	position: relative;
-	background-color: $color__orange;
 }
 .heroimage,
 .heroslider {
 	img {
-		width: 100%;
 		max-width: none;
 		min-height: 500px;
 		object-fit: cover;;
+		width: 100%;
 	}
 }
 .hero-callout {

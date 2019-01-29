@@ -1,0 +1,69 @@
+body.past {
+	background-color: #ffd2b5;
+
+	.intro {
+		padding-bottom: 10em;
+		width: 80%;
+
+		@include breakpoint(tablet-v) {
+			width: 100%;
+		}
+	}
+	.exhibit-right-top {
+	    margin-top: -24em;
+	}
+
+	.el-image img {
+		height: 586px;
+	}
+
+	.past-top {
+		margin-top: 12em;
+	}
+	.past-exhibits {
+		margin-bottom: 4em;
+	}
+	.x-past-exhibits {
+		display: none;
+	}
+
+	.viewmore-past {
+		text-align: right;
+		margin-bottom: 4em;
+
+		.viewmore {
+			border-bottom: 1px solid $color__base;
+			cursor: pointer;
+			display: inline-block;
+			padding-bottom: 4px;
+			font-weight: $font__weight-bold;
+		}
+
+		.cssicon-plusminus {
+			margin-left: 1em;
+		}
+	}
+
+	.calltoaction {
+		margin-top: 8em;
+	}
+}
+
+body.past.seeart{
+	.intro {
+		width: 70%;
+		@include breakpoint(tablet-v) {
+			width: 100%;
+		}
+	}
+}
+
+.past-exhibits {
+	.cssicon-arrow-r {
+		cursor: pointer;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

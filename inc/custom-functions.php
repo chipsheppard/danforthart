@@ -64,7 +64,7 @@ add_action( 'danforthart_init', 'danforthart_body_color_class' );
 
 
 /**
- * Write styles for the custom background color from the BGcolor Meta Box.
+ * META BOX FUNCTIONS Write styles for the custom background color from tBGcolor Meta Box.
  */
 function write_bgcolor() {
 
@@ -76,15 +76,16 @@ function write_bgcolor() {
 	$blog_id = get_option( 'page_for_posts' );
 	$color = sanitize_hex_color( get_post_meta( get_the_ID(), 'bgcolor_color', true ) );
 	$blog_color = sanitize_hex_color( get_post_meta( $blog_id, 'bgcolor_color', true ) );
+	$default = '#ffffff';
 
 	// For blog page.
-	if ( is_home() && ! is_front_page() && $blog_color ) :
+	if ( is_home() && ! is_front_page() && $blog_color !== $default ) :
 		?>
 <style type="text/javascript">body {background-color:<?php echo esc_html( $blog_color ); ?>;}</style>
 		<?php
-	elseif ( is_singular() && $color ) :
+	elseif ( is_singular() && $color !== $default ) :
 		?>
-<style type="text/css">body {background-color:<?php echo esc_html( $color ); ?>;}</style>
+<style type="text/css">body,.exhibition-featured-date,.hero-callout {background-color:<?php echo esc_html( $color ); ?> !important;}</style>
 		<?php
 	endif;
 

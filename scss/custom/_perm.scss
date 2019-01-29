@@ -1,0 +1,13 @@
+body.permanent {
+}
+.opm {
+	position: relative;
+
+	a {
+		display: inline-block;
+	}
+}
+.opm.stuck {
+	position: fixed;
+	top: 0;
+}

@@ -22,10 +22,9 @@ function da_current() {
 
 	// Child page menu.
 	echo '<div class="sub-navigation">';
-		wp_nav_menu( array(
-			'menu' => 'see-art-sub',
-			'container' => '',
-		) );
+	wp_nav_menu( array(
+		'menu' => 'see-art-sub',
+	) );
 	echo '</div>';
 	?>
 
@@ -189,8 +188,6 @@ endif;
 						if ( ! empty( $erb_image ) ) :
 							$erb_url = $erb_image['url'];
 							$erb_alt = $erb_image['alt'];
-							$erb_width = $erb_image['width'];
-							$erb_height = $erb_image['height'];
 							$erb_size = 'medium_large';
 							$erb_width = $erb_image['sizes'][ $erb_size . '-width' ];
 							$erb_height = $erb_image['sizes'][ $erb_size . '-height' ];
@@ -269,8 +266,9 @@ endif;
 								if ( ! empty( $u_image ) ) :
 									$u_url = $u_image['url'];
 									$u_alt = $u_image['alt'];
-									$u_width = $u_image['width'];
-									$u_height = $u_image['height'];
+									$u_size = 'medium';
+									$u_width = $u_image['sizes'][ $u_size . '-width' ];
+									$u_height = $u_image['sizes'][ $u_size . '-height' ];
 									?>
 									<img src="<?php echo esc_url( $u_url ); ?>" alt="<?php echo esc_attr( $u_alt ); ?>" width="<?php echo esc_attr( $u_width ); ?>" height="<?php echo esc_attr( $u_height ); ?>" />
 								<?php endif; ?>

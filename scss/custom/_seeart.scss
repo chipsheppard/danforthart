@@ -16,6 +16,7 @@ body.seeart {
 	}
 
 	.el-text,
+	.el-date,
 	.ert-date,
 	.erb-date {
 		font-weight: $font__weight-light;
@@ -24,6 +25,7 @@ body.seeart {
 
 	}
 
+	.el-date,
 	.ert-date,
 	.erb-date {
 		text-align: right;
@@ -45,7 +47,16 @@ body.seeart {
 
 		img {
 			display: block;
+			object-fit: cover;;
+			width: 100%;
 		}
+	}
+	.ert-image img,
+	.erb-image img {
+		height: 586px;
+	}
+	.el-image img {
+		height: 800px;
 	}
 
 	.el-callout,
@@ -148,7 +159,8 @@ body.seeart {
 
 
 
-	.upcoming-top {
+	.upcoming-top,
+	.past-top {
 		margin-bottom: 4em;
 
 		h3 {
@@ -157,6 +169,10 @@ body.seeart {
 			@include breakpoint(tablet-v) {
 				margin-left: 3%;
 				@include font-size(2.5);
+			}
+
+			span {
+				font-weight: $font__weight-light;
 			}
 		}
 
@@ -173,7 +189,7 @@ body.seeart {
 	}
 
 
-	.upcoming-exhibits {
+	.upcoming-exhibit {
 		margin-bottom: 20em;
 
 		@include breakpoint(tablet-v) {
@@ -181,7 +197,8 @@ body.seeart {
 		}
 	}
 
-	.u-exhibit {
+	.u-exhibit,
+	.p-exhibit {
 		border-style: solid;
 		border-width: 1px 1px 0 1px;
 		clear: both;
@@ -220,6 +237,12 @@ body.seeart {
 				background-color: $color__tan;
 			}
 		}
+		&.purple {
+			border-color: $color__purple;
+			&:hover {
+				background-color: $color__purple;
+			}
+		}
 
 		h4 {
 			@include font-size(1);
@@ -253,36 +276,46 @@ body.seeart {
 		}
 	}
 
-	.ue-upper {
+	.ue-upper,
+	.pe-upper {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
 	.ue-image,
-	.ue-caption {
+	.ue-caption,
+	.pe-image {
 		margin-left: 0;
 		order: 0;
 	}
-	.ue-image img {
+	.ue-image img,
+	.pe-image img {
 		display: block;
 		max-width: none;
+		height: 240px;
+		object-fit: cover;;
 		width: 100%;
 	}
 
 	.ue-date,
-	.ue-button {
+	.ue-button,
+	.pe-date,
+	.pe-button {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	@include breakpoint(tablet-v) {
 		.ue-date,
-		.ue-button {
+		.ue-button,
+		.pe-date,
+		.pe-button {
 			float: left;
 			margin-bottom: 2em;
 			width: 50%;
 		}
-		.ue-date {
+		.ue-date,
+		.pe-date {
 			justify-content: space-between;
 			padding-left: 3%;
 		}
@@ -339,6 +372,7 @@ body.seeart {
 	}
 }
 
-.site-content .social-link a {
+.site-content .social-link a,
+.site-content .pe-button a {
 	@include nb();
 }

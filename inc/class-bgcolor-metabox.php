@@ -154,7 +154,7 @@ class Bgcolor_Metabox {
 		<script type="text/javascript">
 			jQuery(document).ready(function($){
 				$('#bgcolor_color').wpColorPicker( {
-					palettes: ['#000000', '#ffffff', '#f1a676', '#93ddce', '#f6d06d', '#edd6b9', '#afc2e3']
+					palettes: ['#000000', '#f1a676', '#93ddce', '#f6d06d', '#edd6b9', '#9ed4ef', '#afc2e3']
 				} );
 			});
 		</script>

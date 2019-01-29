@@ -57,13 +57,12 @@
 	float: left;
 	height: 100%;
 	min-height: 1px;
-	//margin: 0;
+
 	[dir="rtl"] & {
         float: right;
     }
 	img {
 		display: block;
-		//width: 100%;
 	}
 	&.slick-loading img {
         display: none;
@@ -89,10 +88,6 @@
         border: 1px solid transparent;
     }
 }
-.slick-arrow.slick-hidden {
-	display: none;
-}
-
 
 // HEROSLIDER -------------------------------------
 .heroslider {
@@ -112,6 +107,19 @@
 }
 
 /* Arrows ------------------------------------- */
+
+.slick-arrow {
+	&.slick-hidden {
+		display: none;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: none;
+	}
+}
+
 .prev,
 .next {
 	background: transparent;
