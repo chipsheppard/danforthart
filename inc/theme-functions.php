@@ -88,7 +88,7 @@ add_action( 'tha_header_top', 'danforthart_display_nav' );
 
 
 /**
- * DISPLAY the parent page nane
+ * DISPLAY the parent page nane ( in header )
  */
 function display_parent() {
 	$current = $post->ID;

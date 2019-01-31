@@ -2,32 +2,31 @@
 	display: none;
 	position: absolute;
 	right: 1.5em;
-	top: 1em;
+	top: 1.5em;
 
 	@include breakpoint(tablet-v) {
 		display: block;
 	}
 	@include breakpoint(phone-h) {
-		top: .75em;
+		top: 1em;
 	}
 	@include breakpoint(phone-v) {
 		right: 1em;
-		top: .25em;
 	}
 
 	.section-title {
 		display: inline-block;
 		font-weight: $font__weight-bold;
 		letter-spacing: 1px;
+		line-height: 1;
 		margin-right: 2em;
-		position: relative;
-		top: .25em;
+		padding-bottom: .5em;
+		vertical-align: middle;
 		text-transform: uppercase;
 		@include font-size(1);
 
 		@include breakpoint(phone-h) {
 			margin-right: 1em;
-			top: .375em;
 			@include font-size(.875);
 		}
 		@include breakpoint(phone-v) {

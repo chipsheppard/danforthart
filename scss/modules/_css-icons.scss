@@ -126,26 +126,84 @@
 	margin-right: .5em;
 	width: 30px;
 	height: 40px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 29px;
+		left: 0;
+		width: 28px;
+		height: 1px;
+		background-color: currentColor;
+		transform: rotate(-45deg);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top:10px;
+		width: 28px;
+		height: 1px;
+		background-color: currentColor;
+		transform: rotate(45deg);
+	}
+
+	&.small {
+		margin-right: 0;
+		width: 15px;
+		height: 20px;
+		&:before {
+			top: 14px;
+			width: 14px;
+		}
+		&:after {
+			top: 5px;
+			width: 14px;
+		}
+	}
 }
-.cssicon-arrow-r:before {
-	content: '';
-	position: absolute;
-	top: 29px;
-	left: 0;
-	width: 28px;
-	height: 1px;
-	background-color: currentColor;
-	transform: rotate(-45deg);
-}
-.cssicon-arrow-r:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top:10px;
-	width: 28px;
-	height: 1px;
-	background-color: currentColor;
-	transform: rotate(45deg);
+
+// UP/DOWN
+.cssicon-updown {
+	color: currentColor;
+	text-indent: 0;
+	margin-right: .5em;
+	width: 24px;
+	height: 16px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 14px;
+		height: 1px;
+		background-color: currentColor;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 14px;
+		height: 1px;
+		background-color: currentColor;
+	}
+
+	// UP
+	&.up:before {
+		transform: rotate(-45deg);
+	}
+	&.up:after {
+		transform: rotate(45deg);
+	}
+	// DOWN
+	&.down:before {
+		transform: rotate(45deg);
+	}
+	&.down:after {
+		transform: rotate(-45deg);
+	}
 }
 
 
@@ -189,39 +247,6 @@
 
 /*
 
-// DOWN
-.cssicon-arrow-d {
-	border: 2px solid #ffffff;
-    border-radius: 50%;
-	color: #ffffff;
-	text-indent: 0;
-	margin-top: 0;
-	margin-left: 0;
-	width: 25px;
-	height: 25px;
-}
-
-.cssicon-arrow-d:before {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 10px;
-  width: 8px;
-  height: 2px;
-  background-color: currentColor;
-  transform: rotate(45deg);
-}
-
-.cssicon-arrow-d:after {
-	content: '';
-	position: absolute;
-	left: 9px;
-	top: 10px;
-	width: 8px;
-	height: 2px;
-	background-color: currentColor;
-	transform: rotate(-45deg);
-}
 
 
 // CART

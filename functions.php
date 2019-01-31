@@ -52,6 +52,10 @@ function danforthart_scripts() {
 		wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 		wp_enqueue_script( 'exhibits-js', get_template_directory_uri() . '/assets/js/exhibits-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
+	if ( is_page_template( 'templates/permanent.php' ) ) {
+		wp_enqueue_script( 'masonry' );
+		wp_enqueue_script( 'permanent-js', get_template_directory_uri() . '/assets/js/permanent-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
 
@@ -129,6 +133,7 @@ add_filter( 'wp_revisions_to_keep', 'danforthart_set_revision_max', 10, 2 );
 // ACF Options.
 if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page( 'Call To Action' );
+	acf_add_options_page( 'Signup Form' );
 }
 
 // Load Jetpack compatibility file.

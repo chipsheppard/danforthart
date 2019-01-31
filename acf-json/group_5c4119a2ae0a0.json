@@ -25,7 +25,7 @@
             "key": "field_5c4119b7d3b63",
             "label": "Intro",
             "name": "intro",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -35,10 +35,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
         },
         {
             "key": "field_5c411a49d3b64",
@@ -207,7 +207,7 @@
             "label": "Highlight Color",
             "name": "highlight_color",
             "type": "select",
-            "instructions": "",
+            "instructions": "Tangerine (orange) is default and will display If no selection is made.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -216,6 +216,7 @@
                 "id": ""
             },
             "choices": {
+                "orange": "Tangerine",
                 "green": "Aquamarine",
                 "yellow": "Goldenrod",
                 "blue": "Sky",
@@ -223,7 +224,7 @@
                 "tan": "Mocha"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -248,5 +249,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548449177
+    "modified": 1548888548
 }

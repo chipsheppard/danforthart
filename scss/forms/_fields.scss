@@ -14,20 +14,22 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	background-color: #ffffff;
-	border: 1px solid $color__base-xlight;
-	padding: .5em;
+	background-color: transparent;
+	border: 1px solid $color__base;
+	padding: .5em 1.5em;
 	width: 100%;
 	-webkit-appearance: none;
 
 	&:focus {
-		border: 1px solid $color__base-light;
+		background-color: #ffffff;
+		border-width: 2px;
 		outline: none;
+		padding: .4375em 1.5em;
 	}
 }
 
 select {
-	border: 1px solid $color__base-light;
+	border: 1px solid $color__base;
 }
 
 .post-password-form {
@@ -38,10 +40,10 @@ select {
 }
 
 ::-moz-placeholder {
-	color: $color__base-light;
+	color: $color__base;
 	opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-	color: $color__base-light;
+	color: $color__base;
 }

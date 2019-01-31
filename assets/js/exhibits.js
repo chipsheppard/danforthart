@@ -1,5 +1,5 @@
 /**
- * JS for Exhibit and Current modal displays
+ * JS for the Single Exhibit template (current,past,special collection)
  *
  * @package  danforthart
  * @subpackage danforthart/assets/js

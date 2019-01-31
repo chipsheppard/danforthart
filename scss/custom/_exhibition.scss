@@ -13,92 +13,6 @@ body.single-exhibition {
 		@include font-size(1.875);
 	}
 
-	.page-title {
-		padding: 3rem 2.5rem 6rem;
-		@include font-size(4.6875);
-	}
-
-	.ex-intro {
-		font-weight: $font__weight-light;
-		padding: 0 4rem 8rem 2.5rem;
-		@include font-size(1.625);
-	}
-	.ex-content {
-		padding: 0 8rem 8rem 0;
-	}
-	.ex-info {
-		padding: 0 0 5rem 2.5rem;
-
-		span {
-			font-weight: $font__weight-bold;
-		}
-	}
-
-	.ex-social {
-		padding: 1rem 10rem 5rem 0;
-		text-align: right;
-
-		.social-link {
-			margin-bottom: 2em;
-		}
-
-		.cssicon-facebook:after {
-			color: $color__tan;
-		}
-
-		a {
-			color: #000000;
-
-			&:hover {
-				opacity: .5;
-			}
-
-			.slink {
-				border-bottom: 1px solid currentColor;
-				padding-bottom: 3px;
-				@include bigtext();
-			}
-		}
-	}
-
-	.artworks {
-		margin: 3em 0;
-	}
-
-	.artwork {
-		width: 23%;
-		margin-left: 1%;
-		margin-right: 1%;
-		padding-bottom: 3em;
-		@include font-size(.875);
-
-		@include breakpoint(tablet-v) {
-			width: 47%;
-			margin-left: 1.5%;
-			margin-right: 1.5%;
-		}
-		@include breakpoint(phone-h) {
-			width: 46%;
-			margin-left: 2%;
-			margin-right: 2%;
-		}
-		@include breakpoint(phone-v) {
-			width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-
-	.artwork-img {
-		margin-bottom: .5em;
-
-		img {
-			display: block;
-			max-width: none;
-			width: 100%;
-		}
-	}
-
 	blockquote {
 		font-weight: $font__weight-light;
 		line-height: 1.375;
@@ -149,6 +63,123 @@ body.single-exhibition {
 			padding-bottom: .5em;
 			padding-left: .5em;
 			padding-right: .5em;
+		}
+	}
+}
+
+.artworks {
+	margin: 3em 0;
+
+	.artwork {
+		width: 23%;
+		margin-left: 1%;
+		margin-right: 1%;
+		padding-bottom: 3em;
+		@include font-size(.875);
+
+		@include breakpoint(tablet-v) {
+			width: 47%;
+			margin-left: 1.5%;
+			margin-right: 1.5%;
+		}
+		@include breakpoint(phone-h) {
+			width: 46%;
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+		@include breakpoint(phone-v) {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.artwork-img {
+		margin-bottom: .5em;
+
+		a {
+			display: inline-block;
+			width: 100%;
+			@include nb();
+		}
+		img {
+			display: block;
+			max-width: none;
+			width: 100%;
+		}
+	}
+}
+
+.ex-page-title {
+	line-height: 1;
+	padding: .5em 0 .25em .25em;
+	@include font-size(4.6875);
+
+	@include breakpoint(tablet-v) {
+		padding: .5em 0 1em 0;
+		@include font-size(3.2);
+	}
+}
+
+.ex-intro {
+	font-weight: $font__weight-light;
+	padding: 0 0 4em 1em;
+	@include font-size(1.625);
+
+	@include breakpoint(tablet-v) {
+		padding: 0 0 2em;
+	}
+	@include breakpoint(phone-h) {
+		line-height: 1.5;
+		@include font-size(1.125);
+	}
+}
+.ex-content {
+	padding: 0 2em 2em 4em;
+
+	@include breakpoint(tablet-v) {
+		padding: 0 0 2em;
+	}
+}
+.ex-info {
+	padding: 0 0 5em 2.5em;
+
+	@include breakpoint(tablet-v) {
+		padding: 0 0 3em 0;
+	}
+
+	span {
+		font-weight: $font__weight-bold;
+	}
+}
+
+.ex-social {
+	padding: 1em 10em 5em 0;
+	text-align: right;
+
+	@include breakpoint(tablet-v) {
+		padding: 0 1em 2em 0;
+		text-align: left;
+	}
+	.social-link {
+		margin-bottom: 2em;
+	}
+
+	.cssicon-facebook:after {
+		color: $color__tan;
+	}
+
+	a {
+		color: #000000;
+
+		&:hover {
+			opacity: .5;
+		}
+
+		.slink {
+			border-bottom: 1px solid currentColor;
+			padding-bottom: 3px;
+			@include bigtext();
 		}
 	}
 }

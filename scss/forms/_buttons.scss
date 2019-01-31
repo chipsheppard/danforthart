@@ -8,12 +8,14 @@ button,
 	border: 1px solid $color__base;
 	cursor: pointer;
 	line-height: normal;
-	padding: .875em 1em .75em;
+	padding: .875em 1.5em .75em;
 	position: relative;
 	text-decoration: none;
 	white-space: normal;
 	z-index: 1;
-	@include bigtext();
+	font-weight: $font__weight-bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 
 	&:hover,
 	&:focus,
@@ -21,6 +23,20 @@ button,
 		background-color: #000000;
 		color: #ffffff;
 		outline: 0;
+	}
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background-color: $color__base;
+	border: 2px solid $color__base;
+	color: #ffffff;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: #ffffff;
+		color: $color__base;
 	}
 }
 

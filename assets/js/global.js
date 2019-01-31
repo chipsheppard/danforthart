@@ -8,9 +8,7 @@
  * @license  GPL-2.0+
  */
 
-/*
- * Navigation
- */
+// Navigation -------------------------------------------
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
 
@@ -77,9 +75,7 @@
 
 
 
-/*
- * Project List show/hide
- */
+// Project List show/hide -------------------------------
 jQuery(function( $ ){
 	$('.u-exhibit').find('.cssicon-plusminus').click(function() {
 		if ( $(this).hasClass( 'plus' ) ) {
@@ -94,9 +90,8 @@ jQuery(function( $ ){
 	} );
 } );
 
-/*
- * Extended Exhibits show/hide
- */
+
+// Extended Exhibits show/hide --------------------------
 jQuery(function( $ ){
 	$('.viewmore').click(function() {
 		if ( $('.cssicon-plusminus').hasClass( 'plus' ) ) {
@@ -110,81 +105,3 @@ jQuery(function( $ ){
 		}
 	} );
 } );
-
-/**
- * On-Page menus ---------------------------------------
- *
- */
-(function( $ ) {
-	/*
-	 * Sticky On-Page Menu
-	 *
-	 * @link https://codepen.io/jovanivezic/pen/ZQNdag
-	 */
-	if ($('.opm').length ) {
-
-		var $anchor = $('.opm');
-		var ot = $anchor.offset().top;
-		var move = function() {
-			var st = $(window).scrollTop();
-			//if(window.innerWidth > 640) {
-				if(st >= ot) {
-					$anchor.addClass('stuck');
-				} else {
-					$anchor.removeClass('stuck');
-				}
-			//}
-		};
-
-		$(window).scroll(move);
-		move();
-
-	} else {
-		return;
-	}
-} )( jQuery );
-
-(function( $ ) {
-	/**
-	 * Smooth Scroll for OnPage Menus
-	 *
-	 * @link http://cssdeck.com/labs/setting-active-states-on-sticky-navigations-while-scrolling
-	 * @link https://codepen.io/rishabhp/pen/aNXVbQ
-	 */
-	if ($('.opm').length ) {
-		var sections = $('.opm-target'),
-		nav = $('.onpage-menu'),
-		nav_height = nav.outerHeight();
-
-		$(window).on('scroll', function () {
-			var cur_pos = $(this).scrollTop();
-
-			sections.each(function() {
-				var top = $(this).offset().top - nav_height,
-				    bottom = top + $(this).outerHeight();
-
-				if (cur_pos >= top && cur_pos <= bottom) {
-					nav.find('a').removeClass('active');
-					sections.removeClass('active');
-
-					$(this).addClass('active');
-					nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-				}
-		 	});
-		});
-
-		nav.find('a').on('click', function () {
-			var $el = $(this),
-			id = $el.attr('href');
-			//alert(id);
-			$('html, body').animate({
-				scrollTop: $(id).offset().top
-			}, 500);
-
-			return false;
-		});
-
-	} else {
-		return;
-	}
-} )( jQuery );
