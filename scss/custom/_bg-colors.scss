@@ -54,18 +54,23 @@ body.color5 {
 		}
 	}
 
+	.home .site-navigation .color1 a,
 	.seeart .site-navigation .color1 a {
 		background-color: $color__orange;
 	}
+	.home .site-navigation .color2 a,
 	.learncreate .site-navigation .color2 a {
 		background-color: $color__green;
 	}
+	.home .site-navigation .color3 a,
 	.vis .site-navigation .color3 a {
 		background-color: $color__yellow;
 	}
+	.home .site-navigation .color4 a,
 	.joinsupport .site-navigation .color4 a {
 		background-color: $color__tan;
 	}
+	.home .site-navigation .color5 a,
 	.meetus .site-navigation .color5 a {
 		background-color: $color__purple;
 	}

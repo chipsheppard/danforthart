@@ -19,7 +19,7 @@
 	font-weight: $font__weight-bold;
 	float: left;
 	letter-spacing: 1px;
-	padding: .5em 1em;
+	padding: .375em 1em .5em;
 }
 
 .opm-section-menu {
@@ -32,7 +32,8 @@
 
 		.current {
 			@include font-size(1.375);
-			padding: 0 .375em;
+			line-height: 1.25;
+			padding: .25em 0 0 .75em;
 		}
 		.tp1,.tp2,.tp3,.tp4 {
 			display: none;
@@ -44,11 +45,14 @@
 	}
 
 	.opm-menu {
-		background-color: #f3f3f3;
+		background-color: #fff;
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, .15);
+		border-bottom: 1px solid $color__base;
 		width: 300px;
 		display: none;
-		padding: .5em .5em 0;
+		padding: .5em 1em 0;
 		position: absolute;
+		top: 100%;
 		z-index: 5;
 	}
 }
@@ -68,7 +72,7 @@
 
 		&:hover,
 		&:focus,
-		&:active {
+		&.active {
 			padding: 0;
 			outline: 0;
 
@@ -82,6 +86,8 @@
 
 .opm-arrow {
 	float: left;
+	line-height: 1;
+	margin-top: .75em;
 
 	.cssicon-updown {
 		cursor: pointer;

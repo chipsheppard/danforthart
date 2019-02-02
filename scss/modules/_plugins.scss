@@ -1,0 +1,32 @@
+/* Jetpack --------------- */
+img#wpstats {display:none;}
+
+// Remove text site-title when Jetpack site-logo is used.
+body.has-site-logo .site-title,
+body.has-site-logo .site-description {display:none !important;}
+
+
+/* Contact Form 7 ----------------------- */
+.wpcf7-form {
+
+	p {
+		margin-bottom: 0;
+	}
+	.wpcf7-not-valid-tip {
+		position: absolute;
+		top: -20px;
+		left: 1.5em;
+		line-height: 1;
+		width: 100%;
+		@include font-size(1);
+	}
+}
+
+div.wpcf7-response-output {
+    border-color: transparent;
+	color: #c00;
+	line-height: 1;
+	margin: 1em 0 0;
+	padding: 0;
+	@include font-size(1);
+}

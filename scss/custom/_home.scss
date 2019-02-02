@@ -1,7 +1,15 @@
-.home {
 
-	.content-inner-wrap {
-		padding: 0;
+body.home {
+	background-color: $color__yellow;
+
+	.heroslider {
+		img {
+			height: calc(100vh - 88px);
+		}
+	}
+
+	.hero-callout {
+		background-color: $color__yellow;
 	}
 
 	.site-content {
@@ -9,8 +17,274 @@
 			padding-top: 0;
 		}
 	}
+
+	.page-title {
+		line-height: 1;
+		margin: 0 0 3.625em;
+		width: 55%;
+		@include font-size(8);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+
+	.mid-block {
+		background-color: $color__green;
+
+		.col-1-2 {
+			position: relative;
+			margin-top: -25em;
+
+			@include breakpoint(tablet-v) {
+				margin-top: 0;
+			}
+		}
+
+		.imageblock {
+			position: relative;
+
+			img {
+				display: block;
+				max-width: none;
+				height: 800px;
+				object-fit: cover;
+				width: 100%;
+
+				@include breakpoint(tablet-h) {
+					height: 600px;
+				}
+				@include breakpoint(phone-h) {
+					height: 400px;
+				}
+			}
+
+			.card-title {
+				display: inline-block;
+				line-height: 1;
+				padding: 1em 1.25em 1em 1.75em;
+				position: absolute;
+				left: 0;
+				@include bigtext();
+				@include font-size(1);
+			}
+
+
+		}
+
+
+		.textblock {
+			height: 400px;
+			padding: 0 2.5em;
+			position: relative;
+
+			@include breakpoint(tablet-v) {
+				padding: 0 1.5em;
+				height: 300px;
+			}
+			@include breakpoint(phone-h) {
+				padding: 0;
+			}
+			a {
+				@include bigtext();
+			}
+
+			.message {
+				padding: 1em;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			blockquote {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				line-height: 1.25;
+				margin: 0;
+				padding-right: 0;
+				@include font-size(2.8125);
+
+				@include breakpoint(tablet-m) {
+					@include font-size(1.875);
+				}
+
+				cite {
+					@include font-size(1.4375);
+
+					@include breakpoint(phone-h) {
+						@include font-size(1.25);
+					}
+				}
+
+				a {
+					@include font-size(1);
+				}
+			}
+		}
+	}
+
+	.mid-left {
+		.card-title {
+			background-color: $color__yellow;
+			top: 0;
+		}
+	}
+	.mid-right {
+		.card-title {
+			background-color: $color__green;
+			bottom: 0;
+		}
+	}
+
+	@include breakpoint(tablet-v) {
+		.mid-left .imageblock {
+			margin-left: -3%;
+		}
+		.mid-right .imageblock {
+			margin-right: -3%;
+		}
+	}
+
+	.info-block {
+		padding: 5em 0 2em;
+		@include font-size(1.125);
+
+		.section-title {
+			line-height: 1;
+			margin-bottom: .75em;
+			@include font-size(5);
+		}
+
+		h5 {
+			text-transform: uppercase;
+			margin-bottom: 2em;
+			@include bigtext();
+			@include font-size(1);
+
+			span {
+				padding-bottom: 4px;
+				border-bottom: 1px solid $color__base;
+			}
+		}
+
+		.big {
+			line-height: 1;
+			font-weight: $font__weight-light;
+			@include font-size(3.125);
+		}
+
+		.col-1-3 {
+			margin-bottom: 2em;
+		}
+
+		td {
+			padding: 0;
+			border: 0;
+		}
+	}
+
+
+	.social-block {
+		background-color: #ffffff;
+		padding: 2em 0;
+		text-align: right;
+		@include breakpoint(tablet-v) {
+			text-align: center;
+		}
+
+		.image-blocks {
+			display: inline-block;
+			width: 75%;
+			margin-right: -4em;
+			@include breakpoint(tablet-v) {
+				margin-right: 0;
+			}
+		}
+		.col-1-3 {
+			padding: 1em 2em;
+		}
+
+		.cssicon-facebook:after,
+		.cssicon-linkedin:after {
+			color: #77414d;
+		}
+	}
+
+	.s-image {
+		border: 10px solid #77414d;
+		position: relative;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+		&:hover	.overlay-text {
+			display: block;
+		}
+	}
+	.overlay-text {
+		display: none;
+		background-color: #77414d;
+		color: #ffffff;
+		text-align: center;
+		position: absolute;
+		top:0;right:0;bottom:0;left:0;
+		z-index: 5;
+
+		strong {
+			border-bottom: 1px solid currentColor;
+			letter-spacing: 2px;
+			padding-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		a {
+			color: #ffffff;
+			display: inline-block;
+			height: 100%;
+			@include nb();
+		}
+		.txt {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.text-links {
+		padding: 1em 1em 0;
+		@include font-size(2.5);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1.5);
+		}
+	}
 }
 
+
+@keyframes colorchange {
+	0%  {background: $color__yellow;}
+	20%  {background: $color__yellow;}
+	40%  {background: $color__blue;}
+	60%  {background: $color__green;}
+	75%  {background: $color__tan;}
+	95% {background: $color__orange;}
+	100%  {background: $color__yellow;}
+}
+body.home,
+body.home .hero-callout,
+body.home .card-title {
+   	animation: colorchange 35s;
+	animation-iteration-count: infinite;
+}
 
 
 .sl {
@@ -39,8 +313,39 @@
                             0 100%;
     animation: bg 6s linear;
     animation-play-state: running;
+
+	&.green {
+		background-image:   linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to right, $color__green 100%, $color__green 100%),
+	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%);
+	}
+	&.yellow {
+		background-image:   linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
+	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%);
+	}
+	&.blue {
+		background-image:   linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to right, $color__blue 100%, $color__blue 100%),
+	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%);
+	}
+	&.tan {
+		background-image:   linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to right, $color__tan 100%, $color__tan 100%),
+	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%);
+	}
+	&.purple {
+		background-image:   linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to right, $color__purple 100%, $color__purple 100%),
+	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%);
+	}
 }
 
-.sl.slick-current:hover .progbar {
-    animation-play-state: paused;
-}
+//.sl.slick-current:hover .progbar {
+//    animation-play-state: paused;
+//}

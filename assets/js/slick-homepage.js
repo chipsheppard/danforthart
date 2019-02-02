@@ -13,6 +13,7 @@ jQuery(function( $ ) {
 		arrows: false,
 		infinite: true,
 		autoplay: true,
+		pauseOnHover: false,
 		slidesToShow: 1,
 		speed: 600,
 		autoplaySpeed: 6000,

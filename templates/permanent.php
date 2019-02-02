@@ -19,14 +19,16 @@ add_filter( 'body_class', function( $classes ) {
  * Permanent
  */
 function da_permanent() {
-
-	// Child page menu.
-	echo '<div class="sub-navigation">';
-	wp_nav_menu( array(
-		'menu' => 'see-art-sub',
-	) );
-	echo '</div>';
-	?>
+?>
+	<div class="inner-wrap">
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'see-art-sub',
+			) );
+			?>
+		</div>
+	</div>
 
 	<div class="hero-wrap">
 		<div class="inner-wrap np">

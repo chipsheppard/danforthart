@@ -50,6 +50,7 @@
 		titles = $('.opm-sections'),
 		nav = $('.opm-menu'),
  		nav_height = nav.outerHeight();
+		titles.find('.tp1').addClass('active');
 
  		$(window).on('scroll', function () {
  			var cur_pos = $(this).scrollTop();

@@ -19,22 +19,22 @@ add_filter( 'body_class', function( $classes ) {
  * Learn Create page functions
  */
 function da_learn() {
+?>
+	<div class="inner-wrap">
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'learn-sub',
+			) );
+			?>
+		</div>
+	</div>
 
-	echo '<div class="inner-wrap">';
+	LEARN CREATE
 
-	echo '<div class="sub-navigation">';
-		wp_nav_menu( array(
-			'menu' => 'learn-sub',
-			'container' => '',
-		) );
-	echo '</div>';
+	<?php the_content(); ?>
 
-	echo 'LEARN CREATE';
-
-	the_content();
-
-	echo '</div>';
-
+<?php
 }
 add_action( 'tha_entry_content_before', 'da_learn' );
 

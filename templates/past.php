@@ -19,16 +19,17 @@ add_filter( 'body_class', function( $classes ) {
  * Past
  */
 function da_past() {
-
-	echo '<div class="sub-navigation">';
-	wp_nav_menu( array(
-		'menu' => 'see-art-sub',
-		'container' => '',
-	) );
-	echo '</div>';
-	?>
-
+?>
 	<div class="inner-wrap">
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'see-art-sub',
+				'container' => '',
+			) );
+			?>
+		</div>
+
 		<div class="intro">
 			<?php the_content(); ?>
 		</div>
