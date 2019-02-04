@@ -59,9 +59,9 @@
                 "id": ""
             },
             "choices": {
+                "yellow": "Goldenrod",
                 "orange": "Tangerine",
                 "green": "Aquamarine",
-                "yellow": "Goldenrod",
                 "blue": "Sky",
                 "purple": "Pansy",
                 "tan": "Mocha"
@@ -92,5 +92,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548889251
+    "modified": 1549299594
 }

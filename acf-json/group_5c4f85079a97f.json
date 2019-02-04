@@ -43,7 +43,7 @@
         {
             "key": "field_5c4f85eeab8b8",
             "label": "Featured Exhibition Image",
-            "name": "featured_exhibition_image",
+            "name": "fe_image",
             "type": "image",
             "instructions": "If no image is selected, the exhibition's featured image will display.",
             "required": 0,
@@ -376,5 +376,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548888696
+    "modified": 1549308042
 }

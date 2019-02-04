@@ -37,9 +37,9 @@ function da_exhibition() {
 		$body_classes = get_body_class();
 		if ( in_array( 'special-collection', $body_classes, true ) ) :
 		?>
-			<a href="/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+			<a href="/danforth/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		<?php else : ?>
-			<a href="/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
+			<a href="/danforth/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
 		<?php endif; ?>
 
 		</div>

@@ -97,11 +97,45 @@ jQuery(function( $ ){
 		if ( $('.cssicon-plusminus').hasClass( 'plus' ) ) {
 			$('.cssicon-plusminus').removeClass( 'plus' );
 			$('.cssicon-plusminus').addClass( 'minus' );
-			$('.x-past-exhibits').slideDown(200);
+			$('.x-past-exhibits, .row-bottom').slideDown(200);
 		} else {
 			$('.cssicon-plusminus').removeClass( 'minus' );
 			$('.cssicon-plusminus').addClass( 'plus' );
-			$('.x-past-exhibits').slideUp(200);
+			$('.x-past-exhibits, .row-bottom').slideUp(200);
+		}
+	} );
+} );
+
+// Course List show/hide -------------------------------
+jQuery(function( $ ){
+	$('.course-row').find('.cssicon-plusminus').click(function() {
+		if ( $(this).hasClass( 'plus' ) ) {
+			$(this).removeClass( 'plus' );
+			$(this).addClass( 'minus' );
+			$(this).closest('.course-row').addClass('active');
+			$(this).parents().children('.row-bottom').slideDown(200);
+		} else {
+			$(this).removeClass( 'minus' );
+			$(this).addClass( 'plus' );
+			$(this).closest('.course-row').removeClass('active');
+			$(this).parents().children('.row-bottom').slideUp(200);
+		}
+	} );
+} );
+
+// ACCORDIONs -------------------------------
+jQuery(function( $ ){
+	$('.accordion').find('.cssicon-plusminus').click(function() {
+		if ( $(this).hasClass( 'plus' ) ) {
+			$(this).removeClass( 'plus' );
+			$(this).addClass( 'minus' );
+			$(this).closest('.accordion').addClass('active');
+			$(this).parents().children('.acbot').slideDown(200);
+		} else {
+			$(this).removeClass( 'minus' );
+			$(this).addClass( 'plus' );
+			$(this).closest('.accordion').removeClass('active');
+			$(this).parents().children('.acbot').slideUp(200);
 		}
 	} );
 } );

@@ -17,37 +17,48 @@ add_filter( 'body_class', function( $classes ) {
  * Home Function
  */
 function da_artwork() {
+?>
+	<div class="inner-wrap">
 
-	echo '<div class="inner-wrap">';
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'see-art-sub',
+			) );
+			?>
+		</div>
 
-	// Child page menu.
-	echo '<div class="sub-navigation">';
-		wp_nav_menu( array(
-			'menu' => 'see-art-sub',
-		) );
-	echo '</div>';
+		<div class="return">
+			<a href="/danforth/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+		</div>
+		<div class="cf"></div>
 
-	echo '<div class="return">';
-	echo '<a href="/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>';
-	echo '</div>';
+		<div class="print-info"><a href="#">Print information <span class="cssicon-file green"></span></a></div>
 
-	echo '<div class="cf"></div>';
+		<?php
+		$terms = get_the_terms( $post->ID, 'collection_type' );
+		if ( ! empty( $terms ) ) :
+			$arttypes = array();
+			foreach ( $terms as $term ) {
+				$arttypes[] = $term->name;
+			}
+			$arttype_list = join( ', ', $arttypes );
+			?>
+			<h3 class="catname">
+				<?php printf( '%s', esc_html( $arttype_list ) ); ?>
+			</h3>
+		<?php endif; ?>
 
-	// Field !!!.
-	echo '<div class="print-info"><a href="#">Print information <span class="cssicon-file green"></span></a></div>';
-	$categories = get_the_category();
-	if ( ! empty( $categories ) ) {
-		echo '<h3 class="catname">' . esc_html( $categories[0]->name ) . '</h3>';
-	}
-	echo '<div class="artwork-img">';
-	if ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'large', [
-			'class' => 'artwork-image aligncenter',
-		] );
-	endif;
-	echo '</div>';
-	echo '</div>'; // /inner-wrap.
-	?>
+		<div class="artwork-img">
+			<?php
+			if ( has_post_thumbnail() ) :
+				the_post_thumbnail( 'large', [
+					'class' => 'artwork-image aligncenter',
+				] );
+			endif;
+			?>
+		</div>
+	</div>
 
 	<div class="content-wrap">
 		<div class="inner-wrap">
@@ -57,7 +68,12 @@ function da_artwork() {
 				<h2 class="artist-name"><?php the_field( 'artist_name' ); ?></h2>
 				<div class="artist-info"><?php the_field( 'artist_info' ); ?></div>
 				<h1 class="artwork-title"><?php the_title(); ?></h1>
-				<div class="artwork-info"><span class="artwork-date"><?php the_field( 'date' ); ?></span>&mdash;<span class="artwork-medium"><?php the_field( 'medium' ); ?></span></div>
+				<div class="artwork-info">
+					<span class="artwork-date"><?php the_field( 'date' ); ?></span>
+<?php if ( the_field( 'medium' ) ) : ?>
+&mdash;<span class="artwork-medium"><?php the_field( 'medium' ); ?></span>
+<?php endif; ?>
+				</div>
 			</div>
 
 			<div class="col-1-2 art-right">

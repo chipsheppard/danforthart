@@ -487,8 +487,8 @@ template {
 }
 
 .alt-font-all, .afa {
-  -webkit-font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15";
-          font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15";
+  -webkit-font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15", "ss17", "ss18";
+          font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15", "ss17", "ss18";
 }
 
 .ss01 {
@@ -671,7 +671,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DFHellix", Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #222222;
-  line-height: 1.2;
+  line-height: 1.5;
   margin: 0 0 3%;
 }
 
@@ -717,6 +717,9 @@ h6 {
 }
 
 @media all and (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+  }
   h1 {
     font-size: 34px;
     font-size: 2.125rem;
@@ -1204,7 +1207,7 @@ a:focus {
 
 @media all and (min-width: 769px) {
   .seeart .site-navigation .color1,
-  .learncreate .site-navigation .color2,
+  .lc .site-navigation .color2,
   .vis .site-navigation .color3,
   .joinsupport .site-navigation .color4,
   .meetus .site-navigation .color5 {
@@ -1213,14 +1216,14 @@ a:focus {
     border-width: 1px 1px 0 1px;
   }
   .seeart .site-navigation .color1 a,
-  .learncreate .site-navigation .color2 a,
+  .lc .site-navigation .color2 a,
   .vis .site-navigation .color3 a,
   .joinsupport .site-navigation .color4 a,
   .meetus .site-navigation .color5 a {
     border-bottom-color: #ffffff;
   }
   .seeart .site-navigation .color1 a:hover,
-  .learncreate .site-navigation .color2 a:hover,
+  .lc .site-navigation .color2 a:hover,
   .vis .site-navigation .color3 a:hover,
   .joinsupport .site-navigation .color4 a:hover,
   .meetus .site-navigation .color5 a:hover {
@@ -3461,13 +3464,10 @@ div.wpcf7-response-output {
 }
 
 .site-footer {
+  background-color: #000000;
   clear: both;
   width: 100%;
   padding: 0 3%;
-}
-
-.site-footer .inner-wrap {
-  background-color: #000000;
 }
 
 .site-footer a {
@@ -5242,7 +5242,7 @@ body.home .text-links {
 
 body.home,
 body.home .hero-callout,
-body.home .card-title {
+body.home .mid-left .card-title {
   -webkit-animation: colorchange 35s;
           animation: colorchange 35s;
   -webkit-animation-iteration-count: infinite;
@@ -6664,4 +6664,361 @@ body.permanent .artwork-img {
 body.permanent .artwork-img a {
   display: inline-block;
   width: 100%;
+}
+
+body.learncreate .page-title {
+  line-height: 1;
+  margin: 0 0 3.625em;
+  width: 69%;
+  font-size: 128px;
+  font-size: 8rem;
+}
+
+@media all and (max-width: 1024px) {
+  body.learncreate .page-title {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  body.learncreate .page-title {
+    font-size: 96px;
+    font-size: 6rem;
+    margin-bottom: 1em;
+  }
+}
+
+@media all and (max-width: 640px) {
+  body.learncreate .page-title {
+    font-size: 64px;
+    font-size: 4rem;
+  }
+}
+
+body.learncreate .mid-block .col-1-2 {
+  position: relative;
+  margin-top: -25em;
+}
+
+@media all and (max-width: 768px) {
+  body.learncreate .mid-block .col-1-2 {
+    margin-top: 0;
+  }
+}
+
+body.learncreate .mid-block .imageblock {
+  position: relative;
+}
+
+body.learncreate .mid-block .imageblock img {
+  display: block;
+  max-width: none;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media all and (max-width: 1024px) {
+  body.learncreate .mid-block .imageblock img {
+    height: 600px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  body.learncreate .mid-block .imageblock img {
+    height: 400px;
+  }
+}
+
+body.learncreate .mid-block .imageblock .card-title {
+  display: inline-block;
+  line-height: 1;
+  padding: 1em 1.25em 1em 1.75em;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+body.learncreate .mid-block .textblock {
+  height: 400px;
+  padding: 0 2.5em;
+  position: relative;
+}
+
+@media all and (max-width: 768px) {
+  body.learncreate .mid-block .textblock {
+    padding: 0 1.5em;
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  body.learncreate .mid-block .textblock {
+    padding: 0;
+  }
+}
+
+body.learncreate .mid-block .textblock a {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+body.learncreate .mid-block .textblock .message {
+  padding: 1em;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body.learncreate .mid-block .textblock blockquote {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1.25;
+  margin: 0;
+  padding-right: 0;
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+@media all and (max-width: 900px) {
+  body.learncreate .mid-block .textblock blockquote {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+
+body.learncreate .mid-block .textblock blockquote cite {
+  font-size: 23px;
+  font-size: 1.4375rem;
+}
+
+@media all and (max-width: 640px) {
+  body.learncreate .mid-block .textblock blockquote cite {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+body.learncreate .mid-block .textblock blockquote a {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+body.learncreate .mid-left .card-title {
+  background-color: #93ddce;
+  top: 0;
+}
+
+body.learncreate .mid-right .card-title {
+  background-color: #fff;
+  bottom: 0;
+}
+
+@media all and (max-width: 768px) {
+  body.learncreate .mid-left .imageblock {
+    margin-left: -3%;
+  }
+  body.learncreate .mid-right .imageblock {
+    margin-right: -3%;
+  }
+}
+
+.courses-intro {
+  padding: 3em 1em;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.course-rows-wrap {
+  margin-bottom: 8em;
+}
+
+.course-headers {
+  font-weight: bold;
+  padding: 1em 1em 2em;
+}
+
+.course-row {
+  border-bottom: 1px solid #222222;
+  padding: 0 1em;
+}
+
+.course-row .row-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.5em;
+}
+
+.course-row .row-bottom {
+  display: none;
+  padding-top: 3em;
+}
+
+.course-row .course-images {
+  margin: 3em 0 4em;
+}
+
+.course-col.col-1-6 {
+  display: flex;
+  line-height: 1.5;
+}
+
+.course-col.col-1-6 h6 {
+  line-height: 1.25;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.course-col .session-num {
+  display: inline-block;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 1;
+  margin-top: auto;
+  padding: .5em .6875em .375em;
+  margin-right: .5em;
+  margin-bottom: .5em;
+}
+
+.course-col .date {
+  display: inline-block;
+  margin-top: auto;
+  padding-bottom: .5em;
+}
+
+.course-col .instructors {
+  border-bottom: 2px solid #000;
+  margin-top: auto;
+  padding-bottom: .375em;
+}
+
+.course-col .display-name {
+  font-weight: bold;
+}
+
+.course-col .display-name span {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: .375em;
+}
+
+.course-col .price,
+.course-col .control {
+  float: left;
+  width: 50%;
+}
+
+.course-col .price {
+  margin-top: auto;
+  padding-bottom: .375em;
+}
+
+.course-col .control {
+  margin: auto;
+}
+
+.course-col .btn {
+  margin: auto;
+}
+
+.lower-block {
+  margin: 1em 0 8em;
+}
+
+.lower-block .lb-title {
+  padding-left: 5em;
+  margin-bottom: 3em;
+}
+
+@media all and (max-width: 768px) {
+  .lower-block .lb-title {
+    padding-left: 0;
+  }
+}
+
+.lower-block .lb-title h2 {
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+.lower-block .lb-left {
+  position: relative;
+}
+
+.lower-block .lb-left img {
+  max-width: none;
+  width: 100%;
+}
+
+.lower-block .lb-left .card-title {
+  background-color: #fff;
+  bottom: 0;
+  display: inline-block;
+  left: 0;
+  line-height: 1;
+  padding: 1em 1.25em 1em 1.75em;
+  position: absolute;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.accordion {
+  border-bottom: 1px solid #222222;
+  padding: 0 1em;
+}
+
+.accordion .actop {
+  padding: 1em 0;
+}
+
+.accordion .acbot {
+  display: none;
+  padding: 1em 0 3em;
+}
+
+.accordion .acc-title {
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.accordion .acc-button {
+  display: inline-block;
+  float: right;
+  text-align: center;
+  width: 32px;
+  margin-right: 1em;
+}
+
+body.learn .course-row:hover,
+body.learn .course-row.active,
+body.learn .accordion:hover,
+body.learn .accordion.active {
+  background-color: #cdfee9;
+}
+
+body.learn-c {
+  background-color: #cdfee9;
+}
+
+body.learn-t {
+  background-color: #95ecdb;
+}
+
+body.learn-a {
+  background-color: #a1f7d2;
 }

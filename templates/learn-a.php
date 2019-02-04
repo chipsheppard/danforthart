@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Adult Art Classes page.
  *
- * Template Name: Art Classes - Adult
+ * Template Name: Art Classes - Adults
  *
  * @package    danforthart
  * @subpackage danforthart/templates
@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'learncreate learn-a' ) );
+	return array_merge( $classes, array( 'lc learn-a' ) );
 } );
 
 /**

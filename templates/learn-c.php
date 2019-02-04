@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying the K-8 Art Classes page.
+ * The template for displaying Childrens Art Classes page.
  *
- * Template Name: Art Classes - K-8
+ * Template Name: Art Classes - Children
  *
  * @package    danforthart
  * @subpackage danforthart/templates
@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'learncreate learn-k' ) );
+	return array_merge( $classes, array( 'lc learn-c' ) );
 } );
 
 /**
@@ -33,6 +33,8 @@ function da_learn_k() {
 	K-8 Art Classes
 
 	<?php the_content(); ?>
+
+	</div>
 
 <?php
 }

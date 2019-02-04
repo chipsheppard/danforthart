@@ -35,19 +35,19 @@ function da_permanent() {
 			<div class="heroimage">
 				<?php
 				// POST OBJECT.
-				$fe_post_object = get_field( 'featured_exhibition' );
+				$post_object = get_field( 'featured_exhibition' );
 				// IMAGE.
-				$fe_image = get_field( 'fe_image' );
-				if ( ! empty( $fe_image ) ) :
-					$fe_url = $fe_image['url'];
-					$fe_alt = $fe_image['alt'];
-					$fe_width = $fe_image['width'];
-					$fe_height = $fe_image['height'];
+				$image = get_field( 'fe_image' );
+				if ( ! empty( $image ) ) :
+					$url = $image['url'];
+					$alt = $image['alt'];
+					$width = $image['width'];
+					$height = $image['height'];
 					?>
-					<img src="<?php echo esc_url( $fe_url ); ?>" alt="<?php echo esc_attr( $fe_alt ); ?>" width="<?php echo esc_attr( $fe_width ); ?>" height="<?php echo esc_attr( $fe_height ); ?>" />
+					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 				<?php
 				else :
-					echo get_the_post_thumbnail( $fe_post_object->ID, 'full', [
+					echo get_the_post_thumbnail( $post_object->ID, 'full', [
 						'class' => 'featured-image',
 						'title' => 'Feature image',
 					] );
@@ -56,10 +56,10 @@ function da_permanent() {
 			</div><!-- /hero-image -->
 			<div class="hero-callout">
 				<div class="link">
-					<a href="<?php echo esc_url( get_permalink( $fe_post_object->ID ) ); ?>"><span><?php the_field( 'link_text' ); ?></span></a>
+					<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>"><span><?php the_field( 'link_text' ); ?></span></a>
 				</div>
-				<div class="date"><?php the_field( 'date', $fe_post_object->ID ); ?></div>
-				<div class="text"><?php echo get_the_title( $fe_post_object->ID ); ?></div>
+				<div class="date"><?php the_field( 'date', $post_object->ID ); ?></div>
+				<div class="text"><?php echo get_the_title( $post_object->ID ); ?></div>
 			</div>
 		</div><!-- /inner-wrap -->
 	</div><!-- /hero-wrap -->

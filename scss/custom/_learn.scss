@@ -1,0 +1,320 @@
+body.learncreate {
+
+	.page-title {
+		line-height: 1;
+		margin: 0 0 3.625em;
+		width: 69%;
+		@include font-size(8);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+
+
+	.mid-block {
+
+		.col-1-2 {
+			position: relative;
+			margin-top: -25em;
+
+			@include breakpoint(tablet-v) {
+				margin-top: 0;
+			}
+		}
+
+		.imageblock {
+			position: relative;
+
+			img {
+				display: block;
+				max-width: none;
+				height: 800px;
+				object-fit: cover;
+				width: 100%;
+
+				@include breakpoint(tablet-h) {
+					height: 600px;
+				}
+				@include breakpoint(phone-h) {
+					height: 400px;
+				}
+			}
+
+			.card-title {
+				display: inline-block;
+				line-height: 1;
+				padding: 1em 1.25em 1em 1.75em;
+				position: absolute;
+				left: 0;
+				@include bigtext();
+				@include font-size(1);
+			}
+		}
+
+		.textblock {
+			height: 400px;
+			padding: 0 2.5em;
+			position: relative;
+
+			@include breakpoint(tablet-v) {
+				padding: 0 1.5em;
+				height: 300px;
+			}
+			@include breakpoint(phone-h) {
+				padding: 0;
+			}
+			a {
+				@include bigtext();
+			}
+
+			.message {
+				padding: 1em;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			blockquote {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				line-height: 1.25;
+				margin: 0;
+				padding-right: 0;
+				@include font-size(2.8125);
+
+				@include breakpoint(tablet-m) {
+					@include font-size(1.875);
+				}
+
+				cite {
+					@include font-size(1.4375);
+
+					@include breakpoint(phone-h) {
+						@include font-size(1.25);
+					}
+				}
+
+				a {
+					@include font-size(1);
+				}
+			}
+		}
+	}
+
+	.mid-left {
+		.card-title {
+			background-color: $color__green;
+			top: 0;
+		}
+	}
+	.mid-right {
+		.card-title {
+			background-color: #fff;
+			bottom: 0;
+		}
+	}
+
+	@include breakpoint(tablet-v) {
+		.mid-left .imageblock {
+			margin-left: -3%;
+		}
+		.mid-right .imageblock {
+			margin-right: -3%;
+		}
+	}
+}
+
+
+
+.courses-intro {
+	padding: 3em 1em;
+	@include font-size(1.875);
+}
+.course-rows-wrap {
+	margin-bottom: 8em;
+}
+.course-headers {
+	font-weight: $font__weight-bold;
+	padding: 1em 1em 2em;
+}
+
+.course-row {
+	border-bottom: 1px solid $color__base;
+	padding: 0 1em;
+
+	.row-top {
+		display: flex;
+	 	flex-wrap: wrap;
+		padding-top: 1.5em;
+	}
+	.row-bottom {
+		display: none;
+		padding-top: 3em;
+	}
+	.course-images {
+		margin: 3em 0 4em;
+	}
+}
+
+.course-col {
+
+	&.col-1-6 {
+		display: flex;
+		line-height: 1.5;
+
+		h6 {
+			line-height: 1.25;
+			@include font-size(1);
+		}
+	}
+
+	.session-num {
+		display: inline-block;
+		background-color: #000;
+		border-radius: 50%;
+		color: #fff;
+		line-height: 1;
+		margin-top: auto;
+		padding: .5em .6875em .375em;
+		margin-right: .5em;
+		margin-bottom: .5em;
+	}
+
+	.date {
+		display: inline-block;
+		margin-top: auto;
+		padding-bottom: .5em;
+	}
+
+	.instructors {
+		border-bottom: 2px solid #000;
+		margin-top: auto;
+		padding-bottom: .375em;
+	}
+
+	.level {}
+	.display-name {
+		font-weight: $font__weight-bold;
+		span {
+			display: inline-block;
+			border-bottom: 2px solid #000;
+			padding-bottom: .375em;
+		}
+	}
+
+	.price,
+	.control {
+		float: left;
+		width: 50%;
+	}
+	.price {
+		margin-top: auto;
+		padding-bottom: .375em;
+	}
+	.control {
+		margin: auto;
+	}
+	.btn {
+		margin: auto;
+	}
+
+}
+
+	.sessions {}
+	.session-note {}
+	.other-courses {}
+
+
+.lower-block {
+	margin: 1em 0 8em;
+
+	.lb-title {
+		padding-left: 5em;
+		margin-bottom: 3em;
+
+		@include breakpoint(tablet-v) {
+			padding-left: 0;
+		}
+
+		h2 {
+			@include font-size(2.8125);
+		}
+	}
+
+	.lb-left {
+		position: relative;
+
+		img {
+			max-width: none;
+			width: 100%;
+		}
+		.card-title {
+			background-color: #fff;
+			bottom: 0;
+			display: inline-block;
+			left: 0;
+			line-height: 1;
+			padding: 1em 1.25em 1em 1.75em;
+			position: absolute;
+			@include bigtext();
+			@include font-size(1);
+		}
+
+	}
+	.lb-right {
+
+	}
+}
+
+.accordion {
+	border-bottom: 1px solid $color__base;
+	padding: 0 1em;
+
+	.actop {
+		padding: 1em 0;
+	}
+	.acbot {
+		display: none;
+		padding: 1em 0 3em;
+	}
+
+	.acc-title {
+		display: inline-block;
+		float: left;
+		@include font-size(1.25);
+	}
+	.acc-button {
+		display: inline-block;
+		float: right;
+		text-align: center;
+		width: 32px;
+		margin-right: 1em;
+	}
+}
+
+
+
+body.learn .course-row:hover,
+body.learn .course-row.active,
+body.learn .accordion:hover,
+body.learn .accordion.active {
+	background-color: $color__green-xxlt;
+}
+body.learn-c {
+	background-color: $color__green-xxlt;
+}
+body.learn-t {
+	background-color: $color__green-lt;
+}
+body.learn-a {
+	background-color: $color__green-xlt;
+}

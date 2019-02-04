@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying the Highschool Art Classes page.
+ * The template for displaying the Teens Art Classes page.
  *
- * Template Name: Art Classes - Highschool
+ * Template Name: Art Classes - Teens
  *
  * @package    danforthart
  * @subpackage danforthart/templates
@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'learncreate learn-h' ) );
+	return array_merge( $classes, array( 'lc learn-t' ) );
 } );
 
 /**
