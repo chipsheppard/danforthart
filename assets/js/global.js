@@ -106,9 +106,31 @@ jQuery(function( $ ){
 	} );
 } );
 
+
+// Course Overview List (learn+create) -------------------------------
+jQuery(function( $ ){
+	$('.course-overview-box').find('.trigger').click(function() {
+		if ( $(this).hasClass( 'plus' ) ) {
+			$(this).removeClass( 'plus' );
+			$(this).addClass( 'minus' );
+			$(this).closest('.course-overview-box').addClass('active');
+			$(this).parents().children('.box-bottom').slideDown(200);
+		} else {
+			$(this).removeClass( 'minus' );
+			$(this).addClass( 'plus' );
+			$(this).closest('.course-overview-box').removeClass('active');
+			$(this).parents().children('.box-bottom').slideUp(200);
+		}
+	} );
+	$('.course-overview-box').find('.box-close').click(function() {
+		$(this).closest('.course-overview-box').removeClass('active');
+		$(this).parents().children('.box-bottom').slideUp(200);
+	} );
+} );
+
 // Course List show/hide -------------------------------
 jQuery(function( $ ){
-	$('.course-row').find('.cssicon-plusminus').click(function() {
+	$('.course-row').find('.opener').click(function() {
 		if ( $(this).hasClass( 'plus' ) ) {
 			$(this).removeClass( 'plus' );
 			$(this).addClass( 'minus' );
@@ -122,6 +144,7 @@ jQuery(function( $ ){
 		}
 	} );
 } );
+
 
 // ACCORDIONs -------------------------------
 jQuery(function( $ ){

@@ -20,19 +20,23 @@ add_filter( 'body_class', function( $classes ) {
  */
 function da_learn_h() {
 	?>
-		<div class="inner-wrap">
-			<div class="sub-navigation">
-				<?php
-				wp_nav_menu( array(
-					'menu' => 'learn-sub',
-				) );
-				?>
-			</div>
+	<div class="inner-wrap">
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'learn-sub',
+			) );
+			?>
 		</div>
+	</div>
 
-	Highschool Art Classes
+	<div class="inner-wrap">
 
-	<?php the_content(); ?>
+		Highschool Art Classes
+		<?php the_content(); ?>
+		<?php get_template_part( 'template-parts/courses' ); ?>
+
+	</div>
 
 <?php
 }

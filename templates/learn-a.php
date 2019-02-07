@@ -20,19 +20,23 @@ add_filter( 'body_class', function( $classes ) {
  */
 function da_learn_a() {
 	?>
-		<div class="inner-wrap">
-			<div class="sub-navigation">
-				<?php
-				wp_nav_menu( array(
-					'menu' => 'learn-sub',
-				) );
-				?>
-			</div>
+	<div class="inner-wrap">
+		<div class="sub-navigation">
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'learn-sub',
+			) );
+			?>
 		</div>
+	</div>
 
-	Adult Art Classes
+	<div class="inner-wrap">
 
-	<?php the_content(); ?>
+		Adult Art Classes
+		<?php the_content(); ?>
+		<?php get_template_part( 'template-parts/courses' ); ?>
+
+	</div>
 
 <?php
 }
