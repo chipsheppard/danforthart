@@ -145,6 +145,29 @@ jQuery(function( $ ){
 	} );
 } );
 
+// TABs -------------------------------
+jQuery(function( $ ){
+	$('.tt1').click(function() {
+		if ( $(this).hasClass( 'active' ) ) {
+			return;
+		} else {
+			$(this).addClass( 'active' );
+			$('.tb1').addClass( 'active' );
+			$('.tt2').removeClass( 'active' );
+			$('.tb2').removeClass( 'active' );
+		}
+	} );
+	$('.tt2').click(function() {
+		if ( $(this).hasClass( 'active' ) ) {
+			return;
+		} else {
+			$(this).addClass( 'active' );
+			$('.tb2').addClass( 'active' );
+			$('.tt1').removeClass( 'active' );
+			$('.tb1').removeClass( 'active' );
+		}
+	} );
+} );
 
 // ACCORDIONs -------------------------------
 jQuery(function( $ ){

@@ -487,8 +487,8 @@ template {
 }
 
 .alt-font-all, .afa {
-  -webkit-font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15", "ss17", "ss18";
-          font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss10", "ss13", "ss15", "ss17", "ss18";
+  -webkit-font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "ss10", "ss11", "ss12", "ss13", "ss15", "ss16", "ss17", "ss18", "ss19", "ss20";
+          font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "ss10", "ss11", "ss12", "ss13", "ss15", "ss16", "ss17", "ss18", "ss19", "ss20";
 }
 
 .ss01 {
@@ -531,9 +531,24 @@ template {
           font-feature-settings: "ss08";
 }
 
+.ss09 {
+  -webkit-font-feature-settings: "ss09";
+          font-feature-settings: "ss09";
+}
+
 .ss10 {
   -webkit-font-feature-settings: "ss10";
           font-feature-settings: "ss10";
+}
+
+.ss11 {
+  -webkit-font-feature-settings: "ss11";
+          font-feature-settings: "ss11";
+}
+
+.ss12 {
+  -webkit-font-feature-settings: "ss12";
+          font-feature-settings: "ss12";
 }
 
 .ss13 {
@@ -551,6 +566,11 @@ template {
           font-feature-settings: "ss15";
 }
 
+.ss16 {
+  -webkit-font-feature-settings: "ss16";
+          font-feature-settings: "ss16";
+}
+
 .ss17 {
   -webkit-font-feature-settings: "ss17";
           font-feature-settings: "ss17";
@@ -559,6 +579,16 @@ template {
 .ss18 {
   -webkit-font-feature-settings: "ss18";
           font-feature-settings: "ss18";
+}
+
+.ss19 {
+  -webkit-font-feature-settings: "ss19";
+          font-feature-settings: "ss19";
+}
+
+.ss20 {
+  -webkit-font-feature-settings: "ss20";
+          font-feature-settings: "ss20";
 }
 
 /*--------------------------------------------------------------
@@ -650,6 +680,12 @@ hr {
 
 hr.alt {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid #222222;
+  padding-bottom: 3px;
 }
 
 ::-moz-selection {
@@ -834,7 +870,7 @@ table {
 th, td {
   line-height: 1.5;
   vertical-align: top;
-  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 th {
@@ -844,7 +880,7 @@ th {
 }
 
 td {
-  padding: 1em;
+  padding: .5em;
 }
 
 thead th, tfoot th {
@@ -2406,6 +2442,28 @@ img#wpstats {
 
 img.flex {
   width: 100%;
+}
+
+.fwn {
+  font-weight: normal;
+}
+
+.fwl {
+  font-weight: 300;
+}
+
+.to-left {
+  position: relative;
+  left: -.5em;
+  margin-left: -.5em;
+}
+
+.red {
+  color: #984e1f;
+}
+
+.grn {
+  color: #93ddce;
 }
 
 /* ## Slick Slider
@@ -4622,6 +4680,30 @@ body.color5 {
 .footer-quote {
   background-color: #9ed4ef;
   position: relative;
+}
+
+.footer-quote.orange {
+  background-color: #fcb080;
+}
+
+.footer-quote.green {
+  background-color: #93ddce;
+}
+
+.footer-quote.yellow {
+  background-color: #f6d06d;
+}
+
+.footer-quote.blue {
+  background-color: #9ed4ef;
+}
+
+.footer-quote.tan {
+  background-color: #edd6b9;
+}
+
+.footer-quote.purple {
+  background-color: #afc2e3;
 }
 
 .footer-quote blockquote {
@@ -6850,6 +6932,7 @@ body.learncreate .mid-right .card-title {
 .course-row {
   border-bottom: 1px solid #222222;
   padding: 0 1em;
+  width: 100%;
 }
 
 .course-row .row-top {
@@ -6865,6 +6948,15 @@ body.learncreate .mid-right .card-title {
 
 .course-row .course-images {
   margin: 3em 0 4em;
+}
+
+.course-row .course-images img {
+  display: block;
+  max-width: none;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .course-col.fb {
@@ -7084,35 +7176,35 @@ body.learncreate .mid-right .card-title {
   width: 30%;
 }
 
-.lower-block {
+.accordion-block {
   margin: 1em 0 8em;
 }
 
-.lower-block .lb-title {
+.accordion-block .ab-title {
   padding: 0 0 3em 5em;
 }
 
 @media all and (max-width: 768px) {
-  .lower-block .lb-title {
+  .accordion-block .ab-title {
     padding-left: 0;
   }
 }
 
-.lower-block .lb-title h2 {
+.accordion-block .ab-title h2 {
   font-size: 45px;
   font-size: 2.8125rem;
 }
 
-.lower-block .lb-left {
+.accordion-block .ab-left {
   position: relative;
 }
 
-.lower-block .lb-left img {
+.accordion-block .ab-left img {
   max-width: none;
   width: 100%;
 }
 
-.lower-block .lb-left .card-title {
+.accordion-block .ab-left .card-title {
   background-color: #fff;
   bottom: 0;
   display: inline-block;
@@ -7160,31 +7252,185 @@ body.learncreate .mid-right .card-title {
   margin-right: 1em;
 }
 
-body.learn .course-overview-box.lt-green:hover, body.learn .course-overview-box.lt-green.active {
+body.learncreate .course-overview-box.lt-green:hover, body.learncreate .course-overview-box.lt-green.active {
   background-color: #cdfee9;
 }
 
-body.learn .course-overview-box.m-green:hover, body.learn .course-overview-box.m-green.active {
+body.learncreate .course-overview-box.m-green:hover, body.learncreate .course-overview-box.m-green.active {
   background-color: #a1f7d2;
 }
 
-body.learn .course-overview-box.d-green:hover, body.learn .course-overview-box.d-green.active {
+body.learncreate .course-overview-box.d-green:hover, body.learncreate .course-overview-box.d-green.active {
   background-color: #95ecdb;
 }
 
-body.learn .course-row:hover,
-body.learn .course-row.active {
+body.learncreate .course-row:hover,
+body.learncreate .course-row.active {
   background-color: #cdfee9;
 }
 
-body.learn-c {
+body.learn-c .page-title {
+  margin: 2em 0 6em;
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+body.learn-c .tabs-wrap {
+  margin-top: -11.875em;
+}
+
+body.learn-c .tab-tab {
+  cursor: pointer;
+  padding: 1.5em 2em 2em;
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+body.learn-c .tab-tab h2 {
+  font-weight: 300;
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+body.learn-c .tab-tab h2 span {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #222222;
+}
+
+body.learn-c .tab-tab.active {
+  cursor: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #222222;
+  border-right: 1px solid #222222;
+  border-left: 1px solid #222222;
+}
+
+body.learn-c .tab-tab.active h2 {
+  font-weight: bold;
+}
+
+body.learn-c .tab-tab.active h2 span {
+  border: none;
+}
+
+body.learn-c .tab-body {
+  border: 1px solid #222222;
+  padding: 3em 2.5em;
+  margin-bottom: 6em;
+  position: relative;
+  top: -1px;
+  display: none;
+}
+
+body.learn-c .tab-body.active {
+  display: block;
+}
+
+body.learn-c .tab-intro {
+  font-weight: 300;
+  margin-bottom: 2em;
+  padding-right: 1em;
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+body.learn-c .tab-content {
+  padding: 1em 4em 1em 1em;
+}
+
+body.learn-c .tab-images {
+  margin-bottom: 5em;
+}
+
+body.learn-c .tab-image img {
+  border: 1px solid #222222;
+  width: 100%;
+}
+
+body.learn-c .tab-image.img-1 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+body.learn-c .tab-image.img-2 {
+  float: left;
+  width: 49%;
+}
+
+body.learn-c .tab-image.img-2:last-of-type {
+  float: right;
+}
+
+body.learn-c .tab-image.img-3 {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+
+body.learn-c .tab-image.img-3:last-of-type {
+  float: right;
+  margin-right: 0;
+}
+
+body.learn-c .tab-image.img-4 {
+  float: left;
+  width: 23%;
+  margin-right: 2.625%;
+}
+
+body.learn-c .tab-image.img-4:last-of-type {
+  float: right;
+  margin-right: 0;
+}
+
+body.learn-c .tab-courses-intro {
+  margin-bottom: 3em;
+}
+
+body.learn-c .tab-filter {
+  margin-bottom: 3em;
+}
+
+body.learn-c .tab-filter-text {
+  margin-bottom: 3em;
+}
+
+.filter-buttons button {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+body.k-8 {
   background-color: #cdfee9;
 }
 
-body.learn-t {
+body.k-8 .accordion:hover,
+body.k-8 .accordion.active,
+body.k-8 .course-row:hover,
+body.k-8 .course-row.active {
+  background-color: #cdfee9;
+}
+
+body.teens {
   background-color: #95ecdb;
 }
 
-body.learn-a {
+body.teens .accordion:hover,
+body.teens .accordion.active,
+body.teens .course-row:hover,
+body.teens .course-row.active {
+  background-color: #95ecdb;
+}
+
+body.adults {
+  background-color: #a1f7d2;
+}
+
+body.adults .accordion:hover,
+body.adults .accordion.active,
+body.adults .course-row:hover,
+body.adults .course-row.active {
   background-color: #a1f7d2;
 }

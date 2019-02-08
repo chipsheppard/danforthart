@@ -358,6 +358,21 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c5c7b437acf8",
+            "label": "Citation Link",
+            "name": "citation_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c4a2fb3f1aa5",
             "label": "Upcoming Exhibitions",
             "name": "",
@@ -578,5 +593,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548443365
+    "modified": 1549564771
 }

@@ -8,7 +8,7 @@ table {
 th, td {
     line-height: 1.5;
     vertical-align: top;
-    border-top: 1px solid $color__base-xlight;
+    border-bottom: 1px solid $color__base-xlight;
 }
 th {
     padding: 1em;
@@ -16,7 +16,7 @@ th {
 	background-color: $color__base-xxlight;
 }
 td {
-    padding: 1em;
+    padding: .5em;
 }
 thead th, tfoot th {
     vertical-align: bottom;

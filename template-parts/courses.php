@@ -3,7 +3,7 @@
  * The template part for displaying Courses.
  *
  * @package    danforthart
- * @subpackage danforthart
+ * @subpackage danforthart/template-parts
  * @author     Chip Sheppard
  * @since      1.0.0
  * @license    GPL-2.0+
@@ -11,15 +11,15 @@
 
 ?>
 
+<div class="course-headers">
+	<div class="col-1-6 first">Session  number + Dates</div>
+	<div class="col-1-6">Instructor(s)</div>
+	<div class="col-1-3">Grade level + Class name</div>
+	<div class="col-1-6">Price</div>
+	<div class="col-1-6">Register <span>*</span></div>
+	<div class="cf"></div>
+</div>
 <div class="course-rows-wrap">
-	<div class="course-headers">
-		<div class="col-1-6 first">Session  number + Dates</div>
-		<div class="col-1-6">Instructor(s)</div>
-		<div class="col-1-3">Grade level + Class name</div>
-		<div class="col-1-6">Price</div>
-		<div class="col-1-6">Register <span>*</span></div>
-		<div class="cf"></div>
-	</div>
 	<?php
 	// Season, K-8.
 	$level = get_sub_field( 'c_level' );
@@ -56,8 +56,16 @@
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
+			$terms = get_the_terms( $post->ID, 'level' );
+			if ( ! empty( $terms ) ) :
+				$levels = array();
+				foreach ( $terms as $term ) {
+					$levels[] = $term->name;
+				}
+				$level_list = join( ' ', $levels );
+			endif;
 			?>
-			<div class="course-row">
+			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?>">
 				<div class="row-top">
 					<div class="col-1-6 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
@@ -69,19 +77,7 @@
 						<div class="instructors"><?php the_field( 'instructors' ); ?></div>
 					</div>
 					<div class="col-1-3 course-col">
-						<div class="level">
-						<?php
-						$terms = get_the_terms( $post->ID, 'level' );
-						if ( ! empty( $terms ) ) :
-							$levels = array();
-							foreach ( $terms as $term ) {
-								$levels[] = $term->name;
-							}
-							$level_list = join( ', ', $levels );
-							printf( '%s', esc_html( $level_list ) );
-						endif;
-						?>
-						</div>
+						<div class="level"><?php printf( '%s', esc_html( $level_list ) ); ?></div>
 						<div class="display-name"><span><?php the_field( 'display_name' ); ?></span></div>
 					</div>
 					<div class="col-1-6 course-col fb">

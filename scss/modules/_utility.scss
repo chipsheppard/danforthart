@@ -22,3 +22,21 @@
 img.flex {
 	width: 100%;
 }
+
+.fwn {
+	font-weight: $font__weight-normal;
+}
+.fwl {
+	font-weight: $font__weight-light;
+}
+.to-left {
+	position: relative;
+	left: -.5em;
+    margin-left: -.5em;
+}
+.red {
+	color: #984e1f
+}
+.grn {
+	color: $color__green;
+}

@@ -56,6 +56,10 @@ function danforthart_scripts() {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'permanent-js', get_template_directory_uri() . '/assets/js/permanent-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
+	if ( is_page_template( 'templates/learn-c.php' ) ) {
+		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/assets/js/isotope.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'isotope-init', get_template_directory_uri() . '/assets/js/isotope-init.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
 

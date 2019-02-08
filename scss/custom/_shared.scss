@@ -193,6 +193,13 @@
 	background-color: $color__blue;
 	position: relative;
 
+	&.orange {background-color: $color__orange;}
+	&.green {background-color: $color__green;}
+	&.yellow {background-color: $color__yellow;}
+	&.blue {background-color: $color__blue;}
+	&.tan {background-color: $color__tan;}
+	&.purple {background-color: $color__purple;}
+
 	blockquote {
 		line-height: 1.25;
 		margin: 0;

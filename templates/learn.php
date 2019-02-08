@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'learncreate learn' ) );
+	return array_merge( $classes, array( 'learncreate' ) );
 } );
 
 /**
@@ -208,61 +208,7 @@ endif;
 			?>
 			</div><!-- /course-blocks -->
 
-
-			<div class="lower-block">
-				<div class="lb-title">
-					<h2><?php the_field( 'lb_title' ); ?></h2>
-				</div>
-
-				<div class="col-1-3 first lb-left">
-					<?php
-					$image = get_field( 'lb_image' );
-					if ( ! empty( $image ) ) :
-						$url = $image['url'];
-						$alt = $image['alt'];
-						$caption = $image['caption'];
-						$size = 'medium';
-						$width = $image['sizes'][ $size . '-width' ];
-						$height = $image['sizes'][ $size . '-height' ];
-						?>
-						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php if ( $caption ) : ?>
-							<div class="card-title"><?php echo esc_html( $caption ); ?></div>
-						<?php
-						else :
-							echo '&nbsp;';
-						endif;
-					endif;
-					?>
-				</div>
-				<div class="col-2-3 lb-right">
-					<?php
-					if ( have_rows( 'lb_accordion' ) ) :
-						while ( have_rows( 'lb_accordion' ) ) :
-							the_row();
-							?>
-							<div class="accordion col-2-3 silo">
-								<div class="actop">
-									<div class="acc-title">
-										<?php the_sub_field( 'title' ); ?>
-									</div>
-									<div class="acc-button">
-										<span class="cssicon-plusminus small plus"></span>
-									</div>
-									<div class="cf"></div>
-								</div>
-								<div class="acbot">
-									<?php the_sub_field( 'text' ); ?>
-								</div>
-							</div>
-							<?php
-						endwhile;
-					endif;
-					?>
-				</div>
-				<div class="cf"></div>
-
-			</div><!-- /lower-block-->
+			<?php get_template_part( 'template-parts/course-accordion' ); ?>
 
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 
