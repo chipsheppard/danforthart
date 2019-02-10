@@ -27,7 +27,7 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 /**
- * Learn Create page functions
+ * Learn+Create course page functions
  */
 function da_learn_k() {
 ?>
@@ -83,39 +83,8 @@ function da_learn_k() {
 				<div class="col-1-2 first tab-intro"><?php the_sub_field( 'tab_body_intro' ); ?></div>
 				<div class="col-1-2 tab-content"><?php the_sub_field( 'tab_body_text' ); ?></div>
 				<div class="cf"></div>
-				<?php if ( have_rows( 'tab_images' ) ) : ?>
-				<div class="tab-images">
-					<?php
-					// Get a total so we can style the images.
-					$rc = 0;
-					while ( have_rows( 'tab_images' ) ) :
-						$rc++;
-						the_row();
-					endwhile;
 
-					// tagging each image with the total.
-					while ( have_rows( 'tab_images' ) ) :
-						the_row();
-						?>
-						<div class="tab-image img-<?php echo esc_html( $rc ); ?>">
-							<?php
-							$image = get_sub_field( 'tab_image' );
-							if ( ! empty( $image ) ) :
-								$url = $image['url'];
-								$alt = $image['alt'];
-								$caption = $image['caption'];
-								$size = 'medium';
-								$width = $image['sizes'][ $size . '-width' ];
-								$height = $image['sizes'][ $size . '-height' ];
-								?>
-								<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-							<?php endif; ?>
-						</div><!-- /tab-image -->
-					<?php endwhile; ?>
-				<br clear="all">
-				</div><!-- /tab-images -->
-				<?php endif; ?>
-
+				<?php get_template_part( 'template-parts/v-images' ); ?>
 
 				<div class="tab-courses-intro">
 					<?php the_sub_field( 'courses_intro' ); ?>
@@ -138,7 +107,7 @@ function da_learn_k() {
 		<?php endif; ?>
 		</div><!-- /tabs-wrap -->
 
-		<?php get_template_part( 'template-parts/course-accordion' ); ?>
+		<?php get_template_part( 'template-parts/accordion-block' ); ?>
 		<?php get_template_part( 'template-parts/quote' ); ?>
 		<?php get_template_part( 'template-parts/signup' ); ?>
 
@@ -148,8 +117,6 @@ function da_learn_k() {
 <?php
 }
 add_action( 'tha_entry_content_before', 'da_learn_k' );
-
-
 
 // Build the page.
 get_template_part( 'index' );

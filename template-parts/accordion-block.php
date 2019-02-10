@@ -12,11 +12,18 @@
 ?>
 
 <div class="accordion-block">
+	<?php if ( get_field( 'ab_title' ) ) : ?>
 	<div class="ab-title">
-		<h2><?php the_field( 'ab_title' ); ?></h2>
+		<h3><?php the_field( 'ab_title' ); ?></h3>
 	</div>
+	<?php endif; ?>
 
 	<div class="col-1-3 first ab-left">
+		<?php if ( get_field( 'ab_left_title' ) ) : ?>
+		<div class="ab-title">
+			<h3><?php the_field( 'ab_left_title' ); ?></h3>
+		</div>
+		<?php endif; ?>
 		<?php
 		$image = get_field( 'ab_image' );
 		if ( ! empty( $image ) ) :
@@ -38,29 +45,7 @@
 		?>
 	</div>
 	<div class="col-2-3 ab-right">
-		<?php
-		if ( have_rows( 'ab_accordion' ) ) :
-			while ( have_rows( 'ab_accordion' ) ) :
-				the_row();
-				?>
-				<div class="accordion col-2-3 silo">
-					<div class="actop">
-						<div class="acc-title">
-							<?php the_sub_field( 'title' ); ?>
-						</div>
-						<div class="acc-button">
-							<span class="cssicon-plusminus small plus"></span>
-						</div>
-						<div class="cf"></div>
-					</div>
-					<div class="acbot">
-						<?php the_sub_field( 'text' ); ?>
-					</div>
-				</div>
-				<?php
-			endwhile;
-		endif;
-		?>
+		<?php get_template_part( 'template-parts/accordion' ); ?>
 	</div>
 	<div class="cf"></div>
 

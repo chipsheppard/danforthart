@@ -104,7 +104,18 @@ function da_home() {
 					<?php if ( get_field( 'quote' ) ) : ?>
 					<blockquote>
 						<?php the_field( 'quote' ); ?>
-						<cite><?php the_field( 'quote_citation' ); ?></cite>
+						<cite>
+<?php
+the_field( 'quote_citation' );
+$link = get_field( 'citation_link' );
+if ( $link ) :
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+	?>
+	&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+						</cite>
 					</blockquote>
 				<?php endif; ?>
 				</div>
@@ -130,7 +141,7 @@ function da_home() {
 
 	<div class="inner-wrap">
 
-		<div class="info-block">
+		<div class="home-info">
 			<h2 class="section-title">
 				<?php the_field( 'section_title' ); ?>
 			</h2>
@@ -155,7 +166,7 @@ function da_home() {
 				<div class="ib-txt"><?php the_field( 'col3_text' ); ?></div>
 			</div>
 			<div class="cf"></div>
-		</div><!-- /info-block -->
+		</div><!-- /home-info -->
 
 
 		<div class="social-block">

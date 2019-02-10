@@ -1,0 +1,92 @@
+.hero-wrap {
+	clear: both;
+	position: relative;
+}
+.heroimage,
+.heroslider {
+	img {
+		max-width: none;
+		min-height: 500px;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+.hero-callout {
+	background-color: #ffffff;
+	padding: 1.5em 2em;
+	width: 40%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+
+	@include breakpoint(tablet-v) {
+		width: 80%;
+	}
+	@include breakpoint(phone-h) {
+		width: 95%;
+		padding: .75em 1em;
+	}
+
+	.link {
+		float:left;
+		width: 45%;
+
+		@include breakpoint(phone-h) {
+			float: none;
+			width: 100%;
+		}
+
+		a {
+			border: none;
+			padding: 0;
+			@include bigtext();
+
+			span {
+				padding-bottom: 3px;
+				border-bottom: 1px solid $color__base;
+			}
+
+			&:hover {
+				padding: 0;
+
+				span {
+					padding-bottom: 2px;
+					border-bottom: 2px solid $color__base;
+				}
+			}
+		}
+	}
+
+	.date {
+		float:right;
+		text-align: right;
+		width: 55%;
+
+		@include breakpoint(phone-h) {
+			float: none;
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	.text {
+		clear: both;
+		padding-top: .75em;
+		font-weight: $font__weight-light;
+		@include font-size(1.625);
+
+		@include breakpoint(tablet-v) {
+			padding-top: .5em;
+			line-height: 1.25;
+			@include font-size(1.375);
+		}
+	}
+}
+
+.slickeroo {
+	visibility: hidden;
+	&.slick-initialized {
+		visibility: visible;
+	}
+}

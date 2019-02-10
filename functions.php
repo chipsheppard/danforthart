@@ -55,10 +55,14 @@ function danforthart_scripts() {
 	if ( is_page_template( 'templates/permanent.php' ) ) {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'permanent-js', get_template_directory_uri() . '/assets/js/permanent-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
 	if ( is_page_template( 'templates/learn-c.php' ) ) {
 		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/assets/js/isotope.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 		wp_enqueue_script( 'isotope-init', get_template_directory_uri() . '/assets/js/isotope-init.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+	}
+	if ( is_page_template( 'templates/faq.php' ) ) {
+		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
@@ -139,6 +143,24 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page( 'Call To Action' );
 	acf_add_options_page( 'Signup Form' );
 }
+
+
+/**
+ * Show only parent taxonomies by hooking into ACF's taxonomy display.
+ *
+ * @link https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-query/
+ * @param array  $args The number of post revisions to keep.
+ * @param string $field The number of post revisions to keep.
+ * @param object $post_id The post object.
+ */
+function my_taxonomy_query( $args, $field, $post_id ) {
+	// modify args.
+	$args['parent'] = 0;
+	// return.
+	return $args;
+}
+add_filter( 'acf/fields/taxonomy/query/name=c_level', 'my_taxonomy_query', 10, 3 );
+
 
 // Load Jetpack compatibility file.
 if ( defined( 'JETPACK__VERSION' ) ) {

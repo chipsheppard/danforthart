@@ -8,15 +8,14 @@ table {
 th, td {
     line-height: 1.5;
     vertical-align: top;
-    border-bottom: 1px solid $color__base-xlight;
 }
 th {
-    padding: 1em;
+    padding: 1em 0;
 	text-align: left;
 	background-color: $color__base-xxlight;
 }
 td {
-    padding: .5em;
+    padding: .125em 0;
 }
 thead th, tfoot th {
     vertical-align: bottom;

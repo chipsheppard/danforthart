@@ -1,0 +1,38 @@
+.variable-images {
+	margin-bottom: 5em;
+}
+.variable-image {
+	img {
+		border: 1px solid $color__base;
+		width: 100%;
+	}
+	&.img-1 {
+		width: 70%;
+		margin: 0 auto;
+	}
+	&.img-2 {
+		float: left;
+		width: 49%;
+		&:last-of-type {
+			float: right;
+		}
+	}
+	&.img-3 {
+		float: left;
+		width: 32%;
+		margin-right: 2%;
+		&:last-of-type {
+			float: right;
+			margin-right: 0;
+		}
+	}
+	&.img-4 {
+		float: left;
+		width: 23%;
+		margin-right: 2.625%;
+		&:last-of-type {
+			float: right;
+			margin-right: 0;
+		}
+	}
+}

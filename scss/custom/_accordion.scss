@@ -1,0 +1,67 @@
+.accordion-block {
+	margin: 1em 0 8em;
+
+	.ab-title {
+		padding: 0 0 3em 5em;
+
+		@include breakpoint(tablet-v) {
+			padding-left: 0;
+		}
+
+		h2 {
+			@include font-size(2.8125);
+		}
+	}
+
+	.ab-left {
+		position: relative;
+
+		img {
+			max-width: none;
+			width: 100%;
+		}
+		.card-title {
+			background-color: #fff;
+			bottom: 0;
+			display: inline-block;
+			left: 0;
+			line-height: 1;
+			padding: 1em 1.25em 1em 1.75em;
+			position: absolute;
+			@include bigtext();
+			@include font-size(1);
+		}
+	}
+}
+
+
+.accordion {
+	border-bottom: 1px solid $color__base;
+	padding: 0 1em;
+
+	&:hover,
+	&.active {
+		background-color: $color__green;
+	}
+
+	.actop {
+		padding: 1em 0;
+	}
+	.acbot {
+		display: none;
+		padding: 1em 0 3em;
+	}
+
+	.acc-title {
+		display: inline-block;
+		float: left;
+		@include font-size(1.25);
+	}
+	.acc-button {
+		display: inline-block;
+		float: right;
+		text-align: center;
+		width: 32px;
+		margin-right: 1em;
+	}
+}

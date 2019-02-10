@@ -99,8 +99,8 @@
                     "label": "Course Grade Level",
                     "name": "c_level",
                     "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
+                    "instructions": "Choose a \"Parent\" level (k-8, teens, adults)",
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -239,6 +239,51 @@
                             "name": "tab_image",
                             "type": "image",
                             "instructions": "No more than 3.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c60445fd1125",
+                    "label": "Variable Images",
+                    "name": "v_images",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c604472d1126",
+                            "label": "Image",
+                            "name": "v_image",
+                            "type": "image",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -566,20 +611,6 @@
                 "operator": "==",
                 "value": "templates\/learn-c.php"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/learn-t.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/learn-a.php"
-            }
         ]
     ],
     "menu_order": 0,
@@ -592,5 +623,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549567903
+    "modified": 1549812882
 }

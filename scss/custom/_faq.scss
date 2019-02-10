@@ -1,0 +1,37 @@
+body.faq {
+	background-color: $color__yellow-m;
+
+	.accordion-block {
+		margin-top: 8em;
+	}
+	.acc-blk {
+		margin-bottom: 7em;
+	}
+	.variable-images {
+		margin-top: 8em;
+	}
+
+	.accordion {
+		&:hover,
+		&.active {
+		    background-color: $color__yellow-m;
+		}
+	}
+
+	.page-title {
+		line-height: 1;
+		margin: .5em 0 1em;
+		@include font-size(7);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+}

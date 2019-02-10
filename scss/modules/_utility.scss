@@ -29,14 +29,25 @@ img.flex {
 .fwl {
 	font-weight: $font__weight-light;
 }
+
 .to-left {
 	position: relative;
 	left: -.5em;
     margin-left: -.5em;
 }
+
 .red {
 	color: #984e1f
 }
 .grn {
 	color: $color__green;
+}
+
+.open-time {
+	font-weight: $font__weight-light;
+	@include font-size(3.5);
+}
+
+.big {
+	font-size: 125%;
 }

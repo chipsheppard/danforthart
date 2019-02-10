@@ -59,10 +59,13 @@
 			$terms = get_the_terms( $post->ID, 'level' );
 			if ( ! empty( $terms ) ) :
 				$levels = array();
+				$names = array();
 				foreach ( $terms as $term ) {
-					$levels[] = $term->name;
+					$levels[] = $term->slug;
+					$names[] = $term->name;
 				}
 				$level_list = join( ' ', $levels );
+				$name_list = join( ' ', $names );
 			endif;
 			?>
 			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?>">
@@ -77,7 +80,7 @@
 						<div class="instructors"><?php the_field( 'instructors' ); ?></div>
 					</div>
 					<div class="col-1-3 course-col">
-						<div class="level"><?php printf( '%s', esc_html( $level_list ) ); ?></div>
+						<div class="level"><?php printf( '%s', esc_html( $name_list ) ); ?></div>
 						<div class="display-name"><span><?php the_field( 'display_name' ); ?></span></div>
 					</div>
 					<div class="col-1-6 course-col fb">

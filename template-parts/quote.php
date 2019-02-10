@@ -36,7 +36,18 @@ endif;
 	<div class="col-1-2 nm txtblk">
 		<blockquote>
 			<?php the_field( 'quote' ); ?>
-			<cite><?php the_field( 'quote_citation' ); ?></cite>
+			<cite>
+<?php
+the_field( 'quote_citation' );
+$link = get_field( 'citation_link' );
+if ( $link ) :
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+?>
+&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+			</cite>
 		</blockquote>
 	</div>
 	<div class="cf"></div>

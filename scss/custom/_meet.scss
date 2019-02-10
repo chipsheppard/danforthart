@@ -1,0 +1,59 @@
+body.meetus {
+
+	.page-title {
+		line-height: 1;
+		margin: 1em 0 7em;
+		//width: 69%;
+		@include font-size(4.6875);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+	.mid-block {
+		.mid-left {
+			.card-title {
+				background-color: $color__purple;
+			}
+			.textblock {
+				height: auto;
+				padding: 0 4em;
+			}
+		}
+		.textblock .message {
+			font-weight: $font__weight-bold;
+			line-height: 1.5;
+			padding: 0;
+			@include font-size(2.1875);
+		}
+	}
+
+	.ab-title {
+		padding: 0;
+		@include font-size(1.875);
+	}
+	.accordion-block .ab-right {
+		padding: 0 2em 1em 0;
+	}
+
+	.accordion {
+		&:hover,
+		&.active {
+			background-color: $color__blue-xlt;
+		}
+	}
+	.variable-images {
+		margin-bottom: 8em;
+	}
+
+	.quote-block {
+		margin-top: 8em;
+	}
+}

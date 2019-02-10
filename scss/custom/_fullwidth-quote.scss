@@ -1,0 +1,51 @@
+.quote-block {
+	margin: 15em 0 10em;
+
+	@include breakpoint(tablet-v) {
+		margin: 5em 0 0;
+	}
+
+	.large-link {
+		padding: 2em 0 3em 3em;
+
+		a {
+			font-weight: $font__weight-bold;
+			@include font-size(1.6875);
+		}
+
+		@include breakpoint(tablet-v) {
+			padding: 0 0 2.5em $size__site-padding;
+
+			a {
+				@include font-size(1.375);
+			}
+		}
+	}
+
+	blockquote {
+		line-height: 1.375;
+		margin-top: 0;
+		padding-top: 0;
+		@include font-size(2.8125);
+
+		cite {
+			@include font-size(1.4375);
+
+			a {
+				@include font-size(1);
+			}
+		}
+
+		&:before {
+			top: -0.25em;
+		}
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1.875);
+
+			cite {
+				@include font-size(1.25);
+			}
+		}
+	}
+}

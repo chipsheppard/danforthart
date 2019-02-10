@@ -243,6 +243,21 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c6067604e6de",
+            "label": "Citation Link",
+            "name": "citation_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c532a1f584f4",
             "label": "Learn Image",
             "name": "learn_image",
@@ -564,8 +579,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1549222663
+    "modified": 1549821832
 }

@@ -1,0 +1,117 @@
+body.visit {
+
+	.page-title {
+		line-height: 1;
+		margin: 1em 0 1.5em;
+		@include font-size(7);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+
+	.content-wrap.yellow {
+		background-color: $color__yellow-xlt;
+	}
+
+	.detail-block {
+		padding: 2em 0 6em;
+	}
+	.detail-tl,
+	.detail-tr,
+	.detail-bl,
+	.detail-br {
+		padding: 4em 4em 4em 0;
+
+		@include breakpoint(tablet-v) {
+			padding: 0 0 2em;
+		}
+	}
+
+	.accordion-wrap {
+		margin-bottom: 4em;
+	}
+
+	.accordion {
+		&:hover,
+		&.active {
+		    background-color: $color__yellow-xxlt;
+		}
+	}
+
+	.questions {
+		background-color: #ffffff;
+		border: 1px solid $color__base;
+		display: inline-block;
+		font-weight: $font__weight-light;
+		margin: 0 auto;
+		position:relative;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		padding: 1em 2.5em;
+		@include font-size(2.5);
+
+		@include breakpoint(tablet-h) {
+			padding: 1em 2em;
+			@include font-size(2);
+		}
+		@include breakpoint(tablet-m) {
+			padding: 1em 2em;
+			width: 90%;
+		}
+		@include breakpoint(tablet-h) {
+			padding: 1em 1.5em;
+			width: 96%;
+			@include font-size(1.5);
+		}
+	}
+
+	.contact-info {
+		margin-bottom: 10em;
+
+		@include breakpoint(tablet-m) {
+			margin-bottom: 4em;
+
+			h6 {
+				margin-bottom: .5em;
+			}
+		}
+	}
+}
+
+.imagekey {
+	border-top: 1px solid $color__base;
+	display: inline-block;
+	padding: 1em;
+	max-width: 300px;
+
+	li {
+		line-height: 1;
+		margin-left: 1.25em;
+		margin-bottom: 1em;
+	}
+
+	.to-left {
+		margin-left: -1.825em;
+	}
+
+	.num {
+		background-color: $color__base;
+		color: #ffffff;
+		display: inline-block;
+		line-height: 1.625;
+		height: 1.625em;
+		width: 1.625em;
+		border-radius: 50%;
+		padding: 0;
+		text-align: center;
+	}
+}

@@ -1,6 +1,6 @@
 {
     "key": "group_5c4119a2ae0a0",
-    "title": "Exhibitions Custom Content",
+    "title": "Exhibitions",
     "fields": [
         {
             "key": "field_5c49157d24092",
@@ -249,5 +249,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548888548
+    "modified": 1549642029
 }

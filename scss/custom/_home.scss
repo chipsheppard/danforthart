@@ -39,118 +39,19 @@ body.home {
 	.mid-block {
 		background-color: $color__green;
 
-		.col-1-2 {
-			position: relative;
-			margin-top: -25em;
-
-			@include breakpoint(tablet-v) {
-				margin-top: 0;
-			}
-		}
-
-		.imageblock {
-			position: relative;
-
-			img {
-				display: block;
-				max-width: none;
-				height: 800px;
-				object-fit: cover;
-				width: 100%;
-
-				@include breakpoint(tablet-h) {
-					height: 600px;
-				}
-				@include breakpoint(phone-h) {
-					height: 400px;
-				}
-			}
-
-			.card-title {
-				display: inline-block;
-				line-height: 1;
-				padding: 1em 1.25em 1em 1.75em;
-				position: absolute;
-				left: 0;
-				@include bigtext();
-				@include font-size(1);
-			}
-		}
-
-		.textblock {
-			height: 400px;
-			padding: 0 2.5em;
-			position: relative;
-
-			@include breakpoint(tablet-v) {
-				padding: 0 1.5em;
-				height: 300px;
-			}
-			@include breakpoint(phone-h) {
-				padding: 0;
-			}
-			a {
-				@include bigtext();
-			}
-
-			.message {
-				padding: 1em;
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			blockquote {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
-				line-height: 1.25;
-				margin: 0;
-				padding-right: 0;
-				@include font-size(2.8125);
-
-				@include breakpoint(tablet-m) {
-					@include font-size(1.875);
-				}
-
-				cite {
-					@include font-size(1.4375);
-
-					@include breakpoint(phone-h) {
-						@include font-size(1.25);
-					}
-				}
-
-				a {
-					@include font-size(1);
-				}
-			}
-		}
 	}
-
 	.mid-left {
 		.card-title {
 			background-color: $color__yellow;
-			top: 0;
 		}
 	}
 	.mid-right {
 		.card-title {
 			background-color: $color__green;
-			bottom: 0;
 		}
 	}
 
-	@include breakpoint(tablet-v) {
-		.mid-left .imageblock {
-			margin-left: -3%;
-		}
-		.mid-right .imageblock {
-			margin-right: -3%;
-		}
-	}
-
-	.info-block {
+	.home-info {
 		padding: 5em 0 2em;
 		@include font-size(1.125);
 
