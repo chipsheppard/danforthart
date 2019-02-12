@@ -29,11 +29,11 @@ endif;
 		// IMAGE.
 		$image = get_field( 'image', 'option' );
 		if ( ! empty( $image ) ) :
-			$url = $image['url'];
 			$alt = $image['alt'];
 			$size = 'medium_large';
 			$width = $image['sizes'][ $size . '-width' ];
 			$height = $image['sizes'][ $size . '-height' ];
+			$url = $image['sizes'][ $size ];
 			?>
 			<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 		<?php endif; ?>

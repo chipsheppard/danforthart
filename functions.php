@@ -121,12 +121,6 @@ add_action( 'after_setup_theme', 'danforthart_setup' );
 
 
 /**
- * Make the TEXT editor the default.
- */
- add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
-
-
-/**
  * Limit the number of post revisions.
  *
  * @param string $num The number of post revisions to keep.

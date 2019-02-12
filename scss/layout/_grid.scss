@@ -1,5 +1,8 @@
-.col-1-2,.col-1-3,.col-2-3,.col-1-4,.col-3-4,.col-1-5,.col-2-5,.col-3-5,.col-4-5,.col-1-6,
-.col-5-6,.col-1-7,.col-2-7,.col-3-7,.col-4-7,.col-5-7,.col-6-7,.col-1-8,.col-3-8,.col-5-8,.col-7-8 {
+.col-1-2,.col-1-3,.col-2-3,.col-1-4,.col-3-4,.col-1-5,.col-2-5,.col-3-5,.col-4-5,
+.col-1-6,.col-5-6,.col-1-7,.col-2-7,.col-3-7,.col-4-7,.col-5-7,.col-6-7,.col-1-8,.col-3-8,.col-5-8,.col-7-8,
+.col-1-9,.col-2-9,.col-4-9,.col-5-9,.col-7-9,.col-8-9,.col-1-10,.col-3-10,.col-7-10,.col-9-10,
+.col-1-11,.col-2-11,.col-3-11,.col-4-11,.col-5-11,.col-6-11,.col-7-11,.col-8-11,.col-9-11,.col-10-11,
+.col-1-12,.col-5-12,.col-7-12,.col-11-12 {
 	float: left;
 	margin-left: 2.564102564102564%;
 }
@@ -25,7 +28,30 @@
 .col-3-8 {width:35.8974358974359%;}
 .col-5-8 {width:61.53846153846154%;}
 .col-7-8 {width:87.17948717948718%;}
-
+.col-1-9 {width:8.83190883190883%;}
+.col-2-9 {width:20.22792022792022%;}
+.col-4-9 {width:43.01994301994301%;}
+.col-5-9 {width:54.4159544159544%;}
+.col-7-9 {width:77.20797720797718%;}
+.col-8-9 {width:88.60398860398857%;}
+.col-1-10 {width:7.6923076923077%;}
+.col-3-10 {width:28.20512820512823%;}
+.col-7-10 {width:69.23076923076927%;}
+.col-9-10 {width:89.74358974358979%;}
+.col-1-11 {width:6.75990675990676%;}
+.col-2-11 {width:16.08391608391608%;}
+.col-3-11 {width:25.40792540792541%;}
+.col-4-11 {width:34.73193473193473%;}
+.col-5-11 {width:44.05594405594405%;}
+.col-6-11 {width:53.37995337995337%;}
+.col-7-11 {width:62.70396270396269%;}
+.col-8-11 {width:72.02797202797201%;}
+.col-9-11 {width:81.35198135198133%;}
+.col-10-11 {width:90.67599067599065%;}
+.col-1-12 {width:5.98290598290599%;}
+.col-5-12 {width:40.1709401709402%;}
+.col-7-12 {width:57.2649572649573%;}
+.col-11-12 {width:91.4529914529915%;}
 .first {
 	clear:both;
 	margin-left:0;
@@ -54,7 +80,11 @@
 }
 
 @include breakpoint(tablet-v) {
-	.col-1-2,.col-1-3,.col-2-3,.col-1-4,.col-3-4,.col-1-5,.col-2-5,.col-3-5,.col-4-5,.col-1-6,.col-5-6,.col-1-7,.col-2-7,.col-3-7,.col-4-7,.col-5-7,.col-6-7,.col-1-8,.col-3-8,.col-5-8,.col-7-8,.pullright,.col-1-2.nm,.col-1-3.nm,.col-2-3.nm,.col-1-4.nm,.col-3-4.nm {
+	.col-1-2,.col-1-3,.col-2-3,.col-1-4,.col-3-4,.col-1-5,.col-2-5,.col-3-5,.col-4-5,
+	.col-1-6,.col-5-6,.col-1-7,.col-2-7,.col-3-7,.col-4-7,.col-5-7,.col-6-7,.col-1-8,.col-3-8,.col-5-8,.col-7-8,
+	.col-1-9,.col-2-9,.col-4-9,.col-5-9,.col-7-9,.col-8-9,.col-1-10,.col-3-10,.col-7-10,.col-9-10,
+	.col-1-11,.col-2-11,.col-3-11,.col-4-11,.col-5-11,.col-6-11,.col-7-11,.col-8-11,.col-9-11,.col-10-11,
+	.col-1-12,.col-5-12,.col-7-12,.col-11-12,.pullright,.col-1-2.nm,.col-1-3.nm,.col-2-3.nm,.col-1-4.nm,.col-3-4.nm {
 		clear: both;
 		display:block;
 		float:none;

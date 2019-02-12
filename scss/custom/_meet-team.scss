@@ -1,0 +1,27 @@
+body.team {
+	background-color: $color__blue-lt;
+}
+body.community {
+	background-color: $color__blue-xlt;
+}
+
+body.team,
+body.community {
+	.page-title {
+		line-height: 1.5;
+		padding: 2em 1em;
+		width: 70%;
+		@include font-size(2.8125);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(2);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(1.5);
+		}
+	}
+}

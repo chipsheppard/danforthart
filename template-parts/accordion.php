@@ -16,7 +16,7 @@ if ( have_rows( 'ab_accordion' ) ) :
 		<div class="accordion">
 			<div class="actop">
 				<div class="acc-title">
-					<?php the_sub_field( 'title' ); ?>
+					<?php the_sub_field( 'a_title' ); ?>
 				</div>
 				<div class="acc-button">
 					<span class="cssicon-plusminus small plus"></span>
@@ -24,7 +24,7 @@ if ( have_rows( 'ab_accordion' ) ) :
 				<div class="cf"></div>
 			</div>
 			<div class="acbot">
-				<?php the_sub_field( 'text' ); ?>
+				<?php the_sub_field( 'a_text' ); ?>
 			</div>
 		</div>
 		<?php

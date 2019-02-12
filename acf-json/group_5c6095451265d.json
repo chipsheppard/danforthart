@@ -169,16 +169,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "field_5c60977b70bed",
+                    "collapsed": "field_5c61f42c3a516",
                     "min": 0,
                     "max": 0,
                     "layout": "block",
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5c60977b70bed",
+                            "key": "field_5c61f42c3a516",
                             "label": "Title",
-                            "name": "title",
+                            "name": "a_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -195,9 +195,9 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5c60978570bee",
+                            "key": "field_5c61f43e3a517",
                             "label": "Text",
-                            "name": "text",
+                            "name": "a_text",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -282,5 +282,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549836618
+    "modified": 1549924203
 }

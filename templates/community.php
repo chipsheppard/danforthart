@@ -12,29 +12,43 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'meetus community' ) );
+	return array_merge( $classes, array( 'meet community' ) );
 } );
 
 /**
  * Community page functions
  */
 function da_community() {
-
-	echo '<div class="inner-wrap">';
-
-	echo '<div class="sub-navigation">';
+?>
+<div class="inner-wrap">
+	<div class="sub-navigation">
+		<?php
 		wp_nav_menu( array(
 			'menu' => 'meet-sub',
 			'container' => '',
 		) );
-	echo '</div>';
+		?>
+	</div>
+</div>
 
-	echo 'FSU Community';
+<div class="inner-wrap">
+	<h1 class="page-title">
+		<?php the_field( 'page_title' ); ?>
+	</h1>
+</div>
 
-	the_content();
+<div class="content-wrap">
+	<div class="inner-wrap">
 
-	echo '</div>';
+		<?php the_content(); ?>
 
+		<?php get_template_part( 'template-parts/quote' ); ?>
+		<?php get_template_part( 'template-parts/signup' ); ?>
+
+	</div><!-- /inner-wrap -->
+</div><!-- /content-wrap -->
+
+<?php
 }
 add_action( 'tha_entry_content_before', 'da_community' );
 

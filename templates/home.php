@@ -86,11 +86,11 @@ function da_home() {
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
@@ -123,11 +123,11 @@ if ( $link ) :
 					<?php
 					$image = get_field( 'learn_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
@@ -181,11 +181,11 @@ if ( $link ) :
 								<?php
 								$s_image = get_sub_field( 's_image' );
 								if ( ! empty( $s_image ) ) :
-									$url = $s_image['url'];
 									$alt = $s_image['alt'];
 									$size = 'medium';
 									$width = $s_image['sizes'][ $size . '-width' ];
 									$height = $s_image['sizes'][ $size . '-height' ];
+									$url = $s_image['sizes'][ $size ];
 									?>
 									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 								<?php endif; ?>

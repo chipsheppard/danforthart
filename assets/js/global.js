@@ -97,11 +97,11 @@ jQuery(function( $ ){
 		if ( $('.cssicon-plusminus').hasClass( 'plus' ) ) {
 			$('.cssicon-plusminus').removeClass( 'plus' );
 			$('.cssicon-plusminus').addClass( 'minus' );
-			$('.x-past-exhibits, .row-bottom').slideDown(200);
+			$('.x-past-exhibits, .row-bottom, .x-events').slideDown(200);
 		} else {
 			$('.cssicon-plusminus').removeClass( 'minus' );
 			$('.cssicon-plusminus').addClass( 'plus' );
-			$('.x-past-exhibits, .row-bottom').slideUp(200);
+			$('.x-past-exhibits, .row-bottom, .x-events').slideUp(200);
 		}
 	} );
 } );

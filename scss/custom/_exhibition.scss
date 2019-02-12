@@ -23,7 +23,7 @@ body.single-exhibition {
 			margin-top: 1.5em;
 			@include font-size(1.375);
 
-			strong {
+			a {
 				letter-spacing: 1px;
 				@include font-size(1);
 			}

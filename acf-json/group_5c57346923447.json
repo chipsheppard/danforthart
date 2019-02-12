@@ -652,16 +652,16 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5c5739715f60d",
+            "collapsed": "field_5c61fae05a032",
             "min": 0,
             "max": 0,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5c5739715f60d",
+                    "key": "field_5c61fae05a032",
                     "label": "Title",
-                    "name": "title",
+                    "name": "a_title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -678,9 +678,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5c5739785f60e",
+                    "key": "field_5c61faee5a033",
                     "label": "Text",
-                    "name": "text",
+                    "name": "a_text",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -718,5 +718,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549565572
+    "modified": 1549925315
 }

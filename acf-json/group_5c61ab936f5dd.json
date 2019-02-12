@@ -1,10 +1,10 @@
 {
-    "key": "group_5c4f85079a97f",
-    "title": "Permanent Collection",
+    "key": "group_5c61ab936f5dd",
+    "title": "Events Calendar",
     "fields": [
         {
-            "key": "field_5c522532f44b7",
-            "label": "Featured Exhibition",
+            "key": "field_5c61aecdadff9",
+            "label": "Page Title",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,11 +19,46 @@
             "endpoint": 0
         },
         {
-            "key": "field_5c4f851cab8b7",
-            "label": "Featured Exhibition",
-            "name": "featured_exhibition",
+            "key": "field_5c61ac4cadfee",
+            "label": "Page Title",
+            "name": "page_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c61aebbadff8",
+            "label": "Hero Image",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c61ae2cadff5",
+            "label": "Featured Event",
+            "name": "featured_event",
             "type": "post_object",
-            "instructions": "This can be the \"Special Collection\" or any other exhibition.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -32,7 +67,7 @@
                 "id": ""
             },
             "post_type": [
-                "exhibition"
+                "event"
             ],
             "taxonomy": "",
             "allow_null": 0,
@@ -41,11 +76,11 @@
             "ui": 1
         },
         {
-            "key": "field_5c4f85eeab8b8",
-            "label": "Featured Exhibition Image",
+            "key": "field_5c61ae5badff6",
+            "label": "Featured Image",
             "name": "fe_image",
             "type": "image",
-            "instructions": "If no image is selected, the exhibition's featured image will display.",
+            "instructions": "If no image is selected the exhibit's featured image will be used.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -65,25 +100,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_5c522564f44b8",
-            "label": "Top Text",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5c4f8633ab8b9",
-            "label": "Link Text",
-            "name": "link_text",
+            "key": "field_5c61ae94adff7",
+            "label": "Featured Event Link Text",
+            "name": "fe_link_text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -100,46 +119,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c4f8c108c67a",
-            "label": "Page Title",
-            "name": "page_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5c4f8be68c679",
-            "label": "Intro",
-            "name": "intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_5c522589f44b9",
-            "label": "Collections",
+            "key": "field_5c61af07adffa",
+            "label": "Events Block",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -154,9 +135,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5c508f5d46e1a",
-            "label": "collection_blocks",
-            "name": "collection_blocks",
+            "key": "field_5c61ac55adfef",
+            "label": "Events",
+            "name": "events",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -166,36 +147,17 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5c508f8946e1b",
+            "collapsed": "field_5c61aca4adff0",
             "min": 0,
             "max": 0,
-            "layout": "block",
-            "button_label": "Add a Collection Block",
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5c508f8946e1b",
-                    "label": "Block Title",
-                    "name": "block_title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c50901a46e1d",
-                    "label": "Featured Artwork",
-                    "name": "featured_artwork",
-                    "type": "relationship",
+                    "key": "field_5c61aca4adff0",
+                    "label": "Event",
+                    "name": "event",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -205,26 +167,19 @@
                         "id": ""
                     },
                     "post_type": [
-                        "artwork"
+                        "event"
                     ],
                     "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "post_type",
-                        "taxonomy"
-                    ],
-                    "elements": [
-                        "featured_image"
-                    ],
-                    "min": 1,
-                    "max": 1,
-                    "return_format": "object"
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
                 },
                 {
-                    "key": "field_5c508fa046e1c",
-                    "label": "Artworks",
-                    "name": "artworks",
-                    "type": "relationship",
+                    "key": "field_5c61acd6adff1",
+                    "label": "Event Image",
+                    "name": "e_image",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -233,27 +188,89 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "artwork"
-                    ],
-                    "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "post_type",
-                        "taxonomy"
-                    ],
-                    "elements": [
-                        "featured_image"
-                    ],
-                    "min": "",
-                    "max": "",
-                    "return_format": "object"
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         },
         {
-            "key": "field_5c5225aff44ba",
-            "label": "Quote",
+            "key": "field_5c61ad96adff2",
+            "label": "Extended Events",
+            "name": "x_events",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5c61aca4adff0",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5c61ad96adff3",
+                    "label": "Event",
+                    "name": "x_event",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "event"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5c61ad96adff4",
+                    "label": "Event Image",
+                    "name": "xe_image",
+                    "type": "image",
+                    "instructions": "If no image is selected the exhibit's featured image will be used.  At least 300x300 for best results.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c61b5033ab32",
+            "label": "Footer Quote",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -268,7 +285,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5c522493f44b5",
+            "key": "field_5c61b5243ab33",
             "label": "Quote",
             "name": "quote",
             "type": "textarea",
@@ -287,7 +304,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_5c5224b3f44b6",
+            "key": "field_5c61b5373ab34",
             "label": "Quote Citation",
             "name": "quote_citation",
             "type": "text",
@@ -306,7 +323,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c5c7c1dc130d",
+            "key": "field_5c61b5423ab35",
             "label": "Citation Link",
             "name": "citation_link",
             "type": "link",
@@ -321,7 +338,7 @@
             "return_format": "array"
         },
         {
-            "key": "field_5c52271ac479f",
+            "key": "field_5c61b57d3ab36",
             "label": "Quote Image",
             "name": "quote_image",
             "type": "image",
@@ -345,9 +362,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_5c522a0a27f85",
+            "key": "field_5c61b58a3ab37",
             "label": "Quote Background Color",
-            "name": "quote_color",
+            "name": "quote_background_color",
             "type": "select",
             "instructions": "Sky (blue) is default and will display if no selection is made.",
             "required": 0,
@@ -379,7 +396,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "templates\/permanent.php"
+                "value": "templates\/calendar.php"
             }
         ]
     ],
@@ -388,8 +405,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1549907413
+    "modified": 1549919843
 }

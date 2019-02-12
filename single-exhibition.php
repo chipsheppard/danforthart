@@ -137,10 +137,20 @@ function da_exhibition() {
 			<div class="quote">
 				<blockquote>
 					<?php the_field( 'quote' ); ?>
-					<cite><?php the_field( 'quote_citation' ); ?></cite>
+					<cite>
+<?php
+the_field( 'quote_citation' );
+$link = get_field( 'citation_link' );
+if ( $link ) :
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+?>
+&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+					</cite>
 				</blockquote>
 			</div>
-
 		</div>
 
 		<hr />
@@ -156,7 +166,6 @@ function da_exhibition() {
 
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 		</div>
-
 	</div>
 
 	<?php

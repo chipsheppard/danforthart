@@ -83,9 +83,9 @@
 						<div class="img-bg" style="background-image:url('<?php the_post_thumbnail_url( 'large' ); ?>')">
 							<div class="card-title">Exhibit</div>
 							<div class="card-info">
-									<div class="sub-head"><?php the_sub_field( 'sub_head' ); ?></div>
-									<div class="card-text"><?php the_title(); ?></div>
-									<span class="card-link">See What's On View</span>
+								<div class="sub-head"><?php the_sub_field( 'sub_head' ); ?></div>
+								<div class="card-text"><?php the_title(); ?></div>
+								<span class="card-link">See What's On View</span>
 							</div>
 						</div>
 						</a>

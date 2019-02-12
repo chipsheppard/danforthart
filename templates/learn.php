@@ -45,11 +45,11 @@ function da_learn() {
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
@@ -82,11 +82,11 @@ if ( $link ) :
 					<?php
 					$image = get_field( 'course_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>

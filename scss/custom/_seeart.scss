@@ -212,7 +212,8 @@ body.seeart {
 
 		&:nth-child(2n+2) {
 			.ue-image,
-			.ue-caption {
+			.ue-caption,
+			.pe-image {
 				float: right;
 				order: 3;
 

@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5c4a2f3af1aa4",
-            "label": "Featured Exhibition",
+            "label": "Featured Exhibit",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -486,7 +486,7 @@
                 {
                     "key": "field_5c47a82e231be",
                     "label": "Exhibition Text",
-                    "name": "text",
+                    "name": "u_text",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -593,5 +593,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549642007
+    "modified": 1549920013
 }

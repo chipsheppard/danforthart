@@ -60,11 +60,11 @@ endif;
 						// IMAGE.
 						$el_image = get_field( 'pel_image' );
 						if ( ! empty( $el_image ) ) :
-							$el_url = $el_image['url'];
 							$el_alt = $el_image['alt'];
 							$el_size = 'medium_large';
 							$el_width = $el_image['sizes'][ $el_size . '-width' ];
 							$el_height = $el_image['sizes'][ $el_size . '-height' ];
+							$el_url = $el_image['sizes'][ $el_size ];
 							?>
 							<img src="<?php echo esc_url( $el_url ); ?>" alt="<?php echo esc_attr( $el_alt ); ?>" width="<?php echo esc_attr( $el_width ); ?>" height="<?php echo esc_attr( $el_height ); ?>" />
 						<?php
@@ -106,11 +106,11 @@ endif;
 						// NATIVE IMAGE.
 						$ert_image = get_field( 'pert_image' );
 						if ( ! empty( $ert_image ) ) :
-							$ert_url = $ert_image['url'];
 							$elrtalt = $ert_image['alt'];
 							$ert_size = 'medium_large';
 							$ert_width = $ert_image['sizes'][ $ert_size . '-width' ];
 							$ert_height = $ert_image['sizes'][ $ert_size . '-height' ];
+							$ert_url = $ert_image['sizes'][ $ert_size ];
 							?>
 							<img src="<?php echo esc_url( $ert_url ); ?>" alt="<?php echo esc_attr( $ert_alt ); ?>" width="<?php echo esc_attr( $ert_width ); ?>" height="<?php echo esc_attr( $ert_height ); ?>" />
 							<?php
@@ -150,13 +150,13 @@ endif;
 						// NATIVE IMAGE.
 						$erb_image = get_field( 'perb_image' );
 						if ( ! empty( $erb_image ) ) :
-							$erb_url = $erb_image['url'];
 							$erb_alt = $erb_image['alt'];
 							$erb_width = $erb_image['width'];
 							$erb_height = $erb_image['height'];
 							$erb_size = 'medium_large';
 							$erb_width = $erb_image['sizes'][ $erb_size . '-width' ];
 							$erb_height = $erb_image['sizes'][ $erb_size . '-height' ];
+							$erb_url = $erb_image['sizes'][ $erb_size ];
 							?>
 							<img src="<?php echo esc_url( $erb_url ); ?>" alt="<?php echo esc_attr( $erb_alt ); ?>" width="<?php echo esc_attr( $erb_width ); ?>" height="<?php echo esc_attr( $erb_height ); ?>" />
 						<?php
@@ -211,11 +211,11 @@ endif;
 								<?php
 								$p_image = get_sub_field( 'pe_image' );
 								if ( ! empty( $p_image ) ) :
-									$url = $p_image['url'];
 									$alt = $p_image['alt'];
 									$size = 'medium';
 									$width = $p_mage['sizes'][ $size . '-width' ];
 									$height = $p_image['sizes'][ $size . '-height' ];
+									$url = $p_image['sizes'][ $size ];
 									?>
 									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 								<?php
@@ -281,11 +281,11 @@ endif;
 								<?php
 								$xp_image = get_sub_field( 'xpe_image' );
 								if ( ! empty( $xp_image ) ) :
-									$url = $xp_image['url'];
 									$alt = $xp_image['alt'];
 									$size = 'medium';
 									$width = $xp_mage['sizes'][ $size . '-width' ];
 									$height = $xp_image['sizes'][ $size . '-height' ];
+									$url = $xp_image['sizes'][ $size ];
 									?>
 									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 								<?php
@@ -317,10 +317,6 @@ endif;
 			endif;
 			?>
 			</div><!-- /past-exhibits -->
-
-
-
-
 
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 

@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'meetus meet' ) );
+	return array_merge( $classes, array( 'meetus' ) );
 } );
 
 /**
@@ -46,11 +46,11 @@ function da_meet() {
 					<?php
 					$image = get_field( 'l_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
@@ -68,11 +68,11 @@ function da_meet() {
 					<?php
 					$image = get_field( 'r_image' );
 					if ( ! empty( $image ) ) :
-						$url = $image['url'];
 						$alt = $image['alt'];
 						$size = 'medium_large';
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];
+						$url = $image['sizes'][ $size ];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>

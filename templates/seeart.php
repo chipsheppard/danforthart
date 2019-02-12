@@ -98,11 +98,11 @@ endif;
 					// IMAGE.
 					$el_image = get_field( 'exhibit_left_image' );
 					if ( ! empty( $el_image ) ) :
-						$el_url = $el_image['url'];
 						$el_alt = $el_image['alt'];
 						$el_size = 'medium_large';
 						$el_width = $el_image['sizes'][ $el_size . '-width' ];
 						$el_height = $el_image['sizes'][ $el_size . '-height' ];
+						$el_url = $el_image['sizes'][ $el_size ];
 						?>
 						<img src="<?php echo esc_url( $el_url ); ?>" alt="<?php echo esc_attr( $el_alt ); ?>" width="<?php echo esc_attr( $el_width ); ?>" height="<?php echo esc_attr( $el_height ); ?>" />
 					<?php
@@ -144,11 +144,11 @@ endif;
 					// NATIVE IMAGE.
 					$ert_image = get_field( 'exhibit_rt_image' );
 					if ( ! empty( $ert_image ) ) :
-						$ert_url = $ert_image['url'];
 						$elrtalt = $ert_image['alt'];
 						$ert_size = 'medium_large';
 						$ert_width = $ert_image['sizes'][ $ert_size . '-width' ];
 						$ert_height = $ert_image['sizes'][ $ert_size . '-height' ];
+						$ert_url = $ert_image['sizes'][ $ert_size ];
 						?>
 						<img src="<?php echo esc_url( $ert_url ); ?>" alt="<?php echo esc_attr( $ert_alt ); ?>" width="<?php echo esc_attr( $ert_width ); ?>" height="<?php echo esc_attr( $ert_height ); ?>" />
 						<?php
@@ -188,11 +188,11 @@ endif;
 					// NATIVE IMAGE.
 					$erb_image = get_field( 'exhibit_rb_image' );
 					if ( ! empty( $erb_image ) ) :
-						$erb_url = $erb_image['url'];
 						$erb_alt = $erb_image['alt'];
 						$erb_size = 'medium_large';
 						$erb_width = $erb_image['sizes'][ $erb_size . '-width' ];
 						$erb_height = $erb_image['sizes'][ $erb_size . '-height' ];
+						$erb_url = $erb_image['sizes'][ $erb_size ];
 						?>
 						<img src="<?php echo esc_url( $erb_url ); ?>" alt="<?php echo esc_attr( $erb_alt ); ?>" width="<?php echo esc_attr( $erb_width ); ?>" height="<?php echo esc_attr( $erb_height ); ?>" />
 					<?php
@@ -245,11 +245,11 @@ endif;
 							<?php
 							$u_image = get_sub_field( 'image' );
 							if ( ! empty( $u_image ) ) :
-								$u_url = $u_image['url'];
 								$u_alt = $u_image['alt'];
 								$u_size = 'medium';
 								$u_width = $u_image['sizes'][ $u_size . '-width' ];
 								$u_height = $u_image['sizes'][ $u_size . '-height' ];
+								$u_url = $u_image['sizes'][ $u_size ];
 								?>
 								<img src="<?php echo esc_url( $u_url ); ?>" alt="<?php echo esc_attr( $u_alt ); ?>" width="<?php echo esc_attr( $u_width ); ?>" height="<?php echo esc_attr( $u_height ); ?>" />
 							<?php endif; ?>
@@ -257,7 +257,7 @@ endif;
 						<div class="col-1-2 ue-heading">
 							<div class="vc-wrap">
 								<?php if ( get_sub_field( 'sub_heading' ) ) : ?>
-								<h4><?php the_sub_field( 'sub_heading' ); ?></h4>
+									<h4><?php the_sub_field( 'sub_heading' ); ?></h4>
 								<?php endif; ?>
 								<h3><?php the_sub_field( 'title' ); ?></h3>
 							</div>
@@ -273,7 +273,7 @@ endif;
 							<?php the_sub_field( 'image_caption' ); ?>
 						</div>
 						<div class="col-1-2 ue-content">
-							<?php the_sub_field( 'text' ); ?>
+							<?php the_sub_field( 'u_text' ); ?>
 							<div class="cf"></div>
 							<div class="ue-social">
 								<div class="social-link"><a href="#0"><span class="iconwrap"><span class="cssicon-facebook"></span></span> <span class="link">Share It</span></a></div>

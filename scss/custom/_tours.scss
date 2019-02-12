@@ -1,0 +1,21 @@
+body.tours {
+	background-color: $color__yellow-lt;
+
+	.page-title {
+		line-height: 1;
+		margin: .5em 0 1em;
+		width: 70%;
+		@include font-size(4.6875);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(6);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(4);
+		}
+	}
+}

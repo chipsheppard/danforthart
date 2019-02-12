@@ -10,6 +10,7 @@
  */
 
 if ( have_rows( 'v_images' ) ) :
+	// $count = count( (array) get_field( 'v_images' ) ); // Not working with PHP 7.2.
 ?>
 <div class="variable-images">
 	<?php
