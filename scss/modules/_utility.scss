@@ -51,3 +51,15 @@ img.flex {
 .big {
 	font-size: 125%;
 }
+
+.circle-num {
+	display: inline-block;
+	background-color: #000;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 1;
+	margin-top: auto;
+	padding: .5em .6875em .375em;
+	margin-right: .5em;
+	margin-bottom: .5em;
+}

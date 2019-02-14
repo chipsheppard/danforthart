@@ -1,10 +1,3 @@
-body.team {
-	background-color: $color__blue-lt;
-}
-body.community {
-	background-color: $color__blue-xlt;
-}
-
 body.team,
 body.community {
 	.page-title {
@@ -24,4 +17,123 @@ body.community {
 			@include font-size(1.5);
 		}
 	}
+}
+body.team {
+	background-color: $color__blue-lt;
+
+	.mem-row {
+		margin-bottom: 2.5em;
+	}
+
+	.member {
+		.mem-card {
+			border-style: solid;
+			border-color: transparent;
+			border-width: 1px 1px 3px 1px;
+			cursor: pointer;
+			padding-bottom: 1em;
+			position: relative;
+			z-index: 2;
+			height: 300px;
+		}
+
+		&:hover,
+		&.active {
+			.mem-card {
+				background-color: #ffffff;
+				border-color: $color__base;
+			}
+		}
+		&.active {
+			.mem-card {
+				border-color: $color__base;
+				border-bottom-width: 0;
+			}
+		}
+	}
+
+	.m-image {
+		img {
+			display: block;
+			max-width: none;
+			margin-bottom: .5em;
+			height: 170px;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	.m-name {
+		font-weight: $font__weight-light;
+		line-height: 1.125;
+		padding-bottom: .25em;
+		text-align: center;
+		@include font-size(1.625);
+	}
+	.m-title {
+		text-align: center;
+		line-height: 1.25;
+	}
+
+	.mem-content-desk {
+		background-color: #ffffff;
+		border-style: solid;
+		border-color: $color__base;
+		border-width: 1px 1px 4px 1px;
+		padding: 6em 0;
+		position: relative;
+		top: -1px;
+		z-index: 1;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.mem-content-mobile {
+		background-color: #ffffff;
+		border-style: solid;
+		border-color: $color__base;
+		border-width: 0 1px 3px 1px;
+		display: none;
+		margin-bottom: 2em;
+		position: relative;
+		z-index: 2;
+		padding: 1em;
+	}
+
+	.col-left {
+		padding-left: 3em;
+		@include breakpoint(tablet-v) {
+			padding-left: 0;
+		}
+	}
+	.col-right {
+		padding-right: 20%;
+		@include breakpoint(tablet-v) {
+			padding-right: 0;
+		}
+	}
+
+	.bottom-members {
+		.member {
+			.mem-card {
+				padding-bottom: 2em;
+			}
+			&:hover,
+			&.active {
+				.mem-card {
+					background-color: $color__blue-lt;
+				}
+			}
+		}
+		.mem-content-desk,
+		.mem-content-mobile {
+			background-color: $color__blue-lt;
+		}
+	}
+}
+
+body.community {
+	background-color: $color__blue-xlt;
 }

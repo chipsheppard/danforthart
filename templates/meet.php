@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'meetus' ) );
+	return array_merge( $classes, array( 'meet meetus' ) );
 } );
 
 /**

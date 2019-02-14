@@ -10,18 +10,14 @@
  */
 
 if ( have_rows( 'v_images' ) ) :
-	// $count = count( (array) get_field( 'v_images' ) ); // Not working with PHP 7.2.
-?>
-<div class="variable-images">
-	<?php
-	// Get a total so we can style the images.
 	$rc = 0;
 	while ( have_rows( 'v_images' ) ) :
 		$rc++;
 		the_row();
 	endwhile;
-
-	// tagging each image with the total.
+	?>
+	<div class="variable-images rowof<?php echo esc_html( $rc ); ?>">
+	<?php
 	while ( have_rows( 'v_images' ) ) :
 		the_row();
 		?>
@@ -29,12 +25,12 @@ if ( have_rows( 'v_images' ) ) :
 			<?php
 			$image = get_sub_field( 'v_image' );
 			if ( ! empty( $image ) ) :
-				$url = $image['url'];
 				$alt = $image['alt'];
 				$caption = $image['caption'];
-				$size = 'medium';
+				$size = 'medium_large';
 				$width = $image['sizes'][ $size . '-width' ];
 				$height = $image['sizes'][ $size . '-height' ];
+				$url = $image['sizes'][ $size ];
 				?>
 				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 				<?php if ( $caption ) : ?>
@@ -45,8 +41,8 @@ if ( have_rows( 'v_images' ) ) :
 				endif;
 			endif;
 			?>
-		</div><!-- /variable-image -->
+		</div>
 	<?php endwhile; ?>
 <br clear="all">
-</div><!-- /variable-images -->
+</div>
 <?php endif; ?>

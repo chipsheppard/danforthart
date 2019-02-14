@@ -185,3 +185,41 @@ jQuery(function( $ ){
 		}
 	} );
 } );
+
+// Team Member List show/hide -------------------------------
+jQuery(function( $ ) {
+	$('.mem-row').find('.member').click(function() {
+
+		member = $(this).data('team');
+
+		if ( $(this).hasClass( 'active' ) ) {
+			$(this).removeClass( 'active' );
+			if(window.innerWidth > 768) {
+				$('.mem-content-desk').slideUp(200);
+			}
+			if(window.innerWidth < 769) {
+		        $('.mem-content-mobile').slideUp(200);
+			}
+		} else {
+			$('.member').removeClass( 'active' ); // close all.
+			$(this).addClass( 'active' ); // activate this one.
+			if(window.innerWidth > 768) {
+				$('.mem-content-desk').slideUp(200);
+				$(this).parent().children('.' + member).slideDown(200);
+			}
+			if(window.innerWidth < 769) {
+		        $('.mem-content-mobile').slideUp(200);
+				$(this).children('.mem-content-mobile').slideDown(200);
+			}
+		}
+	});
+
+	$(window).resize(function(){
+		//if(window.innerWidth < 769) {
+			$('.mem-content-mobile').hide();
+			$('.member').removeClass( 'active' );
+			$('.mem-content-desk').hide();
+		//}
+	});
+
+} );

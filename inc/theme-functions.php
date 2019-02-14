@@ -88,9 +88,10 @@ add_action( 'tha_header_top', 'danforthart_display_nav' );
 
 
 /**
- * DISPLAY the parent page nane ( in header )
+ * DISPLAY the parent page name ( in header )
  */
 function display_parent() {
+	global $post;
 	$current = $post->ID;
 	$parent = $post->post_parent;
 	$grandparent_get = get_post( $parent );

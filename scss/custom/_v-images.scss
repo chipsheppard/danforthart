@@ -4,6 +4,7 @@
 .variable-image {
 	img {
 		border: 1px solid $color__base;
+		display: block;
 		width: 100%;
 	}
 	&.img-1 {
@@ -13,6 +14,10 @@
 	&.img-2 {
 		float: left;
 		width: 49%;
+		img {
+			height: 400px;
+			object-fit: cover;
+		}
 		&:last-of-type {
 			float: right;
 		}
@@ -21,6 +26,10 @@
 		float: left;
 		width: 32%;
 		margin-right: 2%;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
 		&:last-of-type {
 			float: right;
 			margin-right: 0;
@@ -30,9 +39,27 @@
 		float: left;
 		width: 23%;
 		margin-right: 2.625%;
+		img {
+			height: 280px;
+			object-fit: cover;
+		}
 		&:last-of-type {
 			float: right;
 			margin-right: 0;
+		}
+	}
+	@include breakpoint(tablet-v) {
+		&.img-1,
+		&.img-2,
+		&.img-3,
+		&.img-4 {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			img {
+				height: auto;
+				//object-fit: none;
+			}
 		}
 	}
 }

@@ -12,7 +12,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'joinsupport join' ) );
+	return array_merge( $classes, array( 'modules join joinsupport' ) );
 } );
 
 /**
@@ -35,12 +35,19 @@ function da_join() {
 	<h1 class="page-title">
 		<?php the_field( 'page_title' ); ?>
 	</h1>
+
+	<?php get_template_part( 'template-parts/v-images' ); ?>
+
 </div>
 
 <div class="content-wrap">
 	<div class="inner-wrap">
 
-		<?php the_content(); ?>
+		<div class="modules">
+
+			<?php get_template_part( 'template-parts/content', 'modules' ); ?>
+
+		</div>
 
 		<?php get_template_part( 'template-parts/quote' ); ?>
 		<?php get_template_part( 'template-parts/signup' ); ?>

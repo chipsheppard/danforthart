@@ -38,16 +38,22 @@ class Bgcolor_Metabox {
 
 	/**
 	 * Add metabox.
+	 *
+	 * @param Array $post_type the post type of this post.
 	 */
-	public function add_metabox() {
-		add_meta_box(
-			'bgcolor-metabox',
-			__( 'Background Color', 'danforthart' ),
-			array( $this, 'render_metabox' ),
-			$post_type,
-			'side',
-			'high'
-		);
+	public function add_metabox( $post_type ) {
+		// Limit meta box to certain post types.
+		$post_types = array( 'post', 'page' );
+		if ( in_array( $post_type, $post_types, true ) ) {
+			add_meta_box(
+				'bgcolor-metabox',
+				__( 'Background Color', 'danforthart' ),
+				array( $this, 'render_metabox' ),
+				$post_type,
+				'side',
+				'high'
+			);
+		}
 	}
 
 	/**

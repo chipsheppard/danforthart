@@ -1,0 +1,76 @@
+body.joinsupport {
+	background-color: $color__tan-lt;
+}
+body.donations {
+	background-color: #f6e6d0;
+}
+
+body.modules {
+	.page-title {
+		line-height: 1.5;
+		padding: 2em 1em;
+		width: 70%;
+		@include font-size(2.8125);
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+		@include breakpoint(tablet-v) {
+			@include font-size(2);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(1.5);
+		}
+	}
+
+	.content-wrap {
+		padding-top: 4.5em;
+	}
+
+	.mod-text {
+		padding-bottom: 4em;
+	}
+	.mod-accordion {
+		margin-bottom: 6em;
+	}
+
+	.variable-images {
+		&.rowof2 {
+			padding: 0 30% 0 10%;
+
+			@include breakpoint(tablet-v) {
+				padding: 0;
+			}
+		}
+	}
+
+	.footnote {
+		border-top: 1px solid #c3a190;
+		padding-top: 1em;
+		padding-bottom: .75em;
+		padding-right: 10%;
+		margin-top: -4em;
+		margin-bottom: 4em;
+		width: 70%;
+		@include font-size(.875);
+	}
+	.quote-block {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	.mod-cta {
+		border: 1px solid $color__base;
+		font-weight: $font__weight-bold;
+		line-height: 1.25;
+		padding: 2em 4em;
+		margin-bottom: 2.5em;
+		@include font-size(2.1875);
+		.cta-text {
+			margin-bottom: 1em;
+		}
+		.btn {
+			@include font-size(1);
+		}
+	}
+}
