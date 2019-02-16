@@ -25,6 +25,7 @@ require get_template_directory() . '/inc/tha-theme-hooks.php';
 require get_template_directory() . '/inc/wordpress-cleanup.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/entry-meta.php';
+// require get_template_directory() . '/inc/entry-footer.php';.
 require get_template_directory() . '/inc/theme-functions.php';
 require get_template_directory() . '/inc/loop.php';
 require get_template_directory() . '/inc/customizer.php';
@@ -154,6 +155,24 @@ function my_taxonomy_query( $args, $field, $post_id ) {
 	return $args;
 }
 add_filter( 'acf/fields/taxonomy/query/name=c_level', 'my_taxonomy_query', 10, 3 );
+
+
+/**
+ * Add body class to all pages using content modules.
+ *
+ * @param array $classes The body classes.
+ */
+function dfa_body_classes( $classes ) {
+	if ( is_singular() && ! is_page_template( array( 'templates/calendar.php', 'templates/faq.php', 'templates/home.php', 'templates/learn.php', 'templates/learn-c.php', 'templates/meet.php', 'templates/past.php', 'templates/permanent.php', 'templates/seeart.php', 'templates/team.php', 'templates/tours.php', 'templates/visit.php' ) ) ) {
+		$classes[] = 'modules';
+	}
+	if ( get_field( 'sub_menu' ) ) {
+		$m = get_field( 'sub_menu' );
+		$classes[] = $m;
+	}
+	return $classes;
+}
+add_action( 'body_class','dfa_body_classes' );
 
 
 // Load Jetpack compatibility file.

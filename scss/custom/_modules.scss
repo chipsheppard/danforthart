@@ -55,10 +55,12 @@ body.modules {
 		width: 70%;
 		@include font-size(.875);
 	}
+
 	.quote-block {
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}
+
 	.mod-cta {
 		border: 1px solid $color__base;
 		font-weight: $font__weight-bold;
@@ -66,11 +68,25 @@ body.modules {
 		padding: 2em 4em;
 		margin-bottom: 2.5em;
 		@include font-size(2.1875);
+
 		.cta-text {
 			margin-bottom: 1em;
 		}
+
 		.btn {
 			@include font-size(1);
+		}
+
+		@include breakpoint(tablet-m) {
+			padding: 1em 2em;
+		}
+		@include breakpoint(phone-h) {
+			padding: .5em 1em 1em;
+			@include font-size(1.5);
+
+			.btn {
+				@include font-size(.75);
+			}
 		}
 	}
 }

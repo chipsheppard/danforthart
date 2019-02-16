@@ -15,10 +15,13 @@
 		img {
 			display: block;
 			max-width: none;
-			height: 800px;
+			height: 1000px;
 			object-fit: cover;
 			width: 100%;
 
+			@include breakpoint(site-max) {
+				height: 800px;
+			}
 			@include breakpoint(tablet-h) {
 				height: 600px;
 			}
@@ -35,6 +38,10 @@
 			left: 0;
 			@include bigtext();
 			@include font-size(1);
+
+			a {
+				@include nb();
+			}
 		}
 	}
 

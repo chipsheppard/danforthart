@@ -258,6 +258,21 @@
             "return_format": "array"
         },
         {
+            "key": "field_5c670943a0d9b",
+            "label": "Quote Tab",
+            "name": "quote_tab",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c532a1f584f4",
             "label": "Learn Image",
             "name": "learn_image",
@@ -299,6 +314,21 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": "br"
+        },
+        {
+            "key": "field_5c67099ea0d9c",
+            "label": "Learn Tab",
+            "name": "learn_tab",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_5c532bd358501",
@@ -584,5 +614,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549821832
+    "modified": 1550256576
 }

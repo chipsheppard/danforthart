@@ -1,5 +1,5 @@
 .content-wrap {
-	background-color: #ffffff;
+	background-color: #fffbf5;
 }
 
 .return {
@@ -49,4 +49,9 @@
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.site-content .social-link a,
+.site-content .pe-button a {
+	@include nb();
 }

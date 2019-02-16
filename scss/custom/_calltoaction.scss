@@ -4,23 +4,28 @@
 
 	@include breakpoint(tablet-min-v) {
 		padding-bottom: .5em;
-
 		.inner-wrap {
-			display: flex;
-			overflow: hidden;
-			flex-wrap: wrap;
-			max-width: none;
-			overflow: visible;
-
 			.ctablock {
 				flex: 1;
 			}
+		}
+	}
+	.inner-wrap {
+		display: flex;
+		overflow: hidden;
+		flex-wrap: wrap;
+		max-width: none;
+		overflow: visible;
+
+		.ctablock {
+			flex: auto;
 		}
 	}
 
 	.ctablock {
 		padding: 1em;
 		margin-bottom: 1.5em;
+		min-height: 400px;
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 0;
@@ -41,14 +46,15 @@
 		}
 
 		.card-info {
-			padding: 4.5em 3em 3em;
+			margin-top: auto;
+			padding: 1em 3em;
 			font-weight: $font__weight-light;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
 
 			@include breakpoint(tablet-v) {
-				padding: 2.5em 1.75em 1.75em;
-			}
-			@include breakpoint(tablet-h) {
-				padding: 2em 1em 1em;
+				padding: .5em 1.5em;
 			}
 		}
 
@@ -92,7 +98,7 @@
 	}
 
 	.ctablock:first-of-type {
-		margin-left: -4.5em;
+		margin-left: -5%;
 
 		@include breakpoint(tablet-v) {
 			margin-left: 0;
@@ -107,7 +113,6 @@
 		}
 	}
 
-
 	.cta-learn {
 		background-color: $color__green;
 
@@ -115,7 +120,6 @@
 			background-color: $color__green;
 		}
 	}
-
 
 	.cta-exhibit {
 
@@ -172,18 +176,16 @@
 		}
 
 		@include breakpoint(tablet-v) {
+			.card-text {
+				margin-bottom: .5em;
+			}
 			.card-info {
-				padding-top: 56%;
+				padding-top: 200px;
 			}
 			.img-bg {
 				background-size: 100% 50%;
 				background-position: center top;
-			}
-		}
-
-		@include breakpoint(phone-v) {
-			.card-info {
-				padding-top: 100%;
+				height: 100%;
 			}
 		}
 

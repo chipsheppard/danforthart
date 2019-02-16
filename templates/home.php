@@ -82,7 +82,17 @@ function da_home() {
 		<div class="inner-wrap">
 			<div class="col-1-2 nm mid-left">
 				<div class="imageblock">
-					<div class="card-title">On View</div>
+					<div class="card-title">
+<?php
+$link = get_field( 'quote_tab' );
+if ( $link ) :
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+	?>
+	<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+					</div>
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
@@ -131,7 +141,17 @@ if ( $link ) :
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
-					<div class="card-title">Learn + Create</div>
+					<div class="card-title">
+<?php
+$link = get_field( 'learn_tab' );
+if ( $link ) :
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+	?>
+	<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+					</div>
 				</div>
 			</div>
 			<div class="cf"></div>

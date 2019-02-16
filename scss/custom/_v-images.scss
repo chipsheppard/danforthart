@@ -1,11 +1,20 @@
 .variable-images {
 	margin-bottom: 5em;
+
+	@include breakpoint(tablet-v) {
+		margin-bottom: 0;
+	}
 }
 .variable-image {
+	margin-bottom: 2em;
+
 	img {
 		border: 1px solid $color__base;
 		display: block;
 		width: 100%;
+	}
+	.caption {
+		margin-top: .5em;
 	}
 	&.img-1 {
 		width: 70%;
@@ -58,7 +67,6 @@
 			margin-right: 0;
 			img {
 				height: auto;
-				//object-fit: none;
 			}
 		}
 	}

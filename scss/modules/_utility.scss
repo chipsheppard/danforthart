@@ -53,13 +53,26 @@ img.flex {
 }
 
 .circle-num {
-	display: inline-block;
-	background-color: #000;
+	background-color: #000000;
 	border-radius: 50%;
-	color: #fff;
-	line-height: 1;
-	margin-top: auto;
-	padding: .5em .6875em .375em;
-	margin-right: .5em;
-	margin-bottom: .5em;
+	color: #ffffff;
+	display: inline-block;
+	height: 1.75em;
+	line-height: 1.75;
+	margin-bottom: .25em;
+	text-align: center;
+	vertical-align: middle;
+	width: 1.75em;
+	position: relative;
+	margin-left: -2em;
+}
+
+.entry-content .num-list {
+	margin-bottom: 2em;
+	margin-left: 2.5em;
+	line-height: 1.25;
+}
+
+.oh {
+	overflow: hidden;
 }

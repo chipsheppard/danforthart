@@ -19,10 +19,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5c6247c32b474",
-            "label": "Page Title",
-            "name": "page_title",
-            "type": "text",
+            "key": "field_5c659360f5360",
+            "label": "Sub Menu",
+            "name": "sub_menu",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,11 +31,20 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "choices": {
+                "visit-sub": "Visit",
+                "meet-sub": "Meet Us",
+                "see-art-sub": "See Art",
+                "learn-sub": "Learn+Create",
+                "join-sub": "Join+Support"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5c64cfe712c74",
@@ -534,21 +543,14 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "templates\/join.php"
+                "value": "default"
             }
         ],
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/donations.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/community.php"
+                "value": "post"
             }
         ]
     ],
@@ -557,10 +559,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550113862
+    "modified": 1550188751
 }

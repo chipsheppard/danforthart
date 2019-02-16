@@ -9,8 +9,8 @@
  * @license    GPL-2.0+
  */
 
+if ( get_field( 'quote' ) ) :
 ?>
-
 <div class="footer-quote<?php if ( get_field( 'quote_color' ) ) : ?>
 <?php
 echo ' ';
@@ -52,3 +52,4 @@ if ( $link ) :
 	</div>
 	<div class="cf"></div>
 </div>
+<?php endif; ?>

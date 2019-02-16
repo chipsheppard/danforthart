@@ -22,5 +22,9 @@ a {
 		border-width: 2px;
 		padding-bottom: .1875em;
 	}
+}
 
+.site-content .entry-meta a:not(.btn),
+.site-content a:not(.btn).fi-link {
+	@include nb();
 }

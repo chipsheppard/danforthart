@@ -50,7 +50,7 @@ add_action( 'tha_content_loop', 'danforthart_default_loop' );
 
 
 /**
- * Archive Page Titles
+ * Archive/Search Page Titles
  */
 function danforthart_archive_page_titles() {
 	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
@@ -73,14 +73,23 @@ add_action( 'tha_content_while_before', 'danforthart_archive_page_titles' );
 
 
 /**
+ * Archive & Search begin wrap
+ */
+function danforthart_archive_start_wrap() {
+	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
+		echo '<div class="inner-wrap">';
+	endif;
+}
+add_action( 'tha_content_while_before', 'danforthart_archive_start_wrap', 15 );
+/**
  * Archive & Search end wrap
  */
-function clct_archive_end_wrap() {
+function danforthart_archive_end_wrap() {
 	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
 		echo '</div>';
 	endif;
 }
-add_action( 'tha_content_while_after', 'clct_archive_end_wrap', 15 );
+add_action( 'tha_content_while_after', 'danforthart_archive_end_wrap', 15 );
 
 
 /**

@@ -103,12 +103,18 @@ function danforthart_comment_count() {
  */
 function danforthart_display_entry_meta() {
 	if ( 'post' === get_post_type() ) :
+		if ( is_singular() ) :
+			echo '<div class="inner-wrap">';
+		endif;
 		echo '<div class="entry-meta">';
 		danforthart_posted_on();
 		danforthart_posted_by();
 		danforthart_comment_count();
 		danforthart_updated_on();
 		echo '</div>';
+		if ( is_singular() ) :
+			echo '</div>';
+		endif;
 	endif;
 }
 add_action( 'tha_entry_top', 'danforthart_display_entry_meta' );

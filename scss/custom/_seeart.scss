@@ -125,7 +125,7 @@ body.seeart {
 		}
 
 		.view-past {
-			padding-top: 2em;
+			padding-top: 3em;
 			text-align: right;
 
 			@include breakpoint(tablet-v) {
@@ -319,9 +319,4 @@ body.seeart {
 			padding-right: $size__site-padding;
 		}
 	}
-}
-
-.site-content .social-link a,
-.site-content .pe-button a {
-	@include nb();
 }

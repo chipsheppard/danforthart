@@ -1,11 +1,8 @@
 .site-footer {
-		background-color: #000000;
+	background-color: #000000;
 	clear: both;
 	width: 100%;
 	padding: 0 $size__site-padding;
-
-	.inner-wrap {
-	}
 
 	a {
 		color: #ffffff;
@@ -14,9 +11,57 @@
 	.social {
 		font-weight: $font__weight-bold;
 		margin-bottom: 2em;
+		@include breakpoint(phone-h) {
+			margin-left: 1em;
+		}
+
+		a:hover {
+			.iconwrap {
+				background-color: #ffffff;
+				border-color: #000000;
+			}
+			.cssicon-instagram {
+				background-color: #ffffff;
+				border-color: #000000;
+
+				&:before {
+					background-color: #000000;
+				}
+				&:after {
+				    border-color: #000000;
+				}
+			}
+			.cssicon-facebook {
+				background-color: #000000;
+				&:after {
+					color: #ffffff;
+				}
+			}
+			.cssicon-linkedin {
+				background-color: #000000;
+				&:after {
+					color: #ffffff;
+				}
+			}
+			.cssicon-twitter {
+				color: #000000;
+				&:after {
+					box-shadow: inset 255 255 255 12px, 6px 6px, 6px 14px;
+				}
+			}
+		}
+	}
+
+	.fsu-logo {
+		text-align: right;
 
 		@include breakpoint(phone-h) {
-			text-align: center;
+			margin: 4em 0 0 1em;
+			text-align: left;
+		}
+
+		img {
+			width: 230px;
 		}
 	}
 
@@ -26,61 +71,8 @@
 		@include font-size(.75);
 
 		@include breakpoint(phone-h) {
-			text-align: center;
-		}
-	}
-
-	.fsu-logo {
-		text-align: right;
-
-		@include breakpoint(phone-h) {
-			margin: 2.5em 0 0;
-			text-align: center;
-		}
-
-		img {
-			width: 230px;
-		}
-	}
-
-	.social a:hover {
-
-		.iconwrap {
-			border-color: #000000;
-			background-color: #ffffff;
-		}
-
-		.cssicon-instagram {
-			background-color: #ffffff;
-			border-color: #000000;
-
-			&:before {
-				background-color: #000000;
-			}
-			&:after {
-			    border-color: #000000;
-			}
-		}
-
-		.cssicon-facebook {
-			background-color: #000000;
-			&:after {
-				color: #ffffff;
-			}
-		}
-
-		.cssicon-linkedin {
-			background-color: #000000;
-			&:after {
-				color: #ffffff;
-			}
-		}
-
-		.cssicon-twitter {
-			color: #000000;
-			&:after {
-				box-shadow: inset 255 255 255 12px, 6px 6px, 6px 14px;
-			}
+			margin-left: 1em;
+			text-align: left;
 		}
 	}
 }
@@ -94,7 +86,7 @@
 }
 
 .site-footer .menu {
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 
 	li {
 		float: left;
@@ -132,15 +124,14 @@
 		@include breakpoint(tablet-v) {
 			margin: 1.5em 0;
 		}
+		@include breakpoint(phone-h) {
+			display: none;
+		}
 
 		li {
 			float: none;
 			width: auto;
 			padding: 0 0 1.25em 0;
-
-			@include breakpoint(phone-h) {
-				padding: 0 0 .5em 0;
-			}
 
 			&.current-menu-item > a,
 			&.current-menu-ancestor > a {
@@ -171,14 +162,13 @@
 			width: 33%;
 		}
 	}
+
 	@include breakpoint(phone-h) {
-		li {
-			width: 50%;
-		}
-	}
-	@include breakpoint(phone-v) {
+		margin-left: 3%;
+
 		li {
 			float: none;
+			margin-bottom: 1em;
 			width: 100%;
 		}
 	}

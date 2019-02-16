@@ -10,9 +10,9 @@
 	input[type="submit"] {
 		background: transparent;
 		border: none;
-		border: 1px solid $color__base;
+		border-left: 1px solid $color__base-medium;
 		display: inline-block;
-		padding: .313em .75em .438em;
+		padding: .5625em .75em;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -20,7 +20,7 @@
 
 		&:hover,
 		&:focus {
-			border-color: $color__base;
+			background-color: $color__yellow;
 		}
 	}
 }

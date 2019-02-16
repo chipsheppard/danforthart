@@ -10,6 +10,9 @@
 		@include font-size(1);
 		text-transform: uppercase;
 	}
+	p {
+		margin-bottom: 0;
+	}
 }
 
 .entry-title,
@@ -25,46 +28,19 @@
 
 .entry-content {
 	ol,
-	ul {
-		margin-left: 2.5em;
-		margin-bottom: 1.5em;
+	ul {margin-left: 1.75em;}
 
-		li {
-			line-height: 1.4;
-			padding-bottom: .5em;
-		}
-	}
-
-	ol > li {
-		list-style-type: decimal;
-	}
-
-	ul > li {
-		list-style-type: disc;
-	}
+	ol > li {list-style-type: decimal;}
+	ul > li {list-style-type: disc;}
 
 	ol ol,
-	ul ul {
-		margin-top: .5em;
+	ul ul,
+	ul ol,
+	ol ul {
 		margin-bottom: 0;
-
-		li:last-child {
-			padding-bottom: 0;
-		}
+		li:last-child {padding-bottom: 0;}
 	}
 
-	dt {
-		font-weight: $font__weight-bold;
-	}
-
-	dd {
-		margin: 0 1em 1em;
-	}
-
-}
-
-.single {
-	.entry-content {
-		margin-bottom: 2em;
-	}
+	dt {font-weight: $font__weight-bold;}
+	dd {margin: 0 1em 1em;}
 }
