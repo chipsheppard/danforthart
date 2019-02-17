@@ -9,29 +9,27 @@
  * @license  GPL-2.0+
  */
 
-echo '<section class="no-results not-found">';
-echo '<header class="page-header">';
-	echo '<div class="inner-wrap title-wrap">';
-		echo '<h1 class="page-title">' . esc_html__( 'Nothing Found', 'danforthart' ) . '</h1>';
-	echo '</div>';
-echo '</header>';
+?>
+<section class="no-results not-found">
 
-echo '<div class="page-content">';
+	<header class="page-header">
+		<div class="inner-wrap title-wrap">
+			<?php echo '<h1 class="page-title">' . esc_html__( 'Nothing Found', 'danforthart' ) . '</h1>'; ?>
+		</div>
+	</header>
 
-if ( is_home() && current_user_can( 'publish_posts' ) ) :
+	<div class="inner-wrap">
+	<?php
+	if ( is_home() && current_user_can( 'publish_posts' ) ) :
+		echo '<p>' . esc_html__( 'No posts to display.', 'danforthart' ) . '</p>';
+	elseif ( is_search() ) :
+		echo '<p>' . esc_html__( 'Nothing matched your search terms. Please try again with some different keywords.', 'danforthart' ) . '</p>';
+		get_search_form();
+	else :
+		echo '<p>' . esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'danforthart' ) . '</p>';
+		get_search_form();
+	endif;
+	?>
+	</div>
 
-	echo '<p>' . esc_html__( 'No posts to display.', 'danforthart' ) . '</p>';
-
-elseif ( is_search() ) :
-
-	echo '<p>' . esc_html__( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'danforthart' ) . '</p>';
-	get_search_form();
-
-else :
-
-	echo '<p>' . esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'danforthart' ) . '</p>';
-	get_search_form();
-
-endif;
-echo '</div>';
-echo '</section>';
+</section>

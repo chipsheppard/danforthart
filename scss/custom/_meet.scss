@@ -3,7 +3,7 @@ body.meetus {
 	.page-title {
 		line-height: 1;
 		margin: 1em 0 7em;
-		//width: 69%;
+		//width: 70%;
 		@include font-size(4.6875);
 
 		@include breakpoint(tablet-h) {
@@ -25,6 +25,12 @@ body.meetus {
 			.textblock {
 				height: auto;
 				padding: 0 4em;
+				@include breakpoint(tablet-h) {
+					padding: 0 2em;
+				}
+				@include breakpoint(tablet-v) {
+					padding: 0 1em;
+				}
 			}
 		}
 		.textblock .message {
@@ -32,6 +38,13 @@ body.meetus {
 			line-height: 1.5;
 			padding: 0;
 			@include font-size(2.1875);
+
+			@include breakpoint(tablet-h) {
+				@include font-size(1.875);
+			}
+			@include breakpoint(tablet-v) {
+				@include font-size(1.5);
+			}
 		}
 	}
 
@@ -51,9 +64,19 @@ body.meetus {
 	}
 	.variable-images {
 		margin-bottom: 8em;
+		@include breakpoint(tablet-v) {
+			margin-bottom: 4em;
+		}
+		@include breakpoint(phone-h) {
+			margin-bottom: 1em;
+		}
 	}
 
 	.quote-block {
 		margin-top: 8em;
+
+		@include breakpoint(tablet-h) {
+			margin-top: 4em;
+		}
 	}
 }

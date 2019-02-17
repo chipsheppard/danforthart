@@ -16,7 +16,8 @@ blockquote {
 	quotes: "\201C""\201D""\201C""\201D";
 
 	@include breakpoint(phone-h) {
-		padding: 1.25em 0 1.25em 1em;
+		margin: 0;
+		padding: 1.25em .5em 1.25em 1em;
 	}
 
 	&:after {

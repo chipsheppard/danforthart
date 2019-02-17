@@ -48,6 +48,14 @@ function da_exhibition() {
 
 		<div class="exhibition-featured-img">
 			<?php
+			if ( get_field( 'highlight_color' ) ) :
+				$color = ' ' . get_field( 'highlight_color' );
+			else :
+				$color = '';
+			endif;
+			?>
+			<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
+			<?php
 			if ( has_post_thumbnail() ) :
 				the_post_thumbnail( 'full' );
 			endif;
@@ -79,8 +87,9 @@ function da_exhibition() {
 			<div class="ex-artists"><span>Participating artists:</span> <?php the_field( 'artist_listing' ); ?></div>
 		</div>
 		<div class="col-1-2 ex-social">
-			<div class="social-link"><a href="#0"><span class="iconwrap"><span class="cssicon-facebook"></span></span> <span class="slink">Share It</span></a></div>
-			<div class="social-link"><a href="#0"><span class="iconwrap c"><span class="cssicon-twitter"></span></span> <span class="slink">Tweet It</span></a></div>
+			<div class="ss-wrap">
+				<?php the_field( 'share_blocks', 'option' ); ?>
+			</div>
 		</div>
 		<div class="cf"></div>
 	</div>

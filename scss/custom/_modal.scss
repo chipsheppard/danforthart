@@ -1,14 +1,18 @@
 .exhibit-modal {
 	background-color: #ffffff;
 	border: 2px solid $color__base;
-	position: absolute;
-	z-index: 999;
-	left: 1%;
-	top: 1%;
 	display: none;
-	width: 98%;
 	height: 98vh;
+	left: 1%;
 	padding: 4em 15%;
+	position: absolute;
+	top: 1%;
+	width: 98%;
+	z-index: 999;
+
+	@include breakpoint(tablet-v) {
+		padding: 3em 5%;
+	}
 
 	&.show {
     	display: block!important;
@@ -19,9 +23,10 @@
 		font-weight: $font__weight-light;
 		opacity: .5;
 		position: absolute;
-		top: .25em;
-		right: .5em;
-		@include font-size(3);
+		top: .5em;
+		right: 1em;
+		height: 30px;
+		width: 30px;
 
 		&:hover {
 			opacity: 1;

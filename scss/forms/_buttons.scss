@@ -25,20 +25,6 @@ button,
 		outline: 0;
 	}
 }
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	background-color: $color__base;
-	border: 2px solid $color__base;
-	color: #ffffff;
-
-	&:hover,
-	&:focus,
-	&:active {
-		background-color: #ffffff;
-		color: $color__base;
-	}
-}
 
 .btn {
 	display: inline-block;

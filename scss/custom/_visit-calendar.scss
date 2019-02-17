@@ -184,17 +184,13 @@ body.single-event {
 	}
 	.e-social {
 		margin-bottom: 6em;
-
-		.social-link {
-			display: inline;
-			margin-right: 1.5em;
-
-			a:hover {
-				opacity: .70;
-			}
-			.cssicon-facebook:after {
-				color:$color__yellow-xxlt;
-			}
+		text-align: right;
+		p {
+			margin-bottom: 0;
+		}
+		.ss-wrap {
+			width: 200px;
+			float: right;
 		}
 	}
 }

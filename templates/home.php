@@ -42,7 +42,7 @@ function da_home() {
 					$h_height = $h_image['height'];
 					?>
 					<div class="sl">
-						<span class="progbar<?php echo esc_html( $color ); ?>"></span>
+						<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 						<img src="<?php echo esc_url( $h_url ); ?>" alt="<?php echo esc_attr( $h_alt ); ?>" width="<?php echo esc_attr( $h_width ); ?>" height="<?php echo esc_attr( $h_height ); ?>" />
 					</div>
 				<?php
@@ -81,18 +81,16 @@ function da_home() {
 	<div class="mid-block">
 		<div class="inner-wrap">
 			<div class="col-1-2 nm mid-left">
-				<div class="imageblock">
-					<div class="card-title">
 <?php
-$link = get_field( 'quote_tab' );
+$link = get_field( 'q_link' );
 if ( $link ) :
 	$link_url = $link['url'];
 	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
 	?>
-	<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<a href="<?php echo esc_url( $link_url ); ?>">
 <?php endif; ?>
-					</div>
+				<div class="imageblock">
+					<div class="card-title"><?php echo esc_html( $link_title ); ?></div>
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
@@ -105,10 +103,14 @@ if ( $link ) :
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
 				</div>
+<?php if ( $link ) : ?>
+</a>
+<?php endif; ?>
 				<div class="textblock">
 					<div class="message"><?php the_field( 'learn_text' ); ?></div>
 				</div>
 			</div>
+
 			<div class="col-1-2 nm mid-right">
 				<div class="textblock">
 					<?php if ( get_field( 'quote' ) ) : ?>
@@ -117,18 +119,26 @@ if ( $link ) :
 						<cite>
 <?php
 the_field( 'quote_citation' );
-$link = get_field( 'citation_link' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
+$c_link = get_field( 'citation_link' );
+if ( $c_link ) :
+	$c_url = $c_link['url'];
+	$c_title = $c_link['title'];
+	$c_target = $c_link['target'] ? $c_link['target'] : '_self';
 	?>
-	&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+	&mdash;<a href="<?php echo esc_url( $c_url ); ?>" target="<?php echo esc_attr( $c_target ); ?>"><?php echo esc_html( $c_title ); ?></a>
 <?php endif; ?>
 						</cite>
 					</blockquote>
 				<?php endif; ?>
 				</div>
+<?php
+$l_link = get_field( 'l_link' );
+if ( $l_link ) :
+	$l_url = $l_link['url'];
+	$l_title = $l_link['title'];
+?>
+<a href="<?php echo esc_url( $l_url ); ?>">
+<?php endif; ?>
 				<div class="imageblock">
 					<?php
 					$image = get_field( 'learn_image' );
@@ -141,18 +151,13 @@ if ( $link ) :
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
-					<div class="card-title">
-<?php
-$link = get_field( 'learn_tab' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
-	?>
-	<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-<?php endif; ?>
+					<div class="card-title"><?php echo esc_html( $l_title ); ?>
 					</div>
 				</div>
+<?php if ( $l_link ) : ?>
+</a>
+<?php endif; ?>
+
 			</div>
 			<div class="cf"></div>
 		</div>

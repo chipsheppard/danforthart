@@ -14,8 +14,8 @@ jQuery(function( $ ) {
 		infinite: true,
 		autoplay: true,
 		pauseOnHover: false,
-		slidesToShow: 1,
-		speed: 600,
-		autoplaySpeed: 6000,
+ 		fade: true,
+ 		speed: 1000,
+		autoplaySpeed: 5000,
 	});
 });

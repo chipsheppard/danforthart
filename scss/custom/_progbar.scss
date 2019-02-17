@@ -69,7 +69,10 @@
 .progbar-trigger {
 	position: relative;
 }
-.progbar-trigger:hover .progbar {
+.progbar-trigger:hover .progbar,
+.heroimage .progbar,
+.exhibition-featured-img .progbar,
+.sl.slick-current .progbar {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -91,14 +94,20 @@
                             100% 100%,
                             0 100%;
 
-    animation: fibg 1s;
+	animation-name: fibg;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
 
 	&.big {
-		animation: bg 1s;
+		animation-name: bg;
 		background-size:    100% 24px,
 	                        24px 100%,
 	                        100% 24px,
 	                        24px 100%;
+	}
+
+	&.slow {
+		animation-duration: 5s;
 	}
 
 	&.green {

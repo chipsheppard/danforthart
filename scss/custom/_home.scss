@@ -38,7 +38,19 @@ body.home {
 	.mid-block {
 		background-color: $color__green;
 
+		.imageblock  {
+			img {
+				transition: all 0.25s ease-in-out;
+			}
+
+			&:hover {
+				img {
+					transform: scale(1.05,1.05);
+				}
+			}
+		}
 	}
+
 	.mid-left {
 		.card-title {
 			background-color: $color__yellow;
@@ -166,15 +178,15 @@ body.home {
 	}
 }
 
-
+// BACKGROUND COLOR TRANSITION
 @keyframes colorchange {
-	0%  {background: $color__yellow;}
-	20%  {background: $color__yellow;}
-	40%  {background: $color__blue;}
-	60%  {background: $color__green;}
-	75%  {background: $color__tan;}
-	95% {background: $color__orange;}
-	100%  {background: $color__yellow;}
+	0%   {background: $color__yellow;}
+	5%   {background: $color__yellow;}
+	25%  {background: $color__blue;}
+	45%  {background: $color__green;}
+	65%  {background: $color__tan;}
+	85%  {background: $color__orange;}
+	100% {background: $color__yellow;}
 }
 body.home,
 body.home .hero-callout,
@@ -183,64 +195,12 @@ body.home .mid-left .card-title {
 	animation-iteration-count: infinite;
 }
 
-
+// HERO BORDER ANIMATION
 .sl {
 	position: relative;
 }
 .sl.slick-current .progbar {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 2;
-
-    background-repeat: no-repeat;
-    background-image:   linear-gradient(to right, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to right, #f1a676 100%, #f1a676 100%),
-                        linear-gradient(to bottom, #f1a676 100%, #f1a676 100%);
-    background-size:    100% 24px,
-                        24px 100%,
-                        100% 24px,
-                        24px 100%;
-    background-position:    0 0,
-                            100% 0,
-                            100% 100%,
-                            0 100%;
-    animation: bg 6s linear;
     animation-play-state: running;
-
-	&.green {
-		background-image:   linear-gradient(to right, $color__green 100%, $color__green 100%),
-	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%),
-	                        linear-gradient(to right, $color__green 100%, $color__green 100%),
-	                        linear-gradient(to bottom, $color__green 100%, $color__green 100%);
-	}
-	&.yellow {
-		background-image:   linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
-	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%),
-	                        linear-gradient(to right, $color__yellow 100%, $color__yellow 100%),
-	                        linear-gradient(to bottom, $color__yellow 100%, $color__yellow 100%);
-	}
-	&.blue {
-		background-image:   linear-gradient(to right, $color__blue 100%, $color__blue 100%),
-	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%),
-	                        linear-gradient(to right, $color__blue 100%, $color__blue 100%),
-	                        linear-gradient(to bottom, $color__blue 100%, $color__blue 100%);
-	}
-	&.tan {
-		background-image:   linear-gradient(to right, $color__tan 100%, $color__tan 100%),
-	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%),
-	                        linear-gradient(to right, $color__tan 100%, $color__tan 100%),
-	                        linear-gradient(to bottom, $color__tan 100%, $color__tan 100%);
-	}
-	&.purple {
-		background-image:   linear-gradient(to right, $color__purple 100%, $color__purple 100%),
-	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%),
-	                        linear-gradient(to right, $color__purple 100%, $color__purple 100%),
-	                        linear-gradient(to bottom, $color__purple 100%, $color__purple 100%);
-	}
 }
 
 //.sl.slick-current:hover .progbar {

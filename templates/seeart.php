@@ -36,6 +36,11 @@ function da_current() {
 			<?php
 			// POST OBJECT.
 			$fe_post_object = get_field( 'featured_exhibition' );
+			if ( get_field( 'highlight_color', $fe_post_object->ID ) ) :
+				$color = ' ' . get_field( 'highlight_color', $fe_post_object->ID );
+			else :
+				$color = '';
+			endif;
 			// IMAGE.
 			$fe_image = get_field( 'fe_image' );
 			if ( ! empty( $fe_image ) ) :
@@ -44,16 +49,18 @@ function da_current() {
 				$fe_width = $fe_image['width'];
 				$fe_height = $fe_image['height'];
 				?>
+				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 				<img src="<?php echo esc_url( $fe_url ); ?>" alt="<?php echo esc_attr( $fe_alt ); ?>" width="<?php echo esc_attr( $fe_width ); ?>" height="<?php echo esc_attr( $fe_height ); ?>" />
-			<?php
-			else :
+			<?php else : ?>
+				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
+				<?php
 				echo get_the_post_thumbnail( $fe_post_object->ID, 'full', [
 					'class' => 'featured-image',
 					'title' => 'Feature image',
 				] );
 			endif;
 			?>
-		</div><!-- /hero-image -->
+		</div>
 		<div class="hero-callout">
 			<div class="link">
 				<a href="<?php echo esc_url( get_permalink( $fe_post_object->ID ) ); ?>"><span><?php the_field( 'fe_link_text' ); ?></span></a>
@@ -61,15 +68,15 @@ function da_current() {
 			<div class="date"><?php the_field( 'date', $fe_post_object->ID ); ?></div>
 			<div class="text"><?php echo get_the_title( $fe_post_object->ID ); ?></div>
 		</div>
-	</div><!-- /inner-wrap -->
-</div><!-- /hero-wrap -->
+	</div>
+</div>
 
 
 <div class="inner-wrap">
 	<div class="intro">
 		<?php the_content(); ?>
 	</div>
-</div><!-- /inner-wrap -->
+</div>
 
 
 <div class="content-wrap">
@@ -276,8 +283,9 @@ endif;
 							<?php the_sub_field( 'u_text' ); ?>
 							<div class="cf"></div>
 							<div class="ue-social">
-								<div class="social-link"><a href="#0"><span class="iconwrap"><span class="cssicon-facebook"></span></span> <span class="link">Share It</span></a></div>
-								<div class="social-link"><a href="#0"><span class="iconwrap c"><span class="cssicon-twitter"></span></span> <span class="link">Tweet It</span></a></div>
+								<div class="ss-wrap">
+									<?php the_field( 'share_blocks', 'option' ); ?>
+								</div>
 							</div>
 						</div>
 						<div class="cf"></div>

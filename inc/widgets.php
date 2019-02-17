@@ -28,6 +28,16 @@ function danforthart_widgets_init() {
 		'after_title' => '</h5>',
 	) );
 
+	register_sidebar( array(
+		'name' => esc_html__( 'Above Header Widget', 'danforthart' ),
+		'id' => 'header',
+		'description' => esc_html__( 'An optional "announcement" widget area. Displays at the very top of your website.', 'danforthart' ),
+		'before_widget' => '<div id="%1$s" class="header-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+
 }
 
 add_action( 'widgets_init', 'danforthart_widgets_init' );

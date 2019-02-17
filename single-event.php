@@ -80,8 +80,9 @@ function da_event() {
 		<?php the_field( 'more_left' ); ?>
 	</div>
 	<div class="col-1-2 e-social">
-		<div class="social-link"><a href="#0"><span class="iconwrap"><span class="cssicon-facebook"></span></span> <span class="slink">Share It</span></a></div>
-		<div class="social-link"><a href="#0"><span class="iconwrap c"><span class="cssicon-twitter"></span></span> <span class="slink">Tweet It</span></a></div>
+		<div class="ss-wrap">
+			<?php the_field( 'share_blocks', 'option' ); ?>
+		</div>
 	</div>
 	<div class="cf"></div>
 </div>

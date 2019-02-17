@@ -938,16 +938,17 @@ blockquote {
 @media all and (max-width: 640px) {
   /* line 11, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
   blockquote {
-    padding: 1.25em 0 1.25em 1em;
+    margin: 0;
+    padding: 1.25em .5em 1.25em 1em;
   }
 }
 
-/* line 22, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
+/* line 23, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
 blockquote:after {
   content: "";
 }
 
-/* line 26, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
+/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
 blockquote:before {
   display: block;
   content: "\201C";
@@ -958,7 +959,7 @@ blockquote:before {
   font-size: 150%;
 }
 
-/* line 37, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
+/* line 38, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
 blockquote cite {
   display: block;
   font-style: normal;
@@ -967,7 +968,7 @@ blockquote cite {
   font-size: 75%;
 }
 
-/* line 44, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
+/* line 45, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
 blockquote cite a {
   color: #000000;
   font-weight: bold;
@@ -975,7 +976,7 @@ blockquote cite a {
   text-transform: uppercase;
 }
 
-/* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
+/* line 51, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/elements/_blockquotes.scss */
 blockquote p:last-child {
   margin-bottom: 0;
 }
@@ -1091,46 +1092,25 @@ button:active,
   outline: 0;
 }
 
-/* line 28, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background-color: #000000;
-  border: 2px solid #000000;
-  color: #ffffff;
-}
-
-/* line 35, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
-input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="reset"]:active,
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="submit"]:active {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* line 43, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 29, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn {
   display: inline-block;
   padding-right: 3em;
 }
 
-/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 33, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn.black {
   background-color: #000000;
   color: #ffffff;
 }
 
-/* line 51, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 37, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn.black:hover, .btn.black:focus, .btn.black:active {
   background-color: #ffffff;
   color: #000000;
 }
 
-/* line 59, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 45, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn:before {
   content: '';
   position: absolute;
@@ -1143,7 +1123,7 @@ input[type="submit"]:active {
           transform: rotate(-45deg);
 }
 
-/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn:after {
   content: '';
   position: absolute;
@@ -1156,19 +1136,19 @@ input[type="submit"]:active {
           transform: rotate(45deg);
 }
 
-/* line 79, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn.wide {
   width: 60%;
   text-align: center;
 }
 
-/* line 83, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 .btn.xwide {
   width: 100%;
   text-align: center;
 }
 
-/* line 91, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+/* line 77, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
   display: none;
@@ -1176,7 +1156,7 @@ input[type="search"]::-webkit-search-results-button {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
-  /* line 98, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
+  /* line 84, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_buttons.scss */
   button,
   input[type="button"],
   input[type="reset"],
@@ -1263,12 +1243,17 @@ select {
 /* line 5, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
 .search-form input[type="search"] {
   border-color: #808080;
+  color: currentColor;
   display: inline-block;
 }
 
 /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
+.search-form input[type="search"]:focus {
+  background-color: transparent;
+}
+
+/* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
 .search-form input[type="submit"] {
-  background: transparent;
   border: none;
   border-left: 1px solid #808080;
   display: inline-block;
@@ -1280,9 +1265,30 @@ select {
   font-size: 1.25rem;
 }
 
-/* line 21, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
-.search-form input[type="submit"]:hover, .search-form input[type="submit"]:focus {
-  background-color: #f6d06d;
+/* line 28, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
+body.error404 .page-content .search-form {
+  width: 70%;
+  margin: 1em auto;
+}
+
+@media all and (max-width: 768px) {
+  /* line 28, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
+  body.error404 .page-content .search-form {
+    width: 100%;
+  }
+}
+
+/* line 38, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
+body.search .content-area .search-form {
+  width: 70%;
+  margin: 1em 0 5em;
+}
+
+@media all and (max-width: 768px) {
+  /* line 38, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/forms/_search.scss */
+  body.search .content-area .search-form {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1307,13 +1313,13 @@ a:focus {
 /* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/navigation/_links.scss */
 .site-content a:not(.btn) {
   border-bottom: 1px solid #000000;
-  padding-bottom: .25em;
+  padding-bottom: 3px;
 }
 
 /* line 19, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/navigation/_links.scss */
 .site-content a:not(.btn):hover, .site-content a:not(.btn):focus, .site-content a:not(.btn):active {
-  border-width: 2px;
-  padding-bottom: .1875em;
+  border-bottom-width: 2px;
+  padding-bottom: 2px;
 }
 
 /* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/navigation/_links.scss */
@@ -2866,7 +2872,15 @@ img.flex {
   font-size: 125%;
 }
 
-/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
+@media all and (max-width: 768px) {
+  /* line 51, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
+  .big {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+}
+
+/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
 .circle-num {
   background-color: #000000;
   border-radius: 50%;
@@ -2882,14 +2896,14 @@ img.flex {
   margin-left: -2em;
 }
 
-/* line 70, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
+/* line 75, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
 .entry-content .num-list {
   margin-bottom: 2em;
   margin-left: 2.5em;
   line-height: 1.25;
 }
 
-/* line 76, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
+/* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_utility.scss */
 .oh {
   overflow: hidden;
 }
@@ -3461,6 +3475,40 @@ li.slick-active button:before {
 }
 
 /* line 210, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+.cssicon-x {
+  color: currentColor;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 218, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+.cssicon-x:before {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 227, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+.cssicon-x:after {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 240, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-file {
   background: transparent;
   border: 1px solid currentColor;
@@ -3469,7 +3517,7 @@ li.slick-active button:before {
   top: -2px;
 }
 
-/* line 217, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 247, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-file:before {
   background: #fff;
   border-width: 1px;
@@ -3484,7 +3532,7 @@ li.slick-active button:before {
           transform: rotate(45deg);
 }
 
-/* line 229, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 259, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-file:after {
   background: transparent;
   border-width: 1px;
@@ -3497,97 +3545,12 @@ li.slick-active button:before {
   width: 7px;
 }
 
-/* line 241, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 271, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-file.green:before {
   background: #93ddce;
 }
 
-/*
-
-
-
-// CART
-.cssicon-cart {
-    width: 19px;
-    height: 0;
-    border-width: 10px 6px 0 2px;
-    border-style: solid;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    margin: 0 6px 2px;
-}
-.cssicon-cart:before {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 12px, 12px 0, -2px -13px 0 0;
-    top: 0;
-    left: -2px;
-}
-
-
-// TAGS
-.cssicon-tag {
-	background-color: currentColor;
-	border-radius: 1px 0 0 0;
-	border-left: solid 1px currentColor;
-	border-top: solid 1px currentColor;
-	color: currentColor;
-	height: 7px;
-	margin-right: 10px;
-	top: -2px;
-	width: 7px;
-}
-.cssicon-tag:before {
-	content: '';
-    position: absolute;
-    left: 1px;
-    top: 1px;
-    width: 10px;
-    height: 10px;
-    border-radius: 1px;
-    border-left: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-    border-bottom: solid 1px currentColor;
-    background-color: currentColor;
-    transform: rotate(-45deg);
-}
-.cssicon-tag:after {
-	content: '';
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    color: white;
-    background-color: currentColor;
-}
-
-
-// GATEGORIES (folder)
-.cssicon-folder {
-	width: 15px;
-    height: 10px;
-	margin-right: 4px;
-    margin-top: 2px;
-    position: relative;
-    background-color: currentColor;
-    border-radius: 0 1px 1px 1px;
-}
-.cssicon-folder:before {
-	content: '';
-    width: 60%;
-    height: 3px;
-    border-radius: 0 2px 0 0;
-    background-color: currentColor;
-    position: absolute;
-    top: -2px;
-    left: 0px;
-}
-*/
-/* line 335, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 279, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-instagram {
   background-color: transparent;
   border-radius: .375em;
@@ -3597,12 +3560,12 @@ li.slick-active button:before {
   width: 1.5em;
 }
 
-/* line 343, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 287, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-instagram:before, .cssicon-instagram:after {
   position: absolute;
 }
 
-/* line 347, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 291, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-instagram:before {
   height: 2px;
   width: 2px;
@@ -3611,7 +3574,7 @@ li.slick-active button:before {
   right: 3px;
 }
 
-/* line 354, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 298, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-instagram:after {
   background-color: transparent;
   border-radius: 50%;
@@ -3624,7 +3587,7 @@ li.slick-active button:before {
   width: .75em;
 }
 
-/* line 367, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 311, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-facebook {
   background-color: currentColor;
   height: 1.5em;
@@ -3633,7 +3596,7 @@ li.slick-active button:before {
   width: 1.5em;
 }
 
-/* line 374, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 318, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-facebook:after {
   content: 'f';
   color: #000000;
@@ -3649,7 +3612,7 @@ li.slick-active button:before {
   font-size: 1.625rem;
 }
 
-/* line 390, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 334, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-linkedin {
   background-color: currentColor;
   height: 1.5em;
@@ -3658,7 +3621,7 @@ li.slick-active button:before {
   width: 1.5em;
 }
 
-/* line 397, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 341, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-linkedin:after {
   content: 'in';
   color: #000000;
@@ -3674,45 +3637,24 @@ li.slick-active button:before {
   font-size: 1.5rem;
 }
 
-/* line 415, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 357, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .cssicon-twitter {
   color: currentColor;
-  width: 8px;
-  height: 16px;
-  border-radius: 0 0 0 5px;
-  box-shadow: -4px 2px 0 0;
-  margin: 0 5px 0 10px;
+  width: 22px;
+  height: 20px;
+  background-image: url(assets/images/tbird.png);
+  background-size: 22px 20px;
+  background-position: center;
 }
 
-/* line 423, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
-.cssicon-twitter:before {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 0;
-  box-shadow: inset 0 5px, 0 -8px;
-}
-
-/* line 432, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
-.cssicon-twitter:after {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  box-shadow: inset 0 0 0 12px, 6px 6px, 6px 14px;
-  border-radius: 50%;
-  left: -4px;
-}
-
-/* line 442, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 366, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .iconwrap {
   padding: .625em .625em .875em;
   margin-right: .5em;
   border: 1px solid currentColor;
 }
 
-/* line 447, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
+/* line 371, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_css-icons.scss */
 .iconwrap.c {
   border-radius: 50%;
 }
@@ -3755,6 +3697,46 @@ div.wpcf7-response-output {
   padding: 0;
   font-size: 16px;
   font-size: 1rem;
+}
+
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_plugins.scss */
+.site-content .ss-social-sharing a {
+  display: block;
+  position: relative;
+  text-indent: 0;
+  margin-bottom: 1em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* line 53, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/setup/_mixins.scss */
+.site-content .ss-social-sharing a:hover {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* line 43, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_plugins.scss */
+.site-content .ss-social-sharing a span {
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+  position: absolute;
+  left: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  top: 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_plugins.scss */
+.site-content .ss-social-sharing a:focus {
+  outline: 0;
+}
+
+/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/modules/_plugins.scss */
+a.ss-button-facebook, a.ss-button-twitter, a.ss-button-linkedin, a.ss-button-pinterest {
+  background-image: url(assets/images/socialshare.png) !important;
 }
 
 /*--------------------------------------------------------------
@@ -4255,76 +4237,29 @@ div.wpcf7-response-output {
 }
 
 /* line 19, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .iconwrap {
-  background-color: #ffffff;
-  border-color: #000000;
+.site-footer .social a:hover {
+  opacity: .7;
 }
 
-/* line 23, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-instagram {
-  background-color: #ffffff;
-  border-color: #000000;
-}
-
-/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-instagram:before {
-  background-color: #000000;
-}
-
-/* line 30, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-instagram:after {
-  border-color: #000000;
-}
-
-/* line 34, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-facebook {
-  background-color: #000000;
-}
-
-/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-facebook:after {
-  color: #ffffff;
-}
-
-/* line 40, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-linkedin {
-  background-color: #000000;
-}
-
-/* line 42, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-linkedin:after {
-  color: #ffffff;
-}
-
-/* line 46, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-twitter {
-  color: #000000;
-}
-
-/* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
-.site-footer .social a:hover .cssicon-twitter:after {
-  box-shadow: inset 255 255 255 12px, 6px 6px, 6px 14px;
-}
-
-/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 24, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .fsu-logo {
   text-align: right;
 }
 
 @media all and (max-width: 640px) {
-  /* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 24, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .fsu-logo {
     margin: 4em 0 0 1em;
     text-align: left;
   }
 }
 
-/* line 63, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 32, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .fsu-logo img {
   width: 230px;
 }
 
-/* line 68, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 37, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .copyright {
   margin-top: .5em;
   text-align: right;
@@ -4333,14 +4268,19 @@ div.wpcf7-response-output {
 }
 
 @media all and (max-width: 640px) {
-  /* line 68, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 37, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .copyright {
     margin-left: 1em;
     text-align: left;
   }
 }
 
-/* line 80, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+.site-footer input[type="submit"] {
+  color: #ffffff;
+}
+
+/* line 54, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-info {
   color: #ffffff;
   letter-spacing: 1px;
@@ -4348,12 +4288,12 @@ div.wpcf7-response-output {
   position: relative;
 }
 
-/* line 88, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 62, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu {
   margin-bottom: 2em;
 }
 
-/* line 91, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu li {
   float: left;
   padding-right: 1em;
@@ -4361,7 +4301,7 @@ div.wpcf7-response-output {
   line-height: 1.5em;
 }
 
-/* line 97, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 71, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu li a {
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
@@ -4372,12 +4312,12 @@ div.wpcf7-response-output {
   text-transform: uppercase;
 }
 
-/* line 106, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 80, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu li a:hover {
   border-width: 2px;
 }
 
-/* line 111, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 85, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu li.current-menu-item > a,
 .site-footer .menu li.current-menu-ancestor > a {
   background-color: #fff;
@@ -4387,33 +4327,33 @@ div.wpcf7-response-output {
   margin-left: -.75em;
 }
 
-/* line 121, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 95, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu .sub-menu {
   margin: 1.5em 0 3em;
 }
 
 @media all and (max-width: 768px) {
-  /* line 121, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 95, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .menu .sub-menu {
     margin: 1.5em 0;
   }
 }
 
 @media all and (max-width: 640px) {
-  /* line 121, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 95, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .menu .sub-menu {
     display: none;
   }
 }
 
-/* line 131, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 105, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu .sub-menu li {
   float: none;
   width: auto;
   padding: 0 0 1.25em 0;
 }
 
-/* line 136, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 110, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu .sub-menu li.current-menu-item > a,
 .site-footer .menu .sub-menu li.current-menu-ancestor > a {
   background: none;
@@ -4424,7 +4364,7 @@ div.wpcf7-response-output {
   margin-left: 0;
 }
 
-/* line 147, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 121, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu .sub-menu a {
   border: none;
   font-weight: normal;
@@ -4434,24 +4374,24 @@ div.wpcf7-response-output {
   font-size: 1rem;
 }
 
-/* line 154, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+/* line 128, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
 .site-footer .menu .sub-menu a:hover {
   border-bottom: 1px solid currentColor;
 }
 
 @media all and (max-width: 900px) {
-  /* line 161, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 135, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .menu li {
     width: 33%;
   }
 }
 
 @media all and (max-width: 640px) {
-  /* line 88, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 62, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .menu {
     margin-left: 3%;
   }
-  /* line 169, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
+  /* line 143, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_site-footer.scss */
   .site-footer .menu li {
     float: none;
     margin-bottom: 1em;
@@ -4632,6 +4572,22 @@ div.wpcf7-response-output {
 }
 
 /* line 5, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+.blog .featured-image,
+.archive .featured-image,
+.search .featured-image {
+  display: inline-block;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 9, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+.blog .featured-image:hover,
+.archive .featured-image:hover,
+.search .featured-image:hover {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+}
+
+/* line 14, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .hentry,
 .archive .hentry,
 .search .hentry {
@@ -4642,7 +4598,7 @@ div.wpcf7-response-output {
   font-size: 1rem;
 }
 
-/* line 11, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 20, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .hentry .wp-post-image,
 .archive .hentry .wp-post-image,
 .search .hentry .wp-post-image {
@@ -4650,7 +4606,7 @@ div.wpcf7-response-output {
   width: 100%;
 }
 
-/* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 25, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .hentry .entry-header,
 .blog .hentry .entry-content,
 .blog .hentry .link-more,
@@ -4663,21 +4619,21 @@ div.wpcf7-response-output {
   overflow: hidden;
 }
 
-/* line 22, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 31, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .hentry.sticky,
 .archive .hentry.sticky,
 .search .hentry.sticky {
   border-top: 2px solid #93ddce;
 }
 
-/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .page-header,
 .archive .page-header,
 .search .page-header {
   margin-bottom: 4em;
 }
 
-/* line 32, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 41, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .page-title span,
 .archive .page-title span,
 .search .page-title span {
@@ -4688,7 +4644,7 @@ div.wpcf7-response-output {
   font-size: 1rem;
 }
 
-/* line 40, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 49, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .entry-title,
 .archive .entry-title,
 .search .entry-title {
@@ -4697,21 +4653,21 @@ div.wpcf7-response-output {
   font-size: 1.375rem;
 }
 
-/* line 45, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 54, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .entry-content p,
 .archive .entry-content p,
 .search .entry-content p {
   margin-bottom: .25em;
 }
 
-/* line 49, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 58, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .blog .format-status .entry-content p,
 .archive .format-status .entry-content p,
 .search .format-status .entry-content p {
   margin-bottom: 1em;
 }
 
-/* line 54, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 63, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .fi-link {
   display: inline-block;
   margin: .5em 1.5em 1.5em 0;
@@ -4721,7 +4677,7 @@ div.wpcf7-response-output {
 }
 
 @media all and (max-width: 768px) {
-  /* line 54, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+  /* line 63, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
   .fi-link {
     float: none;
     margin-bottom: 0;
@@ -4731,18 +4687,13 @@ div.wpcf7-response-output {
   }
 }
 
-/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
-.featured-image {
-  display: inline-block;
-}
-
-/* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 78, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .archive-description {
   line-height: 1.2;
 }
 
 /* READ MORE */
-/* line 78, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
+/* line 83, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_archives.scss */
 .more-link {
   display: inline-block;
   font-weight: bold;
@@ -5049,6 +5000,47 @@ div.wpcf7-response-output {
 /* line 112, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_comments.scss */
 .bypostauthor {
   display: inline-block;
+}
+
+/* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget-wrap {
+  background-color: #ffffff;
+  display: none;
+}
+
+/* line 6, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget {
+  background-color: #ffffff;
+  border: 3px solid #f6d06d;
+  padding: .5em 2em .25em 4em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* line 13, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 17, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget .circle-num {
+  margin-right: 1em;
+}
+
+/* line 21, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget .close {
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 29, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/site/_header-widget.scss */
+.header-widget .close:hover {
+  color: #808080;
 }
 
 /*--------------------------------------------------------------
@@ -5438,9 +5430,10 @@ body.color5 {
 /* line 12, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .imageblock {
   position: relative;
+  overflow: hidden;
 }
 
-/* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .imageblock img {
   display: block;
   max-width: none;
@@ -5451,33 +5444,34 @@ body.color5 {
 }
 
 @media all and (max-width: 1600px) {
-  /* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .imageblock img {
     height: 800px;
   }
 }
 
 @media all and (max-width: 1024px) {
-  /* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .imageblock img {
     height: 600px;
   }
 }
 
 @media all and (max-width: 640px) {
-  /* line 15, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .imageblock img {
     height: 400px;
   }
 }
 
-/* line 33, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 34, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .imageblock .card-title {
   display: inline-block;
+  left: 0;
   line-height: 1;
   padding: 1em 1.25em 1em 1.75em;
   position: absolute;
-  left: 0;
+  z-index: 2;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -5485,7 +5479,7 @@ body.color5 {
   font-size: 1rem;
 }
 
-/* line 42, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 44, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .imageblock .card-title a {
   border-bottom: none;
   padding-bottom: 0;
@@ -5497,7 +5491,7 @@ body.color5 {
   padding-bottom: 0;
 }
 
-/* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock {
   height: 400px;
   padding: 0 2.5em;
@@ -5505,7 +5499,7 @@ body.color5 {
 }
 
 @media all and (max-width: 768px) {
-  /* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .textblock {
     padding: 0 1.5em;
     height: 300px;
@@ -5513,20 +5507,20 @@ body.color5 {
 }
 
 @media all and (max-width: 640px) {
-  /* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .textblock {
     padding: 0;
   }
 }
 
-/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 62, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock a {
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-/* line 64, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 66, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock .message {
   padding: 1em;
   position: relative;
@@ -5535,20 +5529,28 @@ body.color5 {
           transform: translateY(-50%);
 }
 
-/* line 70, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock .l-text {
   padding: 2em 0 1em;
   font-size: 26px;
   font-size: 1.625rem;
 }
 
-/* line 74, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+@media all and (max-width: 768px) {
+  /* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  .mid-block .textblock .l-text {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+/* line 82, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock .l-content {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 78, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 86, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock blockquote {
   position: relative;
   top: 50%;
@@ -5562,51 +5564,51 @@ body.color5 {
 }
 
 @media all and (max-width: 900px) {
-  /* line 78, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 86, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .textblock blockquote {
     font-size: 30px;
     font-size: 1.875rem;
   }
 }
 
-/* line 91, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 99, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock blockquote cite {
   font-size: 23px;
   font-size: 1.4375rem;
 }
 
 @media all and (max-width: 640px) {
-  /* line 91, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 99, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-block .textblock blockquote cite {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
-/* line 99, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 107, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-block .textblock blockquote a {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 107, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 115, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-left .card-title {
   background-color: #93ddce;
   top: 0;
 }
 
-/* line 113, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+/* line 121, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
 .mid-right .card-title {
   background-color: #fff;
   bottom: 0;
 }
 
 @media all and (max-width: 768px) {
-  /* line 120, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 128, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-left .imageblock {
     margin-left: -3%;
   }
-  /* line 123, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
+  /* line 131, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_mid-block.scss */
   .mid-right .imageblock {
     margin-right: -3%;
   }
@@ -5690,7 +5692,10 @@ body.color5 {
 }
 
 /* line 72, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar {
+.progbar-trigger:hover .progbar,
+.heroimage .progbar,
+.exhibition-featured-img .progbar,
+.sl.slick-current .progbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -5701,39 +5706,70 @@ body.color5 {
   background-image: linear-gradient(to right, #fcb080 100%, #fcb080 100%), linear-gradient(to bottom, #fcb080 100%, #fcb080 100%), linear-gradient(to right, #fcb080 100%, #fcb080 100%), linear-gradient(to bottom, #fcb080 100%, #fcb080 100%);
   background-size: 100% 12px, 12px 100%, 100% 12px, 12px 100%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  -webkit-animation: fibg 1s;
-          animation: fibg 1s;
+  -webkit-animation-name: fibg;
+          animation-name: fibg;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-/* line 96, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.big {
-  -webkit-animation: bg 1s;
-          animation: bg 1s;
+/* line 101, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.big,
+.heroimage .progbar.big,
+.exhibition-featured-img .progbar.big,
+.sl.slick-current .progbar.big {
+  -webkit-animation-name: bg;
+          animation-name: bg;
   background-size: 100% 24px, 24px 100%, 100% 24px, 24px 100%;
 }
 
-/* line 104, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.green {
+/* line 109, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.slow,
+.heroimage .progbar.slow,
+.exhibition-featured-img .progbar.slow,
+.sl.slick-current .progbar.slow {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+/* line 113, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.green,
+.heroimage .progbar.green,
+.exhibition-featured-img .progbar.green,
+.sl.slick-current .progbar.green {
   background-image: linear-gradient(to right, #93ddce 100%, #93ddce 100%), linear-gradient(to bottom, #93ddce 100%, #93ddce 100%), linear-gradient(to right, #93ddce 100%, #93ddce 100%), linear-gradient(to bottom, #93ddce 100%, #93ddce 100%);
 }
 
-/* line 110, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.yellow {
+/* line 119, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.yellow,
+.heroimage .progbar.yellow,
+.exhibition-featured-img .progbar.yellow,
+.sl.slick-current .progbar.yellow {
   background-image: linear-gradient(to right, #f6d06d 100%, #f6d06d 100%), linear-gradient(to bottom, #f6d06d 100%, #f6d06d 100%), linear-gradient(to right, #f6d06d 100%, #f6d06d 100%), linear-gradient(to bottom, #f6d06d 100%, #f6d06d 100%);
 }
 
-/* line 116, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.blue {
+/* line 125, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.blue,
+.heroimage .progbar.blue,
+.exhibition-featured-img .progbar.blue,
+.sl.slick-current .progbar.blue {
   background-image: linear-gradient(to right, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to bottom, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to right, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to bottom, #9ed4ef 100%, #9ed4ef 100%);
 }
 
-/* line 122, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.tan {
+/* line 131, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.tan,
+.heroimage .progbar.tan,
+.exhibition-featured-img .progbar.tan,
+.sl.slick-current .progbar.tan {
   background-image: linear-gradient(to right, #edd6b9 100%, #edd6b9 100%), linear-gradient(to bottom, #edd6b9 100%, #edd6b9 100%), linear-gradient(to right, #edd6b9 100%, #edd6b9 100%), linear-gradient(to bottom, #edd6b9 100%, #edd6b9 100%);
 }
 
-/* line 128, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
-.progbar-trigger:hover .progbar.purple {
+/* line 137, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_progbar.scss */
+.progbar-trigger:hover .progbar.purple,
+.heroimage .progbar.purple,
+.exhibition-featured-img .progbar.purple,
+.sl.slick-current .progbar.purple {
   background-image: linear-gradient(to right, #afc2e3 100%, #afc2e3 100%), linear-gradient(to bottom, #afc2e3 100%, #afc2e3 100%), linear-gradient(to right, #afc2e3 100%, #afc2e3 100%), linear-gradient(to bottom, #afc2e3 100%, #afc2e3 100%);
 }
 
@@ -5741,44 +5777,51 @@ body.color5 {
 .exhibit-modal {
   background-color: #ffffff;
   border: 2px solid #000000;
-  position: absolute;
-  z-index: 999;
-  left: 1%;
-  top: 1%;
   display: none;
-  width: 98%;
   height: 98vh;
+  left: 1%;
   padding: 4em 15%;
+  position: absolute;
+  top: 1%;
+  width: 98%;
+  z-index: 999;
 }
 
-/* line 13, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+@media all and (max-width: 768px) {
+  /* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+  .exhibit-modal {
+    padding: 3em 5%;
+  }
+}
+
+/* line 17, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal.show {
   display: block !important;
 }
 
-/* line 17, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 21, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal .close-modal {
   cursor: pointer;
   font-weight: 300;
   opacity: .5;
   position: absolute;
-  top: .25em;
-  right: .5em;
-  font-size: 48px;
-  font-size: 3rem;
+  top: .5em;
+  right: 1em;
+  height: 30px;
+  width: 30px;
 }
 
-/* line 26, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 31, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal .close-modal:hover {
   opacity: 1;
 }
 
-/* line 31, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal .modal-img {
   text-align: center;
 }
 
-/* line 34, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 39, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal .modal-img .modal-image {
   display: inline-block;
   width: auto;
@@ -5786,19 +5829,19 @@ body.color5 {
   margin: auto 0;
 }
 
-/* line 42, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .exhibit-modal .artwork-info {
   text-align: center;
 }
 
-/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 52, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .modal-nav {
   position: absolute;
   bottom: 0;
   right: 3em;
 }
 
-/* line 52, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
+/* line 57, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modal.scss */
 .pagingInfo {
   color: #000000;
   font-weight: 300;
@@ -6380,17 +6423,26 @@ body.color5 {
 .accordion .acc-title {
   display: inline-block;
   float: left;
+  width: calc(100% - 42px);
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_accordion.scss */
+@media all and (max-width: 768px) {
+  /* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_accordion.scss */
+  .accordion .acc-title {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+}
+
+/* line 66, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_accordion.scss */
 .accordion .acc-button {
   display: inline-block;
   float: right;
   text-align: center;
   width: 32px;
-  margin-right: 1em;
 }
 
 /* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_v-images.scss */
@@ -6505,6 +6557,13 @@ body.color5 {
   margin-bottom: 10em;
 }
 
+@media all and (max-width: 1024px) {
+  /* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+  .quote-block {
+    margin-bottom: 4em;
+  }
+}
+
 @media all and (max-width: 768px) {
   /* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
   .quote-block {
@@ -6513,12 +6572,12 @@ body.color5 {
   }
 }
 
-/* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 13, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block .large-link {
   padding: 2em 0 3em 3em;
 }
 
-/* line 13, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block .large-link a {
   font-weight: bold;
   font-size: 27px;
@@ -6526,18 +6585,18 @@ body.color5 {
 }
 
 @media all and (max-width: 768px) {
-  /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+  /* line 13, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
   .quote-block .large-link {
     padding: 0 0 2.5em 3%;
   }
-  /* line 21, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+  /* line 24, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
   .quote-block .large-link a {
     font-size: 22px;
     font-size: 1.375rem;
   }
 }
 
-/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 30, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block blockquote {
   line-height: 1.375;
   margin-top: 0;
@@ -6546,30 +6605,30 @@ body.color5 {
   font-size: 2.8125rem;
 }
 
-/* line 33, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block blockquote cite {
   font-size: 23px;
   font-size: 1.4375rem;
 }
 
-/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 39, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block blockquote cite a {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 41, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+/* line 44, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
 .quote-block blockquote:before {
   top: -0.25em;
 }
 
 @media all and (max-width: 768px) {
-  /* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+  /* line 30, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
   .quote-block blockquote {
     font-size: 30px;
     font-size: 1.875rem;
   }
-  /* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
+  /* line 51, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_fullwidth-quote.scss */
   .quote-block blockquote cite {
     font-size: 20px;
     font-size: 1.25rem;
@@ -6747,24 +6806,35 @@ body.home .mid-block {
   background-color: #93ddce;
 }
 
-/* line 43, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 42, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+body.home .mid-block .imageblock img {
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+body.home .mid-block .imageblock:hover img {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .mid-left .card-title {
   background-color: #f6d06d;
 }
 
-/* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .mid-right .card-title {
   background-color: #93ddce;
 }
 
-/* line 53, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info {
   padding: 5em 0 2em;
   font-size: 18px;
   font-size: 1.125rem;
 }
 
-/* line 57, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info .section-title {
   line-height: 1;
   margin-bottom: .75em;
@@ -6772,7 +6842,7 @@ body.home .home-info .section-title {
   font-size: 5rem;
 }
 
-/* line 63, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 75, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info h5 {
   text-transform: uppercase;
   margin-bottom: 2em;
@@ -6783,13 +6853,13 @@ body.home .home-info h5 {
   font-size: 1rem;
 }
 
-/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info h5 span {
   padding-bottom: 4px;
   border-bottom: 1px solid #000000;
 }
 
-/* line 75, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info .big {
   line-height: 1;
   font-weight: 300;
@@ -6797,18 +6867,18 @@ body.home .home-info .big {
   font-size: 3.125rem;
 }
 
-/* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 93, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info .col-1-3 {
   margin-bottom: 2em;
 }
 
-/* line 85, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 97, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .home-info td {
   padding: 0;
   border: 0;
 }
 
-/* line 92, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 104, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .social-block {
   background-color: #ffffff;
   padding: 2em 0;
@@ -6816,13 +6886,13 @@ body.home .social-block {
 }
 
 @media all and (max-width: 768px) {
-  /* line 92, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+  /* line 104, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
   body.home .social-block {
     text-align: center;
   }
 }
 
-/* line 100, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 112, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .social-block .image-blocks {
   display: inline-block;
   width: 75%;
@@ -6830,41 +6900,41 @@ body.home .social-block .image-blocks {
 }
 
 @media all and (max-width: 768px) {
-  /* line 100, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+  /* line 112, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
   body.home .social-block .image-blocks {
     margin-right: 0;
   }
 }
 
-/* line 108, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 120, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .social-block .col-1-3 {
   padding: 1em 2em;
 }
 
-/* line 112, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 124, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .social-block .cssicon-facebook:after,
 body.home .social-block .cssicon-linkedin:after {
   color: #77414d;
 }
 
-/* line 118, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 130, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .s-image {
   border: 10px solid #77414d;
   position: relative;
 }
 
-/* line 122, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 134, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .s-image img {
   display: block;
   width: 100%;
 }
 
-/* line 126, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 138, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .s-image:hover .overlay-text {
   display: block;
 }
 
-/* line 130, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 142, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .overlay-text {
   display: none;
   background-color: #77414d;
@@ -6878,7 +6948,7 @@ body.home .overlay-text {
   z-index: 5;
 }
 
-/* line 139, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 151, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .overlay-text strong {
   border-bottom: 1px solid currentColor;
   letter-spacing: 2px;
@@ -6886,7 +6956,7 @@ body.home .overlay-text strong {
   text-transform: uppercase;
 }
 
-/* line 146, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 158, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .overlay-text a {
   color: #ffffff;
   display: inline-block;
@@ -6901,7 +6971,7 @@ body.home .overlay-text a:hover {
   padding-bottom: 0;
 }
 
-/* line 152, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 164, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .overlay-text .txt {
   position: relative;
   top: 50%;
@@ -6909,7 +6979,7 @@ body.home .overlay-text .txt {
           transform: translateY(-50%);
 }
 
-/* line 159, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 171, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home .text-links {
   padding: 1em 1em 0;
   font-size: 40px;
@@ -6917,7 +6987,7 @@ body.home .text-links {
 }
 
 @media all and (max-width: 768px) {
-  /* line 159, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+  /* line 171, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
   body.home .text-links {
     font-size: 24px;
     font-size: 1.5rem;
@@ -6928,19 +6998,19 @@ body.home .text-links {
   0% {
     background: #f6d06d;
   }
-  20% {
+  5% {
     background: #f6d06d;
   }
-  40% {
+  25% {
     background: #9ed4ef;
   }
-  60% {
+  45% {
     background: #93ddce;
   }
-  75% {
+  65% {
     background: #edd6b9;
   }
-  95% {
+  85% {
     background: #fcb080;
   }
   100% {
@@ -6952,19 +7022,19 @@ body.home .text-links {
   0% {
     background: #f6d06d;
   }
-  20% {
+  5% {
     background: #f6d06d;
   }
-  40% {
+  25% {
     background: #9ed4ef;
   }
-  60% {
+  45% {
     background: #93ddce;
   }
-  75% {
+  65% {
     background: #edd6b9;
   }
-  95% {
+  85% {
     background: #fcb080;
   }
   100% {
@@ -6972,7 +7042,7 @@ body.home .text-links {
   }
 }
 
-/* line 179, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 191, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 body.home,
 body.home .hero-callout,
 body.home .mid-left .card-title {
@@ -6982,52 +7052,15 @@ body.home .mid-left .card-title {
           animation-iteration-count: infinite;
 }
 
-/* line 187, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 199, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 .sl {
   position: relative;
 }
 
-/* line 190, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
+/* line 202, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
 .sl.slick-current .progbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #f1a676 100%, #f1a676 100%), linear-gradient(to bottom, #f1a676 100%, #f1a676 100%), linear-gradient(to right, #f1a676 100%, #f1a676 100%), linear-gradient(to bottom, #f1a676 100%, #f1a676 100%);
-  background-size: 100% 24px, 24px 100%, 100% 24px, 24px 100%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  -webkit-animation: bg 6s linear;
-          animation: bg 6s linear;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-}
-
-/* line 214, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
-.sl.slick-current .progbar.green {
-  background-image: linear-gradient(to right, #93ddce 100%, #93ddce 100%), linear-gradient(to bottom, #93ddce 100%, #93ddce 100%), linear-gradient(to right, #93ddce 100%, #93ddce 100%), linear-gradient(to bottom, #93ddce 100%, #93ddce 100%);
-}
-
-/* line 220, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
-.sl.slick-current .progbar.yellow {
-  background-image: linear-gradient(to right, #f6d06d 100%, #f6d06d 100%), linear-gradient(to bottom, #f6d06d 100%, #f6d06d 100%), linear-gradient(to right, #f6d06d 100%, #f6d06d 100%), linear-gradient(to bottom, #f6d06d 100%, #f6d06d 100%);
-}
-
-/* line 226, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
-.sl.slick-current .progbar.blue {
-  background-image: linear-gradient(to right, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to bottom, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to right, #9ed4ef 100%, #9ed4ef 100%), linear-gradient(to bottom, #9ed4ef 100%, #9ed4ef 100%);
-}
-
-/* line 232, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
-.sl.slick-current .progbar.tan {
-  background-image: linear-gradient(to right, #edd6b9 100%, #edd6b9 100%), linear-gradient(to bottom, #edd6b9 100%, #edd6b9 100%), linear-gradient(to right, #edd6b9 100%, #edd6b9 100%), linear-gradient(to bottom, #edd6b9 100%, #edd6b9 100%);
-}
-
-/* line 238, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_home.scss */
-.sl.slick-current .progbar.purple {
-  background-image: linear-gradient(to right, #afc2e3 100%, #afc2e3 100%), linear-gradient(to bottom, #afc2e3 100%, #afc2e3 100%), linear-gradient(to right, #afc2e3 100%, #afc2e3 100%), linear-gradient(to bottom, #afc2e3 100%, #afc2e3 100%);
 }
 
 /* line 1, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_art.scss */
@@ -7164,20 +7197,38 @@ body.single-exhibition {
 }
 
 /* line 4, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+body.single-exhibition .exhibition-featured-img {
+  position: relative;
+}
+
+/* line 6, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+body.single-exhibition .exhibition-featured-img img {
+  display: block;
+}
+
+/* line 11, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 body.single-exhibition .exhibition-featured-date {
   background-color: #edd6b9;
   font-weight: 300;
-  padding: 1rem 2.5rem;
+  padding: .5em 1.5em .875em;
   display: inline-block;
   position: relative;
   float: right;
-  top: -5rem;
+  top: -3em;
   z-index: 3;
   font-size: 30px;
   font-size: 1.875rem;
 }
 
-/* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+@media all and (max-width: 768px) {
+  /* line 11, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  body.single-exhibition .exhibition-featured-date {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 body.single-exhibition blockquote {
   font-weight: 300;
   line-height: 1.375;
@@ -7186,22 +7237,8 @@ body.single-exhibition blockquote {
   font-size: 2.8125rem;
 }
 
-/* line 22, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-body.single-exhibition blockquote cite {
-  margin-top: 1.5em;
-  font-size: 22px;
-  font-size: 1.375rem;
-}
-
-/* line 26, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-body.single-exhibition blockquote cite a {
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-size: 1rem;
-}
-
 @media all and (max-width: 1024px) {
-  /* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   body.single-exhibition blockquote {
     margin: 1.5em 1em;
     font-size: 40px;
@@ -7210,15 +7247,29 @@ body.single-exhibition blockquote cite a {
 }
 
 @media all and (max-width: 768px) {
-  /* line 16, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   body.single-exhibition blockquote {
-    margin: .75em 0 1.5em;
+    margin: 0 0 1.5em;
     font-size: 32px;
     font-size: 2rem;
   }
 }
 
 /* line 43, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+body.single-exhibition blockquote cite {
+  margin-top: 1.5em;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+body.single-exhibition blockquote cite a {
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/* line 54, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 body.single-exhibition .more-left,
 body.single-exhibition .more-right {
   padding-top: 3em;
@@ -7227,21 +7278,21 @@ body.single-exhibition .more-right {
   font-size: 0.875rem;
 }
 
-/* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 61, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 body.single-exhibition .more-left {
   padding-left: 10em;
   padding-right: 6em;
 }
 
 @media all and (max-width: 900px) {
-  /* line 50, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 61, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   body.single-exhibition .more-left {
     padding-left: 5em;
   }
 }
 
 @media all and (max-width: 768px) {
-  /* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 71, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   body.single-exhibition .more-left,
   body.single-exhibition .more-right {
     padding-top: .5em;
@@ -7251,12 +7302,19 @@ body.single-exhibition .more-left {
   }
 }
 
-/* line 70, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .artworks {
   margin: 3em 0;
 }
 
-/* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+@media all and (max-width: 768px) {
+  /* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  .artworks {
+    margin: 0;
+  }
+}
+
+/* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .artworks .artwork {
   width: 23%;
   margin-left: 1%;
@@ -7267,7 +7325,7 @@ body.single-exhibition .more-left {
 }
 
 @media all and (max-width: 768px) {
-  /* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .artworks .artwork {
     width: 47%;
     margin-left: 1.5%;
@@ -7276,7 +7334,7 @@ body.single-exhibition .more-left {
 }
 
 @media all and (max-width: 640px) {
-  /* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .artworks .artwork {
     width: 46%;
     margin-left: 2%;
@@ -7285,7 +7343,7 @@ body.single-exhibition .more-left {
 }
 
 @media all and (max-width: 380px) {
-  /* line 73, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .artworks .artwork {
     width: 100%;
     margin-left: 0;
@@ -7293,12 +7351,12 @@ body.single-exhibition .more-left {
   }
 }
 
-/* line 97, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 111, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .artworks .artwork-img {
   margin-bottom: .5em;
 }
 
-/* line 100, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 114, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .artworks .artwork-img a {
   display: inline-block;
   width: 100%;
@@ -7312,14 +7370,22 @@ body.single-exhibition .more-left {
   padding-bottom: 0;
 }
 
-/* line 105, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 119, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .artworks .artwork-img img {
   display: block;
   max-width: none;
   width: 100%;
 }
 
-/* line 113, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+@media all and (max-width: 768px) {
+  /* line 126, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  .artworks .artwork-info {
+    padding: 0 1em;
+    line-height: 1.375;
+  }
+}
+
+/* line 134, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-page-title {
   line-height: 1;
   padding: .5em 0 .25em .25em;
@@ -7328,7 +7394,7 @@ body.single-exhibition .more-left {
 }
 
 @media all and (max-width: 768px) {
-  /* line 113, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 134, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .ex-page-title {
     padding: .5em 0 1em 0;
     font-size: 51.2px;
@@ -7336,7 +7402,7 @@ body.single-exhibition .more-left {
   }
 }
 
-/* line 124, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 145, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-intro {
   font-weight: 300;
   padding: 0 0 4em 1em;
@@ -7345,14 +7411,14 @@ body.single-exhibition .more-left {
 }
 
 @media all and (max-width: 768px) {
-  /* line 124, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 145, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .ex-intro {
     padding: 0 0 2em;
   }
 }
 
 @media all and (max-width: 640px) {
-  /* line 124, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 145, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .ex-intro {
     line-height: 1.5;
     font-size: 18px;
@@ -7360,76 +7426,50 @@ body.single-exhibition .more-left {
   }
 }
 
-/* line 137, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 158, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-content {
   padding: 0 2em 2em 4em;
 }
 
 @media all and (max-width: 768px) {
-  /* line 137, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 158, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .ex-content {
     padding: 0 0 2em;
   }
 }
 
-/* line 144, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 165, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-info {
   padding: 0 0 5em 2.5em;
 }
 
 @media all and (max-width: 768px) {
-  /* line 144, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+  /* line 165, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
   .ex-info {
     padding: 0 0 3em 0;
   }
 }
 
-/* line 151, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 172, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-info span {
   font-weight: bold;
 }
 
-/* line 156, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+/* line 177, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
 .ex-social {
-  padding: 1em 10em 5em 0;
+  margin-bottom: 6em;
   text-align: right;
 }
 
-@media all and (max-width: 768px) {
-  /* line 156, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-  .ex-social {
-    padding: 0 1em 2em 0;
-    text-align: left;
-  }
+/* line 180, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+.ex-social p {
+  margin-bottom: 0;
 }
 
-/* line 164, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-.ex-social .social-link {
-  margin-bottom: 2em;
-}
-
-/* line 168, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-.ex-social .cssicon-facebook:after {
-  color: #edd6b9;
-}
-
-/* line 172, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-.ex-social a {
-  color: #000000;
-}
-
-/* line 175, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-.ex-social a:hover {
-  opacity: .5;
-}
-
-/* line 179, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
-.ex-social a .slink {
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 3px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* line 183, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_exhibition.scss */
+.ex-social .ss-wrap {
+  width: 200px;
+  float: right;
 }
 
 /* line 3, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_seeart.scss */
@@ -9138,25 +9178,21 @@ body.single-event .e-info {
 /* line 185, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
 body.single-event .e-social {
   margin-bottom: 6em;
+  text-align: right;
 }
 
 /* line 188, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
-body.single-event .e-social .social-link {
-  display: inline;
-  margin-right: 1.5em;
+body.single-event .e-social p {
+  margin-bottom: 0;
 }
 
-/* line 192, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
-body.single-event .e-social .social-link a:hover {
-  opacity: .70;
+/* line 191, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
+body.single-event .e-social .ss-wrap {
+  width: 200px;
+  float: right;
 }
 
-/* line 195, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
-body.single-event .e-social .social-link .cssicon-facebook:after {
-  color: #fff497;
-}
-
-/* line 202, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
+/* line 198, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_visit-calendar.scss */
 .site-content .e-button a {
   border-bottom: none;
   padding-bottom: 0;
@@ -9211,7 +9247,21 @@ body.meetus .mid-block .mid-left .textblock {
   padding: 0 4em;
 }
 
-/* line 30, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+@media all and (max-width: 1024px) {
+  /* line 25, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .mid-block .mid-left .textblock {
+    padding: 0 2em;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* line 25, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .mid-block .mid-left .textblock {
+    padding: 0 1em;
+  }
+}
+
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .mid-block .textblock .message {
   font-weight: bold;
   line-height: 1.5;
@@ -9220,31 +9270,68 @@ body.meetus .mid-block .textblock .message {
   font-size: 2.1875rem;
 }
 
-/* line 38, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+@media all and (max-width: 1024px) {
+  /* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .mid-block .textblock .message {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .mid-block .textblock .message {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+/* line 51, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .ab-title {
   padding: 0;
   font-size: 30px;
   font-size: 1.875rem;
 }
 
-/* line 42, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+/* line 55, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .accordion-block .ab-right {
   padding: 0 2em 1em 0;
 }
 
-/* line 47, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+/* line 60, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .accordion:hover, body.meetus .accordion.active {
   background-color: #dde9ff;
 }
 
-/* line 52, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+/* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .variable-images {
   margin-bottom: 8em;
 }
 
-/* line 56, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+@media all and (max-width: 768px) {
+  /* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .variable-images {
+    margin-bottom: 4em;
+  }
+}
+
+@media all and (max-width: 640px) {
+  /* line 65, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .variable-images {
+    margin-bottom: 1em;
+  }
+}
+
+/* line 75, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
 body.meetus .quote-block {
   margin-top: 8em;
+}
+
+@media all and (max-width: 1024px) {
+  /* line 75, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet.scss */
+  body.meetus .quote-block {
+    margin-top: 4em;
+  }
 }
 
 /* line 3, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_meet-team.scss */
@@ -9469,7 +9556,7 @@ body.donations {
   background-color: #f6e6d0;
 }
 
-/* line 9, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .page-title {
   line-height: 1.5;
   padding: 2em 1em;
@@ -9479,14 +9566,14 @@ body.modules .page-title {
 }
 
 @media all and (max-width: 1024px) {
-  /* line 9, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .page-title {
     width: 100%;
   }
 }
 
 @media all and (max-width: 768px) {
-  /* line 9, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .page-title {
     font-size: 32px;
     font-size: 2rem;
@@ -9495,41 +9582,48 @@ body.modules .page-title {
 }
 
 @media all and (max-width: 640px) {
-  /* line 9, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .page-title {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 
-/* line 27, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 28, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .content-wrap {
   padding-top: 4.5em;
 }
 
-/* line 31, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+@media all and (max-width: 768px) {
+  /* line 28, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  body.modules .content-wrap {
+    padding-top: 0;
+  }
+}
+
+/* line 36, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .mod-text {
   padding-bottom: 4em;
 }
 
-/* line 34, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 39, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .mod-accordion {
   margin-bottom: 6em;
 }
 
-/* line 39, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 44, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .variable-images.rowof2 {
   padding: 0 30% 0 10%;
 }
 
 @media all and (max-width: 768px) {
-  /* line 39, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 44, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .variable-images.rowof2 {
     padding: 0;
   }
 }
 
-/* line 48, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 53, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .footnote {
   border-top: 1px solid #c3a190;
   padding-top: 1em;
@@ -9542,13 +9636,13 @@ body.modules .footnote {
   font-size: 0.875rem;
 }
 
-/* line 59, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 64, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .quote-block {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-/* line 64, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .mod-cta {
   border: 1px solid #000000;
   font-weight: bold;
@@ -9559,34 +9653,50 @@ body.modules .mod-cta {
   font-size: 2.1875rem;
 }
 
-/* line 72, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 77, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .mod-cta .cta-text {
   margin-bottom: 1em;
 }
 
-/* line 76, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+/* line 81, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
 body.modules .mod-cta .btn {
   font-size: 16px;
   font-size: 1rem;
 }
 
 @media all and (max-width: 900px) {
-  /* line 64, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .mod-cta {
     padding: 1em 2em;
   }
 }
 
 @media all and (max-width: 640px) {
-  /* line 64, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 69, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .mod-cta {
     padding: .5em 1em 1em;
     font-size: 24px;
     font-size: 1.5rem;
   }
-  /* line 87, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
+  /* line 92, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_modules.scss */
   body.modules .mod-cta .btn {
     font-size: 12px;
     font-size: 0.75rem;
+  }
+}
+
+@media print {
+  /* line 2, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_print.scss */
+  #masthead,
+  #colophon,
+  .sub-navigation,
+  .return,
+  .print-info,
+  .catname {
+    display: none;
+  }
+  /* line 10, Users/normansheppard/Local Sites/danforth/app/public/wp-content/themes/danforthart/scss/custom/_print.scss */
+  #printable {
+    display: block;
   }
 }

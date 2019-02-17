@@ -14,13 +14,13 @@ a {
 
 .site-content a:not(.btn) {
 	border-bottom: 1px solid $color__base;
-	padding-bottom: .25em;
+	padding-bottom: 3px;
 
 	&:hover,
 	&:focus,
 	&:active {
-		border-width: 2px;
-		padding-bottom: .1875em;
+		border-bottom-width: 2px;
+		padding-bottom: 2px;
 	}
 }
 

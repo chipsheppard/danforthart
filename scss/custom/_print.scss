@@ -1,0 +1,11 @@
+@media print {
+	#masthead,
+	#colophon,
+	.sub-navigation,
+	.return,
+	.print-info,
+	.catname {
+		display: none;
+	}
+	#printable { display: block; }
+}

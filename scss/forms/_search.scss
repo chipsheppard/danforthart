@@ -4,11 +4,15 @@
 
 	input[type="search"] {
 		border-color: $color__base-medium;
+		color: currentColor;
 		display: inline-block;
+
+		&:focus {
+			background-color: transparent;
+		}
 	}
 
 	input[type="submit"] {
-		background: transparent;
 		border: none;
 		border-left: 1px solid $color__base-medium;
 		display: inline-block;
@@ -17,10 +21,26 @@
 		right: 0;
 		top: 0;
 		@include font-size(1.25);
+	}
+}
 
-		&:hover,
-		&:focus {
-			background-color: $color__yellow;
+body.error404 {
+	.page-content .search-form {
+		width: 70%;
+		margin: 1em auto;
+
+		@include breakpoint(tablet-v) {
+			width: 100%;
+		}
+	}
+}
+body.search {
+	.content-area .search-form {
+		width: 70%;
+		margin: 1em 0 5em;
+
+		@include breakpoint(tablet-v) {
+			width: 100%;
 		}
 	}
 }

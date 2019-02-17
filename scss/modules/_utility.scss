@@ -50,6 +50,11 @@ img.flex {
 
 .big {
 	font-size: 125%;
+
+	@include breakpoint(tablet-v) {
+		font-size: 120%;
+		line-height: 1.5;
+	}
 }
 
 .circle-num {

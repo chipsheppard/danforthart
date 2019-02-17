@@ -2,6 +2,9 @@
 	margin-top: 15em;
 	margin-bottom: 10em;
 
+	@include breakpoint(tablet-h) {
+		margin-bottom: 4em;
+	}
 	@include breakpoint(tablet-v) {
 		margin-top: 5em;
 		margin-bottom: 0;

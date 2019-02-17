@@ -13,7 +13,7 @@
 ?>
 <div class="exhibit-modal">
 
-	<div class="close-modal">X</div>
+	<div class="close-modal"><span class="cssicon-x"></span></div>
 
 	<div class="slickeroo">
 	<?php

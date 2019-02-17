@@ -150,3 +150,24 @@ if ( ! function_exists( 'danforthart_display_site_footer' ) ) {
 	}
 }
 add_action( 'tha_footer_top', 'danforthart_display_site_footer' );
+
+
+/*
+ * DISPLAY Header Widget
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'danforthart_display_header_widget' ) ) {
+	/**
+	 * The Header Widget.
+	 */
+	function danforthart_display_header_widget() {
+		if ( ! is_front_page() ) :
+			return;
+		elseif ( is_active_sidebar( 'header' ) ) :
+			echo '<div class="header-widget-wrap inner-wrap">';
+				dynamic_sidebar( 'header' );
+			echo '</div>';
+		endif;
+	}
+}
+add_action( 'tha_header_before', 'danforthart_display_header_widget' );

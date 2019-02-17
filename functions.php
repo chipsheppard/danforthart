@@ -133,10 +133,13 @@ function danforthart_set_revision_max( $num, $post ) {
 }
 add_filter( 'wp_revisions_to_keep', 'danforthart_set_revision_max', 10, 2 );
 
+
+
 // ACF Options.
 if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page( 'Call To Action' );
 	acf_add_options_page( 'Signup Form' );
+	acf_add_options_page( 'Social Share' );
 }
 
 

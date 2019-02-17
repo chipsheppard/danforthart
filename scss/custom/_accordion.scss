@@ -55,13 +55,18 @@
 	.acc-title {
 		display: inline-block;
 		float: left;
+		width: calc(100% - 42px);
 		@include font-size(1.25);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1);
+			line-height: 1.375;
+		}
 	}
 	.acc-button {
 		display: inline-block;
 		float: right;
 		text-align: center;
 		width: 32px;
-		margin-right: 1em;
 	}
 }

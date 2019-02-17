@@ -221,5 +221,32 @@ jQuery(function( $ ) {
 			$('.mem-content-desk').hide();
 		//}
 	});
+});
 
-} );
+// Header Widget -------------------------------
+// FIRST display:none the header.
+// It will only be there if the widget area is used.
+// https://www.w3schools.com/html/html5_webstorage.asp
+jQuery(function( $ ) {
+	// then setup the session var.
+	var data = sessionStorage.getItem('clicked');
+	// if session var is not set show the header.
+	if (data != 'true') {
+		$('.header-widget-wrap').show();
+		$('.header-widget-wrap').find('.close').click(function() {
+			$('.header-widget-wrap').slideUp(200);
+			sessionStorage.setItem('clicked', true);
+		});
+	}
+});
+
+
+
+// PRINT PAGE functions -------------------------------
+function printDiv(divName) {
+	var printContents = document.getElementById(divName).innerHTML;
+	var originalContents = document.body.innerHTML;
+	document.body.innerHTML = printContents;
+	window.print();
+	document.body.innerHTML = originalContents;
+}

@@ -146,8 +146,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c532c0558502",
-            "label": "Mid Block",
+            "key": "field_5c685d83f16e2",
+            "label": "Page Heading",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -181,6 +181,37 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c532c0558502",
+            "label": "Mid Block",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c6067604e6de",
+            "label": "Quote Link",
+            "name": "q_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c532900584f0",
             "label": "Quote Image",
             "name": "quote_image",
@@ -203,6 +234,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5c670943a0d9b",
+            "label": "Quote Tab Text",
+            "name": "quote_tab",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5c5329d9584f2",
@@ -243,7 +293,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c6067604e6de",
+            "key": "field_5c6867a8c0f9b",
             "label": "Citation Link",
             "name": "citation_link",
             "type": "link",
@@ -258,9 +308,9 @@
             "return_format": "array"
         },
         {
-            "key": "field_5c670943a0d9b",
-            "label": "Quote Tab",
-            "name": "quote_tab",
+            "key": "field_5c67099ea0d9c",
+            "label": "Learn Link",
+            "name": "l_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -297,6 +347,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_5c685e33f16e3",
+            "label": "Learn Tab Text",
+            "name": "learn_tab",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c532924584f1",
             "label": "Learn Text",
             "name": "learn_text",
@@ -314,21 +383,6 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": "br"
-        },
-        {
-            "key": "field_5c67099ea0d9c",
-            "label": "Learn Tab",
-            "name": "learn_tab",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         },
         {
             "key": "field_5c532bd358501",
@@ -614,5 +668,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1550256576
+    "modified": 1550346405
 }

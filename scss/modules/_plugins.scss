@@ -30,3 +30,33 @@ div.wpcf7-response-output {
 	padding: 0;
 	@include font-size(1);
 }
+
+// WP SOCIAL SHARING
+.site-content .ss-social-sharing {
+	a {
+		display: block;
+		position: relative;
+		text-indent: 0;
+		margin-bottom: 1em;
+	    @include nb();
+
+		span {
+			border-bottom: 1px solid $color__base;
+			font-weight: $font__weight-bold;
+			position: absolute;
+			left: 60px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			top:10px;
+			white-space: nowrap;
+			@include font-size(1);
+		}
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+a.ss-button-facebook, a.ss-button-twitter, a.ss-button-linkedin, a.ss-button-pinterest {
+    background-image: url(assets/images/socialshare.png) !important;
+}

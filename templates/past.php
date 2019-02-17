@@ -208,6 +208,7 @@ endif;
 ">
 						<div class="pe-upper">
 							<div class="col-1-4 pe-image">
+							<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>">
 								<?php
 								$p_image = get_sub_field( 'pe_image' );
 								if ( ! empty( $p_image ) ) :
@@ -226,6 +227,7 @@ endif;
 									] );
 								endif;
 								?>
+							</a>
 							</div>
 							<div class="col-1-2 pe-heading">
 								<div class="vc-wrap">
@@ -278,6 +280,7 @@ endif;
 ">
 						<div class="pe-upper">
 							<div class="col-1-4 pe-image">
+							<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>">
 								<?php
 								$xp_image = get_sub_field( 'xpe_image' );
 								if ( ! empty( $xp_image ) ) :
@@ -296,6 +299,7 @@ endif;
 									] );
 								endif;
 								?>
+							</a>
 							</div>
 							<div class="col-1-2 pe-heading">
 								<div class="vc-wrap">

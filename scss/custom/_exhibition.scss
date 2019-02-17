@@ -1,16 +1,27 @@
 body.single-exhibition {
 	background-color: $color__tan;
 
+	.exhibition-featured-img {
+		position: relative;
+		img {
+			display: block;
+		}
+	}
+
 	.exhibition-featured-date {
 		background-color: $color__tan;
 		font-weight: $font__weight-light;
-		padding: 1rem 2.5rem;
+		padding: .5em 1.5em .875em;
 		display: inline-block;
 		position: relative;
 		float: right;
-		top: -5rem;
+		top: -3em;
 		z-index: 3;
 		@include font-size(1.875);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1.5);
+		}
 	}
 
 	blockquote {
@@ -18,6 +29,16 @@ body.single-exhibition {
 		line-height: 1.375;
 		margin: 1.5em 3em 1em 7em;
 		@include font-size(2.8125);
+
+		@include breakpoint(tablet-h) {
+			margin: 1.5em 1em;
+			@include font-size(2.5);
+
+		}
+		@include breakpoint(tablet-v) {
+			margin: 0 0 1.5em;
+			@include font-size(2);
+		}
 
 		cite {
 			margin-top: 1.5em;
@@ -27,16 +48,6 @@ body.single-exhibition {
 				letter-spacing: 1px;
 				@include font-size(1);
 			}
-		}
-
-		@include breakpoint(tablet-h) {
-			margin: 1.5em 1em;
-			@include font-size(2.5);
-
-		}
-		@include breakpoint(tablet-v) {
-			margin: .75em 0 1.5em;
-			@include font-size(2);
 		}
 	}
 
@@ -69,6 +80,9 @@ body.single-exhibition {
 
 .artworks {
 	margin: 3em 0;
+	@include breakpoint(tablet-v) {
+		margin: 0;
+	}
 
 	.artwork {
 		width: 23%;
@@ -106,6 +120,13 @@ body.single-exhibition {
 			display: block;
 			max-width: none;
 			width: 100%;
+		}
+	}
+
+	.artwork-info {
+		@include breakpoint(tablet-v) {
+			padding: 0 1em;
+			line-height: 1.375;
 		}
 	}
 }
@@ -154,32 +175,13 @@ body.single-exhibition {
 }
 
 .ex-social {
-	padding: 1em 10em 5em 0;
+	margin-bottom: 6em;
 	text-align: right;
-
-	@include breakpoint(tablet-v) {
-		padding: 0 1em 2em 0;
-		text-align: left;
+	p {
+		margin-bottom: 0;
 	}
-	.social-link {
-		margin-bottom: 2em;
-	}
-
-	.cssicon-facebook:after {
-		color: $color__tan;
-	}
-
-	a {
-		color: #000000;
-
-		&:hover {
-			opacity: .5;
-		}
-
-		.slink {
-			border-bottom: 1px solid currentColor;
-			padding-bottom: 3px;
-			@include bigtext();
-		}
+	.ss-wrap {
+		width: 200px;
+		float: right;
 	}
 }
