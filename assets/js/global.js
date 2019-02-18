@@ -131,7 +131,11 @@ jQuery(function( $ ){
 // Course List show/hide -------------------------------
 jQuery(function( $ ){
 	$('.course-row').find('.opener').click(function() {
+		$('.row-bottom').hide();
+		$('.course-row').removeClass('active');
 		if ( $(this).hasClass( 'plus' ) ) {
+			$('.opener').removeClass( 'minus' );
+			$('.opener').addClass( 'plus' );
 			$(this).removeClass( 'plus' );
 			$(this).addClass( 'minus' );
 			$(this).closest('.course-row').addClass('active');
@@ -139,7 +143,7 @@ jQuery(function( $ ){
 		} else {
 			$(this).removeClass( 'minus' );
 			$(this).addClass( 'plus' );
-			$(this).closest('.course-row').removeClass('active');
+			//$(this).closest('.course-row').removeClass('active');
 			$(this).parents().children('.row-bottom').slideUp(200);
 		}
 	} );

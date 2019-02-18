@@ -58,7 +58,7 @@ function da_learn_k() {
 					$tab = null;
 				endif;
 			?>
-			<div class="col-1-2 nm tab-tab tt<?php echo esc_html( $t ); ?><?php echo esc_html( $tab ); ?>">
+			<div class="tab-tab tt<?php echo esc_html( $t ); ?><?php echo esc_html( $tab ); ?>">
 				<h2><span><?php the_sub_field( 'tab_title' ); ?></span></h2>
 				<?php the_sub_field( 'tab_text' ); ?>
 			</div>

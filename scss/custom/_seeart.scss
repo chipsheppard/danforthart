@@ -11,9 +11,12 @@ body.seeart {
 		@include font-size(2.8125);
 
 		@include breakpoint(tablet-v) {
-			padding-top: 2em;
+			padding: 2em 0;
 			padding-left: 0;
 			width: 100%;
+ 			@include font-size(2);
+		}
+		@include breakpoint(phone-h) {
  			@include font-size(1.375);
 		}
 	}
@@ -104,6 +107,10 @@ body.seeart {
 	.exhibit-right-top {
 		margin-top: -18em;
 		margin-bottom: 12em;
+
+		@include breakpoint(tablet-v) {
+			margin-top: 0;
+		}
 	}
 
 

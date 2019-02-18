@@ -5,6 +5,7 @@
 	  itemSelector: '.course-row',
 	  layoutMode: 'vertical',
   	});
+	$('.tb2').hide().css('visibility','visible');
 	// filter items on button click
 	$('.filter-buttons').on( 'click', 'button', function() {
 	  var filterValue = $(this).attr('data-filter');

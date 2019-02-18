@@ -36,12 +36,20 @@ body.learncreate {
 .course-headers {
 	font-weight: $font__weight-bold;
 	padding: 1em 1em 2em;
+
+	@include breakpoint(tablet-v) {
+		padding: 0 1em;
+	}
 }
 
 .course-row {
 	border-bottom: 1px solid $color__base;
 	padding: 0 1em;
 	width: 100%;
+
+	&.active {
+		z-index: 5;
+	}
 
 	.row-top {
 		display: flex;
@@ -138,9 +146,27 @@ body.learncreate {
 
 	.control {
 		margin: auto;
+
+		@include breakpoint(tablet-v) {
+			text-align: right;
+			position: relative;
+			top: 175%;
+		}
 	}
 	.btn {
 		margin: auto;
+
+		@include breakpoint(tablet-m) {
+			letter-spacing: 1px;
+			margin: 1em 0;
+			padding-right: 1.5em;
+			padding-left: .5em;
+
+			&:before,
+			&:after {
+				right: .25em;
+			}
+		}
 	}
 }
 
@@ -308,10 +334,10 @@ body.learncreate {
 		}
 	}
 
-	.course-row:hover,
-	.course-row.active {
-		background-color: $color__green-xxlt;
-	}
+	//.course-row:hover,
+	//.course-row.active {
+	//	background-color: $color__green-xxlt;
+	//}
 }
 
 
@@ -326,19 +352,41 @@ body.learn-c {
 		margin-top: -11.875em;
 	}
 	.tab-tab {
+		float: left;
+		width: 50%;
 		cursor: pointer;
-		padding: 1.5em 2em 2em;
+		min-height: 192px;
+		padding: 1.5em 2em 0;
 		position: relative;
 		z-index: 2;
 		@include font-size(1.25);
 
+		@include breakpoint(tablet-m) {
+			line-height: 1.5;
+			@include font-size(1);
+		}
+		@include breakpoint(tablet-v) {
+			padding: .75em;
+		}
 		h2 {
 			font-weight: $font__weight-light;
 			@include font-size(2.8125);
 
+			@include breakpoint(tablet-m) {
+				line-height: 1.125;
+				margin-bottom: .5em;
+				@include font-size(2.5);
+			}
+			@include breakpoint(tablet-v) {
+				@include font-size(2);
+			}
+
 			span {
 				padding-bottom: 3px;
 				border-bottom: 1px solid $color__base;
+				@include breakpoint(phone-h) {
+					padding-bottom: 0;
+				}
 			}
 
 		}
@@ -363,7 +411,10 @@ body.learn-c {
 		margin-bottom: 6em;
 		position: relative;
 		top: -1px;
-		display: none;
+
+		@include breakpoint(tablet-v) {
+			padding: 1em;
+		}
 
 		&.active {
 			display: block;
@@ -374,9 +425,17 @@ body.learn-c {
 		margin-bottom: 2em;
 		padding-right: 1em;
 		@include font-size(1.625);
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.25);
+			margin-bottom: 0;
+		}
 	}
 	.tab-content {
 		padding: 1em 4em 1em 1em;
+		@include breakpoint(phone-h) {
+			padding: 0 0 1.5em;
+		}
 	}
 	.tab-courses-intro {
 		margin-bottom: 3em;
@@ -386,11 +445,6 @@ body.learn-c {
 	}
 	.tab-filter-text {
 		margin-bottom: 3em;
-	}
-
-	//Accordion
-	.accordion-block .ab-right {
-		//padding: 0 4em 2em 1em;
 	}
 }
 
