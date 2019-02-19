@@ -161,7 +161,7 @@ endif;
 		<?php
 		} // endwhile.
 	} else {
-		echo '<div class="courses-intro" style="border:1px dashed #ccc;">No courses have been published for that criterea.</div>';
+		echo '<div class="no-courses">No courses have been published for that criterea.</div>';
 	}
 	wp_reset_postdata();
 	?>

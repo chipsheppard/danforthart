@@ -215,51 +215,6 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_5c5c3ca78a914",
-                    "label": "Tab Images",
-                    "name": "tab_images",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 4,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5c5c3ce18a915",
-                            "label": "Tab Image",
-                            "name": "tab_image",
-                            "type": "image",
-                            "instructions": "No more than 3.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ]
-                },
-                {
                     "key": "field_5c60445fd1125",
                     "label": "Variable Images",
                     "name": "v_images",
@@ -623,5 +578,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549925052
+    "modified": 1550552431
 }

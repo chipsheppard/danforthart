@@ -430,11 +430,8 @@ body.learn-c {
 		@include breakpoint(tablet-v) {
 			padding: 1em;
 		}
-
-		&.active {
-			display: block;
-		}
 	}
+
 	.tab-intro {
 		font-weight: $font__weight-light;
 		margin-bottom: 2em;
@@ -446,6 +443,7 @@ body.learn-c {
 			margin-bottom: 0;
 		}
 	}
+
 	.tab-content {
 		padding: 1em 4em 1em 1em;
 		@include breakpoint(phone-h) {
@@ -460,6 +458,11 @@ body.learn-c {
 	}
 	.tab-filter-text {
 		margin-bottom: 3em;
+	}
+	.no-courses {
+		border:1px dashed #ccc;
+		padding: 1em;
+		@include font-size(1.875);
 	}
 }
 

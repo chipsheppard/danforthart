@@ -156,19 +156,20 @@ jQuery(function( $ ){
 			return;
 		} else {
 			$(this).addClass( 'active' );
-			$('.tb1').addClass( 'active' );
 			$('.tt2').removeClass( 'active' );
-			$('.tb2').removeClass( 'active' );
+			$('.tb1').show();
+			$('.tb2').hide();
 		}
 	} );
 	$('.tt2').click(function() {
+		//$('.tb2').removeAttr( 'style' );
 		if ( $(this).hasClass( 'active' ) ) {
 			return;
 		} else {
 			$(this).addClass( 'active' );
-			$('.tb2').addClass( 'active' );
 			$('.tt1').removeClass( 'active' );
-			$('.tb1').removeClass( 'active' );
+			$('.tb2').show();
+			$('.tb1').hide();
 		}
 	} );
 } );
