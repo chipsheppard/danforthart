@@ -29,6 +29,11 @@ body.learncreate {
 .courses-intro {
 	padding: 3em 1em;
 	@include font-size(1.875);
+
+	@include breakpoint(tablet-v) {
+		padding: 1em;
+		@include font-size(1.25);
+	}
 }
 .course-rows-wrap {
 	margin-bottom: 8em;
@@ -188,6 +193,10 @@ body.learncreate {
 	border: 1px solid $color__green;
 	padding: 3em 3em 6em;
 
+	@include breakpoint(tablet-v) {
+		padding: 1.5em 1em 2em;
+	}
+
 	.box-bottom {
 		display: none;
 	}
@@ -224,6 +233,10 @@ body.learncreate {
 		.title-text {
 			border-bottom: 1px solid $color__base;
 			margin-right: 2em;
+
+			@include breakpoint(tablet-v) {
+				margin-right: 1em;
+			}
 		}
 	}
 
@@ -231,6 +244,11 @@ body.learncreate {
 	.c-button {
 		display: inline-block;
 		text-align: right;
+
+		@include breakpoint(tablet-v) {
+			text-align: left;
+			margin-top: .5em;
+		}
 	}
 
 	.c-intro {
@@ -306,8 +324,6 @@ body.learncreate {
 	}
 }
 
-
-
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
@@ -333,11 +349,6 @@ body.learncreate {
 			background-color: $color__green-lt;
 		}
 	}
-
-	//.course-row:hover,
-	//.course-row.active {
-	//	background-color: $color__green-xxlt;
-	//}
 }
 
 
@@ -368,6 +379,7 @@ body.learn-c {
 		@include breakpoint(tablet-v) {
 			padding: .75em;
 		}
+
 		h2 {
 			font-weight: $font__weight-light;
 			@include font-size(2.8125);
@@ -379,6 +391,9 @@ body.learn-c {
 			}
 			@include breakpoint(tablet-v) {
 				@include font-size(2);
+			}
+			@include breakpoint(phone-h) {
+				@include font-size(1.5);
 			}
 
 			span {

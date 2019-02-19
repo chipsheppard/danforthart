@@ -38,119 +38,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c5db31fd0f77",
-            "label": "Info Block",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5c5dac35d3acd",
-            "label": "Info Blocks",
-            "name": "info_blocks",
-            "type": "repeater",
-            "instructions": "Each row has a left and a right block.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_5c5dac44d3ace",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5c5dac44d3ace",
-                    "label": "Left Heading",
-                    "name": "info_l_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c5daca2d3ad0",
-                    "label": "Left Text",
-                    "name": "info_l_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
-                },
-                {
-                    "key": "field_5c5dac72d3acf",
-                    "label": "Right Heading",
-                    "name": "info_r_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c5dacead3ad1",
-                    "label": "Right Text",
-                    "name": "info_r_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
-        },
-        {
             "key": "field_5c5db335d0f78",
             "label": "Detail Block",
             "name": "",
@@ -648,5 +535,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549923464
+    "modified": 1550526316
 }

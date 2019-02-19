@@ -29,7 +29,7 @@ body.modules {
 		padding-top: 4.5em;
 
 		@include breakpoint(tablet-v) {
-			padding-top: 0;
+			padding-top: 2em;
 		}
 	}
 

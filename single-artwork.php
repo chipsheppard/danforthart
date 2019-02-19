@@ -10,7 +10,7 @@
  */
 
 add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'single-artwork seeart' ) );
+	return array_merge( $classes, array( 'single-artwork' ) );
 } );
 
 /**

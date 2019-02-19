@@ -35,7 +35,19 @@ function da_visit() {
 	<h1 class="page-title">
 		<?php the_field( 'page_title' ); ?>
 	</h1>
-	<?php get_template_part( 'template-parts/info-block' ); ?>
+
+	<div class="info-block">
+		<div class="info-row">
+			<div class="col-1-2 first info-l">
+				<?php the_field( 'info_left', 'option' ); ?>
+				<?php get_template_part( 'template-parts/openhours' ); ?>
+			</div>
+			<div class="col-1-2 info-r">
+				<?php the_field( 'info_right', 'option' ); ?>
+			</div>
+			<div class="cf"></div>
+		</div>
+	</div>
 </div>
 
 

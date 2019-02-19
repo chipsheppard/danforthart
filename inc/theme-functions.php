@@ -94,11 +94,9 @@ function display_parent() {
 	global $post;
 	// $current = $post->ID;
 	$parent = $post->post_parent;
-	$grandparent_get = get_post( $parent );
-	$grandparent = $grandparent_get->post_parent;
 
-	if ( $grandparent ) :
-		printf( '<span class="section-title">%s</span>', get_the_title( $grandparent ) );
+	if ( $parent ) :
+		printf( '<span class="section-title">%s</span>', get_the_title( $parent ) );
 	elseif ( is_singular( 'artwork' ) ) :
 		printf( '<span class="section-title">%s</span>', 'SEE ART' );
 	elseif ( is_singular( 'exhibition' ) ) :

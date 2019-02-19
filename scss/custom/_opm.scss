@@ -25,17 +25,27 @@
 .opm-section-menu {
 	background-color: #ffffff;
 	float: left;
+	@include breakpoint(tablet-v) {
+		width: 250px;
+	}
 
 
 	.opm-sections {
 		border-bottom: 1px solid $color__base;
 		padding-bottom: .5em;
 		width: 300px;
+		@include breakpoint(tablet-v) {
+			width: 250px;
+		}
 
 		.current {
 			@include font-size(1.375);
 			line-height: 1.25;
 			padding: .25em 0 0 .75em;
+
+			@include breakpoint(tablet-v) {
+				@include font-size(1.125);
+			}
 		}
 		.tp1,.tp2,.tp3,.tp4 {
 			display: none;
@@ -68,6 +78,10 @@
 		padding: 0;
 		@include font-size(1.375);
 
+		@include breakpoint(tablet-v) {
+			@include font-size(1);
+		}
+
 		span {
 			padding-bottom: .125em;
 		}
@@ -87,9 +101,9 @@
 }
 
 .opm-arrow {
-	float: left;
+	float: right;
 	line-height: 1;
-	margin-top: .75em;
+	margin: .75em;
 
 	.cssicon-updown {
 		cursor: pointer;

@@ -24,6 +24,11 @@ button,
 		color: #ffffff;
 		outline: 0;
 	}
+
+	@include breakpoint(phone-h) {
+		padding: .75em .5em;
+		letter-spacing: 1spx;
+	}
 }
 
 .btn {

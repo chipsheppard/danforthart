@@ -5,7 +5,7 @@
 		padding: 0 0 3em 5em;
 
 		@include breakpoint(tablet-v) {
-			padding-left: 0;
+			padding: 0 0 1em 0;
 		}
 
 		h2 {
@@ -15,6 +15,10 @@
 
 	.ab-left {
 		position: relative;
+
+		@include breakpoint (tablet-v) {
+			margin-bottom: 2em;
+		}
 
 		img {
 			max-width: none;

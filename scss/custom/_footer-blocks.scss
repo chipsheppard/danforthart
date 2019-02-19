@@ -71,6 +71,9 @@
 		@include breakpoint(tablet-m) {
 			@include font-size(1.875);
 		}
+		@include breakpoint(phone-h) {
+			@include font-size(1.5);
+		}
 
 		cite {
 			@include font-size(1.4375);
@@ -97,6 +100,17 @@
 	.form-submit {
 		input[type="submit"] {
 			padding-right: 3em;
+			background-color: $color__base;
+			color: #fff;
+
+			&:hover {
+				background-color: transparent;
+				color: $color__base;
+			}
+
+			@include breakpoint(phone-h) {
+				padding-right: 2em;
+			}
 		}
 		.cssicon-arrow-r {
 			color: #ffffff;

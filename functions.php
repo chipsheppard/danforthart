@@ -137,9 +137,7 @@ add_filter( 'wp_revisions_to_keep', 'danforthart_set_revision_max', 10, 2 );
 
 // ACF Options.
 if ( function_exists( 'acf_add_options_page' ) ) {
-	acf_add_options_page( 'Call To Action' );
-	acf_add_options_page( 'Signup Form' );
-	acf_add_options_page( 'Social Share' );
+	acf_add_options_page( 'Theme Options' );
 }
 
 
@@ -166,9 +164,23 @@ add_filter( 'acf/fields/taxonomy/query/name=c_level', 'my_taxonomy_query', 10, 3
  * @param array $classes The body classes.
  */
 function dfa_body_classes( $classes ) {
-	if ( is_singular() && ! is_page_template( array( 'templates/calendar.php', 'templates/faq.php', 'templates/home.php', 'templates/learn.php', 'templates/learn-c.php', 'templates/meet.php', 'templates/past.php', 'templates/permanent.php', 'templates/seeart.php', 'templates/team.php', 'templates/tours.php', 'templates/visit.php' ) ) ) {
+	if ( is_singular() && ! is_singular( array( 'artwork', 'event', 'exhibition' ) ) && ! is_page_template( array(
+		'templates/calendar.php',
+		'templates/faq.php',
+		'templates/home.php',
+		'templates/learn.php',
+		'templates/learn-c.php',
+		'templates/meet.php',
+		'templates/past.php',
+		'templates/permanent.php',
+		'templates/seeart.php',
+		'templates/team.php',
+		'templates/tours.php',
+		'templates/visit.php',
+	) ) ) {
 		$classes[] = 'modules';
 	}
+
 	if ( get_field( 'sub_menu' ) ) {
 		$m = get_field( 'sub_menu' );
 		$classes[] = $m;

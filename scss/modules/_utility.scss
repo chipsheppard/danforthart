@@ -57,6 +57,16 @@ img.flex {
 	}
 }
 
+.intro {
+	font-weight: $font__weight-light;
+	@include font-size(1.875);
+
+	@include breakpoint(tablet-v) {
+		@include font-size(1.5);
+		line-height: 1.5;
+	}
+}
+
 .circle-num {
 	background-color: #000000;
 	border-radius: 50%;

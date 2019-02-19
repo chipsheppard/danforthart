@@ -7,8 +7,7 @@
 	font-weight: $font__weight-bold;
 	letter-spacing: 2px;
 	margin-bottom: 2em;
-	padding-left: 1.5rem;
-	padding-top: 1em;
+	padding-top: .5em;
 	@include font-size(1);
 
 	@include breakpoint(tablet-v) {
@@ -18,7 +17,6 @@
 	}
 	@include breakpoint(phone-h) {
 		letter-spacing: 1px;
-		margin-bottom: .5em;
 		@include font-size(.75);
 	}
 
@@ -29,15 +27,6 @@
 		&:hover {
 			opacity: .75;
 		}
-	}
-}
-
-.info-block {
-	padding-bottom: 2em;
-
-	.info-row1 {
-		font-weight: $font__weight-light;
-		@include font-size(1.875);
 	}
 }
 
@@ -54,4 +43,8 @@
 .site-content .social-link a,
 .site-content .pe-button a {
 	@include nb();
+}
+
+.open-hours {
+	margin-bottom: 2em;
 }

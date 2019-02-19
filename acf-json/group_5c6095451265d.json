@@ -22,105 +22,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c60958e70be5",
-            "label": "Info Blocks",
-            "name": "info_blocks",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_5c6095c770be6",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add a 2 column row",
-            "sub_fields": [
-                {
-                    "key": "field_5c6095c770be6",
-                    "label": "Info Left Head",
-                    "name": "info_l_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c6095e470be7",
-                    "label": "Info Left Text",
-                    "name": "info_l_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
-                },
-                {
-                    "key": "field_5c60961870be8",
-                    "label": "Info Right Head",
-                    "name": "info_r_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c60962270be9",
-                    "label": "Info Right Text",
-                    "name": "info_r_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
-        },
-        {
             "key": "field_5c60966570bea",
-            "label": "Accordion Blocks",
+            "label": "FAQ Blocks",
             "name": "accordion_blocks",
             "type": "repeater",
             "instructions": "",
@@ -282,5 +185,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549924203
+    "modified": 1550526256
 }
