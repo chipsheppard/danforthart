@@ -90,16 +90,11 @@ body.learncreate {
 		}
 	}
 
-	.session-num {
-		display: inline-block;
-		background-color: #000;
-		border-radius: 50%;
-		color: #fff;
-		line-height: 1;
+	.circle-num {
 		margin-top: auto;
-		padding: .5em .6875em .375em;
 		margin-right: .5em;
 		margin-bottom: .5em;
+		margin-left: 0;
 	}
 
 	.date {
@@ -175,14 +170,21 @@ body.learncreate {
 	}
 }
 
-.sessions {}
-.session-note {}
-.other-courses {}
-
-
 
 // -----------------------------------------------
 // -----------------------------------------------
+
+.vacation-week {
+	margin: 3em 0 1.5em;
+
+	.vw-left {
+		font-weight: $font__weight-light;
+		@include font-size(1.625);
+	}
+}
+
+
+
 // -----------------------------------------------
 // -----------------------------------------------
 

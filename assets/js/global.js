@@ -143,7 +143,6 @@ jQuery(function( $ ){
 		} else {
 			$(this).removeClass( 'minus' );
 			$(this).addClass( 'plus' );
-			//$(this).closest('.course-row').removeClass('active');
 			$(this).parents().children('.row-bottom').slideUp(200);
 		}
 	} );
@@ -162,7 +161,6 @@ jQuery(function( $ ){
 		}
 	} );
 	$('.tt2').click(function() {
-		//$('.tb2').removeAttr( 'style' );
 		if ( $(this).hasClass( 'active' ) ) {
 			return;
 		} else {
@@ -194,7 +192,7 @@ jQuery(function( $ ){
 // Team Member List show/hide -------------------------------
 jQuery(function( $ ) {
 	$('.mem-row').find('.member').click(function() {
-
+		var member;
 		member = $(this).data('team');
 
 		if ( $(this).hasClass( 'active' ) ) {
@@ -229,14 +227,14 @@ jQuery(function( $ ) {
 });
 
 // Header Widget -------------------------------
-// FIRST display:none the header.
+// FIRST display:none the widget.
 // It will only be there if the widget area is used.
 // https://www.w3schools.com/html/html5_webstorage.asp
 jQuery(function( $ ) {
 	// then setup the session var.
 	var data = sessionStorage.getItem('clicked');
 	// if session var is not set show the header.
-	if (data != 'true') {
+	if (data !== 'true') {
 		$('.header-widget-wrap').show();
 		$('.header-widget-wrap').find('.close').click(function() {
 			$('.header-widget-wrap').slideUp(200);
@@ -244,8 +242,6 @@ jQuery(function( $ ) {
 		});
 	}
 });
-
-
 
 // PRINT PAGE functions -------------------------------
 function printDiv(divName) {

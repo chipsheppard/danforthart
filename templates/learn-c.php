@@ -29,7 +29,7 @@ add_filter( 'body_class', 'add_slug_body_class' );
 /**
  * Learn+Create course page functions
  */
-function da_learn_k() {
+function da_learn_c() {
 ?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
@@ -101,6 +101,20 @@ function da_learn_k() {
 
 				<?php get_template_part( 'template-parts/courses' ); ?>
 
+				<div class="cf"></div>
+
+				<?php if ( get_sub_field( 'vw_head' ) ) : ?>
+				<div class="vacation-week">
+					<div class="vw-header-block">
+						<h3 class="vw-head"><?php the_sub_field( 'vw_head' ); ?></h3>
+						<div class="col-1-2 first vw-left"><?php the_sub_field( 'vw_left_col' ); ?></div>
+						<div class="col-1-2 vw-right"><?php the_sub_field( 'vw_right_col' ); ?></div>
+						<div class="cf"></div>
+					</div>
+					<?php get_template_part( 'template-parts/courses-vaca' ); ?>
+				</div>
+				<?php endif; ?>
+
 			</div><!-- /tab-body -->
 
 			<?php endwhile; ?>
@@ -116,7 +130,7 @@ function da_learn_k() {
 
 <?php
 }
-add_action( 'tha_entry_content_before', 'da_learn_k' );
+add_action( 'tha_entry_content_before', 'da_learn_c' );
 
 // Build the page.
 get_template_part( 'index' );

@@ -11,15 +11,7 @@
 
 ?>
 
-<div class="course-headers">
-	<div class="col-1-6 first">Session  number + Dates</div>
-	<div class="col-1-6">Instructor(s)</div>
-	<div class="col-1-3">Grade level + Class name</div>
-	<div class="col-1-6">Price</div>
-	<div class="col-1-6">Register <span>*</span></div>
-	<div class="cf"></div>
-</div>
-<div class="course-rows-wrap vw-">
+<div class="course-rows-wrap">
 	<?php
 	$level = get_sub_field( 'c_level' );
 	$season = get_sub_field( 'c_season' );
@@ -35,15 +27,9 @@
 		'tax_query'              => array( // WPCS: slow query ok.
 			array(
 				'taxonomy'         => 'level',
-				'terms'            => $level,
+				'terms'            => array( '$level', 'vacation-week' ),
 				'field'            => 'slug',
 				'include_children' => true,
-			),
-			array(
-				'taxonomy'         => 'level',
-				'terms'            => 'vacation-week',
-				'field'            => 'slug',
-				'operator'         => 'NOT IN',
 			),
 			array(
 				'taxonomy'         => 'season',

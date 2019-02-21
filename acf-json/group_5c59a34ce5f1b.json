@@ -122,7 +122,7 @@
                     "name": "c_season",
                     "type": "taxonomy",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -301,6 +301,80 @@
                     "key": "field_5c5c44cb8a918",
                     "label": "Course Filter Text",
                     "name": "course_filter_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5c6d8fbcd712c",
+                    "label": "VacaWeek Message",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "The Vacation Week block will only show if the \"VacaWeek Heading\" field is filled out.  Courses that have the \"Vacation Week\" Course Type selected will display here and are subject to the \"Grade Level\" & \"Season\" selected above.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_5c6d88fcf3c00",
+                    "label": "VacaWeek Heading",
+                    "name": "vw_head",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c6d8920f3c01",
+                    "label": "VacaWeek Left Column",
+                    "name": "vw_left_col",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5c6d8944f3c02",
+                    "label": "VacaWeek Right Column",
+                    "name": "vw_right_col",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -578,5 +652,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1550552431
+    "modified": 1550696454
 }
