@@ -82,15 +82,24 @@ function da_home() {
 		<div class="inner-wrap">
 			<div class="col-1-2 nm mid-left">
 <?php
-$link = get_field( 'q_link' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
+$q_link = get_field( 'q_link' );
+if ( $q_link ) :
+	$q_link_url = $q_link['url'];
+	$q_link_title = $q_link['title'];
 	?>
-<a href="<?php echo esc_url( $link_url ); ?>">
+<a class="progbar-trigger" href="<?php echo esc_url( $q_link_url ); ?>">
 <?php endif; ?>
 				<div class="imageblock">
-					<div class="card-title"><?php echo esc_html( $link_title ); ?></div>
+					<?php if ( $q_link ) : ?>
+					<div class="card-title"><?php echo esc_html( $q_link_title ); ?></div>
+					<?php endif; ?>
+					<span class="progbar big<?php if ( get_field( 'q_highlight_color' ) ) : ?>
+<?php
+echo ' ';
+the_field( 'q_highlight_color' );
+endif;
+?>
+"></span>
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
@@ -119,13 +128,13 @@ if ( $link ) :
 						<cite>
 <?php
 the_field( 'quote_citation' );
-$c_link = get_field( 'citation_link' );
-if ( $c_link ) :
-	$c_url = $c_link['url'];
-	$c_title = $c_link['title'];
-	$c_target = $c_link['target'] ? $c_link['target'] : '_self';
+$qc_link = get_field( 'citation_link' );
+if ( $qc_link ) :
+	$qc_url = $qc_link['url'];
+	$qc_title = $qc_link['title'];
+	$qc_target = $qc_link['target'] ? $qc_link['target'] : '_self';
 	?>
-	&mdash;<a href="<?php echo esc_url( $c_url ); ?>" target="<?php echo esc_attr( $c_target ); ?>"><?php echo esc_html( $c_title ); ?></a>
+	&mdash;<a href="<?php echo esc_url( $qc_url ); ?>" target="<?php echo esc_attr( $qc_target ); ?>"><?php echo esc_html( $qc_title ); ?></a>
 <?php endif; ?>
 						</cite>
 					</blockquote>
@@ -137,9 +146,16 @@ if ( $l_link ) :
 	$l_url = $l_link['url'];
 	$l_title = $l_link['title'];
 ?>
-<a href="<?php echo esc_url( $l_url ); ?>">
+<a class="progbar-trigger" href="<?php echo esc_url( $l_url ); ?>">
 <?php endif; ?>
 				<div class="imageblock">
+					<span class="progbar big<?php if ( get_field( 'l_highlight_color' ) ) : ?>
+<?php
+echo ' ';
+the_field( 'l_highlight_color' );
+endif;
+?>
+"></span>
 					<?php
 					$image = get_field( 'learn_image' );
 					if ( ! empty( $image ) ) :
@@ -151,7 +167,9 @@ if ( $l_link ) :
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
+					<?php if ( $l_link ) : ?>
 					<div class="card-title"><?php echo esc_html( $l_title ); ?>
+					<?php endif; ?>
 					</div>
 				</div>
 <?php if ( $l_link ) : ?>

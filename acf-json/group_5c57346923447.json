@@ -78,6 +78,21 @@
             "mime_types": ""
         },
         {
+            "key": "field_5c702c85b0bc0",
+            "label": "Quote Image Link",
+            "name": "q_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c5734ab5f600",
             "label": "Quote",
             "name": "quote",
@@ -131,10 +146,10 @@
             "return_format": "array"
         },
         {
-            "key": "field_5c5736165f607",
-            "label": "Quote Tab Text",
-            "name": "quote_tab_text",
-            "type": "text",
+            "key": "field_5c7035fef5a08",
+            "label": "Quote Highlight Color",
+            "name": "q_highlight_color",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -143,15 +158,25 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "choices": {
+                "orange": "Tangerine",
+                "green": "Aquamarine",
+                "yellow": "Goldenrod",
+                "blue": "Sky",
+                "purple": "Pansy",
+                "tan": "Mocha"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5c5735d85f604",
-            "label": "Course Image",
+            "label": "Courses Image",
             "name": "course_image",
             "type": "image",
             "instructions": "640x800 for best results",
@@ -174,8 +199,52 @@
             "mime_types": ""
         },
         {
+            "key": "field_5c702ca9b0bc1",
+            "label": "Courses Image Link",
+            "name": "c_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5c703622f5a09",
+            "label": "Courses Highlight Color",
+            "name": "c_highlight_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Tangerine",
+                "green": "Aquamarine",
+                "yellow": "Goldenrod",
+                "blue": "Sky",
+                "purple": "Pansy",
+                "tan": "Mocha"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5c5735ec5f605",
-            "label": "Course Text",
+            "label": "Courses Text",
             "name": "course_text",
             "type": "textarea",
             "instructions": "",
@@ -191,25 +260,6 @@
             "maxlength": "",
             "rows": 2,
             "new_lines": ""
-        },
-        {
-            "key": "field_5c57360b5f606",
-            "label": "Course Tab Text",
-            "name": "course_tab_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5c5b633bddb82",
@@ -718,5 +768,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549925315
+    "modified": 1550857831
 }

@@ -49,10 +49,8 @@ function da_current() {
 				$fe_width = $fe_image['width'];
 				$fe_height = $fe_image['height'];
 				?>
-				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 				<img src="<?php echo esc_url( $fe_url ); ?>" alt="<?php echo esc_attr( $fe_alt ); ?>" width="<?php echo esc_attr( $fe_width ); ?>" height="<?php echo esc_attr( $fe_height ); ?>" />
 			<?php else : ?>
-				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 				<?php
 				echo get_the_post_thumbnail( $fe_post_object->ID, 'full', [
 					'class' => 'featured-image',

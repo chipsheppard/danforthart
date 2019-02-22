@@ -49,10 +49,8 @@ function da_permanent() {
 				$width = $image['width'];
 				$height = $image['height'];
 				?>
-				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 			<?php else : ?>
-				<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
 				<?php
 				echo get_the_post_thumbnail( $post_object->ID, 'full', [
 					'class' => 'featured-image',

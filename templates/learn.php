@@ -38,10 +38,28 @@ function da_learn() {
 
 <div class="content-wrap">
 	<div class="inner-wrap">
+
 		<div class="mid-block">
 			<div class="col-1-2 nm mid-left">
+<?php
+$q_link = get_field( 'q_link' );
+if ( $q_link ) :
+	$q_url = $q_link['url'];
+	$q_title = $q_link['title'];
+?>
+<a class="progbar-trigger" href="<?php echo esc_url( $q_url ); ?>">
+<?php endif; ?>
 				<div class="imageblock">
-					<div class="card-title"><?php the_field( 'quote_tab_text' ); ?></div>
+					<?php if ( $q_link ) : ?>
+					<div class="card-title"><?php echo esc_html( $q_title ); ?></div>
+					<?php endif; ?>
+					<span class="progbar big<?php if ( get_field( 'q_highlight_color' ) ) : ?>
+<?php
+echo ' ';
+the_field( 'q_highlight_color' );
+endif;
+?>
+"></span>
 					<?php
 					$image = get_field( 'quote_image' );
 					if ( ! empty( $image ) ) :
@@ -54,6 +72,9 @@ function da_learn() {
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
 				</div>
+<?php if ( $q_link ) : ?>
+</a>
+<?php endif; ?>
 				<div class="textblock">
 					<div class="message"><?php the_field( 'course_text' ); ?></div>
 				</div>
@@ -66,19 +87,34 @@ function da_learn() {
 						<cite>
 <?php
 the_field( 'quote_citation' );
-$link = get_field( 'citation_link' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
+$qc_link = get_field( 'citation_link' );
+if ( $qc_link ) :
+	$qc_link_url = $qc_link['url'];
+	$qc_link_title = $qc_link['title'];
+	$qc_link_target = $qc_link['target'] ? $qc_link['target'] : '_self';
 	?>
-	&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+	&mdash;<a href="<?php echo esc_url( $qc_link_url ); ?>" target="<?php echo esc_attr( $qc_link_target ); ?>"><?php echo esc_html( $qc_link_title ); ?></a>
 <?php endif; ?>
 						</cite>
 					</blockquote>
 				<?php endif; ?>
 				</div>
+<?php
+$c_link = get_field( 'c_link' );
+if ( $c_link ) :
+	$c_url = $c_link['url'];
+	$c_title = $c_link['title'];
+?>
+<a class="progbar-trigger" href="<?php echo esc_url( $c_url ); ?>">
+<?php endif; ?>
 				<div class="imageblock">
+					<span class="progbar big<?php if ( get_field( 'q_highlight_color' ) ) : ?>
+<?php
+echo ' ';
+the_field( 'c_highlight_color' );
+endif;
+?>
+"></span>
 					<?php
 					$image = get_field( 'course_image' );
 					if ( ! empty( $image ) ) :
@@ -90,8 +126,13 @@ if ( $link ) :
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 					<?php endif; ?>
-					<div class="card-title"><?php the_field( 'course_tab_text' ); ?></div>
+					<?php if ( $c_link ) : ?>
+					<div class="card-title"><?php echo esc_html( $c_title ); ?></div>
+					<?php endif; ?>
 				</div>
+<?php if ( $c_link ) : ?>
+</a>
+<?php endif; ?>
 			</div>
 			<div class="cf"></div>
 		</div>

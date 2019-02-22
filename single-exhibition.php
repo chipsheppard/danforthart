@@ -53,9 +53,7 @@ function da_exhibition() {
 			else :
 				$color = '';
 			endif;
-			?>
-			<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
-			<?php
+
 			if ( has_post_thumbnail() ) :
 				the_post_thumbnail( 'full' );
 			endif;
