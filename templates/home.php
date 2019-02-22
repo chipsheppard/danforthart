@@ -190,12 +190,6 @@ endif;
 			</h2>
 
 			<div class="col-1-3 first">
-				<?php if ( get_field( 'col1_title' ) ) : ?>
-					<h5><span><?php the_field( 'col1_title' ); ?></span></h5>
-				<?php endif; ?>
-				<?php if ( get_field( 'col1_text' ) ) : ?>
-					<div class="ib-txt"><?php the_field( 'col1_text' ); ?></div>
-				<?php endif; ?>
 				<?php get_template_part( 'template-parts/openhours' ); ?>
 			</div>
 

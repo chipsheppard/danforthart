@@ -78,10 +78,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5c5f5efc957b2",
-            "label": "Left Image Tab Text",
-            "name": "l_image_tab_text",
-            "type": "text",
+            "key": "field_5c704811e7c36",
+            "label": "Left Image Link",
+            "name": "l_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -90,11 +90,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array"
         },
         {
             "key": "field_5c5f5f1d957b3",
@@ -135,6 +131,35 @@
             "delay": 0
         },
         {
+            "key": "field_5c704836e7c38",
+            "label": "Left Highlight Color",
+            "name": "l_highlight_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Tangerine",
+                "green": "Aquamarine",
+                "yellow": "Goldenrod",
+                "blue": "Sky",
+                "purple": "Pansy",
+                "tan": "Mocha"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5c5f5fc7957b5",
             "label": "Right Image",
             "name": "r_image",
@@ -159,10 +184,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5c5f5ff0957b7",
-            "label": "Right Image Tab Text",
-            "name": "r_image_tab_text",
-            "type": "text",
+            "key": "field_5c704823e7c37",
+            "label": "Right Image Link",
+            "name": "r_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -171,11 +196,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array"
         },
         {
             "key": "field_5c5f5fd8957b6",
@@ -195,6 +216,35 @@
             "maxlength": "",
             "rows": 3,
             "new_lines": ""
+        },
+        {
+            "key": "field_5c704850e7c39",
+            "label": "Right Highlight Color",
+            "name": "r_highlight_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Tangerine",
+                "green": "Aquamarine",
+                "yellow": "Goldenrod",
+                "blue": "Sky",
+                "purple": "Pansy",
+                "tan": "Mocha"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5c5f61ea1b1c8",
@@ -498,5 +548,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549925615
+    "modified": 1550862712
 }
