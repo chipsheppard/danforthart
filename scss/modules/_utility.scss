@@ -51,6 +51,21 @@ img.flex {
 		line-height: 1.5;
 	}
 }
+.right-dq {
+	font-size: 150%;
+	line-height: 1;
+
+	&:before {
+		content: '”';
+		position: relative;
+		top: .125em;
+	}
+
+	@include breakpoint(tablet-v) {
+		font-size: 130%;
+		line-height: 1.5;
+	}
+}
 
 .intro {
 	font-weight: $font__weight-light;

@@ -7,8 +7,42 @@
 	background-color: #ffffff;
 	border: 3px solid $color__yellow;
 	padding: .5em 2em .25em 4em;
-	margin-bottom: 1em;
 	@include font-size(1.25);
+
+	&:hover {
+		background-color: $color__yellow;
+	}
+
+	&.aquamarine {
+		border-color: $color__green;
+		&:hover {
+			background-color: $color__green;
+		}
+	}
+	&.sky {
+		border-color: $color__blue;
+		&:hover {
+			background-color: $color__blue;
+		}
+	}
+	&.tangerine {
+		border-color: $color__orange;
+		&:hover {
+			background-color: $color__orange;
+		}
+	}
+	&.mocha {
+		border-color: $color__tan;
+		&:hover {
+			background-color: $color__tan;
+		}
+	}
+	&.pansy {
+		border-color: $color__purple;
+		&:hover {
+			background-color: $color__purple;
+		}
+	}
 
 	p:last-of-type {
 		margin-bottom: 0;
@@ -27,7 +61,12 @@
 		height: 40px;
 
 		&:hover {
-			color: $color__base-medium;
+			.cssicon-x {
+				&:before,
+				&:after {
+					height: 2px;
+				}
+			}
 		}
 	}
 }

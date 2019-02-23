@@ -165,7 +165,7 @@
             "key": "field_5c5328f0584ef",
             "label": "Page Title",
             "name": "page_title",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -176,9 +176,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
         },
         {
             "key": "field_5c532c0558502",
@@ -688,5 +688,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1550853594
+    "modified": 1550939550
 }

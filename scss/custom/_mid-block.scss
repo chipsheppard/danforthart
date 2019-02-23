@@ -48,13 +48,13 @@
 	}
 
 	.textblock {
-		height: 400px;
+		height: 500px;
 		padding: 0 2.5em;
 		position: relative;
 
 		@include breakpoint(tablet-v) {
 			padding: 0 1.5em;
-			height: 300px;
+			height: 350px;
 		}
 		@include breakpoint(phone-h) {
 			padding: 0;

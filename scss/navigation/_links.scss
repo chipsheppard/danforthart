@@ -7,9 +7,9 @@ a {
 	&:active {
 		outline: 0;
 	}
-	&:focus {
-		outline: thin dotted;
-	}
+	//&:focus {
+	//	outline: thin dotted;
+	//}
 }
 
 .site-content a:not(.btn) {

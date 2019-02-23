@@ -164,7 +164,7 @@ if ( ! function_exists( 'danforthart_display_header_widget' ) ) {
 		if ( ! is_front_page() ) :
 			return;
 		elseif ( is_active_sidebar( 'header' ) ) :
-			echo '<div class="header-widget-wrap inner-wrap">';
+			echo '<div class="header-widget-wrap">';
 				dynamic_sidebar( 'header' );
 			echo '</div>';
 		endif;

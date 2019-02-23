@@ -19,7 +19,7 @@ body.home {
 
 	.page-title {
 		line-height: 1;
-		margin: 0 0 3.625em;
+		margin: 0 0 5em;
 		width: 55%;
 		@include font-size(8);
 
@@ -35,33 +35,40 @@ body.home {
 		}
 	}
 
+	// MID BLOCK - - - - - - - - - - - - - - - -
 	.mid-block {
 		background-color: $color__green;
+
+		.col-1-2 {
+			margin-top: -31.25em;
+
+			@include breakpoint(tablet-v) {
+				margin-top: 0;
+			}
+		}
 
 		.imageblock  {
 			img {
 				transition: all 0.5s ease-in-out;
 			}
-
-			&:hover {
-				img {
-					transform: scale(1.01,1.01);
-				}
-			}
 		}
 	}
 
-	.mid-left {
+	.mid-left { // part of bg anim.
 		.card-title {
 			background-color: $color__yellow;
 		}
 	}
-	.mid-right {
+	.mid-right { // NOT part of anim.
 		.card-title {
 			background-color: $color__green;
 		}
 	}
 
+	// VISIT BLOCK - - - - - - - - - - - - - - - - - - - -
+	.visit-block {
+		background-color: $color__yellow;
+	}
 	.home-info {
 		padding: 5em 0 2em;
 		@include font-size(1.125);
@@ -99,8 +106,11 @@ body.home {
 			border: 0;
 		}
 	}
+	.site-content .section-title a:not(.btn) {
+		@include nb();
+	}
 
-
+	// SOCIAL - - - - - - - - - - - - - - - - - - - - - -
 	.social-block {
 		background-color: #ffffff;
 		padding: 2em 0;
@@ -131,21 +141,25 @@ body.home {
 		border: 10px solid #77414d;
 		position: relative;
 
+
 		img {
 			display: block;
 			width: 100%;
 		}
 		&:hover	.overlay-text {
 			display: block;
+			opacity: 1;
 		}
 	}
 	.overlay-text {
-		display: none;
+		//display: none;
 		background-color: #77414d;
 		color: #ffffff;
 		text-align: center;
+		opacity: 0;
 		position: absolute;
 		top:0;right:0;bottom:0;left:0;
+		transition: all 200ms ease-in-out;
 		z-index: 5;
 
 		strong {
@@ -169,6 +183,7 @@ body.home {
 	}
 
 	.text-links {
+		font-weight: $font__weight-light;
 		padding: 1em 1em 0;
 		@include font-size(2.5);
 
@@ -177,6 +192,8 @@ body.home {
 		}
 	}
 }
+
+
 
 // BACKGROUND COLOR TRANSITION
 @keyframes colorchange {

@@ -182,33 +182,36 @@ endif;
 	</div><!-- /mid-block -->
 
 
+	<div class="visit-block">
+		<div class="inner-wrap">
+			<div class="home-info">
+				<h2 class="section-title">
+					<?php the_field( 'section_title' ); ?>
+				</h2>
+
+				<div class="col-1-3 first">
+					<?php get_template_part( 'template-parts/openhours' ); ?>
+				</div>
+
+				<div class="col-1-3">
+					<?php if ( get_field( 'col2_title' ) ) : ?>
+					<h5><span><?php the_field( 'col2_title' ); ?></span></h5>
+					<?php endif; ?>
+					<div class="ib-txt"><?php the_field( 'col2_text' ); ?></div>
+				</div>
+				<div class="col-1-3">
+					<?php if ( get_field( 'col3_title' ) ) : ?>
+					<h5><span><?php the_field( 'col3_title' ); ?></span></h5>
+					<?php endif; ?>
+					<div class="ib-txt"><?php the_field( 'col3_text' ); ?></div>
+				</div>
+				<div class="cf"></div>
+			</div><!-- /home-info -->
+		</div>
+	</div>
+
+
 	<div class="inner-wrap">
-
-		<div class="home-info">
-			<h2 class="section-title">
-				<?php the_field( 'section_title' ); ?>
-			</h2>
-
-			<div class="col-1-3 first">
-				<?php get_template_part( 'template-parts/openhours' ); ?>
-			</div>
-
-			<div class="col-1-3">
-				<?php if ( get_field( 'col2_title' ) ) : ?>
-				<h5><span><?php the_field( 'col2_title' ); ?></span></h5>
-				<?php endif; ?>
-				<div class="ib-txt"><?php the_field( 'col2_text' ); ?></div>
-			</div>
-			<div class="col-1-3">
-				<?php if ( get_field( 'col3_title' ) ) : ?>
-				<h5><span><?php the_field( 'col3_title' ); ?></span></h5>
-				<?php endif; ?>
-				<div class="ib-txt"><?php the_field( 'col3_text' ); ?></div>
-			</div>
-			<div class="cf"></div>
-		</div><!-- /home-info -->
-
-
 		<div class="social-block">
 			<?php if ( have_rows( 'image_link' ) ) : ?>
 				<div class="image-blocks">
