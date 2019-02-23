@@ -57,8 +57,18 @@
 				$level_list = join( ' ', $levels );
 				$name_list = join( ' ', $names );
 			endif;
+
+			$seasons = get_the_terms( $post->ID, 'season' );
+			if ( ! empty( $seasons ) ) :
+				$sns = array();
+				foreach ( $seasons as $season ) {
+					$sns[] = $season->slug;
+				}
+				$season_list = join( ' ', $sns );
+			endif;
+
 			?>
-			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?>">
+			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?><?php printf( ' %s', esc_html( $season_list ) ); ?>">
 				<div class="row-top">
 					<div class="col-1-6 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>

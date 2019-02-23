@@ -59,8 +59,7 @@ function danforthart_scripts() {
 		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
 	if ( is_page_template( 'templates/learn-c.php' ) ) {
-		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/assets/js/isotope.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
-		wp_enqueue_script( 'isotope-init', get_template_directory_uri() . '/assets/js/isotope-init.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'course-filter', get_template_directory_uri() . '/assets/js/course-filter-min.js', array(), DANFORTHART_VERSION, true );
 	}
 	if ( is_page_template( 'templates/faq.php' ) ) {
 		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );

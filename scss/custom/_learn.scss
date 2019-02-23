@@ -356,6 +356,14 @@ body.learncreate {
 
 body.learn-c {
 
+	.course-row {
+		display: none;
+
+		&.show {
+	  		display: block;
+		}
+	}
+
 	.page-title {
 		margin: 2em 0 6em;
 		@include font-size(2.8125);
@@ -407,7 +415,7 @@ body.learn-c {
 			}
 
 		}
-		&.active {
+		&.tabon {
 			cursor: auto;
 			background-color: #ffffff;
 			border-top: 1px solid $color__base;
@@ -465,6 +473,10 @@ body.learn-c {
 		border:1px dashed #ccc;
 		padding: 1em;
 		@include font-size(1.875);
+	}
+
+	.tb2 {
+		display: none;
 	}
 }
 

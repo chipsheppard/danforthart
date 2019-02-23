@@ -151,21 +151,21 @@ jQuery(function( $ ){
 // TABs -------------------------------
 jQuery(function( $ ){
 	$('.tt1').click(function() {
-		if ( $(this).hasClass( 'active' ) ) {
+		if ( $(this).hasClass( 'tabon' ) ) {
 			return;
 		} else {
-			$(this).addClass( 'active' );
-			$('.tt2').removeClass( 'active' );
+			$(this).addClass( 'tabon' );
+			$('.tt2').removeClass( 'tabon' );
 			$('.tb1').show();
 			$('.tb2').hide();
 		}
 	} );
 	$('.tt2').click(function() {
-		if ( $(this).hasClass( 'active' ) ) {
+		if ( $(this).hasClass( 'tabon' ) ) {
 			return;
 		} else {
-			$(this).addClass( 'active' );
-			$('.tt1').removeClass( 'active' );
+			$(this).addClass( 'tabon' );
+			$('.tt1').removeClass( 'tabon' );
 			$('.tb2').show();
 			$('.tb1').hide();
 		}

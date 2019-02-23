@@ -53,7 +53,7 @@ function da_learn_c() {
 				the_row();
 				$t++;
 				if ( 1 === $t ) :
-					$tab = ' active';
+					$tab = ' tabon';
 				else :
 					$tab = null;
 				endif;
