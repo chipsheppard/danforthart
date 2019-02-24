@@ -74,17 +74,18 @@
 } )( jQuery );
 
 
-
 // Project List show/hide -------------------------------
 jQuery(function( $ ){
-	$('.u-exhibit').find('.cssicon-plusminus').click(function() {
-		if ( $(this).hasClass( 'plus' ) ) {
-			$(this).removeClass( 'plus' );
-			$(this).addClass( 'minus' );
+	$('.u-exhibit').find('.ue-upper').click(function() {
+		if ( $(this).find('.cssicon-plusminus').hasClass( 'plus' ) ) {
+			$(this).closest('.u-exhibit').addClass( 'active' );
+			$(this).find('.cssicon-plusminus').removeClass( 'plus' );
+			$(this).find('.cssicon-plusminus').addClass( 'minus' );
 			$(this).parents().children('.extended').slideDown(200);
 		} else {
-			$(this).removeClass( 'minus' );
-			$(this).addClass( 'plus' );
+			$(this).closest('.u-exhibit').removeClass( 'active' );
+			$(this).find('.cssicon-plusminus').removeClass( 'minus' );
+			$(this).find('.cssicon-plusminus').addClass( 'plus' );
 			$(this).parents().children('.extended').slideUp(200);
 		}
 	} );

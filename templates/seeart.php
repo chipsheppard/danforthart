@@ -251,7 +251,7 @@ endif;
 							$u_image = get_sub_field( 'image' );
 							if ( ! empty( $u_image ) ) :
 								$u_alt = $u_image['alt'];
-								$u_size = 'medium';
+								$u_size = 'medium_large';
 								$u_width = $u_image['sizes'][ $u_size . '-width' ];
 								$u_height = $u_image['sizes'][ $u_size . '-height' ];
 								$u_url = $u_image['sizes'][ $u_size ];

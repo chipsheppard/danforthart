@@ -26,7 +26,7 @@ body.seeart {
 	.ert-date,
 	.erb-date {
 		font-weight: $font__weight-light;
-		padding: 0 1em .75em;
+		padding: 0 1em .6875em;
 		@include font-size(1.375);
 
 	}
@@ -68,7 +68,7 @@ body.seeart {
 	.el-callout,
 	.ert-callout,
 	.erb-callout {
-		background-color:  #ffffff;;
+		background-color: $color__bg;
 		bottom: 0;
 		left: 0;
 		max-width: 90%;
@@ -144,8 +144,9 @@ body.seeart {
 	}
 
 
-	.upcoming-exhibit {
-		margin-bottom: 20em;
+	.upcoming-exhibit, // WHERE IS THIS ???
+	.upcoming-exhibits { // WHERE IS THIS ???
+		margin-bottom: 16em;
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 5em;
@@ -157,6 +158,7 @@ body.seeart {
 		border-style: solid;
 		border-width: 1px 1px 0 1px;
 		clear: both;
+		transition: all 200ms ease-in-out;
 
 		&:nth-last-of-type(1) {
 			border-bottom-width: 1px;
@@ -164,37 +166,43 @@ body.seeart {
 
 		&.orange {
 			border-color: $color__orange;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__orange;
 			}
 		}
 		&.green {
 			border-color: $color__green;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__green;
 			}
 		}
 		&.yellow {
 			border-color: $color__yellow;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__yellow;
 			}
 		}
 		&.blue {
 			border-color: $color__blue;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__blue;
 			}
 		}
 		&.tan {
 			border-color: $color__tan;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__tan;
 			}
 		}
 		&.purple {
 			border-color: $color__purple;
-			&:hover {
+			&:hover,
+			&.active {
 				background-color: $color__purple;
 			}
 		}
@@ -229,6 +237,9 @@ body.seeart {
 					order: 0;
 				}
 			}
+			.ue-caption {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -236,6 +247,9 @@ body.seeart {
 	.pe-upper {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	.ue-upper:hover {
+		cursor: pointer;
 	}
 
 	.ue-image,
@@ -248,7 +262,7 @@ body.seeart {
 	.pe-image img {
 		display: block;
 		max-width: none;
-		height: 240px;
+		height: 290px;
 		object-fit: cover;;
 		width: 100%;
 	}
@@ -291,7 +305,7 @@ body.seeart {
 	}
 	.ue-social {
 		clear: both;
-		margin-top: 2em;
+		margin-top: 3em;
 
 		.social-link {
 			display: inline;

@@ -41,10 +41,6 @@
 			}
 		}
 
-		&:before {
-			top: -0.25em;
-		}
-
 		@include breakpoint(tablet-v) {
 			@include font-size(1.875);
 

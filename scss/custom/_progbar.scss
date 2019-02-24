@@ -33,7 +33,7 @@
 }
 
 /* 12px PROGRESS BAR */
-@keyframes fibg {
+@keyframes fibg-f {
     0% {
         background-size:    0 12px,
                             12px 0,
@@ -63,6 +63,40 @@
                             12px 100%,
                             100% 12px,
                             12px 100%;
+    }
+}
+
+/* 12px PROGRESS BAR */
+@keyframes fibg {
+    0% {
+        background-size:    12px 0, //tl
+                            0 12px, // tr
+                            12px 0, // br
+                            0 12px; //bl
+    }
+    25% {
+        background-size:    12px 0,
+                            0 12px,
+                            12px 0,
+                            100% 12px;
+    }
+    50% {
+        background-size:    12px 0,
+                            0 12px,
+                            12px 100%,
+                            100% 12px;
+    }
+    75% {
+        background-size:    12px 0,
+                            100% 12px,
+                            12px 100%,
+                            100% 12px;
+    }
+    100% {
+        background-size:    12px 100%,
+                            100% 12px,
+                            12px 100%,
+                            100% 12px;
     }
 }
 

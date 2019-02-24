@@ -19,6 +19,7 @@
 .ta-right {
 	text-align: right;
 }
+
 img.flex {
 	width: 100%;
 }
@@ -52,18 +53,13 @@ img.flex {
 	}
 }
 .right-dq {
-	font-size: 150%;
-	line-height: 1;
+	line-height: 0;
 
 	&:before {
 		content: '”';
 		position: relative;
 		top: .125em;
-	}
-
-	@include breakpoint(tablet-v) {
-		font-size: 130%;
-		line-height: 1.5;
+		left: -0.125em;
 	}
 }
 
