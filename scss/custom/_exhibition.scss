@@ -17,7 +17,7 @@ body.single-exhibition {
 		float: right;
 		top: -3em;
 		z-index: 3;
-		@include font-size(1.875);
+		@include font-size(2);
 
 		@include breakpoint(tablet-v) {
 			@include font-size(1.5);
@@ -27,7 +27,7 @@ body.single-exhibition {
 	blockquote {
 		font-weight: $font__weight-light;
 		line-height: 1.375;
-		margin: 1.5em 3em 1em 7em;
+		margin: 1.5em 3em 3em 7em;
 		@include font-size(2.8125);
 
 		@include breakpoint(tablet-h) {
@@ -75,6 +75,10 @@ body.single-exhibition {
 			padding-left: .5em;
 			padding-right: .5em;
 		}
+	}
+
+	.artworks .artwork-img a {
+		cursor: zoom-in;
 	}
 }
 
@@ -133,8 +137,8 @@ body.single-exhibition {
 
 .ex-page-title {
 	line-height: 1;
-	padding: .5em 0 .25em .25em;
-	@include font-size(4.6875);
+	padding: .75em 0 1.25em .25em;
+	@include font-size(4.8125);
 
 	@include breakpoint(tablet-v) {
 		padding: .5em 0 1em 0;
@@ -145,7 +149,7 @@ body.single-exhibition {
 .ex-intro {
 	font-weight: $font__weight-light;
 	padding: 0 0 4em 1em;
-	@include font-size(1.625);
+	@include font-size(1.75);
 
 	@include breakpoint(tablet-v) {
 		padding: 0 0 2em;
@@ -156,7 +160,8 @@ body.single-exhibition {
 	}
 }
 .ex-content {
-	padding: 0 2em 2em 4em;
+	padding: .75em 2em 8em 4em;
+	@include font-size(1.125);
 
 	@include breakpoint(tablet-v) {
 		padding: 0 0 2em;
@@ -164,6 +169,7 @@ body.single-exhibition {
 }
 .ex-info {
 	padding: 0 0 5em 2.5em;
+	@include font-size(1.125);
 
 	@include breakpoint(tablet-v) {
 		padding: 0 0 3em 0;

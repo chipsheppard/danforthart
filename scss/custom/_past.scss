@@ -2,7 +2,7 @@ body.past {
 	background-color: #ffd2b5;
 
 	.intro {
-		padding-bottom: 10em;
+		padding: 3.5em 0 7em 1em;
 		width: 80%;
 
 		@include breakpoint(tablet-v) {
@@ -47,16 +47,13 @@ body.past {
 	.past-top {
 		margin-top: 12em;
 	}
-	.past-exhibits {
-		margin-bottom: 4em;
-	}
 	.x-past-exhibits {
 		display: none;
 	}
 
 	.viewmore-past {
 		text-align: right;
-		margin-bottom: 4em;
+		margin: 4em 0;
 
 		.viewmore {
 			border-bottom: 1px solid $color__base;

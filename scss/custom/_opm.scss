@@ -9,22 +9,27 @@
 	z-index: 6;
 }
 .onpage-menu {
+	background-color: $color__bg;
 	float: right;
-	background-color: #ffffff;
+	padding-top: 2em;
 
+	.opm-arrow {
+		margin-top: 1.25em;
+	}
 }
 
 .opm-text {
-	background-color: #ffffff;
+	background-color: $color__bg;
 	font-weight: $font__weight-bold;
 	float: left;
 	letter-spacing: 1px;
-	padding: .375em 1em .5em;
+	padding: 1em 1em .5em;
 }
 
 .opm-section-menu {
-	background-color: #ffffff;
+	background-color: $color__bg;
 	float: left;
+
 	@include breakpoint(tablet-v) {
 		width: 250px;
 	}
@@ -32,18 +37,23 @@
 
 	.opm-sections {
 		border-bottom: 1px solid $color__base;
-		padding-bottom: .5em;
+		padding-bottom: 1em;
 		width: 300px;
+
 		@include breakpoint(tablet-v) {
 			width: 250px;
 		}
+		&.open {
+			border-color: $color__bg;
+		}
 
-		.current {
+		.permcat {
 			@include font-size(1.375);
 			line-height: 1.25;
-			padding: .25em 0 0 .75em;
+			padding: .75em 0 0 .75em;
 
 			@include breakpoint(tablet-v) {
+				padding-top: 1.75em;
 				@include font-size(1.125);
 			}
 		}
@@ -57,10 +67,9 @@
 	}
 
 	.opm-menu {
-		background-color: #fff;
-		box-shadow: 0px 0px 4px rgba(0, 0, 0, .15);
+		background-color: $color__bg;
 		border-bottom: 1px solid $color__base;
-		width: 300px;
+		width: 316px;
 		display: none;
 		padding: .5em 1em 0;
 		position: absolute;

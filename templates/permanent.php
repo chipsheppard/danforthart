@@ -103,7 +103,7 @@ if ( have_rows( 'collection_blocks' ) ) :
 							the_row();
 							$c++;
 							?>
-							<div class="current tp<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'block_title' ); ?></div>
+							<div class="permcat tp<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'block_title' ); ?></div>
 						<?php endwhile; ?>
 					</div>
 					<div class="opm-menu">

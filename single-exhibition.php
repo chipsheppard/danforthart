@@ -36,10 +36,11 @@ function da_exhibition() {
 		<?php
 		$body_classes = get_body_class();
 		if ( in_array( 'special-collection', $body_classes, true ) ) :
+			$url = site_url( '/secrets/' );
 		?>
-			<a href="/danforth/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+			<a href="<?php echo esc_url( site_url() ); ?>/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		<?php else : ?>
-			<a href="/danforth/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
+			<a href="<?php echo esc_url( site_url() ); ?>/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
 		<?php endif; ?>
 
 		</div>

@@ -76,6 +76,7 @@
 			letter-spacing: 2px;
 			padding: .25em 0;
 			text-transform: uppercase;
+			transition: all 200ms ease-in-out;
 
 			&:hover {
 				border-width: 2px;
@@ -91,6 +92,7 @@
 			margin-left: -.75em;
 		}
 	}
+
 
 	.sub-menu {
 		margin: 1.5em 0 3em;

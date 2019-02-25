@@ -29,7 +29,7 @@ function da_artwork() {
 		</div>
 
 		<div class="return">
-			<a href="/danforth/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+			<a href="<?php echo esc_url( site_url() ); ?>/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		</div>
 		<div class="cf"></div>
 

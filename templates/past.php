@@ -259,10 +259,6 @@ endif;
 			if ( have_rows( 'x_past_exhibitions' ) ) :
 			?>
 
-			<div class="viewmore-past">
-				<div class="viewmore">View more past exhibits <span class="cssicon-plusminus small plus"></span></div>
-			</div>
-
 			<div class="x-past-exhibits">
 				<?php
 				while ( have_rows( 'x_past_exhibitions' ) ) :
@@ -321,6 +317,10 @@ endif;
 			endif;
 			?>
 			</div><!-- /past-exhibits -->
+			<div class="viewmore-past">
+				<div class="viewmore">View more past exhibits <span class="cssicon-plusminus small plus"></span></div>
+			</div>
+
 
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 

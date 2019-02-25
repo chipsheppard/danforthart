@@ -92,15 +92,17 @@
 
 // On Page Menu show/hide --------------------------
 jQuery(function( $ ){
-	$('.cssicon-updown').click(function() {
+	$('.cssicon-updown, .permcat').click(function() {
 		if ( $('.cssicon-updown').hasClass( 'down' ) ) {
 			$('.cssicon-updown').removeClass( 'down' );
 			$('.cssicon-updown').addClass( 'up' );
-			$('.opm-menu').slideDown(200);
+			$('.opm-sections').addClass( 'open' );
+			$('.opm-menu').slideDown(100);
 		} else {
 			$('.cssicon-updown').removeClass( 'up' );
 			$('.cssicon-updown').addClass( 'down' );
-			$('.opm-menu').slideUp(200);
+			$('.opm-sections').removeClass( 'open' );
+			$('.opm-menu').slideUp(100);
 		}
 	} );
 } );

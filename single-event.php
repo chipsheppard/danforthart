@@ -29,7 +29,7 @@ function da_event() {
 	</div>
 
 	<div class="return">
-		<a href="/danforth/visit/event-calendar/"><span class="cssicon-arrow-l"></span> View Full Calendar</a>
+		<a href="<?php echo esc_url( site_url() ); ?>/visit/event-calendar/"><span class="cssicon-arrow-l"></span> View Full Calendar</a>
 	</div>
 	<div class="cf"></div>
 
