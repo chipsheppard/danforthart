@@ -2,7 +2,7 @@ body.team,
 body.community {
 	.page-title {
 		line-height: 1.5;
-		padding: 2em 1em;
+		padding: 2.5em 1em 3em;
 		width: 70%;
 		@include font-size(2.8125);
 
@@ -31,10 +31,11 @@ body.team {
 			border-color: transparent;
 			border-width: 1px 1px 3px 1px;
 			cursor: pointer;
+			height: 300px;
 			padding-bottom: 1em;
 			position: relative;
+			transition: all 200ms ease-in-out;
 			z-index: 2;
-			height: 300px;
 		}
 
 		&:hover,
@@ -116,6 +117,8 @@ body.team {
 	}
 
 	.bottom-members {
+		margin-bottom: 10em;
+
 		.member {
 			.mem-card {
 				padding-bottom: 2em;

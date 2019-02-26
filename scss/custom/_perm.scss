@@ -46,7 +46,6 @@ body.permanent {
 	.artwork {
 		a {
 			display: inline-block;
-			@include nb();
 		}
 	}
 
@@ -98,6 +97,7 @@ body.permanent {
 		a {
 			display: inline-block;
 			width: 100%;
+			@include nb();
 		}
 	}
 }

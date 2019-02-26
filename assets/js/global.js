@@ -110,15 +110,15 @@ jQuery(function( $ ){
 
 // Course Overview List (learn+create) -------------------------------
 jQuery(function( $ ){
-	$('.course-overview-box').find('.trigger').click(function() {
-		if ( $(this).hasClass( 'plus' ) ) {
-			$(this).removeClass( 'plus' );
-			$(this).addClass( 'minus' );
+	$('.course-overview-box').find('.c-title').click(function() {
+		if ( $(this).find('.cssicon-plusminus').hasClass( 'plus' ) ) {
+			$(this).find('.cssicon-plusminus').removeClass( 'plus' );
+			$(this).find('.cssicon-plusminus').addClass( 'minus' );
 			$(this).closest('.course-overview-box').addClass('active');
 			$(this).parents().children('.box-bottom').slideDown(200);
 		} else {
-			$(this).removeClass( 'minus' );
-			$(this).addClass( 'plus' );
+			$(this).find('.cssicon-plusminus').removeClass( 'minus' );
+			$(this).find('.cssicon-plusminus').addClass( 'plus' );
 			$(this).closest('.course-overview-box').removeClass('active');
 			$(this).parents().children('.box-bottom').slideUp(200);
 		}
@@ -175,15 +175,15 @@ jQuery(function( $ ){
 
 // ACCORDIONs -------------------------------
 jQuery(function( $ ){
-	$('.accordion').find('.cssicon-plusminus').click(function() {
-		if ( $(this).hasClass( 'plus' ) ) {
-			$(this).removeClass( 'plus' );
-			$(this).addClass( 'minus' );
+	$('.accordion').find('.actop').click(function() {
+		if ( $(this).find('.cssicon-plusminus').hasClass( 'plus' ) ) {
+			$(this).find('.cssicon-plusminus').removeClass( 'plus' );
+			$(this).find('.cssicon-plusminus').addClass( 'minus' );
 			$(this).closest('.accordion').addClass('active');
 			$(this).parents().children('.acbot').slideDown(200);
 		} else {
-			$(this).removeClass( 'minus' );
-			$(this).addClass( 'plus' );
+			$(this).find('.cssicon-plusminus').removeClass( 'minus' );
+			$(this).find('.cssicon-plusminus').addClass( 'plus' );
 			$(this).closest('.accordion').removeClass('active');
 			$(this).parents().children('.acbot').slideUp(200);
 		}

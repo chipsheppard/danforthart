@@ -22,12 +22,12 @@ body.calendar {
 		}
 	}
 
-	.events {
-		margin-bottom: 3em;
-	}
-
 	.x-events {
 		display: none;
+
+		.event:nth-of-type(1) {
+			border-top-width: 0;
+		}
 	}
 
 	.event {
@@ -108,7 +108,7 @@ body.calendar {
 
 	.viewmore-events {
 		text-align: right;
-		margin-bottom: 4em;
+		margin: 4em 0 10em;
 
 		.viewmore {
 			border-bottom: 1px solid $color__base;

@@ -34,7 +34,6 @@ button,
 
 .btn {
 	display: inline-block;
-	padding-right: 3em;
 
 	&.black {
 		background-color: #000000;
@@ -47,6 +46,18 @@ button,
 			color: #000000;
 		}
 	}
+	&.wide {
+		width: 60%;
+		text-align: center;
+	}
+	&.xwide {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.btn:not(button) {
+	padding-right: 3em;
 
 	&:before {
 		content: '';
@@ -68,16 +79,6 @@ button,
 	  background-color: currentColor;
 	  transform: rotate(45deg);
 	}
-	&.wide {
-		width: 60%;
-		text-align: center;
-	}
-	&.xwide {
-		width: 100%;
-		text-align: center;
-	}
-
-
 }
 
 input[type="search"]::-webkit-search-cancel-button,

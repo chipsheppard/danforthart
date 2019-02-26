@@ -48,19 +48,18 @@
 	input[type="submit"] {
 		color: #ffffff;
 	}
-
 }
 
 .site-info {
 	color: #ffffff;
 	letter-spacing: 1px;
-	padding: 2em 0 .5em;
+	padding: 5em 0 1em;
 	position: relative;
 
 }
 
 .site-footer .menu {
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 
 	li {
 		float: left;
@@ -73,7 +72,7 @@
 			color: #ffffff;
 			display: inline;
 			font-weight: $font__weight-bold;
-			letter-spacing: 2px;
+			letter-spacing: 3px;
 			padding: .25em 0;
 			text-transform: uppercase;
 			transition: all 200ms ease-in-out;

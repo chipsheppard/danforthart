@@ -26,14 +26,14 @@
 		padding: 1em 3em;
 
 		@include breakpoint(tablet-h) {
-			max-height: 450px;
+			height: 450px;
 		}
 		@include breakpoint(tablet-v) {
 			padding: 1.5em;
 		}
 		@include breakpoint(phone-h) {
 			padding: 1em;
-			max-height: 300px;
+			height: 300px;
 		}
 	}
 }
@@ -46,8 +46,8 @@
 	transform: translateY(-50%);
 
 	@include breakpoint(tablet-v) {
-		top: auto;
-		transform: none;
+		//top: auto;
+		//transform: none;
 	}
 }
 

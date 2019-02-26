@@ -43,6 +43,12 @@ img.flex {
 .grn {
 	color: $color__green;
 }
+.blu {
+	color: $color__blue;
+}
+.pur {
+	color: $color__purple;
+}
 
 .big {
 	font-size: 125%;
@@ -80,18 +86,23 @@ img.flex {
 	display: inline-block;
 	height: 1.75em;
 	line-height: 1.75;
-	margin-bottom: .25em;
 	text-align: center;
 	vertical-align: middle;
 	width: 1.75em;
 	position: relative;
 	margin-left: -2em;
+	@include font-size(1);
 }
 
 .entry-content .num-list {
 	margin-bottom: 2em;
 	margin-left: 2.5em;
-	line-height: 1.25;
+	line-height: 1.5;
+
+	li {
+		margin-bottom: 1em;
+		@include font-size(1.125);
+	}
 }
 
 .oh {

@@ -126,14 +126,22 @@ body.single-exhibition {
 			width: 100%;
 		}
 	}
+}
 
-	.artwork-info {
-		@include breakpoint(tablet-v) {
-			padding: 0 1em;
-			line-height: 1.375;
+.site-content .artwork-info {
+	a {
+		border-color: transparent;
+
+		&:hover {
+			border-color: $color__base;
 		}
 	}
+	@include breakpoint(tablet-v) {
+		padding: 0 1em;
+		line-height: 1.375;
+	}
 }
+
 
 .ex-page-title {
 	line-height: 1;

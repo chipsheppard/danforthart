@@ -162,7 +162,7 @@ endif;
 					<div class="box-top">
 						<div class="col-1-2 first c-title">
 							<div class="title-text"><?php the_sub_field( 'box_title' ); ?></div>
-							<div class="trigger cssicon-plusminus plus"></div>
+							<div class="cssicon-plusminus plus"></div>
 						</div>
 						<div class="col-1-4 c-level"><?php echo 'Grades: ' . esc_html( $boxlevel ); ?></div>
 						<div class="col-1-4 c-button">

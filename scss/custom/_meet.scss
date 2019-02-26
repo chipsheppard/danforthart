@@ -2,7 +2,7 @@ body.meetus {
 
 	.page-title {
 		line-height: 1;
-		margin: 1em 0 7em;
+		margin: 1.5em 0 8em;
 		//width: 70%;
 		@include font-size(4.6875);
 
@@ -18,6 +18,13 @@ body.meetus {
 		}
 	}
 	.mid-block {
+		.col-1-2 {
+			margin-top: -31.375em;
+
+			@include breakpoint(tablet-v) {
+				margin-top: 0;
+			}
+		}
 		.mid-left {
 			.card-title {
 				background-color: $color__purple;

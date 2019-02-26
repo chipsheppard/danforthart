@@ -169,9 +169,9 @@ if ( have_rows( 'collection_blocks' ) ) :
 										?>
 										<div class="artwork-info">
 											<?php
-											echo '<strong>';
+											echo '<a href="' . esc_url( get_permalink() ) . '"><strong>';
 											the_field( 'artist_name' );
-											echo '</strong>, ';
+											echo '</strong></a>, ';
 											the_title();
 											?>
 										</div>
@@ -220,9 +220,9 @@ if ( have_rows( 'collection_blocks' ) ) :
 									?>
 									<div class="artwork-info">
 										<?php
-										echo '<strong>';
+										echo '<a href="' . esc_url( get_permalink() ) . '"><strong>';
 										the_field( 'artist_name' );
-										echo '</strong>, ';
+										echo '</strong></a>, ';
 										the_title();
 										?>
 									</div>

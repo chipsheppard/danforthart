@@ -125,12 +125,17 @@ function da_exhibition() {
 						?>
 						<div class="artwork-info">
 							<?php
-							echo '<strong>';
+							echo '<a href="#' . esc_html( $c ) . '" class="modal-link" data-index="' . esc_html( $c ) . '"><strong>';
 							the_title();
-							echo '</strong>, ';
-							the_field( 'date' );
-							echo ', ';
-							the_field( 'medium' );
+							echo '</strong></a>';
+							if ( get_field( 'date' ) ) :
+								echo ', ';
+								the_field( 'date' );
+							endif;
+							if ( get_field( 'medium' ) ) :
+								echo ', ';
+								the_field( 'medium' );
+							endif;
 							?>
 						</div>
 					</div>

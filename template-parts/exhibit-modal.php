@@ -36,10 +36,20 @@
 					?>
 				</div>
 				<div class="artwork-info">
-					<strong><?php the_title(); ?></strong>,
-					<?php the_field( 'date' ); ?>,
-					<?php the_field( 'medium' ); ?>	<br />
-					<?php the_field( 'more_left' ); ?>
+					<strong><?php the_title(); ?></strong>
+					<?php
+					if ( get_field( 'date' ) ) :
+						echo ', ';
+						the_field( 'date' );
+					endif;
+					if ( get_field( 'medium' ) ) :
+						echo ', ';
+						the_field( 'medium' );
+					endif;
+					the_field( 'medium' );
+					echo '<br />';
+					the_field( 'more_left' );
+					?>
 				</div>
 			</div>
 		<?php

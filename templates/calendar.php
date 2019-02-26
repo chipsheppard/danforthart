@@ -95,37 +95,39 @@ function da_calendar() {
 				setup_postdata( $post );
 				?>
 				<div class="event">
-					<div class="e-upper">
-						<div class="col-1-4 e-image">
-							<?php
-							$e_image = get_sub_field( 'e_image' );
-							if ( ! empty( $e_image ) ) :
-								$alt = $e_image['alt'];
-								$size = 'medium';
-								$width = $e_image['sizes'][ $size . '-width' ];
-								$height = $e_image['sizes'][ $size . '-height' ];
-								$url = $e_image['sizes'][ $size ];
+					<a href="<?php echo esc_url( get_permalink( $e_post_object->ID ) ); ?>">
+						<div class="e-upper">
+							<div class="col-1-4 e-image">
+								<?php
+								$e_image = get_sub_field( 'e_image' );
+								if ( ! empty( $e_image ) ) :
+									$alt = $e_image['alt'];
+									$size = 'medium';
+									$width = $e_image['sizes'][ $size . '-width' ];
+									$height = $e_image['sizes'][ $size . '-height' ];
+									$url = $e_image['sizes'][ $size ];
+									?>
+									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
+								<?php
+								else :
+									echo get_the_post_thumbnail( $e_post_object->ID, 'medium', [
+										'class' => 'featured-image',
+										'title' => 'Feature image',
+									] );
+								endif;
 								?>
-								<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-							<?php
-							else :
-								echo get_the_post_thumbnail( $e_post_object->ID, 'medium', [
-									'class' => 'featured-image',
-									'title' => 'Feature image',
-								] );
-							endif;
-							?>
-						</div>
-						<div class="col-5-12 e-heading">
-							<div class="vc-wrap">
-								<h3><?php echo get_the_title( $e_post_object->ID ); ?></h3>
+							</div>
+							<div class="col-5-12 e-heading">
+								<div class="vc-wrap">
+									<h3><?php echo get_the_title( $e_post_object->ID ); ?></h3>
+								</div>
+							</div>
+							<div class="col-1-6 e-date"><?php the_field( 'e_date', $e_post_object->ID ); ?></div>
+							<div class="col-1-6 e-button">
+								<span class="cssicon-arrow-r"></span>
 							</div>
 						</div>
-						<div class="col-1-6 e-date"><?php the_field( 'e_date', $e_post_object->ID ); ?></div>
-						<div class="col-1-6 e-button">
-							<a href="<?php echo esc_url( get_permalink( $e_post_object->ID ) ); ?>"><span class="cssicon-arrow-r"></span></a>
-						</div>
-					</div>
+					</a>
 				</div><!-- /event -->
 				<?php
 			endif;
@@ -139,10 +141,6 @@ function da_calendar() {
 		// EXTENDED EVENTS - - - - - - - - - - - - - - - - - - - -.
 		if ( have_rows( 'x_events' ) ) :
 		?>
-
-		<div class="viewmore-events">
-			<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
-		</div>
 
 		<div class="x-events">
 		<?php
@@ -193,7 +191,11 @@ function da_calendar() {
 		endwhile;
 		endif;
 		?>
-		</div><!-- /events -->
+		</div><!-- /x-events -->
+
+		<div class="viewmore-events">
+			<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
+		</div>
 
 		<?php get_template_part( 'template-parts/quote' ); ?>
 		<?php get_template_part( 'template-parts/signup' ); ?>

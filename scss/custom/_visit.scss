@@ -42,12 +42,12 @@ body.visit {
 	.accordion {
 		&:hover,
 		&.active {
-		    background-color: $color__yellow-xxlt;
+		    background-color: $color__bg;
 		}
 	}
 
 	.questions {
-		background-color: #ffffff;
+		background-color: $color__bg;
 		border: 1px solid $color__base;
 		display: inline-block;
 		font-weight: $font__weight-light;
