@@ -62,7 +62,7 @@ body.seeart {
 	}
 	.ert-image img,
 	.erb-image img {
-		height: 586px;
+		height: 600px;
 	}
 	.el-image img {
 		height: 800px;
@@ -109,7 +109,7 @@ body.seeart {
 
 	.exhibit-right-top {
 		margin-top: -18em;
-		margin-bottom: 12em;
+		margin-bottom: 10em;
 
 		@include breakpoint(tablet-v) {
 			margin-top: 0;

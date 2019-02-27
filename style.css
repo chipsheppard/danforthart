@@ -2195,7 +2195,7 @@ body.seeart .el-image a:hover, body.seeart .ert-image a:hover, body.seeart .erb-
 
 body.seeart .el-image img, body.seeart .ert-image img, body.seeart .erb-image img { display: block; -o-object-fit: cover; object-fit: cover; }
 
-body.seeart .ert-image img, body.seeart .erb-image img { height: 586px; }
+body.seeart .ert-image img, body.seeart .erb-image img { height: 600px; }
 
 body.seeart .el-image img { height: 800px; }
 
@@ -2211,7 +2211,7 @@ body.seeart .el-callout .title, body.seeart .ert-callout .title, body.seeart .er
 
 body.seeart .exhibit-left { margin-top: -3.375em; }
 
-body.seeart .exhibit-right-top { margin-top: -18em; margin-bottom: 12em; }
+body.seeart .exhibit-right-top { margin-top: -18em; margin-bottom: 10em; }
 
 @media all and (max-width: 768px) { body.seeart .exhibit-right-top { margin-top: 0; } }
 
@@ -2322,13 +2322,13 @@ body.past .exhibit-left { margin-top: -3.375em; }
 
 @media all and (max-width: 768px) { body.past .exhibit-left { margin-top: 0; margin-bottom: 2em; } }
 
-body.past .exhibit-right-top { margin-top: -18em; margin-bottom: 12em; }
+body.past .exhibit-right-top { margin-top: -18em; margin-bottom: 6em; }
 
 @media all and (max-width: 768px) { body.past .exhibit-right-top { margin-top: 0; margin-bottom: 2em; } }
 
 @media all and (max-width: 768px) { body.past .exhibit-left { margin-top: 0; } }
 
-body.past .el-image img { height: 586px; }
+body.past .el-image img { height: 640px; }
 
 body.past .past-top { margin-top: 12em; }
 

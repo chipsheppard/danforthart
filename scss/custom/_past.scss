@@ -27,7 +27,7 @@ body.past {
 
 	.exhibit-right-top {
 		margin-top: -18em;
-		margin-bottom: 12em;
+		margin-bottom: 6em;
 
 		@include breakpoint(tablet-v) {
 			margin-top: 0;
@@ -41,7 +41,7 @@ body.past {
 	}
 
 	.el-image img {
-		height: 586px;
+		height: 640px;
 	}
 
 	.past-top {
