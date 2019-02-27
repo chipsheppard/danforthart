@@ -51,9 +51,6 @@
 		@include breakpoint(phone-h) {
 			max-width: 150px;
 		}
-		@include breakpoint(phone-v) {
-			max-width: 100px;
-		}
 	}
 }
 

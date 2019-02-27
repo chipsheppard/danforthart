@@ -22,4 +22,9 @@
 	&.np {
 		padding: 0;
 	}
+	&.mnp {
+		@include breakpoint(tablet-v) {
+			padding: 0;
+		}
+	}
 }

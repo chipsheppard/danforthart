@@ -101,6 +101,8 @@ function display_parent() {
 		printf( '<span class="section-title">%s</span>', 'SEE ART' );
 	elseif ( is_singular( 'exhibition' ) ) :
 		printf( '<span class="section-title">%s</span>', 'SEE ART' );
+	elseif ( is_singular( 'event' ) ) :
+		printf( '<span class="section-title">%s</span>', 'VISIT' );
 	else :
 		printf( '<span class="section-title">%s</span>', get_the_title() );
 	endif;

@@ -19,11 +19,11 @@ add_filter( 'body_class', function( $classes ) {
 function da_event() {
 ?>
 <div class="inner-wrap">
+
 	<div class="sub-navigation">
 		<?php
 		wp_nav_menu( array(
 			'menu' => 'visit-sub',
-			'container' => '',
 		) );
 		?>
 	</div>
@@ -32,7 +32,6 @@ function da_event() {
 		<a href="<?php echo esc_url( site_url() ); ?>/visit/event-calendar/"><span class="cssicon-arrow-l"></span> View Full Calendar</a>
 	</div>
 	<div class="cf"></div>
-
 </div>
 
 <div class="hero-wrap">
@@ -74,7 +73,10 @@ function da_event() {
 	<div class="cf"></div>
 </div>
 
+
 <hr />
+
+
 <div class="inner-wrap">
 	<div class="col-1-2 first e-info">
 		<?php the_field( 'more_left' ); ?>

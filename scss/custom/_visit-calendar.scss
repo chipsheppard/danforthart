@@ -61,6 +61,12 @@ body.calendar {
 		}
 	}
 
+	.e-heading {
+		@include breakpoint(tablet-v) {
+			padding: 0 $size__site-padding 1.5em;
+		}
+	}
+
 	.e-upper {
 		display: flex;
 		flex-wrap: wrap;

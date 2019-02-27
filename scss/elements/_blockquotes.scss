@@ -32,6 +32,9 @@ blockquote {
 		top: -.125em;
 		left: .625em;
 
+		@include breakpoint(phone-h) {
+			left: 4px;
+		}
 	}
 
 	cite {

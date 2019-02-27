@@ -41,7 +41,7 @@ body.learncreate {
 	@include font-size(1.875);
 
 	@include breakpoint(tablet-v) {
-		padding: 1em;
+		padding-bottom: 0;
 		@include font-size(1.25);
 	}
 }
@@ -54,6 +54,9 @@ body.learncreate {
 
 	@include breakpoint(tablet-v) {
 		padding: 0 1em;
+	}
+	@include breakpoint(phone-h) {
+		display: none;
 	}
 }
 
@@ -118,11 +121,19 @@ body.learncreate {
 		border-bottom: 2px solid #000;
 		margin-top: auto;
 		padding-bottom: .375em;
+
+		@include breakpoint(tablet-v) {
+			margin: 1em 0 1.5em;
+		}
 	}
 
 	.display-name {
 		font-weight: $font__weight-bold;
 		margin-top: auto;
+
+		@include breakpoint(tablet-v) {
+			margin-bottom: 1em;
+		}
 
 		span {
 			display: inline-block;
@@ -140,6 +151,9 @@ body.learncreate {
 		margin-top: auto;
 		font-weight: $font__weight-bold;
 		padding-bottom: .375em;
+		@include breakpoint(tablet-v) {
+			float: right;
+		}
 	}
 	.level-o,
 	.price-o {
@@ -213,6 +227,11 @@ body.learncreate {
 		float: right;
 		padding: 5px 3px;
 		margin: 1em 0;
+
+		@include breakpoint(tablet-v) {
+			display: inline-block;
+			float: none;
+		}
 	}
 
 	.box-top {
@@ -284,15 +303,27 @@ body.learncreate {
 
 	.vaca-blocks {
 		display: flex;
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
 
 		.vaca-block:nth-of-type(1) {
 			border-right: 1px solid rgba(0, 0, 0, .25);
 			padding-left: 1em;
 			padding-right: 6em;
+
+			@include breakpoint(tablet-v) {
+				border: 0;
+				padding: 0;
+			}
 		}
 		.vaca-block:nth-of-type(2) {
 			padding-left: 6em;
 			padding-right: 1em;
+
+			@include breakpoint(tablet-v) {
+				padding: 0;
+			}
 		}
 	}
 
@@ -364,6 +395,13 @@ body.learncreate {
 
 body.learn-c {
 
+	@include breakpoint(phone-h) {
+		.content-wrap .inner-wrap {
+			padding: 0;
+		}
+
+	}
+
 	.course-row {
 		display: none;
 
@@ -430,12 +468,17 @@ body.learn-c {
 			border-right: 1px solid $color__base;
 			border-left: 1px solid $color__base;
 
+			@include breakpoint(phone-h) {
+				border-left: 0;
+			}
+
 			h2 {
 				font-weight: $font__weight-bold;
 				span {
 					border: none;
 				}
 			}
+
 		}
 	}
 	.tab-body {
@@ -447,6 +490,9 @@ body.learn-c {
 
 		@include breakpoint(tablet-v) {
 			padding: 1em;
+		}
+		@include breakpoint(phone-h) {
+			border: none;
 		}
 	}
 

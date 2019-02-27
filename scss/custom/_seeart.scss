@@ -19,6 +19,9 @@ body.seeart {
 		@include breakpoint(phone-h) {
  			@include font-size(1.375);
 		}
+		@include breakpoint(phone-v) {
+ 			text-align: right;
+		}
 	}
 
 	.el-text,
@@ -338,6 +341,12 @@ body.seeart {
 			margin-top: -1em;
 			padding-left: $size__site-padding;
 			padding-right: $size__site-padding;
+		}
+	}
+
+	@include breakpoint(phone-h) {
+		.el-text {
+			text-align: right;
 		}
 	}
 }

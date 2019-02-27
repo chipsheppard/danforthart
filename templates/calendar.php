@@ -77,7 +77,7 @@ function da_calendar() {
 </div>
 
 <div class="content-wrap">
-	<div class="inner-wrap">
+	<div class="inner-wrap mnp">
 
 		<?php
 		// EVENTS - - - - - - - - - - - - - - - - - - - -.
@@ -192,7 +192,9 @@ function da_calendar() {
 		endif;
 		?>
 		</div><!-- /x-events -->
+	</div><!-- /inner-wrap -->
 
+	<div class="inner-wrap">
 		<div class="viewmore-events">
 			<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
 		</div>

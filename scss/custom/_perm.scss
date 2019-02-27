@@ -79,7 +79,7 @@ body.permanent {
 
 		@include breakpoint(tablet-v) {
 			.fa-right {
-				padding: 0 $size__site-padding;
+				padding: 1.5em $size__site-padding;
 			}
 		}
 	}

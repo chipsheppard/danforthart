@@ -65,7 +65,7 @@ function da_faq() {
 							the_row();
 							$c++;
 							?>
-							<div class="current tp<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'ab_title' ); ?></div>
+							<div class="permcat tp<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'ab_title' ); ?></div>
 						<?php endwhile; ?>
 					</div>
 					<div class="opm-menu">

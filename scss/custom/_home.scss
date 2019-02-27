@@ -29,6 +29,7 @@ body.home {
 		@include breakpoint(tablet-v) {
 			@include font-size(6);
 			margin-bottom: 1em;
+			margin-left: $size__site-padding;
 		}
 		@include breakpoint(phone-h) {
 			@include font-size(4);
@@ -49,7 +50,12 @@ body.home {
 
 		.imageblock  {
 			img {
-				transition: all 0.5s ease-in-out;
+				@include breakpoint(tablet-h) {
+					height: 700px;
+				}
+				@include breakpoint(phone-h) {
+					height: 600px;
+				}
 			}
 		}
 	}
@@ -72,6 +78,10 @@ body.home {
 	.home-info {
 		padding: 5em 0 2em;
 		@include font-size(1.125);
+
+		@include breakpoint(tablet-v) {
+			padding: 0 $size__site-padding;
+		}
 
 		.section-title {
 			line-height: 1;
@@ -115,6 +125,7 @@ body.home {
 		background-color: #ffffff;
 		padding: 2em 0;
 		text-align: right;
+
 		@include breakpoint(tablet-v) {
 			text-align: center;
 		}
@@ -123,12 +134,21 @@ body.home {
 			display: inline-block;
 			width: 75%;
 			margin-right: -4em;
+
 			@include breakpoint(tablet-v) {
 				margin-right: 0;
+			}
+			@include breakpoint(phone-h) {
+				margin-left: -3%;
+				width: 106%;
 			}
 		}
 		.col-1-3 {
 			padding: 1em 2em;
+
+			@include breakpoint(phone-h) {
+				padding: .5em 0;
+			}
 		}
 
 		.cssicon-facebook:after,

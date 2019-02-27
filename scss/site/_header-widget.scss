@@ -9,10 +9,15 @@
 	padding: .5em 2em .25em 4em;
 	@include font-size(1.25);
 
+	@include breakpoint(phone-h) {
+		padding: .5em .25em .75em 2.25em;
+		line-height: 1;
+		@include font-size(1);
+	}
+
 	&:hover {
 		background-color: $color__yellow;
 	}
-
 	&.aquamarine {
 		border-color: $color__green;
 		&:hover {
@@ -49,7 +54,12 @@
 	}
 
 	.circle-num {
+		font-weight: $font__weight-bold;
 		margin-right: 1em;
+
+		@include breakpoint(phone-h) {
+			margin-right: .125em;
+		}
 	}
 
 	.close {

@@ -125,6 +125,8 @@ jQuery(function( $ ){
 	} );
 	$('.course-overview-box').find('.box-close').click(function() {
 		$(this).closest('.course-overview-box').removeClass('active');
+		$('.box-top .cssicon-plusminus').removeClass( 'minus' );
+		$('.box-top .cssicon-plusminus').addClass( 'plus' );
 		$(this).parents().children('.box-bottom').slideUp(200);
 	} );
 } );

@@ -128,7 +128,7 @@ endif;
 	</div><!-- /inner-wrap -->
 
 
-	<div class="inner-wrap">
+	<div class="inner-wrap mnp">
 
 		<?php get_template_part( 'template-parts/fullwidth-quote' ); ?>
 		<?php get_template_part( 'template-parts/v-images' ); ?>
