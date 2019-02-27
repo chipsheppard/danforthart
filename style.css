@@ -2898,6 +2898,8 @@ body.modules .content-wrap { padding-top: 4.5em; }
 
 @media all and (max-width: 768px) { body.modules .content-wrap { padding-top: 2em; } }
 
+body.modules .mod-intro { margin-bottom: 3em; font-weight: 300; font-size: 26px; font-size: 1.625rem; }
+
 body.modules .mod-text { padding-bottom: 4em; }
 
 body.modules .mod-accordion { margin-bottom: 6em; }

@@ -33,6 +33,11 @@ body.modules {
 		}
 	}
 
+	.mod-intro {
+		margin-bottom: 3em;
+		font-weight: $font__weight-light;
+		@include font-size(1.625);
+	}
 	.mod-text {
 		padding-bottom: 4em;
 	}

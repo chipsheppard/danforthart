@@ -11,6 +11,10 @@ while ( have_rows( 'content_modules' ) ) :
 
 	switch ( get_row_layout() ) {
 
+		case 'introblock':
+			require 'mod-intro.php';
+			break;
+
 		case 'textblock':
 			require 'mod-text.php';
 			break;

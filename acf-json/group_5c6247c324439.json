@@ -121,6 +121,35 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5c76f8bfa6da1": {
+                    "key": "layout_5c76f8bfa6da1",
+                    "name": "introblock",
+                    "label": "Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c76f8dda6da2",
+                            "label": "Intro",
+                            "name": "mod_intro",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5c64c909da527": {
                     "key": "5c64c909da527",
                     "name": "textblock",
@@ -562,5 +591,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550188751
+    "modified": 1551301016
 }
