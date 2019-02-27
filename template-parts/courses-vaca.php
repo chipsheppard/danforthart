@@ -69,7 +69,13 @@
 
 			?>
 			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?><?php printf( ' %s', esc_html( $season_list ) ); ?>">
-				<div class="row-top">
+				<?php
+				if ( get_field( 'course_alert' ) ) :
+					$ca = ' ca';
+					?>
+					<div class="alert"><?php the_field( 'course_alert' ); ?></div>
+				<?php endif; ?>
+				<div class="row-top<?php echo esc_html( $ca ); ?>">
 					<div class="col-1-6 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
 							<div class="circle-num"><?php the_field( 'session_number' ); ?></div>
@@ -96,6 +102,8 @@
 							$link_target = $link['target'] ? $link['target'] : '_self';
 							?>
 							<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<?php else : ?>
+							<a class="btn disabled" href="#0">Register</a>
 						<?php endif; ?>
 					</div>
 					<div class="cf"></div>

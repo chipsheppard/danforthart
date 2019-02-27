@@ -18,6 +18,7 @@ the_field( 'quote_color' );
 endif;
 ?>
 ">
+<div class="inner-wrap mnp"><div class="flexme">
 	<div class="col-1-2 nm imgblk">
 		<?php
 		// IMAGE.
@@ -51,5 +52,7 @@ if ( $link ) :
 		</blockquote>
 	</div>
 	<div class="cf"></div>
+</div>
+</div>
 </div>
 <?php endif; ?>

@@ -105,7 +105,7 @@ function da_learn_c() {
 
 				<?php if ( get_sub_field( 'vw_head' ) ) : ?>
 				<a name="vacation-week"></a>
-				<div class="vacation-week">
+				<div class="vaca-week">
 					<div class="vw-header-block">
 						<h3 class="vw-head"><?php the_sub_field( 'vw_head' ); ?></h3>
 						<div class="col-1-2 first vw-left"><?php the_sub_field( 'vw_left_col' ); ?></div>
@@ -123,11 +123,12 @@ function da_learn_c() {
 		</div><!-- /tabs-wrap -->
 
 		<?php get_template_part( 'template-parts/accordion-block' ); ?>
-		<?php get_template_part( 'template-parts/quote' ); ?>
-		<?php get_template_part( 'template-parts/signup' ); ?>
-
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
+
+<?php get_template_part( 'template-parts/quote' ); ?>
+<?php get_template_part( 'template-parts/signup' ); ?>
+
 
 <?php
 }

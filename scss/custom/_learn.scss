@@ -62,7 +62,7 @@ body.learncreate {
 
 .course-row {
 	border-bottom: 1px solid $color__base;
-	padding: 0 1.5em;
+	padding: 0 2%;
 	width: 100%;
 	transition: all 200ms ease-in-out;
 
@@ -74,10 +74,22 @@ body.learncreate {
 		display: flex;
 	 	flex-wrap: wrap;
 		padding-top: 1.5em;
+
+		&.ca {
+			padding-top: .5em;
+		}
 	}
 	.row-bottom {
 		display: none;
 		padding-top: 3em;
+	}
+	.alert {
+		background-color: #000000;
+		color: #ffffff;
+		padding: .125em 1.5em;
+		margin-left: -2.1%;
+		width: 104.2%;
+		@include font-size(.875);
 	}
 	.course-images {
 		margin: 3em 0 4em;
@@ -124,6 +136,10 @@ body.learncreate {
 
 		@include breakpoint(tablet-v) {
 			margin: 1em 0 1.5em;
+		}
+
+		a {
+			@include nb();
 		}
 	}
 
@@ -178,6 +194,7 @@ body.learncreate {
 			top: 175%;
 		}
 	}
+
 	.btn {
 		margin: auto 0 auto auto;
 
@@ -192,8 +209,12 @@ body.learncreate {
 // -----------------------------------------------
 // -----------------------------------------------
 
-.vacation-week {
+.vaca-week {
 	margin: 3em 0 1.5em;
+
+	.vw-header-block {
+		margin-bottom: 5em;
+	}
 
 	.vw-left {
 		font-weight: $font__weight-light;
@@ -478,9 +499,9 @@ body.learn-c {
 					border: none;
 				}
 			}
-
 		}
 	}
+
 	.tab-body {
 		border: 1px solid $color__base;
 		padding: 3em 2.5em;

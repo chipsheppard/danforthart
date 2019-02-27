@@ -106,11 +106,11 @@ function da_visit() {
 			<div class="cf"></div>
 		</div><!-- /contact-info -->
 
-		<?php get_template_part( 'template-parts/quote' ); ?>
-		<?php get_template_part( 'template-parts/signup' ); ?>
-
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
+
+<?php get_template_part( 'template-parts/quote' ); ?>
+<?php get_template_part( 'template-parts/signup' ); ?>
 
 <?php
 }

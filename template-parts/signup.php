@@ -18,6 +18,7 @@ the_field( 'signup_color', 'option' );
 endif;
 ?>
 ">
+<div class="inner-wrap mnp"><div class="flexme">
 	<div class="col-1-2 nm txtblk">
 		<div class="signup-form">
 			<?php the_field( 'signup_form', 'option' ); ?>
@@ -39,4 +40,6 @@ endif;
 		<?php endif; ?>
 	</div>
 	<div class="cf"></div>
+</div>
+</div>
 </div>

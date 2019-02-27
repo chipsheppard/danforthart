@@ -54,6 +54,19 @@ button,
 		width: 100%;
 		text-align: center;
 	}
+
+	&.disabled {
+		color: $color__base-light;
+		border-color: $color__base-light;
+		cursor: not-allowed;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: transparent;
+			color: $color__base-light;
+		}
+	}
 }
 
 .btn:not(button) {

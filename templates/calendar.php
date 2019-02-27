@@ -198,12 +198,12 @@ function da_calendar() {
 		<div class="viewmore-events">
 			<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
 		</div>
-
-		<?php get_template_part( 'template-parts/quote' ); ?>
-		<?php get_template_part( 'template-parts/signup' ); ?>
-
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
+
+<?php get_template_part( 'template-parts/quote' ); ?>
+<?php get_template_part( 'template-parts/signup' ); ?>
+
 
 <?php
 }

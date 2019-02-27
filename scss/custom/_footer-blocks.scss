@@ -1,10 +1,13 @@
 .footer-quote,
 .signup-block {
-	clear: both;
-	display: flex;
 
-	@include breakpoint(tablet-v) {
-		display: block;
+	.flexme {
+		clear: both;
+		display: flex;
+
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
 	}
 
 	img {

@@ -76,17 +76,12 @@ if ( is_singular() ) : // single posts, attachments, pages NOT using content-acf
 				<?php get_template_part( 'template-parts/content', 'modules' ); ?>
 			</div>
 
-			<?php get_template_part( 'template-parts/quote' ); ?>
-			<?php get_template_part( 'template-parts/signup' ); ?>
-
 		</div><!-- /inner-wrap -->
 	</div><!-- /content-wrap -->
 
+	<?php get_template_part( 'template-parts/quote' ); ?>
+	<?php get_template_part( 'template-parts/signup' ); ?>
 	<?php
-	wp_link_pages( array(
-		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'danforthart' ),
-		'after'  => '</div>',
-	) );
 
 else : // archives & search.
 

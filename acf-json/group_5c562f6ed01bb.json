@@ -234,6 +234,25 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5c76d11a6f1fa",
+            "label": "Course Alert",
+            "name": "course_alert",
+            "type": "text",
+            "instructions": "Place your course-specific message here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -253,5 +272,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549479310
+    "modified": 1551290768
 }

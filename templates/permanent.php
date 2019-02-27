@@ -242,11 +242,11 @@ if ( have_rows( 'collection_blocks' ) ) :
 		?>
 		</div><!-- /perma-wrap -->
 
-		<?php get_template_part( 'template-parts/quote' ); ?>
-		<?php get_template_part( 'template-parts/signup' ); ?>
-
 	</div>
 </div>
+
+<?php get_template_part( 'template-parts/quote' ); ?>
+<?php get_template_part( 'template-parts/signup' ); ?>
 
 <?php
 }
