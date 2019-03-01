@@ -80,7 +80,12 @@ function da_home() {
 
 	<div class="mid-block">
 		<div class="inner-wrap">
-			<div class="col-1-2 nm mid-left">
+
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+			<div class="col-1-2 nm top mid-left">
 <?php
 $q_link = get_field( 'q_link' );
 if ( $q_link ) :
@@ -115,12 +120,9 @@ endif;
 <?php if ( $link ) : ?>
 </a>
 <?php endif; ?>
-				<div class="textblock">
-					<div class="message"><?php the_field( 'learn_text' ); ?></div>
-				</div>
 			</div>
 
-			<div class="col-1-2 nm mid-right">
+			<div class="col-1-2 nm top mid-right">
 				<div class="textblock">
 					<?php if ( get_field( 'quote' ) ) : ?>
 					<blockquote>
@@ -140,6 +142,11 @@ if ( $qc_link ) :
 					</blockquote>
 				<?php endif; ?>
 				</div>
+			</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<div class="col-1-2 nm pullright bot mid-left">
 <?php
 $l_link = get_field( 'l_link' );
 if ( $l_link ) :
@@ -175,11 +182,18 @@ endif;
 <?php if ( $l_link ) : ?>
 </a>
 <?php endif; ?>
+			</div>
 
+			<div class="col-1-2 nm bot mid-right">
+				<div class="textblock">
+					<div class="message"><?php the_field( 'learn_text' ); ?></div>
+				</div>
 			</div>
 			<div class="cf"></div>
+
 		</div>
-	</div><!-- /mid-block -->
+	</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 
 	<div class="visit-block">

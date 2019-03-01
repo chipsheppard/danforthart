@@ -40,7 +40,11 @@ function da_learn() {
 	<div class="inner-wrap">
 
 		<div class="mid-block">
-			<div class="col-1-2 nm mid-left">
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<div class="col-1-2 nm top mid-left">
 <?php
 $q_link = get_field( 'q_link' );
 if ( $q_link ) :
@@ -75,11 +79,11 @@ endif;
 <?php if ( $q_link ) : ?>
 </a>
 <?php endif; ?>
-				<div class="textblock">
-					<div class="message"><?php the_field( 'course_text' ); ?></div>
-				</div>
 			</div>
-			<div class="col-1-2 nm mid-right">
+
+<!-- - - - - - - - - -->
+
+			<div class="col-1-2 nm top mid-right">
 				<div class="textblock">
 					<?php if ( get_field( 'quote' ) ) : ?>
 					<blockquote>
@@ -99,6 +103,12 @@ if ( $qc_link ) :
 					</blockquote>
 				<?php endif; ?>
 				</div>
+			</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<div class="col-1-2 nm pullright bot mid-left">
 <?php
 $c_link = get_field( 'c_link' );
 if ( $c_link ) :
@@ -134,8 +144,19 @@ endif;
 </a>
 <?php endif; ?>
 			</div>
+
+<!-- - - - - - - - - -->
+
+			<div class="col-1-2 nm bot mid-right">
+				<div class="textblock">
+					<div class="message"><?php the_field( 'course_text' ); ?></div>
+				</div>
+			</div>
+
 			<div class="cf"></div>
 		</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	</div><!-- /mid-block -->
 
 	<div class="inner-wrap">

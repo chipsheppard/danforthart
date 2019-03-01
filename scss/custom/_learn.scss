@@ -1,8 +1,9 @@
 body.learncreate {
 
 	.page-title {
+		height: 390px;
 		line-height: 1;
-		margin: 1em 0 5.25em;
+		margin: 1em 0 4em;
 		width: 69%;
 		@include font-size(8);
 
@@ -10,21 +11,14 @@ body.learncreate {
 			width: 100%;
 		}
 		@include breakpoint(tablet-v) {
+			margin-bottom: 1000px;
+			margin-left: $size__site-padding;
 			@include font-size(6);
-			margin-bottom: 1em;
 		}
 		@include breakpoint(phone-h) {
+			height: 220px;
+			margin-bottom: 800px;
 			@include font-size(4);
-		}
-	}
-
-	.mid-block {
-		.col-1-2 {
-			margin-top: -31.375em;
-
-			@include breakpoint(tablet-v) {
-				margin-top: 0;
-			}
 		}
 	}
 }
@@ -420,7 +414,6 @@ body.learn-c {
 		.content-wrap .inner-wrap {
 			padding: 0;
 		}
-
 	}
 
 	.course-row {
@@ -560,7 +553,15 @@ body.learn-c {
 		float: left;
 		margin: 0 1em 1em 0;
 	}
+}
 
+#no-results-season-one,
+#no-results-season-two {
+	color: $color__base-medium;
+	font-weight: $font__weight-light;
+	font-style: italic;;
+	padding: .5em;
+	@include font-size(1.875);
 }
 
 body.k-8 {

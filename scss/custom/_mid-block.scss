@@ -2,10 +2,23 @@
 
 	.col-1-2 {
 		position: relative;
-		margin-top: -31.25em;
+	}
 
-		@include breakpoint(tablet-v) {
+	.top.mid-left,
+	.top.mid-right {
+		margin-top: -500px;
+	}
+	@include breakpoint(tablet-v) {
+		.top.mid-left {
+			margin-top: -950px;
+		}
+		.top.mid-right {
 			margin-top: 0;
+		}
+	}
+	@include breakpoint(phone-h) {
+		.top.mid-left {
+			margin-top: -750px;
 		}
 	}
 
@@ -111,13 +124,13 @@
 	}
 }
 
-.mid-left {
+.top {
 	.card-title {
 		background-color: $color__green;
 		top: 0;
 	}
 }
-.mid-right {
+.bot {
 	.card-title {
 		background-color: #fff;
 		bottom: 0;
@@ -125,10 +138,10 @@
 }
 
 @include breakpoint(tablet-v) {
-	.mid-left .imageblock {
+	.top .imageblock {
 		margin-left: -3%;
 	}
-	.mid-right .imageblock {
+	.bot .imageblock {
 		margin-right: -3%;
 	}
 }

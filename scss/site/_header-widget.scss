@@ -6,7 +6,7 @@
 .header-widget {
 	background-color: #ffffff;
 	border: 3px solid $color__yellow;
-	padding: .5em 2em .25em 4em;
+	padding: .375em 2em .5em 4em;
 	@include font-size(1.25);
 
 	@include breakpoint(phone-h) {

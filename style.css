@@ -1395,7 +1395,7 @@ a.ss-button-facebook, a.ss-button-twitter, a.ss-button-linkedin, a.ss-button-pin
 
 .header-widget-wrap { background-color: #ffffff; display: none; }
 
-.header-widget { background-color: #ffffff; border: 3px solid #f6d06d; padding: .5em 2em .25em 4em; font-size: 20px; font-size: 1.25rem; }
+.header-widget { background-color: #ffffff; border: 3px solid #f6d06d; padding: .375em 2em .5em 4em; font-size: 20px; font-size: 1.25rem; }
 
 @media all and (max-width: 640px) { .header-widget { padding: .5em .25em .75em 2.25em; line-height: 1; font-size: 16px; font-size: 1rem; } }
 
@@ -1532,9 +1532,14 @@ body.color5 { background-color: #afc2e3; }
 
 .slickeroo.slick-initialized { visibility: visible; }
 
-.mid-block .col-1-2 { position: relative; margin-top: -31.25em; }
+.mid-block .col-1-2 { position: relative; }
 
-@media all and (max-width: 768px) { .mid-block .col-1-2 { margin-top: 0; } }
+.mid-block .top.mid-left, .mid-block .top.mid-right { margin-top: -500px; }
+
+@media all and (max-width: 768px) { .mid-block .top.mid-left { margin-top: -950px; }
+  .mid-block .top.mid-right { margin-top: 0; } }
+
+@media all and (max-width: 640px) { .mid-block .top.mid-left { margin-top: -750px; } }
 
 .mid-block .imageblock { position: relative; overflow: hidden; }
 
@@ -1578,12 +1583,12 @@ body.color5 { background-color: #afc2e3; }
 
 .mid-block .textblock blockquote a { font-size: 16px; font-size: 1rem; }
 
-.mid-left .card-title { background-color: #93ddce; top: 0; }
+.top .card-title { background-color: #93ddce; top: 0; }
 
-.mid-right .card-title { background-color: #fff; bottom: 0; }
+.bot .card-title { background-color: #fff; bottom: 0; }
 
-@media all and (max-width: 768px) { .mid-left .imageblock { margin-left: -3%; }
-  .mid-right .imageblock { margin-right: -3%; } }
+@media all and (max-width: 768px) { .top .imageblock { margin-left: -3%; }
+  .bot .imageblock { margin-right: -3%; } }
 
 /* 24px PROGRESS BAR */
 @-webkit-keyframes bg { 0% { background-size: 0 24px, 24px 0, 0 24px, 24px 0; }
@@ -1950,33 +1955,33 @@ body.home .hero-callout { background-color: #f6d06d; }
 
 body.home .site-content .content-area { padding-top: 0; }
 
-body.home .page-title { line-height: 1; margin: 0 0 5em; width: 55%; font-size: 128px; font-size: 8rem; }
+body.home .page-title { height: 390px; line-height: 1; margin: 0 0 4em; width: 55%; font-size: 128px; font-size: 8rem; }
 
 @media all and (max-width: 1024px) { body.home .page-title { width: 100%; } }
 
-@media all and (max-width: 768px) { body.home .page-title { font-size: 96px; font-size: 6rem; margin-bottom: 1em; margin-left: 3%; } }
+@media all and (max-width: 768px) { body.home .page-title { margin-bottom: 1000px; margin-left: 3%; font-size: 96px; font-size: 6rem; } }
 
-@media all and (max-width: 640px) { body.home .page-title { font-size: 64px; font-size: 4rem; } }
+@media all and (max-width: 640px) { body.home .page-title { height: 220px; font-size: 64px; font-size: 4rem; } }
 
 body.home .mid-block { background-color: #93ddce; }
 
-body.home .mid-block .col-1-2 { margin-top: -31.25em; }
+@media all and (max-width: 768px) { body.home .mid-block .top.mid-left { margin-top: -1050px; } }
 
-@media all and (max-width: 768px) { body.home .mid-block .col-1-2 { margin-top: 0; } }
+@media all and (max-width: 640px) { body.home .mid-block .top.mid-left { margin-top: -950px; } }
 
 @media all and (max-width: 1024px) { body.home .mid-block .imageblock img { height: 700px; } }
 
 @media all and (max-width: 640px) { body.home .mid-block .imageblock img { height: 600px; } }
 
-body.home .mid-left .card-title { background-color: #f6d06d; }
+body.home .top .card-title { background-color: #f6d06d; }
 
-body.home .mid-right .card-title { background-color: #93ddce; }
+body.home .bot .card-title { background-color: #93ddce; }
 
 body.home .visit-block { background-color: #f6d06d; }
 
 body.home .home-info { padding: 5em 0 2em; font-size: 18px; font-size: 1.125rem; }
 
-@media all and (max-width: 768px) { body.home .home-info { padding: 0 3%; } }
+@media all and (max-width: 768px) { body.home .home-info { padding-left: 3%; padding-right: 3%; } }
 
 body.home .home-info .section-title { line-height: 1; margin-bottom: .75em; font-size: 80px; font-size: 5rem; }
 
@@ -2046,7 +2051,7 @@ body.home .text-links { font-weight: 300; padding: 1em 1em 0; font-size: 40px; f
   85% { background: #fcb080; }
   100% { background: #f6d06d; } }
 
-body.home, body.home .hero-callout, body.home .mid-left .card-title { -webkit-animation: colorchange 32s; animation: colorchange 32s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+body.home, body.home .hero-callout, body.home .top .card-title { -webkit-animation: colorchange 32s; animation: colorchange 32s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
 
 .sl { position: relative; }
 
@@ -2396,17 +2401,13 @@ body.permanent .artwork-img a { display: inline-block; width: 100%; border-botto
 
 body.permanent .artwork-img a:hover { border-bottom: none; padding-bottom: 0; }
 
-body.learncreate .page-title { line-height: 1; margin: 1em 0 5.25em; width: 69%; font-size: 128px; font-size: 8rem; }
+body.learncreate .page-title { height: 390px; line-height: 1; margin: 1em 0 4em; width: 69%; font-size: 128px; font-size: 8rem; }
 
 @media all and (max-width: 1024px) { body.learncreate .page-title { width: 100%; } }
 
-@media all and (max-width: 768px) { body.learncreate .page-title { font-size: 96px; font-size: 6rem; margin-bottom: 1em; } }
+@media all and (max-width: 768px) { body.learncreate .page-title { margin-bottom: 1000px; margin-left: 3%; font-size: 96px; font-size: 6rem; } }
 
-@media all and (max-width: 640px) { body.learncreate .page-title { font-size: 64px; font-size: 4rem; } }
-
-body.learncreate .mid-block .col-1-2 { margin-top: -31.375em; }
-
-@media all and (max-width: 768px) { body.learncreate .mid-block .col-1-2 { margin-top: 0; } }
+@media all and (max-width: 640px) { body.learncreate .page-title { height: 220px; margin-bottom: 800px; font-size: 64px; font-size: 4rem; } }
 
 .courses-intro { padding: 3em 1em; font-size: 30px; font-size: 1.875rem; }
 
@@ -2617,6 +2618,8 @@ body.learn-c .no-courses { border: 1px dashed #ccc; padding: 1em; font-size: 30p
 body.learn-c .tb2 { display: none; }
 
 .filter-buttons button { float: left; margin: 0 1em 1em 0; }
+
+#no-results-season-one, #no-results-season-two { color: #808080; font-weight: 300; font-style: italic; padding: .5em; font-size: 30px; font-size: 1.875rem; }
 
 body.k-8 { background-color: #cdfee9; }
 

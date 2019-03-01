@@ -180,8 +180,9 @@ endif;
 					</div><!-- / images -->
 				</div>
 			</div><!-- / course-row -->
-		<?php
-		} // endwhile.
+		<?php } // endwhile. ?>
+		<div id="no-results<?php printf( '-%s', esc_html( $season_list ) ); ?>"></div>
+	<?php
 	} else {
 		echo '<div class="no-courses">No courses have been published for that criterea.</div>';
 	}

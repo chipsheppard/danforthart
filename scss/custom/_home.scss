@@ -18,8 +18,9 @@ body.home {
 	}
 
 	.page-title {
+		height: 390px;
 		line-height: 1;
-		margin: 0 0 5em;
+		margin: 0 0 4em;
 		width: 55%;
 		@include font-size(8);
 
@@ -27,11 +28,12 @@ body.home {
 			width: 100%;
 		}
 		@include breakpoint(tablet-v) {
-			@include font-size(6);
-			margin-bottom: 1em;
+			margin-bottom: 1000px;
 			margin-left: $size__site-padding;
+			@include font-size(6);
 		}
 		@include breakpoint(phone-h) {
+			height: 220px;
 			@include font-size(4);
 		}
 	}
@@ -40,11 +42,14 @@ body.home {
 	.mid-block {
 		background-color: $color__green;
 
-		.col-1-2 {
-			margin-top: -31.25em;
-
-			@include breakpoint(tablet-v) {
-				margin-top: 0;
+		@include breakpoint(tablet-v) {
+			.top.mid-left {
+				margin-top: -1050px;
+			}
+		}
+		@include breakpoint(phone-h) {
+			.top.mid-left {
+				margin-top: -950px;
 			}
 		}
 
@@ -60,12 +65,12 @@ body.home {
 		}
 	}
 
-	.mid-left { // part of bg anim.
+	.top { // part of bg anim.
 		.card-title {
 			background-color: $color__yellow;
 		}
 	}
-	.mid-right { // NOT part of anim.
+	.bot { // NOT part of anim.
 		.card-title {
 			background-color: $color__green;
 		}
@@ -80,7 +85,8 @@ body.home {
 		@include font-size(1.125);
 
 		@include breakpoint(tablet-v) {
-			padding: 0 $size__site-padding;
+			padding-left: $size__site-padding;
+			padding-right: $size__site-padding;
 		}
 
 		.section-title {
@@ -227,7 +233,7 @@ body.home {
 }
 body.home,
 body.home .hero-callout,
-body.home .mid-left .card-title {
+body.home .top .card-title {
    	animation: colorchange 32s;
 	animation-iteration-count: infinite;
 }
