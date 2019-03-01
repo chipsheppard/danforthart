@@ -523,7 +523,7 @@ body.learn-c {
 	}
 
 	.tab-content {
-		padding: 1em 4em 1em 1em;
+		padding: .75em 4em 1em 1em;
 		@include breakpoint(phone-h) {
 			padding: 0 0 1.5em;
 		}
@@ -537,6 +537,7 @@ body.learn-c {
 	.tab-filter-text {
 		margin-bottom: 3em;
 	}
+
 	.no-courses {
 		border:1px dashed #ccc;
 		padding: 1em;

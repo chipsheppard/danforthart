@@ -10,7 +10,7 @@ function filterSelection(c) {
 		if (x[i].className.indexOf(c) > -1) n++;
 	}
 	if (n) {
-		document.getElementById("no-results-season-one").innerHTML = n;
+		document.getElementById("no-results-season-one").innerHTML = "";
 	} else {
 		document.getElementById("no-results-season-one").innerHTML = "No Results";
 	}
@@ -19,18 +19,23 @@ function filterSelection(c) {
 filterSelection2("all")
 function filterSelection2(c) {
 	var x, i, n=0;
+	var elementExists = document.getElementById("no-results-season-two");
 	x = document.getElementsByClassName("season-two");
-	if (c == "all") c = "";
-	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-	for (i = 0; i < x.length; i++) {
-		w3RemoveClass(x[i], "show");
-		if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-		if (x[i].className.indexOf(c) > -1) n++;
-	}
-	if (n) {
-		//document.getElementById("no-results-season-two").innerHTML = n;
+	if (elementExists) {
+		if (c == "all") c = "";
+		// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+		for (i = 0; i < x.length; i++) {
+			w3RemoveClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) n++;
+		}
+		if (n) {
+			document.getElementById("no-results-season-two").innerHTML = "";
+		} else {
+			document.getElementById("no-results-season-two").innerHTML = "No Results";
+		}
 	} else {
-		document.getElementById("no-results-season-two").innerHTML = "No Results";
+		return;
 	}
 }
 
