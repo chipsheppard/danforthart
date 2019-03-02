@@ -222,11 +222,11 @@ endif;
 		<?php get_template_part( 'template-parts/fullwidth-quote' ); ?>
 
 		<div class="upcoming-top">
-			<div class="col-1-2 first alt-font">
+			<div class="col-2-3 first">
 				<h3><?php the_field( 'upcoming_section_title' ); ?></h3>
 			</div>
-			<div class="col-1-2 view-past">
-				<a href="/past/" class="btn">View Past Exhibitions</a>
+			<div class="col-1-3 view-past">
+				<a href="<?php echo esc_url( site_url() ); ?>/past/" class="btn">View Past Exhibitions</a>
 			</div>
 			<div class="cf"></div>
 		</div>
