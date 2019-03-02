@@ -192,6 +192,44 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5c7afd0d787a4",
+                    "label": "Block Description",
+                    "name": "block_description",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5c7afd22787a5",
+                    "label": "Block Extra",
+                    "name": "block_extra",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
                     "key": "field_5c50901a46e1d",
                     "label": "Featured Artwork",
                     "name": "featured_artwork",
@@ -391,5 +429,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549907413
+    "modified": 1551564095
 }

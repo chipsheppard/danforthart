@@ -146,14 +146,13 @@ if ( have_rows( 'collection_blocks' ) ) :
 					if ( $posts ) :
 						?>
 						<div class="featured-artwork">
-							<?php
-							global $post;
-							foreach ( $posts as $post ) :
-								setup_postdata( $post );
-								?>
-								<div class="artwork">
-									<div class="col-1-2 first fa-left">
-										<?php
+							<div class="artwork">
+								<div class="col-1-2 first fa-left">
+									<?php
+									global $post;
+									foreach ( $posts as $post ) :
+										setup_postdata( $post );
+
 										if ( has_post_thumbnail() ) :
 											if ( get_field( 'highlight_color' ) ) :
 												$color = ' ' . get_field( 'highlight_color' );
@@ -175,24 +174,23 @@ if ( have_rows( 'collection_blocks' ) ) :
 											the_title();
 											?>
 										</div>
-									</div>
-									<div class="col-1-2 fa-right">
-										<?php the_content(); ?>
-										<hr />
-										<?php the_field( 'more_left' ); ?>
-									</div>
+									<?php
+									endforeach;
+									wp_reset_postdata();
+									?>
 								</div>
-							<?php endforeach; ?>
+								<div class="col-1-2 fa-right">
+									<?php the_sub_field( 'block_description' ); ?>
+									<hr />
+									<?php the_sub_field( 'block_extra' ); ?>
+								</div>
+							</div>
 							<div class="cf"></div>
 						</div><!-- /featured-artwork -->
 						<div class="cf"></div>
-						<?php
-						wp_reset_postdata();
-					endif;
-					?>
-
-
 					<?php
+					endif;
+
 					// ACF Relationship fields.
 					$posts = get_sub_field( 'artworks' );
 					if ( $posts ) :
