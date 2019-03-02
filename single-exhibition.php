@@ -145,6 +145,7 @@ function da_exhibition() {
 				<?php
 				wp_reset_postdata();
 			endif;
+			get_template_part( 'template-parts/exhibit-modal' );
 			?>
 
 			<div class="quote">
@@ -180,10 +181,7 @@ if ( $link ) :
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 		</div>
 	</div>
-
-	<?php
-	get_template_part( 'template-parts/exhibit-modal' );
-
+<?php
 }
 add_action( 'tha_entry_content_before', 'da_exhibition' );
 

@@ -148,13 +148,13 @@ if ( function_exists( 'acf_add_options_page' ) ) {
  * @param string $field The number of post revisions to keep.
  * @param object $post_id The post object.
  */
-function my_taxonomy_query( $args, $field, $post_id ) {
+function dfa_taxonomy_query( $args, $field, $post_id ) {
 	// modify args.
 	$args['parent'] = 0;
 	// return.
 	return $args;
 }
-add_filter( 'acf/fields/taxonomy/query/name=c_level', 'my_taxonomy_query', 10, 3 );
+add_filter( 'acf/fields/taxonomy/query/name=c_level', 'dfa_taxonomy_query', 10, 3 );
 
 
 /**

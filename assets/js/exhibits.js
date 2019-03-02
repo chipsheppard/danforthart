@@ -36,9 +36,6 @@ jQuery(document).ready(function($) {
 				e.preventDefault(); // prevent link from being followed
 				$(window).trigger('resize'); // prevents first-screen-fuckup - https://github.com/kenwheeler/slick/issues/235
 				$('.exhibit-modal').addClass('show', 1000, "easeOutSine"); // show class to display the previously hidden modal
-				$("html, body").animate({ // if you're below the fold this will animate and scroll to the modal
-				scrollTop: 0
-				}, "slow");
 				return false;
 			});
 		}
