@@ -87,7 +87,10 @@ body.past.seeart{
 		cursor: pointer;
 
 		&:hover {
-			opacity: .7;
+			&:before,
+			&:after {
+				height: 2px;
+			}
 		}
 	}
 }

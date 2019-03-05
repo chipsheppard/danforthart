@@ -231,10 +231,12 @@ endif;
 							</div>
 							<div class="col-1-2 pe-heading">
 								<div class="vc-wrap">
+								<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>">
 									<?php if ( get_field( 'sub_heading', $post_object->ID ) ) : ?>
 									<h4><?php the_field( 'sub_heading', $post_object->ID ); ?></h4>
 									<?php endif; ?>
 									<h3><?php echo get_the_title( $post_object->ID ); ?></h3>
+								</a>
 								</div>
 							</div>
 							<div class="col-1-8 pe-date"><?php the_field( 'date', $post_object->ID ); ?></div>

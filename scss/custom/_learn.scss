@@ -482,8 +482,14 @@ body.learn-c {
 			border-right: 1px solid $color__base;
 			border-left: 1px solid $color__base;
 
+
 			@include breakpoint(phone-h) {
-				border-left: 0;
+				&.tt1 {
+					border-left: none;
+				}
+				&.tt2 {
+					border-right: none;
+				}
 			}
 
 			h2 {
@@ -506,7 +512,7 @@ body.learn-c {
 			padding: 1em;
 		}
 		@include breakpoint(phone-h) {
-			border: none;
+			border-width: 1px 0 1px 0;
 		}
 	}
 
