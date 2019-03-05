@@ -148,6 +148,7 @@ function da_exhibition() {
 			get_template_part( 'template-parts/exhibit-modal' );
 			?>
 
+<?php if ( get_field( 'quote' ) ) : ?>
 			<div class="quote">
 				<blockquote>
 					<?php the_field( 'quote' ); ?>
@@ -165,6 +166,8 @@ if ( $link ) :
 					</cite>
 				</blockquote>
 			</div>
+<?php endif; ?>
+
 		</div>
 
 		<hr />

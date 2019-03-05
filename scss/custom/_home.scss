@@ -63,6 +63,22 @@ body.home {
 				}
 			}
 		}
+
+		.mid-right .message {
+			font-weight: $font__weight-bold;
+			line-height: 1.25;
+			@include font-size(2.8125);
+
+			@include breakpoint(phone-h) {
+				@include font-size(2);
+			}
+
+			a {
+				margin-top: 3em;
+				display: inline-block;
+				@include font-size(1);
+			}
+		}
 	}
 
 	.top { // part of bg anim.
@@ -92,7 +108,11 @@ body.home {
 		.section-title {
 			line-height: 1;
 			margin-bottom: .75em;
-			@include font-size(5);
+			@include font-size(6.25);
+
+			@include breakpoint(phone-h) {
+				@include font-size(5);
+			}
 		}
 
 		h5 {

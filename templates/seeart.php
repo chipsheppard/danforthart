@@ -121,7 +121,7 @@ endif;
 					</a>
 					<div class="el-callout">
 						<div class="sub-title"><?php the_field( 'sub_heading', $el_post_object->ID ); ?></div>
-						<div class="title"><?php echo get_the_title( $el_post_object->ID ); ?></div>
+						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $el_post_object->ID ) ); ?>"><?php echo get_the_title( $el_post_object->ID ); ?></a></div>
 					</div>
 				</div>
 			</div><!-- /exhibit-left -->
@@ -167,7 +167,7 @@ endif;
 					</a>
 					<div class="ert-callout">
 						<div class="sub-title"><?php the_field( 'sub_heading', $ert_post_object->ID ); ?></div>
-						<div class="title"><?php echo get_the_title( $ert_post_object->ID ); ?></div>
+						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $ert_post_object->ID ) ); ?>"><?php echo get_the_title( $ert_post_object->ID ); ?></a></div>
 					</div>
 				</div>
 			</div><!-- /exhibit-right-top -->
@@ -211,7 +211,7 @@ endif;
 					</a>
 					<div class="erb-callout">
 						<div class="sub-title"><?php the_field( 'sub_heading', $erb_post_object->ID ); ?></div>
-						<div class="title"><?php echo get_the_title( $erb_post_object->ID ); ?></div>
+						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $erb_post_object->ID ) ); ?>"><?php echo get_the_title( $erb_post_object->ID ); ?></a></div>
 					</div>
 				</div>
 			</div><!-- /exhibit-right-bottom -->

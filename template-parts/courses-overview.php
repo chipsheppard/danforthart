@@ -49,7 +49,7 @@
 				<div class="row-top">
 					<div class="col-1-5 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
-							<div class="session-num"><?php the_field( 'session_number' ); ?></div>
+							<div class="circle-num"><?php the_field( 'session_number' ); ?></div>
 						<?php endif; ?>
 						<div class="date"><?php the_field( 'date' ); ?></div>
 					</div>

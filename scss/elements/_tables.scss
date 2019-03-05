@@ -8,15 +8,14 @@ table {
 th, td {
     line-height: 1.5;
     vertical-align: top;
+    padding: .25em .5em;
 }
 th {
     padding: 1em 0;
 	text-align: left;
-	background-color: $color__base-xxlight;
+	background-color: rgba(255, 255, 255, 0.1);
 }
-td {
-    padding: .125em 0;
-}
+
 thead th, tfoot th {
     vertical-align: bottom;
 }
@@ -31,14 +30,14 @@ thead:first-child tr:first-child td {
 }
 
 tbody + tbody {
-    border-top: 2px solid $color__base-xlight;
+    border-top: 2px solid  rgba(0, 0, 0, 0.025);
 }
 
 .striped tr:nth-child(odd) > td {
-  background: #ffffff;
+  background:  rgba(0, 0, 0, 0.025);
 }
 .striped tr:nth-child(even) > td {
-  background: $color__base-xxlight;
+  background:  rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-widget.widget_calendar {
