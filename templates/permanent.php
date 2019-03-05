@@ -41,6 +41,9 @@ function da_permanent() {
 			else :
 				$color = '';
 			endif;
+			?>
+			<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>">
+			<?php
 			// IMAGE.
 			$image = get_field( 'fe_image' );
 			if ( ! empty( $image ) ) :
@@ -58,6 +61,7 @@ function da_permanent() {
 				] );
 			endif;
 			?>
+			</a>
 		</div><!-- /hero-image -->
 		<div class="hero-callout">
 			<div class="link">

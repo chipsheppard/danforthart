@@ -41,6 +41,9 @@ function da_current() {
 			else :
 				$color = '';
 			endif;
+			?>
+			<a href="<?php echo esc_url( get_permalink( $fe_post_object->ID ) ); ?>">
+			<?php
 			// IMAGE.
 			$fe_image = get_field( 'fe_image' );
 			if ( ! empty( $fe_image ) ) :
@@ -58,6 +61,7 @@ function da_current() {
 				] );
 			endif;
 			?>
+			</a>
 		</div>
 		<div class="hero-callout">
 			<div class="link">
