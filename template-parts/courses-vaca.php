@@ -24,6 +24,7 @@
 	// WP_Query arguments.
 	$args = array(
 		'post_type'              => array( 'course' ),
+		'posts_per_page'         => 100,
 		'tax_query'              => array( // WPCS: slow query ok.
 			array(
 				'taxonomy'         => 'level',
