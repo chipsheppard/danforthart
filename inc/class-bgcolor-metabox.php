@@ -43,7 +43,7 @@ class Bgcolor_Metabox {
 	 */
 	public function add_metabox( $post_type ) {
 		// Limit meta box to certain post types.
-		$post_types = array( 'post', 'page' );
+		$post_types = array( 'post', 'page', 'artwork', 'exhibition' );
 		if ( in_array( $post_type, $post_types, true ) ) {
 			add_meta_box(
 				'bgcolor-metabox',
