@@ -33,7 +33,7 @@ function da_artwork() {
 		</div>
 		<div class="cf"></div>
 
-		<div class="print-info"><a href="#" onclick="printDiv('main')">Print information <span class="cssicon-file green"></span></a></div>
+		<div class="print-info"><a href="#" onclick="printDiv('main')">Print information <span class="cssicon-file"></span></a></div>
 		<?php
 		global $post;
 		$terms = get_the_terms( $post->ID, 'collection_type' );

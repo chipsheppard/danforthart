@@ -238,39 +238,12 @@
 
 // FILE
 .cssicon-file {
-	background: transparent;
-	border: 1px solid currentColor;
+	background-image: url(assets/images/folder.png);
+	background-size: 16px 21px;
+	background-position: center;
 	height: 21px;
 	width: 16px;
 	top: -2px;
-
-	&:before {
-		background: #fff;
-		border-width: 1px;
-	    border-style: solid;
-	    border-color: transparent transparent currentColor transparent;
-		height: 9px;
-		left: 9px;
-		position: absolute;
-	    top: -5px;
-		width: 11px;
-		transform: rotate(45deg);
-	}
-	&:after {
-	    background: transparent;
-	    border-width: 1px;
-	    border-style: solid;
-	    border-color: transparent transparent currentColor currentColor;
-		height: 7px;
-	    left: 8px;
-		position: absolute;
-		top: -1px;
-		width: 7px;
-	}
-
-	&.green:before {
-		background: $color__green;
-	}
 }
 
 
