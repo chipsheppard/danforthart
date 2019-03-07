@@ -127,16 +127,3 @@ function danforthart_custom_excerpt_length( $length ) {
 	endif;
 }
 add_filter( 'excerpt_length', 'danforthart_custom_excerpt_length', 999 );
-
-
-/**
- * SEARCH Change Text in Submit Button
- *
- * @param string $text string of text.
- * @link https://wordpress.org/support/topic/how-do-i-change-some-details-of-the-search-widget
- */
-function danforthart_search_button( $text ) {
-	$text = str_replace( 'value="Search"', 'value="go"', $text );
-	return $text;
-}
-add_filter( 'get_search_form', 'danforthart_search_button' );

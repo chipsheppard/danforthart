@@ -92,19 +92,24 @@ add_action( 'tha_header_top', 'danforthart_display_nav' );
  */
 function display_parent() {
 	global $post;
-	// $current = $post->ID;
-	$parent = $post->post_parent;
 
-	if ( $parent ) :
-		printf( '<span class="section-title">%s</span>', get_the_title( $parent ) );
-	elseif ( is_singular( 'artwork' ) ) :
+	if ( is_singular( 'artwork' ) ) :
 		printf( '<span class="section-title">%s</span>', 'SEE ART' );
 	elseif ( is_singular( 'exhibition' ) ) :
 		printf( '<span class="section-title">%s</span>', 'SEE ART' );
 	elseif ( is_singular( 'event' ) ) :
 		printf( '<span class="section-title">%s</span>', 'VISIT' );
+	elseif ( is_404() ) :
+		printf( '<span class="section-title">%s</span>', 'NOT FOUND' );
+	elseif ( is_home() ) :
+		printf( '<span class="section-title">%s</span>', 'Posts' );
 	else :
-		printf( '<span class="section-title">%s</span>', get_the_title() );
+		$parent = $post->post_parent;
+		if ( $parent ) :
+			printf( '<span class="section-title">%s</span>', get_the_title( $parent ) );
+		else :
+			printf( '<span class="section-title">%s</span>', get_the_title() );
+		endif;
 	endif;
 }
 

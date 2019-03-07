@@ -22,13 +22,13 @@ echo '<section class="error-404 not-found">';
 
 	echo '<header class="page-header">';
 		echo '<div class="title-wrap">';
-		echo '<h1 class="page-title">' . esc_html__( 'Page not found.', 'danforthart' ) . '</h1>';
+		echo '<h1 class="page-title">' . esc_html__( '404', 'danforthart' ) . '</h1>';
 		echo '</div>';
 	echo '</header>';
 
 	echo '<div class="page-content">';
 		echo '<div class="error-message">' . esc_html__( 'ERROR - ERROR - ERROR', 'danforthart' ) . '</div>';
-		echo '<p>' . esc_html__( 'Please use the menu in the header or try a search.', 'danforthart' ) . '</p>';
+		echo '<p class="error-text">' . esc_html__( 'Page not found.', 'danforthart' ) . '</p>';
 		get_search_form();
 	echo '</div>';
 

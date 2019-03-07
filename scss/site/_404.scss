@@ -2,6 +2,17 @@
 	text-align: center;
 	padding-bottom: 12em;
 }
+body.error404 {
+	.page-content .search-form {
+		max-width: 800px;
+		width: 70%;
+		margin: 1em auto;
+
+		@include breakpoint(tablet-v) {
+			width: 100%;
+		}
+	}
+}
 
 .error404 .page-title,
 .error404 .error-message {
@@ -14,17 +25,36 @@
 .error404 .page-title {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: tada;
+    animation-name: tada;
+	line-height: 1;
+	@include font-size(18);
+
+	@include breakpoint(tablet-v) {
+		@include font-size(10);
+	}
+	@include breakpoint(phone-h) {
+		@include font-size(6);
+	}
 }
 
 .error404 .error-message {
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
+    -webkit-animation-name: hinge;
+    animation-name: hinge;
 }
 
-.error404 .page-title {
-    -webkit-animation-name: tada;
-    animation-name: tada;
+.error404 .error-text {
+	font-weight: $font__weight-bold;
+	margin-bottom: 1em;
+	@include font-size(3.75);
+
+	@include breakpoint(phone-h) {
+		@include font-size(1.5);
+	}
 }
+
 @-webkit-keyframes tada {
     0% {-webkit-transform: scale(1);}
     10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
@@ -38,11 +68,6 @@
     30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
     40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
     100% {transform: scale(1) rotate(0);}
-}
-
-.error404 .error-message {
-    -webkit-animation-name: hinge;
-    animation-name: hinge;
 }
 @-webkit-keyframes hinge {
     0% { -webkit-transform: rotate(0); -webkit-transform-origin: center center; -webkit-animation-timing-function: ease-in-out; }

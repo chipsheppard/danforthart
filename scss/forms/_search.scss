@@ -3,9 +3,10 @@
 	position: relative;
 
 	input[type="search"] {
-		border-color: $color__base-medium;
+		border-color: $color__base;
 		color: currentColor;
 		display: inline-block;
+		padding: 1em 1.5em;
 
 		&:focus {
 			background-color: transparent;
@@ -16,24 +17,13 @@
 		border: none;
 		border-left: 1px solid $color__base-medium;
 		display: inline-block;
-		padding: .5625em .75em;
+		padding: 1.375em 1.5em 1.25em;
 		position: absolute;
 		right: 0;
 		top: 0;
-		@include font-size(1.25);
 	}
 }
 
-body.error404 {
-	.page-content .search-form {
-		width: 70%;
-		margin: 1em auto;
-
-		@include breakpoint(tablet-v) {
-			width: 100%;
-		}
-	}
-}
 body.search {
 	.content-area .search-form {
 		width: 70%;

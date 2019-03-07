@@ -254,3 +254,8 @@ function printDiv(divName) {
 	window.print();
 	document.body.innerHTML = originalContents;
 }
+
+// Change the placeholder text on WordPress forms ------
+jQuery(function( $ ){
+	$("input.search-field").attr('placeholder', 'What\'re you looking for?');
+});
