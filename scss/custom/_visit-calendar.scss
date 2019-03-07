@@ -112,9 +112,13 @@ body.calendar {
 		}
 	}
 
+	.vm-wrap {
+		margin-bottom: 10em;
+	}
+
 	.viewmore-events {
 		text-align: right;
-		margin: 4em 0 10em;
+		margin-top: 4em;
 
 		.viewmore {
 			border-bottom: 1px solid $color__base;

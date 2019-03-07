@@ -192,16 +192,21 @@ function da_calendar() {
 			endif;
 			wp_reset_postdata();
 		endwhile;
-		endif;
 		?>
 		</div><!-- /x-events -->
+		<?php endif; ?>
+
+		<div class="vm-wrap">
+			<?php
+			if ( have_rows( 'x_events' ) ) :
+			?>
+			<div class="viewmore-events">
+				<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
+			</div>
+			<?php endif; ?>
+		</div><!-- /inner-wrap -->
 	</div><!-- /inner-wrap -->
 
-	<div class="inner-wrap">
-		<div class="viewmore-events">
-			<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
-		</div>
-	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
 
 <?php get_template_part( 'template-parts/quote' ); ?>
