@@ -98,7 +98,15 @@ endif;
 							$c++;
 							?>
 							<div class="mem-content-desk mem<?php echo esc_html( $c ); ?>">
-								<div class="col-1-3 first col-left"><?php the_sub_field( 'left_col' ); ?></div>
+								<div class="col-1-3 first col-left">
+									<?php
+									if ( get_sub_field( 'left_col' ) ) :
+										the_sub_field( 'left_col' );
+									else :
+										echo '&nbsp;';
+									endif;
+									?>
+								</div>
 								<div class="col-2-3 col-right"><?php the_sub_field( 'right_col' ); ?></div>
 								<div class="cf"></div>
 							</div>
@@ -179,7 +187,15 @@ endif;
 								$c++;
 								?>
 								<div class="mem-content-desk mem<?php echo esc_html( $c ); ?>">
-									<div class="col-1-3 first col-left"><?php the_sub_field( 'left_col' ); ?></div>
+									<div class="col-1-3 first col-left">
+										<?php
+										if ( get_sub_field( 'left_col' ) ) :
+											the_sub_field( 'left_col' );
+										else :
+											echo '&nbsp;';
+										endif;
+										?>
+									</div>
 									<div class="col-2-3 col-right"><?php the_sub_field( 'right_col' ); ?></div>
 									<div class="cf"></div>
 								</div>
