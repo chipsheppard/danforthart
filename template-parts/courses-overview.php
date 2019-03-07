@@ -21,6 +21,7 @@
 	// WP_Query arguments.
 	$args = array(
 		'post_type'              => array( 'course' ),
+		'posts_per_page'         => 100,
 		'order'                  => 'ASC',
 		'orderby'                => 'menu_order',
 		'tax_query'              => array( // WPCS: slow query ok.
@@ -28,6 +29,12 @@
 				'taxonomy'         => 'level',
 				'terms'            => $level,
 				'field'            => 'slug',
+			),
+			array(
+				'taxonomy'         => 'level',
+				'terms'            => 'vacation-week',
+				'field'            => 'slug',
+				'operator'         => 'NOT IN',
 			),
 			array(
 				'taxonomy'         => 'season',
