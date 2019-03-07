@@ -36,25 +36,22 @@ function da_exhibition() {
 		<?php
 		$body_classes = get_body_class();
 		if ( in_array( 'special-collection', $body_classes, true ) ) :
-			$url = site_url( '/secrets/' );
 		?>
 			<a href="<?php echo esc_url( site_url() ); ?>/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		<?php else : ?>
 			<a href="<?php echo esc_url( site_url() ); ?>/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
 		<?php endif; ?>
-
 		</div>
 
 		<div class="cf"></div>
 
-		<div class="exhibition-featured-img">
+		<div class="heroimage">
 			<?php
 			if ( get_field( 'highlight_color' ) ) :
 				$color = ' ' . get_field( 'highlight_color' );
 			else :
 				$color = '';
 			endif;
-
 			if ( has_post_thumbnail() ) :
 				the_post_thumbnail( 'full' );
 			endif;

@@ -40,7 +40,9 @@ function da_calendar() {
 				// override $post.
 				$post = $post_object;
 				setup_postdata( $post );
-
+				?>
+				<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>">
+				<?php
 				$fe_image = get_field( 'fe_image' );
 				if ( ! empty( $fe_image ) ) :
 					$fe_url = $fe_image['url'];
@@ -59,6 +61,7 @@ function da_calendar() {
 			endif;
 			wp_reset_postdata();
 			?>
+			</a>
 		</div>
 		<div class="hero-callout">
 			<div class="link">
