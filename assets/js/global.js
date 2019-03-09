@@ -151,30 +151,6 @@ jQuery(function( $ ){
 	} );
 } );
 
-// TABs -------------------------------
-jQuery(function( $ ){
-	$('.tt1').click(function() {
-		if ( $(this).hasClass( 'tabon' ) ) {
-			return;
-		} else {
-			$(this).addClass( 'tabon' );
-			$('.tt2').removeClass( 'tabon' );
-			$('.tb1').show();
-			$('.tb2').hide();
-		}
-	} );
-	$('.tt2').click(function() {
-		if ( $(this).hasClass( 'tabon' ) ) {
-			return;
-		} else {
-			$(this).addClass( 'tabon' );
-			$('.tt1').removeClass( 'tabon' );
-			$('.tb2').show();
-			$('.tb1').hide();
-		}
-	} );
-} );
-
 // ACCORDIONs -------------------------------
 jQuery(function( $ ){
 	$('.accordion').find('.actop').click(function() {

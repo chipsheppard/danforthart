@@ -420,7 +420,7 @@ body.learn-c {
 		display: none;
 
 		&.show {
-	  		display: block;
+	 		display: block;
 		}
 	}
 
@@ -431,11 +431,37 @@ body.learn-c {
 
 	.tabs-wrap {
 		margin-top: -11.875em;
+
+		&.left .tab-left,
+		&.right .tab-right {
+			cursor: auto;
+			background-color: $color__bg;
+			border-top: 1px solid $color__base;
+			border-right: 1px solid $color__base;
+			border-left: 1px solid $color__base;
+
+
+			h2 {
+				font-weight: $font__weight-bold;
+				span {
+					border: none;
+				}
+			}
+		}
+
+		@include breakpoint(phone-h) {
+			&.left .tab-left {
+				border-left: none;
+			}
+			&.right .tab-right {
+				border-right: none;
+			}
+		}
 	}
+
 	.tab-tab {
 		float: left;
 		width: 50%;
-		cursor: pointer;
 		min-height: 192px;
 		padding: 1.5em 2em 0;
 		position: relative;
@@ -448,6 +474,11 @@ body.learn-c {
 		}
 		@include breakpoint(tablet-v) {
 			padding: .75em;
+		}
+
+		a {
+			display: inline-block;
+			@include nb();
 		}
 
 		h2 {
@@ -469,37 +500,14 @@ body.learn-c {
 			span {
 				padding-bottom: 3px;
 				border-bottom: 1px solid $color__base;
+
 				@include breakpoint(phone-h) {
 					padding-bottom: 0;
 				}
 			}
-
-		}
-		&.tabon {
-			cursor: auto;
-			background-color: $color__bg;
-			border-top: 1px solid $color__base;
-			border-right: 1px solid $color__base;
-			border-left: 1px solid $color__base;
-
-
-			@include breakpoint(phone-h) {
-				&.tt1 {
-					border-left: none;
-				}
-				&.tt2 {
-					border-right: none;
-				}
-			}
-
-			h2 {
-				font-weight: $font__weight-bold;
-				span {
-					border: none;
-				}
-			}
 		}
 	}
+
 
 	.tab-body {
 		border: 1px solid $color__base;
@@ -544,12 +552,6 @@ body.learn-c {
 		margin-bottom: 3em;
 	}
 
-	.no-courses {
-		border:1px dashed #ccc;
-		padding: 1em;
-		@include font-size(1.875);
-	}
-
 	.tb2 {
 		display: none;
 	}
@@ -562,13 +564,19 @@ body.learn-c {
 	}
 }
 
-#no-results-season-one,
-#no-results-season-two {
+#no-results,
+.no-results {
 	color: $color__base-medium;
 	font-weight: $font__weight-light;
-	font-style: italic;;
-	padding: .5em;
-	@include font-size(1.875);
+	font-style: italic;
+	padding: 0;
+	@include font-size(.125);
+
+	&.active {
+		border:1px dashed #ccc;
+		padding: .5em;
+		@include font-size(1);
+	}
 }
 
 body.k-8 {

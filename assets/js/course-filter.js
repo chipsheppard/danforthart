@@ -1,7 +1,7 @@
 filterSelection("all")
 function filterSelection(c) {
 	var x, i, n=0;
-	x = document.getElementsByClassName("season-one");
+	x = document.getElementsByClassName("course-row");
 	if (c == "all") c = "";
 	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
 	for (i = 0; i < x.length; i++) {
@@ -10,36 +10,13 @@ function filterSelection(c) {
 		if (x[i].className.indexOf(c) > -1) n++;
 	}
 	if (n) {
-		document.getElementById("no-results-season-one").innerHTML = "";
+		document.getElementById("no-results").innerHTML = "";
+		document.getElementById("no-results").classList.remove("active");
 	} else {
-		document.getElementById("no-results-season-one").innerHTML = "No Results";
+		document.getElementById("no-results").innerHTML = "No Results";
+		document.getElementById("no-results").classList.add("active");
 	}
 }
-
-filterSelection2("all")
-function filterSelection2(c) {
-	var x, i, n=0;
-	var elementExists = document.getElementById("no-results-season-two");
-	x = document.getElementsByClassName("season-two");
-	if (elementExists) {
-		if (c == "all") c = "";
-		// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-		for (i = 0; i < x.length; i++) {
-			w3RemoveClass(x[i], "show");
-			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-			if (x[i].className.indexOf(c) > -1) n++;
-		}
-		if (n) {
-			document.getElementById("no-results-season-two").innerHTML = "";
-		} else {
-			document.getElementById("no-results-season-two").innerHTML = "No Results";
-		}
-	} else {
-		return;
-	}
-}
-
-
 
 // Show filtered elements
 function w3AddClass(element, name) {
@@ -70,16 +47,6 @@ function w3RemoveClass(element, name) {
 var btnContainer = document.getElementById("fb1");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-// Add active class to the current control button (highlight it)
-var btnContainer2 = document.getElementById("fb2");
-var btns2 = btnContainer2.getElementsByClassName("btn");
-for (var i = 0; i < btns2.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");

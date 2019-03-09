@@ -12,22 +12,22 @@
 ?>
 
 <div class="course-headers">
-	<div class="col-1-6 first">Session  number + Dates</div>
-	<div class="col-1-6">Instructor(s)</div>
-	<div class="col-1-3">Grade level + Class name</div>
-	<div class="col-1-6">Price</div>
-	<div class="col-1-6 ta-center">Register <span>*</span></div>
+	<div class="col-1-6 first"><?php the_field( 'column1_heading' ); ?></div>
+	<div class="col-1-6"><?php the_field( 'column2_heading' ); ?></div>
+	<div class="col-1-3"><?php the_field( 'column3_heading' ); ?></div>
+	<div class="col-1-6"><?php the_field( 'column4_heading' ); ?></div>
+	<div class="col-1-6 ta-center"><?php the_field( 'column5_heading' ); ?></div>
 	<div class="cf"></div>
 </div>
 <div class="course-rows-wrap">
 	<?php
-	$level = get_sub_field( 'c_level' );
-	$season = get_sub_field( 'c_season' );
+	$level = get_field( 'c_level' );
+	$season = get_field( 'c_season' );
 	if ( ! $level ) :
-		$level = get_field( 'c_level' );
+		$level = get_sub_field( 'c_level' );
 	endif;
 	if ( ! $season ) :
-		$season = get_field( 'c_season' );
+		$season = get_sub_field( 'c_season' );
 	endif;
 	// WP_Query arguments.
 	$args = array(
@@ -72,24 +72,18 @@
 				$level_list = join( ' ', $levels );
 				$name_list = join( ' ', $names );
 			endif;
-
-			$seasons = get_the_terms( $post->ID, 'season' );
-			if ( ! empty( $seasons ) ) :
-				$sns = array();
-				foreach ( $seasons as $season ) {
-					$sns[] = $season->slug;
-				}
-				$season_list = join( ' ', $sns );
-			endif;
-
 			?>
-			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?><?php printf( ' %s', esc_html( $season_list ) ); ?>">
+			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?>">
 				<?php
 				if ( get_field( 'course_alert' ) ) :
 					$ca = ' ca';
 					?>
 					<div class="alert"><?php the_field( 'course_alert' ); ?></div>
-				<?php endif; ?>
+				<?php
+				else :
+					$ca = '';
+				endif;
+				?>
 				<div class="row-top<?php echo esc_html( $ca ); ?>">
 					<div class="col-1-6 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
@@ -181,12 +175,10 @@ endif;
 					</div><!-- / images -->
 				</div>
 			</div><!-- / course-row -->
-		<?php } // endwhile. ?>
-		<div id="no-results<?php printf( '-%s', esc_html( $season_list ) ); ?>"></div>
-	<?php
-	} else {
-		echo '<div class="no-courses">No courses have been published for that criterea.</div>';
+		<?php
+		} // endwhile.
 	}
 	wp_reset_postdata();
 	?>
+	<div id="no-results"></div>
 </div><!-- /course-rows-wrap -->
