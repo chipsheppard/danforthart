@@ -13,6 +13,9 @@ add_filter( 'body_class', function( $classes ) {
 	if ( has_term( 'special-collection' ,'exhibition_type' ) ) {
 		$classes[] = 'special-collection';
 	}
+	if ( has_term( 'past-exhibition' ,'exhibition_type' ) ) {
+		$classes[] = 'past-exhibition';
+	}
 	$classes[] = 'seeart';
 	return $classes;
 } );
@@ -38,6 +41,8 @@ function da_exhibition() {
 		if ( in_array( 'special-collection', $body_classes, true ) ) :
 		?>
 			<a href="<?php echo esc_url( site_url() ); ?>/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+		<?php elseif ( in_array( 'past-exhibition', $body_classes, true ) ) : ?>
+			<a href="<?php echo esc_url( site_url() ); ?>/see-art/past-exhibitions/"><span class="cssicon-arrow-l"></span> View All Past</a>
 		<?php else : ?>
 			<a href="<?php echo esc_url( site_url() ); ?>/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
 		<?php endif; ?>

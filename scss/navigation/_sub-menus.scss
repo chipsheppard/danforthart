@@ -63,7 +63,8 @@
 .learn-c.adults .sub-navigation li:nth-child(3),
 .single-artwork .sub-navigation li:nth-child(2),
 .special-collection .sub-navigation li:nth-child(2),
-.single-exhibition:not(.special-collection) .sub-navigation li:first-child,
+.past-exhibition .sub-navigation li:nth-child(3),
+.single-exhibition:not(.special-collection):not(.past-exhibition) .sub-navigation li:first-child,
 .single-event .sub-navigation li:first-child {
 	background: #000000;
 	color: #ffffff;
