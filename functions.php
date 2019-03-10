@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'DANFORTHART_VERSION', '1.0.0' );
+define( 'DANFORTHART_VERSION', '1.2.0' );
 define( 'DANFORTHART_THEME_NAME', 'Danforth Art' );
 define( 'DANFORTHART_AUTHOR_NAME', 'Moth Design' );
 define( 'DANFORTHART_AUTHOR_LINK', 'https://sheppco.com' );
@@ -33,7 +33,7 @@ require get_template_directory() . '/inc/class-bgcolor-metabox.php';
 require get_template_directory() . '/inc/class-danforthart-css.php';
 require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/css-output.php';
-// require get_template_directory() . '/inc/remove-menu-items.php';
+require get_template_directory() . '/inc/remove-menu-items.php';
 // require get_template_directory() . '/inc/google-analytics.php';.
 /**
  * Enqueue scripts and styles.

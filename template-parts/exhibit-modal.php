@@ -46,7 +46,6 @@
 						echo ', ';
 						the_field( 'medium' );
 					endif;
-					the_field( 'medium' );
 					echo '<br />';
 					the_field( 'more_left' );
 					?>
