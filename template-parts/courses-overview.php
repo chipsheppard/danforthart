@@ -64,7 +64,19 @@
 						<div class="instructors"><?php the_field( 'instructors' ); ?></div>
 					</div>
 					<div class="col-2-5 course-col fb">
-						<div class="display-name"><span><?php the_field( 'display_name' ); ?></span></div>
+						<div class="display-name">
+							<?php
+							$link = get_field( 'registration_link' );
+							if ( $link ) :
+								$link_url = $link['url'];
+								$link_title = $link['title'];
+								$link_target = $link['target'] ? $link['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php the_field( 'display_name' ); ?></a>
+							<?php else : ?>
+								<span><?php the_field( 'display_name' ); ?></span>
+							<?php endif; ?>
+						</div>
 					</div>
 					<div class="col-1-5 course-col fb">
 						<div class="level-o fb"><?php $terms = get_the_terms( $post->ID, 'level' ); ?>

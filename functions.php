@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'DANFORTHART_VERSION', '1.2.0' );
+define( 'DANFORTHART_VERSION', '1.2.1' );
 define( 'DANFORTHART_THEME_NAME', 'Danforth Art' );
 define( 'DANFORTHART_AUTHOR_NAME', 'Moth Design' );
-define( 'DANFORTHART_AUTHOR_LINK', 'https://sheppco.com' );
+define( 'DANFORTHART_AUTHOR_LINK', 'http://www.mothdesign.net' );
 
 /**
  * Load the extra stuff.
