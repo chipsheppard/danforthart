@@ -36,6 +36,8 @@
 					?>
 				</div>
 				<div class="artwork-info">
+					<strong><?php the_field( 'artist_name' ); ?></strong>
+					<br />
 					<strong><?php the_title(); ?></strong>
 					<?php
 					if ( get_field( 'date' ) ) :

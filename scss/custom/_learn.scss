@@ -58,6 +58,25 @@ body.learncreate {
 		transition: background-color 200ms ease-in-out;
 	}
 
+	.course-col {
+		.display-name {
+			padding-bottom: 0;
+			span {
+				display: inline-block;
+				border-bottom: 2px solid #000;
+				padding-bottom: .375em;
+			}
+			a {
+				display: inline-block;
+				border-bottom-width: 2px;
+				padding-bottom: .375em;
+				&:hover {
+					padding-bottom: .375em;
+				}
+			}
+		}
+	}
+
 	.course-row:hover {
 		background-color: #000;
 		color: #fff;
@@ -330,7 +349,6 @@ body.learncreate {
 		@include breakpoint(tablet-v) {
 			margin: 1em 0 1.5em;
 		}
-
 		a {
 			@include nb();
 		}
@@ -339,24 +357,12 @@ body.learncreate {
 	.display-name {
 		font-weight: $font__weight-bold;
 		margin-top: auto;
+		padding-bottom: .375em;
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 1em;
 		}
 
-		span {
-			display: inline-block;
-			border-bottom: 2px solid #000;
-			padding-bottom: .375em;
-		}
-		a {
-			display: inline-block;
-			border-bottom-width: 2px;
-			padding-bottom: .375em;
-			&:hover {
-				padding-bottom: .375em;
-			}
-		}
 	}
 
 	.price,
@@ -367,7 +373,7 @@ body.learncreate {
 	.price {
 		margin-top: auto;
 		font-weight: $font__weight-bold;
-		padding-bottom: .375em;
+		padding-bottom: .4375em;
 		@include breakpoint(tablet-v) {
 			float: right;
 		}
@@ -387,11 +393,13 @@ body.learncreate {
 	}
 
 	.control {
-		margin: auto;
+		//margin: auto;
+		margin-top: 1.5em;
 
 		@include breakpoint(tablet-v) {
-			text-align: right;
+			margin: auto;
 			position: relative;
+			text-align: right;
 			top: 175%;
 		}
 	}
