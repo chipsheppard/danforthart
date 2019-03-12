@@ -127,17 +127,16 @@ function da_exhibition() {
 						?>
 						<div class="artwork-info">
 							<strong><?php the_field( 'artist_name' ); ?></strong>,
-							<em><?php the_title(); ?></em>
-							<?php
-							if ( get_field( 'date' ) ) :
-								echo ', ';
-								the_field( 'date' );
-							endif;
-							if ( get_field( 'medium' ) ) :
-								echo ', ';
-								the_field( 'medium' );
-							endif;
-							?>
+							<em><?php the_title(); ?></em><?php if ( get_field( 'date' ) ) : ?>
+<?php
+	echo ', ';
+	the_field( 'date' );
+endif;
+if ( get_field( 'medium' ) ) :
+	echo ', ';
+	the_field( 'medium' );
+endif;
+?>
 						</div>
 					</div>
 				<?php endforeach; ?>
