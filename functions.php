@@ -34,7 +34,7 @@ require get_template_directory() . '/inc/class-danforthart-css.php';
 require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/css-output.php';
 require get_template_directory() . '/inc/remove-menu-items.php';
-// require get_template_directory() . '/inc/google-analytics.php';.
+require get_template_directory() . '/inc/google-analytics.php';
 /**
  * Enqueue scripts and styles.
  */

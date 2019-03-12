@@ -14,22 +14,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Google Analytics.
+ * Google Analytics Header script.
  */
-function danforthart_add_ga() {
+function danforthart_add_ga_head() {
 ?>
-<!-- Google Analytics tracking code -->
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-831040-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-<!--end Google Analytics tracking code -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDD3RW');</script>
+<!-- End Google Tag Manager -->
 <?php
 }
-add_action( 'wp_head', 'danforthart_add_ga' );
+add_action( 'wp_head', 'danforthart_add_ga_head' );
+
+/**
+ * Google Analytics Body script.
+ */
+function danforthart_add_ga_body() {
+?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDD3RW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<?php
+}
+add_action( 'tha_body_top', 'danforthart_add_ga_body' );

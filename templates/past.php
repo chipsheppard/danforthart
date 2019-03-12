@@ -316,12 +316,12 @@ endif;
 					<?php
 					endif;
 				endwhile;
-			endif;
-			?>
+				?>
 			</div><!-- /past-exhibits -->
 			<div class="viewmore-past">
 				<div class="viewmore">View more past exhibits <span class="cssicon-plusminus small plus"></span></div>
 			</div>
+			<?php endif; ?>
 
 
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>

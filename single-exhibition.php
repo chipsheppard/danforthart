@@ -126,10 +126,9 @@ function da_exhibition() {
 						endif;
 						?>
 						<div class="artwork-info">
+							<strong><?php the_field( 'artist_name' ); ?></strong>,
+							<em><?php the_title(); ?></em>
 							<?php
-							echo '<a href="#' . esc_html( $c ) . '" class="modal-link" data-index="' . esc_html( $c ) . '"><strong>';
-							the_title();
-							echo '</strong></a>';
 							if ( get_field( 'date' ) ) :
 								echo ', ';
 								the_field( 'date' );

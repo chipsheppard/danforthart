@@ -171,12 +171,8 @@ if ( have_rows( 'collection_blocks' ) ) :
 										endif;
 										?>
 										<div class="artwork-info">
-											<?php
-											echo '<a href="' . esc_url( get_permalink() ) . '"><strong>';
-											the_field( 'artist_name' );
-											echo '</strong></a>, ';
-											the_title();
-											?>
+											<strong><?php the_field( 'artist_name' ); ?></strong>,
+											<?php the_title(); ?>
 										</div>
 									<?php
 									endforeach;
@@ -221,12 +217,8 @@ if ( have_rows( 'collection_blocks' ) ) :
 									endif;
 									?>
 									<div class="artwork-info">
-										<?php
-										echo '<a href="' . esc_url( get_permalink() ) . '"><strong>';
-										the_field( 'artist_name' );
-										echo '</strong></a>, ';
-										the_title();
-										?>
+										<strong><?php the_field( 'artist_name' ); ?></strong>,
+										<?php the_title(); ?>
 									</div>
 								</div>
 							<?php endforeach; ?>
