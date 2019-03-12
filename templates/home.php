@@ -42,7 +42,7 @@ function da_home() {
 					$h_height = $h_image['height'];
 					?>
 					<div class="sl">
-						<span class="progbar big slow<?php echo esc_html( $color ); ?>"></span>
+						<span class="progbar homeslide<?php echo esc_html( $color ); ?>"></span>
 						<img src="<?php echo esc_url( $h_url ); ?>" alt="<?php echo esc_attr( $h_alt ); ?>" width="<?php echo esc_attr( $h_width ); ?>" height="<?php echo esc_attr( $h_height ); ?>" />
 					</div>
 				<?php

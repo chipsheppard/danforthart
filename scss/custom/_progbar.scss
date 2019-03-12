@@ -66,6 +66,40 @@
     }
 }
 
+/* 24px PROGRESS BAR - Top -> bottom */
+@keyframes homebg {
+    0% {
+        background-size:    0 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    25% {
+		background-size:    100% 24px,
+                            24px 0,
+                            0 24px,
+                            24px 0;
+    }
+    50% {
+		background-size:    100% 24px,
+                            24px 100%,
+                            0 24px,
+                            24px 0;
+    }
+    75% {
+		background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 0;
+    }
+    100% {
+		background-size:    100% 24px,
+                            24px 100%,
+                            100% 24px,
+                            24px 100%;
+    }
+}
+
 .progbar-trigger {
 	position: relative;
 }
@@ -100,6 +134,14 @@
 
 	&.big {
 		animation-name: bg;
+		background-size:    100% 24px,
+	                        24px 100%,
+	                        100% 24px,
+	                        24px 100%;
+	}
+	&.homeslide {
+		animation-name: homebg;
+		animation-duration: 5s;
 		background-size:    100% 24px,
 	                        24px 100%,
 	                        100% 24px,
