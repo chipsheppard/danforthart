@@ -22,8 +22,6 @@
 	$args = array(
 		'post_type'              => array( 'course' ),
 		'posts_per_page'         => 100,
-		'order'                  => 'ASC',
-		'orderby'                => 'menu_order',
 		'tax_query'              => array( // WPCS: slow query ok.
 			array(
 				'taxonomy'         => 'level',

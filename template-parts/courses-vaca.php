@@ -13,13 +13,13 @@
 
 <div class="course-rows-wrap">
 	<?php
-	$level = get_sub_field( 'c_level' );
-	$season = get_sub_field( 'c_season' );
+	$level = get_field( 'c_level' );
+	$season = get_field( 'c_season' );
 	if ( ! $level ) :
-		$level = get_field( 'c_level' );
+		$level = get_sub_field( 'c_level' );
 	endif;
 	if ( ! $season ) :
-		$season = get_field( 'c_season' );
+		$season = get_sub_field( 'c_season' );
 	endif;
 	// WP_Query arguments.
 	$args = array(
@@ -28,7 +28,13 @@
 		'tax_query'              => array( // WPCS: slow query ok.
 			array(
 				'taxonomy'         => 'level',
-				'terms'            => array( '$level', 'vacation-week' ),
+				'terms'            => $level,
+				'field'            => 'slug',
+				'include_children' => true,
+			),
+			array(
+				'taxonomy'         => 'level',
+				'terms'            => array( 'vacation-week' ),
 				'field'            => 'slug',
 				'include_children' => true,
 			),

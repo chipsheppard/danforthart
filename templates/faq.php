@@ -55,7 +55,7 @@ function da_faq() {
 	<div class="opm">
 		<div class="inner-wrap">
 			<div class="onpage-menu">
-				<div class="opm-text">Viewing our collection:</div>
+				<div class="opm-text">Viewing our FAQs:</div>
 
 				<div class="opm-section-menu">
 					<div class="opm-sections">
