@@ -55,14 +55,15 @@
 			$query->the_post();
 			$terms = get_the_terms( $post->ID, 'level' );
 			if ( ! empty( $terms ) ) :
-				$levels = array();
-				$names = array();
-				foreach ( $terms as $term ) {
-					$levels[] = $term->slug;
-					$names[] = $term->name;
-				}
-				$level_list = join( ' ', $levels );
-				$name_list = join( ' ', $names );
+				$term = $terms[0];
+				//$levels = array();
+				//$names = array();
+				//foreach ( $terms as $term ) {
+				//	$levels[] = $term->slug;
+				//	$names[] = $term->name;
+				//}
+				$level_list = $term->slug;
+				$name_list = $term->slug;
 			endif;
 
 			$seasons = get_the_terms( $post->ID, 'season' );
