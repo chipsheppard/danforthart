@@ -57,7 +57,7 @@
 			if ( ! empty( $terms ) ) :
 				$term = $terms[0];
 				$term_slug = $term->slug;
-				$term_name = $term->slug;
+				$term_name = $term->name;
 			endif;
 
 			$seasons = get_the_terms( $post->ID, 'season' );
