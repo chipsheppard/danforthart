@@ -9,6 +9,10 @@ body.past {
 			padding-bottom: 2em;
 			width: 100%;
 		}
+		@include breakpoint(phone-h) {
+			padding: 2em 0;
+			width: 100%;
+		}
 	}
 	.exhibit-right-top {
 	    margin-top: -24em;

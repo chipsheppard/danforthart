@@ -49,9 +49,9 @@ endif;
 
 // HEADING & TODAY's HOURS ===================.
 if ( $day === $day_closed ) :
-	echo '<h5><span>closed</span></h5>';
+	echo '<h5><span>Museum closed</span></h5>';
 else :
-	echo '<h5><span>open today</span></h5>';
+	echo '<h5><span>Museum open today</span></h5>';
 	echo '<div class="open-time">' . esc_html( $opens ) . ' - ' . esc_html( $closes ) . '</div>';
 endif;
 

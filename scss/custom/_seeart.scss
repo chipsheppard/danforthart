@@ -11,16 +11,12 @@ body.seeart {
 		@include font-size(2.8125);
 
 		@include breakpoint(tablet-v) {
-			padding: 2em 0;
 			padding-left: 0;
 			width: 100%;
  			@include font-size(2);
 		}
 		@include breakpoint(phone-h) {
  			@include font-size(1.375);
-		}
-		@include breakpoint(phone-v) {
- 			text-align: right;
 		}
 	}
 
@@ -38,10 +34,6 @@ body.seeart {
 	.ert-date,
 	.erb-date {
 		text-align: right;
-
-		@include breakpoint(tablet-v) {
-			display: none;
-		}
 	}
 
 	.el-image,

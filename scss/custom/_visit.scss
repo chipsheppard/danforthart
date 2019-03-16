@@ -108,4 +108,15 @@ body.vis {
 			padding-bottom: 2em;
 		}
 	}
+	.open-hours h5 {
+		@include font-size(1.875);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(1.5);
+		}
+		@include breakpoint(phone-h) {
+			margin-bottom: 0;
+			@include font-size(1.25);
+		}
+	}
 }

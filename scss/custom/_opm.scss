@@ -13,8 +13,16 @@
 	float: right;
 	padding-top: 2em;
 
+	@include breakpoint(phone-h) {
+		padding-top: 0;
+	}
+
 	.opm-arrow {
 		margin-top: 1.25em;
+
+		@include breakpoint(phone-v) {
+			margin-top: .5em;
+		}
 	}
 }
 
@@ -43,6 +51,10 @@
 		@include breakpoint(tablet-v) {
 			width: 250px;
 		}
+		@include breakpoint(phone-h) {
+			padding-bottom: .5em;
+		}
+
 		&.open {
 			border-color: $color__bg;
 		}
@@ -53,8 +65,11 @@
 			padding: .75em 0 0 .75em;
 
 			@include breakpoint(tablet-v) {
-				padding-top: 1.75em;
+				padding-top: 1em;
 				@include font-size(1.125);
+			}
+			@include breakpoint(phone-v) {
+				padding-top: 0;
 			}
 		}
 		.tp1,.tp2,.tp3,.tp4 {
