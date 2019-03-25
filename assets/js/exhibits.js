@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
 	$('a[data-index]').click(function(e) {
       e.preventDefault();
       var slideno = $(this).data('index');
-      $('.slickeroo').slick('slickGoTo', slideno - 1);
+      $('.slickeroo').slick('slickGoTo', slideno - 1, true);
     });
 
 	$slickElement.slick({
