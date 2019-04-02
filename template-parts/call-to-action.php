@@ -73,7 +73,7 @@
 				?>
 				<div class="col-1-2 ctablock cta-exhibit<?php echo esc_html( $color ); ?>">
 					<?php
-					$post_object = get_sub_field( 'exhibition' );
+					$post_object = get_sub_field( 'exhibition', 'option' );
 					if ( $post_object ) :
 						// override $post.
 						$post = $post_object;
@@ -83,7 +83,7 @@
 						<div class="img-bg" style="background-image:url('<?php the_post_thumbnail_url( 'large' ); ?>')">
 							<div class="card-title">Exhibit</div>
 							<div class="card-info">
-								<div class="sub-head"><?php the_sub_field( 'sub_head' ); ?></div>
+								<div class="sub-head"><?php the_sub_field( 'sub_header', 'option' ); ?></div>
 								<div class="card-text"><?php the_title(); ?></div>
 								<span class="card-link">See What's On View</span>
 							</div>
