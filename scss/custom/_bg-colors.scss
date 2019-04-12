@@ -18,19 +18,24 @@ body.color5 {
 
 .site-navigation {
 
-	.color1 a:hover {
+	.color1 a:hover,
+	.color1 a:focus {
 		background-color: $color__orange;
 	}
-	.color2 a:hover {
+	.color2 a:hover,
+	.color2 a:focus {
 		background-color: $color__green;
 	}
-	.color3 a:hover {
+	.color3 a:hover,
+	.color3 a:focus {
 		background-color: $color__yellow;
 	}
-	.color4 a:hover {
+	.color4 a:hover,
+	.color4 a:focus {
 		background-color: $color__tan;
 	}
-	.color5 a:hover {
+	.color5 a:hover,
+	.color5 a:focus {
 		background-color: $color__purple;
 	}
 }
@@ -111,10 +116,8 @@ body.color5 {
 				}
 			}
 
-			.sub-menu {
-				a {
-					border: none;
-				}
+			.sub-menu a {
+				border: none;
 			}
 		}
 	}
