@@ -48,6 +48,15 @@
 
 .open-hours {
 	margin-bottom: 2em;
+	@include font-size(1.125);
+}
+.openhours-message {
+	margin: 1em 4em 0 0;
+	@include font-size(.875);
+
+	@include breakpoint(tablet-v) {
+		margin-right: 0;
+	}
 }
 .open-time {
 	font-weight: $font__weight-light;

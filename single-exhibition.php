@@ -149,7 +149,7 @@ endif;
 			?>
 
 <?php if ( get_field( 'quote' ) ) : ?>
-			<div class="quote">
+			<div class="quote-block">
 				<blockquote>
 					<?php the_field( 'quote' ); ?>
 					<cite>
@@ -170,8 +170,8 @@ if ( $link ) :
 
 		</div>
 
+		<?php if ( get_field( 'more_content_left' ) || get_field( 'more_content_right' ) ) : ?>
 		<hr />
-
 		<div class="inner-wrap">
 			<div class="col-1-2 first more-left">
 				<?php the_field( 'more_content_left' ); ?>
@@ -180,9 +180,13 @@ if ( $link ) :
 				<?php the_field( 'more_content_right' ); ?>
 			</div>
 			<div class="cf"></div>
+		</div>
+		<?php endif; ?>
 
+		<div class="inner-wrap">
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 		</div>
+
 	</div>
 <?php
 }

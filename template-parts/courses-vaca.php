@@ -71,6 +71,8 @@
 
 			?>
 			<div class="course-row<?php printf( ' %s', esc_html( $term_slug ) ); ?><?php printf( ' %s', esc_html( $season_list ) ); ?>">
+				<div class="inner-wrap">
+				<div class="course-row-innerwrap">
 				<?php
 				if ( get_field( 'course_alert' ) ) :
 					$ca = ' ca';
@@ -78,7 +80,7 @@
 					<div class="alert"><?php the_field( 'course_alert' ); ?></div>
 				<?php endif; ?>
 				<div class="row-top<?php echo esc_html( $ca ); ?>">
-					<div class="col-1-6 first course-col fb">
+					<div class="col-1-4 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
 							<div class="circle-num"><?php the_field( 'session_number' ); ?></div>
 						<?php endif; ?>
@@ -87,26 +89,17 @@
 					<div class="col-1-6 course-col fb">
 						<div class="instructors"><?php the_field( 'instructors' ); ?></div>
 					</div>
-					<div class="col-1-3 course-col">
-						<div class="level"><?php printf( '%s', esc_html( $term_name ) ); ?></div>
-						<div class="display-name"><span><?php the_field( 'display_name' ); ?></span></div>
+					<div class="col-1-4 course-col fb">
+						<div class="display-name"><span class="opener2"><?php the_field( 'display_name' ); ?></span></div>
 					</div>
-					<div class="col-1-6 course-col fb">
-						<div class="price"><?php the_field( 'price' ); ?></div>
+					<div class="col-1-12 course-col fb">
 						<div class="control"><span class="opener cssicon-plusminus small plus"></span></div>
 					</div>
 					<div class="col-1-6 course-col fb">
-						<?php
-						$link = get_field( 'registration_link' );
-						if ( $link ) :
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-						<?php else : ?>
-							<a class="btn disabled" href="#0">Register</a>
-						<?php endif; ?>
+						<div class="level"><?php printf( '%s', esc_html( $term_name ) ); ?></div>
+					</div>
+					<div class="col-1-12 course-col fb">
+						<div class="price"><?php the_field( 'price' ); ?></div>
 					</div>
 					<div class="cf"></div>
 				</div>
@@ -165,13 +158,15 @@ endif;
 					endif;
 					?>
 					<div class="cf"></div>
-					</div><!-- / images -->
+					</div>
 				</div>
-			</div><!-- / course-row -->
+			</div>
+			</div>
+			</div>
 		<?php
 		} // endwhile.
 	} else {
-		echo '<div class="no-courses">No courses have been published for that criterea.</div>';
+		echo '<div class="inner-wrap no-courses">No courses have been published for that criterea.</div>';
 	}
 	wp_reset_postdata();
 	?>

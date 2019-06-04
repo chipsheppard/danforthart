@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $date = date_create();
-date_sub( $date, date_interval_create_from_date_string( '5 hours' ) );
+date_sub( $date, date_interval_create_from_date_string( '4 hours' ) );
 $day = date_format( $date, 'l' );
 
 // $day = date( 'l' );
@@ -33,15 +33,14 @@ if ( have_rows( 'day', 'option' ) ) :
 	while ( have_rows( 'day', 'option' ) ) :
 		the_row();
 
-		$weekday = get_sub_field( 'day_of_week', 'option' );
-
-		if ( ! get_sub_field( 'open', 'option' ) ) :
-			$day_closed = get_sub_field( 'day_of_week', 'option' );
-		endif;
-
+		// $weekday = get_sub_field( 'day_of_week', 'option' );.
 		if ( get_sub_field( 'day_of_week', 'option' ) === $day ) :
-			$opens = get_sub_field( 'open', 'option' );
-			$closes = get_sub_field( 'close', 'option' );
+			if ( ! get_sub_field( 'open', 'option' ) ) :
+				$day_closed = get_sub_field( 'day_of_week', 'option' );
+			else :
+				$opens = get_sub_field( 'open', 'option' );
+				$closes = get_sub_field( 'close', 'option' );
+			endif;
 		endif;
 	endwhile;
 endif;
@@ -56,7 +55,7 @@ else :
 			echo '<h5><span>Museum closed</span></h5>';
 		else :
 			echo '<h5><span>Museum open today</span></h5>';
-			echo '<div class="open-time">' . esc_html( $opens ) . ' - ' . esc_html( $closes ) . '</div>';
+			echo '<div class="open-time">' . esc_html( $opens ) . ' &mdash; ' . esc_html( $closes ) . '</div>';
 		endif;
 	else :
 		echo '<h5><span>Museum closed</span></h5>';
@@ -79,7 +78,7 @@ else :
 		while ( have_rows( 'day', 'option' ) ) :
 			the_row();
 
-			echo '<div class="hours-row">';
+			echo '<div class="hours-row cf">';
 
 			$myday = get_sub_field( 'day_of_week', 'option' );
 			$myopen = get_sub_field( 'open', 'option' );
@@ -102,7 +101,7 @@ else :
 					$c = 0;
 					echo '<div class="col-1-2 first">';
 					if ( 0 !== $firstday ) :
-						echo esc_html( $firstday ) . ' - ';
+						echo esc_html( $firstday ) . ' &mdash; ';
 						$firstday = 0;
 					endif;
 					echo esc_html( $isday );
@@ -110,7 +109,7 @@ else :
 					echo '<div class="col-1-2">';
 					if ( $isopen ) :
 						echo esc_html( $isopen );
-						echo ' - ';
+						echo ' &mdash; ';
 						echo esc_html( $isclosed );
 						echo '</div>';
 					else :
@@ -125,4 +124,12 @@ else :
 		endwhile;
 	endif;
 endif;
+
+// MESSAGE ===================.
+if ( get_field( 'message', 'option' ) ) :
+	echo '<div class="openhours-message">';
+	the_field( 'message', 'option' );
+	echo '</div>';
+endif;
+
 echo '</div>'; // open-hours.

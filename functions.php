@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'DANFORTHART_VERSION', '1.2.5' );
+define( 'DANFORTHART_VERSION', '1.5.0' );
 define( 'DANFORTHART_THEME_NAME', 'Danforth Art' );
 define( 'DANFORTHART_AUTHOR_NAME', 'Moth Design' );
 define( 'DANFORTHART_AUTHOR_LINK', 'http://www.mothdesign.net' );
@@ -33,7 +33,7 @@ require get_template_directory() . '/inc/class-bgcolor-metabox.php';
 require get_template_directory() . '/inc/class-danforthart-css.php';
 require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/css-output.php';
-require get_template_directory() . '/inc/remove-menu-items.php';
+// require get_template_directory() . '/inc/remove-menu-items.php';.
 require get_template_directory() . '/inc/google-analytics.php';
 /**
  * Enqueue scripts and styles.
@@ -58,9 +58,6 @@ function danforthart_scripts() {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'permanent-js', get_template_directory_uri() . '/assets/js/permanent-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
-	}
-	if ( is_page_template( 'templates/learn-c.php' ) || is_page_template( 'templates/learn-courses.php' ) ) {
-		wp_enqueue_script( 'course-filter', get_template_directory_uri() . '/assets/js/course-filter-min.js', array(), DANFORTHART_VERSION, true );
 	}
 	if ( is_page_template( 'templates/faq.php' ) ) {
 		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );

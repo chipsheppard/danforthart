@@ -51,6 +51,8 @@
 			$query->the_post();
 			?>
 			<div class="course-row">
+				<div class="inner-wrap">
+				<div class="course-row-innerwrap">
 				<div class="row-top">
 					<div class="col-1-5 first course-col fb">
 						<?php if ( get_field( 'session_number' ) ) : ?>
@@ -64,7 +66,7 @@
 					<div class="col-2-5 course-col fb">
 						<div class="display-name">
 							<?php
-							$link = get_field( 'registration_link' );
+							$link = get_field( 'registration_link', 'option' );
 							if ( $link ) :
 								$link_url = $link['url'];
 								$link_title = $link['title'];
@@ -92,6 +94,8 @@ endif;
 						<div class="price-o fb"><?php the_field( 'price' ); ?></div>
 					</div>
 					<div class="cf"></div>
+				</div>
+				</div>
 				</div>
 
 			</div><!-- / course-row -->

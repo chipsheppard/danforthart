@@ -41,7 +41,7 @@ function da_meet() {
 	<div class="inner-wrap">
 
 		<div class="mid-block">
-			<div class="col-1-2 nm mid-left">
+			<div class="col-7-12 nm mid-left">
 <?php
 $l_link = get_field( 'l_link' );
 if ( $l_link ) :
@@ -82,7 +82,7 @@ endif;
 				</div>
 			</div>
 
-			<div class="col-1-2 nm mid-right">
+			<div class="col-5-12 nm mid-right">
 				<div class="textblock">
 					<div class="message"><?php the_field( 'r_text' ); ?></div>
 				</div>

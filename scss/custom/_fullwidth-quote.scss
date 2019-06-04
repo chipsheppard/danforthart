@@ -33,11 +33,19 @@
 		padding-top: 0;
 		@include font-size(2.8125);
 
+		&:before {
+			content: '“';
+			position: relative;
+			left: .1875em;
+		    margin-left: -.625em;
+		}
+
 		cite {
 			@include font-size(1.4375);
 
 			a {
 				@include font-size(1);
+				letter-spacing: 1px;
 			}
 		}
 

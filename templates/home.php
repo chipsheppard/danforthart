@@ -63,7 +63,7 @@ function da_home() {
 					<?php endif; ?>
 				</div>
 				<div class="date"><?php the_field( 'tab_info' ); ?></div>
-				<div class="text"><?php the_field( 'tab_title' ); ?></div>
+				<div class="text"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php the_field( 'tab_title' ); ?></a></div>
 			</div>
 		<?php
 		else :
