@@ -132,6 +132,11 @@ body.single-exhibition {
 	}
 }
 
+.ex-sub-title {
+	margin-bottom: 1em;
+	@include font-size(1.25);
+	@include bigtext();
+}
 
 .ex-page-title {
 	line-height: 1;

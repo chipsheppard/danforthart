@@ -67,7 +67,12 @@ function da_exhibition() {
 			<?php the_field( 'date' ); ?>
 		</div>
 
-		<h1 class="ex-page-title"><?php the_title(); ?></h1>
+		<h1 class="ex-page-title">
+			<?php if ( get_field( 'sub_heading' ) ) : ?>
+			<div class="ex-sub-title"><?php the_field( 'sub_heading' ); ?></div>
+			<?php endif; ?>
+			<?php the_title(); ?>
+		</h1>
 
 		<div class="col-1-2 first ex-intro">
 			<?php the_field( 'intro' ); ?>
