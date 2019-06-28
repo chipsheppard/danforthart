@@ -12,17 +12,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 danforthart is a basic but flexible starter theme for WordPress 5.0.
 
 2 Widget Areas
-  - Sidebar
+  - Post Sidebar
   - Footer
 
 2 Supported Post Formats
   - Aside
   - Status
 
-34 Theme Action Hooks for developers
-This theme follows the standard set by the Theme Hook Alliance (THA)
-The THA repo is from 2012 and has been mostly dormant since, but,
-I think a standardized system of hooks for WordPress themes is a GREAT idea.
+= Theme Hook Alliance =
+
+34 Theme Action Hooks for developers following the standard set by the Theme Hook Alliance (THA)
 https://github.com/zamoose/themehookalliance
 
   Header:
@@ -73,17 +72,7 @@ https://github.com/zamoose/themehookalliance
   - tha_footer_after()
   - tha_body_bottom()
 
-= Anything else I should know? =
-
-The logo is constrained to 300px wide max.
-
-<hr>             is 10% black
-<hr class=“alt”> is 50% white
-
-BlockQuote:
-citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
-
-Utility Classes:
+= Utility Classes =
 
 class="mobile-only" : Displays on small viewports, hidden on large viewports.
 class="desktop-only" : Displays on large viewports, hidden on small viewports.
@@ -92,8 +81,7 @@ class="ta-right" : Text align right.
 class="fwn" : Font weight normal.
 class="fwl" : Font weight light;
 class="to-left" : Position element (opening hang quote) slightly to the left, outside the container.
-class="right-dq" : A fancy double right quote.
-				   You could also just use the HTML special character &rdquo;
+class="right-dq" : A fancy double right quote. You could also just use the HTML special character &rdquo;
 class="red" : Text color red
 class="grn" : Text color green
 class="blu" : Text color blue
@@ -101,9 +89,18 @@ class="pur" : Text color purple
 class="big" : Font size -> 125%
 class="intro" : Light font, size = 30px
 class="circle-num" : A 28x28 black circle you can put a character into, numbers for example.
-class="num-list" : To be placed on an unordered list! <ul class="num-list">
-				   Used when "circle-num" characters are placed in each <li> - replaces default bullet points.
+class="num-list" : To be placed on an unordered list! <ul class="num-list"> Used when "circle-num" characters are placed in each <li> - replaces default bullet points.
 class="oh" : overflow: hidden;
+
+= Anything Else I Should Know? =
+
+The logo is constrained to 300px wide max.
+
+<hr>             is 10% black
+<hr class=“alt”> is 50% white
+
+BlockQuote:
+citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
 
 
 == Changelog ==
