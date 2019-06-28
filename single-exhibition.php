@@ -67,7 +67,12 @@ function da_exhibition() {
 			<?php the_field( 'date' ); ?>
 		</div>
 
-		<h1 class="ex-page-title"><?php the_title(); ?></h1>
+		<h1 class="ex-page-title">
+			<?php if ( get_field( 'sub_heading' ) ) : ?>
+			<div class="ex-sub-title"><?php the_field( 'sub_heading' ); ?></div>
+			<?php endif; ?>
+			<?php the_title(); ?>
+		</h1>
 
 		<div class="col-1-2 first ex-intro">
 			<?php the_field( 'intro' ); ?>
@@ -149,7 +154,7 @@ endif;
 			?>
 
 <?php if ( get_field( 'quote' ) ) : ?>
-			<div class="quote">
+			<div class="quote-block">
 				<blockquote>
 					<?php the_field( 'quote' ); ?>
 					<cite>
@@ -170,8 +175,8 @@ if ( $link ) :
 
 		</div>
 
+		<?php if ( get_field( 'more_content_left' ) || get_field( 'more_content_right' ) ) : ?>
 		<hr />
-
 		<div class="inner-wrap">
 			<div class="col-1-2 first more-left">
 				<?php the_field( 'more_content_left' ); ?>
@@ -180,9 +185,13 @@ if ( $link ) :
 				<?php the_field( 'more_content_right' ); ?>
 			</div>
 			<div class="cf"></div>
+		</div>
+		<?php endif; ?>
 
+		<div class="inner-wrap">
 			<?php get_template_part( 'template-parts/call-to-action' ); ?>
 		</div>
+
 	</div>
 <?php
 }

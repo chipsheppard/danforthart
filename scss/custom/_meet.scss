@@ -18,7 +18,8 @@ body.meetus {
 		}
 	}
 	.mid-block {
-		.col-1-2 {
+		.mid-left,
+		.mid-right {
 			margin-top: -31.375em;
 
 			@include breakpoint(tablet-v) {
@@ -38,6 +39,12 @@ body.meetus {
 				@include breakpoint(tablet-v) {
 					padding: 0 1em;
 				}
+			}
+		}
+		.mid-right {
+			.card-title {
+				background-color: $color__bg;
+				bottom: 0;
 			}
 		}
 		.textblock .message {

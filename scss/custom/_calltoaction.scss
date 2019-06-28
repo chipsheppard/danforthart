@@ -10,6 +10,7 @@
 			}
 		}
 	}
+
 	.inner-wrap {
 		display: flex;
 		overflow: hidden;
@@ -25,7 +26,7 @@
 	.ctablock {
 		padding: 1em;
 		margin-bottom: 1.5em;
-		min-height: 400px;
+		height: 400px;
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 0;
@@ -34,6 +35,7 @@
 		.cta-wrap {
 			background-color: #ffffff;
 			height: 100%;
+			transition: all 200ms ease-in-out;
 		}
 
 		.card-title {
@@ -160,12 +162,32 @@
 			}
 		}
 
-		.img-bg {
+		a {
+			display: inline-block;
 			width: 100%;
-			min-height: 200px;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			@include nb();
+		}
+
+		.img-wrap {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			transition: all 200ms ease-in-out;
+		}
+
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+		.card-title {
+			position: relative;
+			z-index: 3;
 		}
 		.sub-head {
 			padding-bottom: .5em;
@@ -182,39 +204,11 @@
 			.card-info {
 				padding-top: 200px;
 			}
-			.img-bg {
-				background-size: 100% 50%;
-				background-position: center top;
-				height: 100%;
-			}
 		}
 
 		@include breakpoint(tablet-min-v) {
-			.img-bg {
-				height: 100%;
-			}
-			a:hover .img-bg {
-				background: none !important;
-			}
-
-			.sub-head,
-			.card-text,
-			.card-link {
-				color: transparent;
-			}
-			.card-link {
-				border-color: transparent;
-			}
-
-			a:hover {
-				.sub-head,
-				.card-text,
-				.card-link {
-					color: $color__base;;
-				}
-				.card-link {
-					border-color: $color__base;;
-				}
+			a:hover .img-wrap {
+				opacity: 0;
 			}
 		}
 	}

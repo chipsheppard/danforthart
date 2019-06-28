@@ -75,19 +75,19 @@
 					<?php
 					$post_object = get_sub_field( 'exhibition', 'option' );
 					if ( $post_object ) :
-						// override $post.
 						$post = $post_object;
 						setup_postdata( $post );
 						?>
 						<a href="<?php the_permalink(); ?>">
-						<div class="img-bg" style="background-image:url('<?php the_post_thumbnail_url( 'large' ); ?>')">
-							<div class="card-title">Exhibit</div>
-							<div class="card-info">
-								<div class="sub-head"><?php the_sub_field( 'sub_header', 'option' ); ?></div>
-								<div class="card-text"><?php the_title(); ?></div>
-								<span class="card-link">See What's On View</span>
+							<div class="img-wrap"><?php the_post_thumbnail( 'large' ); ?></div>
+							<div class="cta-wrap">
+								<div class="card-title">Exhibit</div>
+								<div class="card-info">
+									<div class="sub-head"><?php the_sub_field( 'sub_header', 'option' ); ?></div>
+									<div class="card-text"><?php the_title(); ?></div>
+									<span class="card-link">See What's On View</span>
+								</div>
 							</div>
-						</div>
 						</a>
 						<?php
 						wp_reset_postdata();

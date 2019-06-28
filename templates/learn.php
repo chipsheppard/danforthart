@@ -40,11 +40,9 @@ function da_learn() {
 	<div class="inner-wrap">
 
 		<div class="mid-block">
+<!-- - - - - - - - - - - -->
 
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-			<div class="col-1-2 nm top mid-left">
+			<div class="col-5-12 nm top mid-left">
 <?php
 $q_link = get_field( 'q_link' );
 if ( $q_link ) :
@@ -82,8 +80,7 @@ endif;
 			</div>
 
 <!-- - - - - - - - - -->
-
-			<div class="col-1-2 nm top mid-right">
+			<div class="col-7-12 nm top mid-right">
 				<div class="textblock">
 					<?php if ( get_field( 'quote' ) ) : ?>
 					<blockquote>
@@ -105,10 +102,8 @@ if ( $qc_link ) :
 				</div>
 			</div>
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-			<div class="col-1-2 nm pullright bot mid-left">
+<!-- - - - - - - - - - - -->
+			<div class="col-7-12 nm pullright bot mid-left">
 <?php
 $c_link = get_field( 'c_link' );
 if ( $c_link ) :
@@ -145,42 +140,45 @@ endif;
 <?php endif; ?>
 			</div>
 
-<!-- - - - - - - - - -->
-
-			<div class="col-1-2 nm bot mid-right">
+<!-- - - - - - - - -->
+			<div class="col-5-12 nm bot mid-right">
 				<div class="textblock">
 					<div class="message"><?php the_field( 'course_text' ); ?></div>
 				</div>
 			</div>
-
 			<div class="cf"></div>
+
 		</div>
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	</div><!-- /mid-block -->
+	</div>
+
+<!-- - - - - - - - - -->
+<!-- - - - - - - - - -->
+<!-- - - - - - - - - -->
 
 	<div class="inner-wrap">
-
 		<div class="courses-intro">
 			<?php the_field( 'courses_intro' ); ?>
 		</div>
+	</div>
 
-		<div class="course-blocks">
-		<?php
-		if ( have_rows( 'course_box' ) ) :
-			while ( have_rows( 'course_box' ) ) :
-				the_row();
-				$lcl = get_sub_field( 'c_level' );
-				$boxlevel = $lcl->name;
-				?>
-				<div class="course-overview-box<?php if ( get_sub_field( 'highlight_color' ) ) : ?>
+	<div class="course-blocks">
+	<?php
+	if ( have_rows( 'course_box' ) ) :
+		while ( have_rows( 'course_box' ) ) :
+			the_row();
+			$lcl = get_sub_field( 'c_level' );
+			$boxlevel = $lcl->name;
+			?>
+			<div class="course-overview-box<?php if ( get_sub_field( 'highlight_color' ) ) : ?>
 <?php
 echo ' ';
 the_sub_field( 'highlight_color' );
 endif;
 ?>
 ">
-					<div class="box-top">
+				<div class="box-top">
+					<div class="inner-wrap">
 						<div class="col-1-2 first c-title">
 							<div class="title-text"><?php the_sub_field( 'box_title' ); ?></div>
 							<div class="cssicon-plusminus plus"></div>
@@ -202,7 +200,10 @@ endif;
 							<?php the_sub_field( 'box_intro' ); ?>
 						</div>
 					</div>
-					<div class="box-bottom">
+				</div>
+
+				<div class="box-bottom">
+					<div class="inner-wrap">
 						<div class="col-3-5 first c-text">
 							<?php the_sub_field( 'box_text' ); ?>
 						</div>
@@ -210,63 +211,67 @@ endif;
 						<div class="c-list-header">
 							<span><?php the_sub_field( 'list_header' ); ?></span>
 						</div>
+					</div>
 
-						<?php get_template_part( 'template-parts/courses-overview' ); ?>
+					<?php get_template_part( 'template-parts/courses-overview' ); ?>
 
-						<?php if ( have_rows( 'vaca_block' ) ) : ?>
-						<div class="vaca-blocks">
-							<?php
-							while ( have_rows( 'vaca_block' ) ) :
-								the_row();
-							?>
-							<div class="col-1-2 nm vaca-block">
-								<div class="vaca-title"><span><?php the_sub_field( 'vaca_title' ); ?></span></div>
-								<div class="vaca-text"><?php the_sub_field( 'vaca_text' ); ?></div>
-								<div class="vaca-dates">
-									<?php
-									if ( have_rows( 'vaca_dates' ) ) :
-										while ( have_rows( 'vaca_dates' ) ) :
-											the_row();
-										?>
-										<div class="vd-date"><?php the_sub_field( 'v_date' ); ?></div>
-										<div class="vd-price"><?php the_sub_field( 'v_price' ); ?></div>
-										<?php
-										endwhile;
-									endif;
+					<?php if ( have_rows( 'vaca_block' ) ) : ?>
+					<div class="inner-wrap"><div class="vaca-blocks">
+						<?php
+						while ( have_rows( 'vaca_block' ) ) :
+							the_row();
+						?>
+						<div class="col-1-2 nm vaca-block">
+							<div class="vaca-title"><span><?php the_sub_field( 'vaca_title' ); ?></span></div>
+							<div class="vaca-text"><?php the_sub_field( 'vaca_text' ); ?></div>
+							<div class="vaca-dates">
+								<?php
+								if ( have_rows( 'vaca_dates' ) ) :
+									while ( have_rows( 'vaca_dates' ) ) :
+										the_row();
 									?>
-									<div class="cf"></div>
-								</div>
-								<div class="vaca-btn">
+									<div class="vd-date"><?php the_sub_field( 'v_date' ); ?></div>
+									<div class="vd-price"><?php the_sub_field( 'v_price' ); ?></div>
 									<?php
-									$v_link = get_sub_field( 'vaca_btn' );
-									if ( $v_link ) :
-										$url = $v_link['url'];
-										$title = $v_link['title'];
-										$target = $v_link['target'] ? $v_link['target'] : '_self';
-										?>
-										<a class="btn" href="<?php echo esc_url( $url ); ?>" target="<?php echo esc_attr( $target ); ?>"><?php echo esc_html( $title ); ?></a>
-									<?php endif; ?>
-								</div>
-								<div class="vaca-ps"><?php the_sub_field( 'vaca_ps' ); ?></div>
+									endwhile;
+								endif;
+								?>
+								<div class="cf"></div>
 							</div>
-							<?php endwhile; ?>
-						<div class="cf"></div>
-						</div><!-- /vaca-blocks -->
-						<?php endif; ?>
+							<div class="vaca-btn">
+								<?php
+								$v_link = get_sub_field( 'vaca_btn' );
+								if ( $v_link ) :
+									$url = $v_link['url'];
+									$title = $v_link['title'];
+									$target = $v_link['target'] ? $v_link['target'] : '_self';
+									?>
+									<a class="btn" href="<?php echo esc_url( $url ); ?>" target="<?php echo esc_attr( $target ); ?>"><?php echo esc_html( $title ); ?></a>
+								<?php endif; ?>
+							</div>
+							<div class="vaca-ps"><?php the_sub_field( 'vaca_ps' ); ?></div>
+						</div>
+						<?php endwhile; ?>
+					<div class="cf"></div>
+					</div></div>
+					<?php endif; ?>
+					<div class="inner-wrap">
 						<div class="box-close">Close <span class="cssicon-plusminus minus"></span></div>
-					</div><!-- /box-bottom -->
-				</div><!-- /course-box -->
-				<?php
-			endwhile;
-		endif;
-		?>
-		</div><!-- /course-blocks -->
+					</div>
+				</div>
+			</div>
+			<?php
+		endwhile;
+	endif;
+	?>
+	</div>
 
+	<div class="inner-wrap">
 		<?php get_template_part( 'template-parts/accordion-block' ); ?>
 		<?php get_template_part( 'template-parts/call-to-action' ); ?>
+	</div>
 
-	</div><!-- /inner-wrap -->
-</div><!-- /content-wrap -->
+</div>
 
 <?php
 }

@@ -68,7 +68,7 @@ function da_current() {
 				<a href="<?php echo esc_url( get_permalink( $fe_post_object->ID ) ); ?>"><span><?php the_field( 'fe_link_text' ); ?></span></a>
 			</div>
 			<div class="date"><?php the_field( 'date', $fe_post_object->ID ); ?></div>
-			<div class="text"><?php echo get_the_title( $fe_post_object->ID ); ?></div>
+			<div class="text"><a href="<?php echo esc_url( get_permalink( $fe_post_object->ID ) ); ?>"><?php echo get_the_title( $fe_post_object->ID ); ?></a></div>
 		</div>
 	</div>
 </div>
@@ -128,7 +128,7 @@ endif;
 						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $el_post_object->ID ) ); ?>"><?php echo get_the_title( $el_post_object->ID ); ?></a></div>
 					</div>
 				</div>
-			</div><!-- /exhibit-left -->
+			</div>
 			<?php endif; ?>
 		</div>
 
@@ -174,7 +174,7 @@ endif;
 						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $ert_post_object->ID ) ); ?>"><?php echo get_the_title( $ert_post_object->ID ); ?></a></div>
 					</div>
 				</div>
-			</div><!-- /exhibit-right-top -->
+			</div>
 			<?php endif; ?>
 
 			<?php
@@ -218,7 +218,7 @@ endif;
 						<div class="title"><a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $erb_post_object->ID ) ); ?>"><?php echo get_the_title( $erb_post_object->ID ); ?></a></div>
 					</div>
 				</div>
-			</div><!-- /exhibit-right-bottom -->
+			</div>
 			<?php endif; ?>
 		</div>
 		<div class="cf"></div>
@@ -234,21 +234,23 @@ endif;
 			</div>
 			<div class="cf"></div>
 		</div>
+	</div>
+	<!-- /inner-wrap -->
 
-
-		<div class="upcoming-exhibits">
-		<?php
-		if ( have_rows( 'upcoming_exhibitions' ) ) :
-			while ( have_rows( 'upcoming_exhibitions' ) ) :
-				the_row();
-				?>
-				<div class="u-exhibit<?php if ( get_sub_field( 'highlight_color' ) ) : ?>
+	<div class="upcoming-exhibits">
+	<?php
+	if ( have_rows( 'upcoming_exhibitions' ) ) :
+		while ( have_rows( 'upcoming_exhibitions' ) ) :
+			the_row();
+			?>
+			<div class="u-exhibit<?php if ( get_sub_field( 'highlight_color' ) ) : ?>
 <?php
 echo ' ';
 the_sub_field( 'highlight_color' );
 endif;
 ?>
 ">
+				<div class="inner-wrap">
 					<div class="ue-upper">
 						<div class="col-1-4 ue-image">
 							<?php
@@ -293,15 +295,16 @@ endif;
 						<div class="cf"></div>
 					</div>
 
-				</div><!-- /u-exhibit -->
-			<?php
-			endwhile;
-		endif;
-		?>
-		</div><!-- /upcoming-exhibits -->
+				</div>
+			</div><!-- /u-exhibit -->
+		<?php
+		endwhile;
+	endif;
+	?>
+	</div><!-- /upcoming-exhibits -->
 
+	<div class="inner-wrap">
 		<?php get_template_part( 'template-parts/call-to-action' ); ?>
-
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
 

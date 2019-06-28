@@ -16,6 +16,52 @@
 
 // ARROWS - - - - - - - - - - - - - - - - - -
 
+// NorthEast
+.cssicon-arrow-ne {
+  margin-left: 12px;
+  margin-top: 6px;
+  width: 16px;
+  height: 10px;
+  transform: rotate(-45deg);
+
+	&:before {
+	  position: absolute;
+	  right: 0;
+	  top: -7px;
+	  width: 11px;
+	  height: 11px;
+	  border-top: solid 1px currentColor;
+	  border-right: solid 1px currentColor;
+	  transform: rotate(45deg);
+	}
+	&:after {
+		position: absolute;
+	    right: 1px;
+	    top: -2px;
+		width: 16px;
+	    height: 1px;
+		background-color: currentColor;
+	}
+
+	&.large {
+	    width: 32px;
+	    height: 20px;
+
+		&:before {
+		  top: -8px;
+		  width: 22px;
+		  height: 22px;
+		}
+		&:after {
+		    right: -3px;
+		    top: 3px;
+			width: 32px;
+		    height: 1px;
+		}
+	}
+}
+
+
 // PlusMinus
 .cssicon-plusminus {
 	color: currentColor;
@@ -25,9 +71,6 @@
 	width: 40px;
 
 
-	&:hover {
-		opacity: .75;
-	}
 	&.plus:before {
 		background-color: currentColor;
 		position: absolute;
@@ -53,6 +96,18 @@
 		position: absolute;
 		top: 20px;
 		left: 0;
+	}
+	&:hover {
+
+		&.plus:before {
+			height: 2px;
+		}
+		&.plus:after {
+			height: 2px;
+		}
+		&.minus:before {
+			height: 2px;
+		}
 	}
 
 	&.small {

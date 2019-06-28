@@ -47,51 +47,70 @@ body.learncreate {
 }
 
 .course-overview-box {
-	border: 1px solid $color__green;
-	padding: 3em 3em 6em;
+	border-top: 1px solid $color__green;
+	border-bottom: 1px solid $color__green;
+	padding: 3em 0 6em;
 
 	@include breakpoint(tablet-v) {
-		padding: 1.5em 1em 2em;
-	}
-
-	.course-row {
-		transition: background-color 200ms ease-in-out;
+		padding: 1.5em 0 2em;
 	}
 
 	.course-col {
+
 		.display-name {
-			padding-bottom: 0;
-			span {
-				display: inline-block;
-				border-bottom: 2px solid #000;
-				padding-bottom: .375em;
+			border-bottom: 2px solid #000;
+			padding-bottom: 5px;
+
+			&:hover {
+				border-bottom:4px solid #000;
+				padding-bottom: 3px;
 			}
+
+			@include breakpoint(tablet-v) {
+				margin: 1em 0 1.5rem;
+			}
+
 			a {
 				display: inline-block;
-				border-bottom-width: 2px;
-				padding-bottom: .375em;
-				&:hover {
-					padding-bottom: .375em;
-				}
+				@include nb();
 			}
+		}
+
+		.level-o,
+		.price-o {
+			float: left;
+			margin-top: auto;
+			padding-bottom: .375em;
+		}
+		.level-o {
+			width: 75%;
+		}
+		.price-o {
+			font-weight: $font__weight-bold;
+			width: 25%;
 		}
 	}
 
 	.course-row:hover {
-		background-color: #000;
-		color: #fff;
+		background-color: #000000;
+		color: #ffffff;
 		border-width: 0;
+
+		.course-row-innerwrap {
+			border-bottom: 0;
+		}
 
 		.row-top {
 			padding-top: 1.5625em;
 		}
 
 		a {
-			color: #fff;
-			border-color: #fff;
+			color: #ffffff;
+			border-color: #ffffff;
 		}
-		.course-col .instructors {
-			border-color: #fff;
+		.course-col .instructors,
+		.course-col .display-name {
+			border-color: #ffffff;
 		}
 	}
 
@@ -121,25 +140,40 @@ body.learncreate {
 	.c-level {
 		display: flex;
 	}
+
 	.title-text,
 	.cssicon-plusminus {
 		margin: auto 0;
 	}
+
 	.c-level {
 		margin: auto;
 	}
 
 	.c-title {
 		font-weight: $font__weight-bold;
-		@include font-size(1.625);
+		@include font-size(2.75);
 
 		&:hover {
 			cursor: pointer;
+
+			.title-text {
+				border-bottom-width: 2px;
+				margin-bottom: 0;
+			}
+			.cssicon-plusminus {
+				&.minus:before,
+				&.plus:before,
+				&.plus:after {
+					height: 2px;
+				}
+			}
 		}
 
 		.title-text {
 			border-bottom: 1px solid $color__base;
 			margin-right: 2em;
+			margin-bottom: 1px;
 
 			@include breakpoint(tablet-v) {
 				margin-right: 1em;
@@ -159,8 +193,9 @@ body.learncreate {
 	}
 
 	.c-intro {
-		margin: 1em 0;
-		@include font-size(1.25);
+		font-weight: $font__weight-light;
+		margin: 1.25em 0 .75em;
+		@include font-size(1.5);
 	}
 
 	.c-list-header {
@@ -180,6 +215,7 @@ body.learncreate {
 
 	.vaca-blocks {
 		display: flex;
+
 		@include breakpoint(tablet-v) {
 			display: block;
 		}
@@ -249,8 +285,8 @@ body.learncreate {
 // -----------------------------------------------
 
 .courses-intro {
-	padding: 3em 1em;
-	@include font-size(1.875);
+	padding: 3em 0;
+	@include font-size(1.75);
 
 	@include breakpoint(tablet-v) {
 		padding-bottom: 0;
@@ -258,23 +294,22 @@ body.learncreate {
 	}
 }
 .course-rows-wrap {
-	margin-bottom: 8em;
+	margin-bottom: 6em;
 }
 .course-headers {
+	color: #9a9a9a;
 	font-weight: $font__weight-bold;
-	padding: 1em 1em 2em;
+	letter-spacing: 2px;
+	padding: 1em 4% 2em;
+	text-transform: uppercase;
+	@include font-size(.875);
 
 	@include breakpoint(tablet-v) {
-		padding: 0 1em;
-	}
-	@include breakpoint(phone-h) {
 		display: none;
 	}
 }
 
 .course-row {
-	border-bottom: 1px solid $color__base;
-	padding: 0 2%;
 	width: 100%;
 	transition: all 200ms ease-in-out;
 
@@ -282,10 +317,22 @@ body.learncreate {
 		z-index: 5;
 	}
 
+	.course-row-innerwrap {
+		border-bottom: 1px solid $color__base;
+		padding: 0 1%;
+		margin-left: -1%;
+		width: 102%;
+	}
+
 	.row-top {
 		display: flex;
 	 	flex-wrap: wrap;
 		padding-top: 1.5em;
+
+		@include breakpoint(tablet-v) {
+			margin-left: 1em;
+			margin-right: 1em;
+		}
 
 		&.ca {
 			padding-top: .5em;
@@ -299,8 +346,6 @@ body.learncreate {
 		background-color: #000000;
 		color: #ffffff;
 		padding: .125em 1.5em;
-		margin-left: -2.1%;
-		width: 104.2%;
 		@include font-size(.875);
 	}
 	.course-images {
@@ -308,9 +353,9 @@ body.learncreate {
 
 		img {
 			display: block;
-			max-width: none;
-			height: 300px;
-			object-fit: cover;
+			//max-width: none;
+			//height: 300px;
+			//object-fit: cover;
 			width: 100%;
 		}
 	}
@@ -338,17 +383,24 @@ body.learncreate {
 	.date {
 		display: inline-block;
 		margin-top: auto;
-		padding-bottom: .5em;
+		padding-bottom: .625em;
 	}
 
 	.instructors {
 		border-bottom: 2px solid #000;
+		font-weight: $font__weight-bold;
 		margin-top: auto;
-		padding-bottom: .375em;
+		padding-bottom: .5em;
+
+		&:hover {
+			border-bottom:4px solid #000;
+			padding-bottom: .375em;
+		}
 
 		@include breakpoint(tablet-v) {
 			margin: 1em 0 1.5em;
 		}
+
 		a {
 			@include nb();
 		}
@@ -357,50 +409,51 @@ body.learncreate {
 	.display-name {
 		font-weight: $font__weight-bold;
 		margin-top: auto;
-		padding-bottom: .375em;
+		@include font-size(1.25);
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 1em;
 		}
 
+		span {
+			cursor: pointer;
+			display: inline-block;
+			border-bottom: 2px solid #000;
+			padding-bottom: 5px;
+
+			&:hover {
+				border-bottom: 4px solid #000;
+				padding-bottom: 3px;
+			}
+		}
 	}
 
-	.price,
 	.control {
-		float: left;
-		width: 50%;
+		margin-top: auto;
+		padding-bottom: .5em;
+		text-align: center;
+
+		@include breakpoint(tablet-v) {
+			margin-top: auto;
+			margin-left: auto;
+			padding-bottom: 0;
+			position: relative;
+			text-align: right;
+			top: 175%;
+		}
+	}
+
+	.level {
+		margin-top: auto;
+		padding-bottom: .5625em;
 	}
 	.price {
 		margin-top: auto;
 		font-weight: $font__weight-bold;
-		padding-bottom: .4375em;
+		padding-bottom: .5625em;
+
 		@include breakpoint(tablet-v) {
 			float: right;
-		}
-	}
-	.level-o,
-	.price-o {
-		float: left;
-		margin-top: auto;
-		padding-bottom: .375em;
-	}
-	.level-o {
-		width: 75%;
-	}
-	.price-o {
-		font-weight: $font__weight-bold;
-		width: 25%;
-	}
-
-	.control {
-		//margin: auto;
-		margin-top: 1.5em;
-
-		@include breakpoint(tablet-v) {
-			margin: auto;
-			position: relative;
-			text-align: right;
-			top: 175%;
 		}
 	}
 
@@ -412,7 +465,29 @@ body.learncreate {
 			margin: 1em auto 1em 0;
 		}
 	}
+
+	.sessions {
+		line-height: 1.375;
+		margin-bottom: 1em;
+	}
+
+	.course-reg-link {
+		display: inline-block;
+		margin-top: .5em;
+		@include font-size(1.125);
+	}
 }
+
+
+.reg-block {
+	margin-top: 1em;
+	margin-bottom: 6em;
+
+	.reg-text {
+		padding-right: 2%;
+	}
+}
+
 
 
 // -----------------------------------------------
@@ -423,6 +498,10 @@ body.learncreate {
 
 	.vw-header-block {
 		margin-bottom: 5em;
+
+		h3 {
+			@include font-size(3.5);
+		}
 	}
 
 	.vw-left {
@@ -431,9 +510,6 @@ body.learncreate {
 	}
 }
 
-
-// -----------------------------------------------
-// -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 
@@ -445,6 +521,7 @@ body.learn-c {
 		}
 	}
 
+/* MASONRY
 	.course-row {
 		display: none;
 
@@ -452,10 +529,15 @@ body.learn-c {
 	 		display: block;
 		}
 	}
+*/
 
 	.page-title {
-		margin: 2em 0 6em;
+		margin: 4em 0 6em;
 		@include font-size(2.8125);
+
+		@include breakpoint(tablet-v) {
+			margin-top: 1.5em;
+		}
 	}
 
 	.tabs-wrap {
@@ -466,8 +548,6 @@ body.learn-c {
 			cursor: auto;
 			background-color: $color__bg;
 			border-top: 1px solid $color__base;
-			border-right: 1px solid $color__base;
-			border-left: 1px solid $color__base;
 
 
 			h2 {
@@ -477,13 +557,29 @@ body.learn-c {
 				}
 			}
 		}
+		&.left .tab-left {
+			border-right: 1px solid $color__base;
+		}
+		&.left .tab-right {
+			border-bottom: 1px solid $color__base;
+		}
+		&.right .tab-right {
+			border-left: 1px solid $color__base;
+		}
+		&.right .tab-left {
+			border-bottom: 1px solid $color__base;
+		}
 
-		@include breakpoint(phone-h) {
-			&.left .tab-left {
-				border-left: none;
+		.tableft-inner {
+			max-width: 740px;
+			width: 100%;
+			float: right;
+
+			@include breakpoint(huge) {
+				max-width: 750px;
 			}
-			&.right .tab-right {
-				border-right: none;
+			@include breakpoint(site-max) {
+				max-width: none;
 			}
 		}
 	}
@@ -501,13 +597,29 @@ body.learn-c {
 			line-height: 1.5;
 			@include font-size(1);
 		}
+
 		@include breakpoint(tablet-v) {
-			padding: .75em;
+			padding-top: .75em;
+			padding-bottom: .75em;
+		}
+
+		&.tab-left {
+			padding-left: 0;
+			padding-right: 0;
+
+			@include breakpoint(site-max) {
+				padding-left: 3%;
+				padding-right: 3%;
+			}
 		}
 
 		a {
 			display: inline-block;
 			@include nb();
+
+			&:hover h2 span {
+				border-bottom-width: 2px;
+			}
 		}
 
 		h2 {
@@ -537,61 +649,69 @@ body.learn-c {
 		}
 	}
 
-
 	.tab-body {
-		border: 1px solid $color__base;
-		padding: 3em 2.5em;
-		margin-bottom: 6em;
+		padding: 3em 0 6em;
 		position: relative;
 		top: -1px;
 
 		@include breakpoint(tablet-v) {
-			padding: 1em;
+			padding: 1em 0;
 		}
 		@include breakpoint(phone-h) {
 			border-width: 1px 0 1px 0;
+			padding: 1em 3%;
 		}
 	}
 
 	.tab-intro {
 		font-weight: $font__weight-light;
-		margin-bottom: 2em;
+		margin-bottom: 4em;
 		padding-right: 1em;
-		@include font-size(1.625);
+		@include font-size(1.75);
+
+		@include breakpoint(tablet-v) {
+			margin-bottom: 0;
+		}
 
 		@include breakpoint(phone-h) {
 			@include font-size(1.25);
-			margin-bottom: 0;
 		}
 	}
 
 	.tab-content {
-		padding: .75em 4em 1em 1em;
-		@include breakpoint(phone-h) {
-			padding: 0 0 1.5em;
+		padding: .75em 4em 4em 1em;
+		@include font-size(1.125);
+
+		@include breakpoint(tablet-v) {
+			padding: 0 0 1.5em 0;
 		}
 	}
+
 	.tab-courses-intro {
-		margin-bottom: 3em;
+		font-weight: $font__weight-bold;
+		@include font-size(1.75);
 	}
+	/*
 	.tab-filter {
 		margin-bottom: 3em;
 	}
 	.tab-filter-text {
 		margin-bottom: 3em;
 	}
-
 	.tb2 {
 		display: none;
 	}
+	*/
 }
 
+/*
 .filter-buttons {
 	button {
 		float: left;
 		margin: 0 1em 1em 0;
 	}
 }
+*/
 
 #no-results,
 .no-results {
@@ -608,30 +728,84 @@ body.learn-c {
 	}
 }
 
+
+body.k-8 .tabs-wrap {
+	&.right .tab-left,
+	&.left .tab-right {
+		background-color: $color__green-xxlt;
+	}
+}
+body.teens .tabs-wrap {
+	&.right .tab-left,
+	&.left .tab-right {
+		background-color: $color__green-lt;
+	}
+}
+body.adults .tabs-wrap {
+	&.right .tab-left,
+	&.left .tab-right {
+		background-color: $color__green-xlt;
+	}
+}
+
 body.k-8 {
 	background-color: $color__green-xxlt;
 	.accordion:hover,
-	.accordion.active,
-	.course-row:hover,
-	.course-row.active {
+	.accordion.active {
 		background-color: $color__green-xxlt;
 	}
 }
 body.teens {
 	background-color: $color__green-lt;
 	.accordion:hover,
-	.accordion.active,
-	.course-row:hover,
-	.course-row.active {
+	.accordion.active {
 		background-color: $color__green-lt;
 	}
 }
 body.adults {
 	background-color: $color__green-xlt;
 	.accordion:hover,
-	.accordion.active,
-	.course-row:hover,
-	.course-row.active {
+	.accordion.active {
 		background-color: $color__green-xlt;
+	}
+}
+
+
+body.learn-c {
+	.course-row:nth-of-type(6n+1) {
+		&:hover,
+		&.active {
+			background-color: $color__green;
+		}
+	}
+	.course-row:nth-of-type(6n+2) {
+		&:hover,
+		&.active {
+			background-color: $color__yellow;
+		}
+	}
+	.course-row:nth-of-type(6n+3) {
+		&:hover,
+		&.active {
+			background-color: $color__tan;
+		}
+	}
+	.course-row:nth-of-type(6n+4) {
+		&:hover,
+		&.active {
+			background-color: $color__purple;
+		}
+	}
+	.course-row:nth-of-type(6n+5) {
+		&:hover,
+		&.active {
+			background-color: $color__orange;
+		}
+	}
+	.course-row:nth-of-type(6n+6) {
+		&:hover,
+		&.active {
+			background-color: $color__blue;
+		}
 	}
 }

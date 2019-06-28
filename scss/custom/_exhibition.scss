@@ -24,30 +24,20 @@ body.single-exhibition {
 		}
 	}
 
+	.quote-block {
+		margin-top: 3em;
+		margin-bottom: 6em;
+	}
 	blockquote {
 		font-weight: $font__weight-light;
-		line-height: 1.375;
-		margin: 1.5em 3em 3em 7em;
-		@include font-size(2.8125);
+		margin: 0 3em 0 7em;
 
 		@include breakpoint(tablet-h) {
-			margin: 1.5em 1em;
-			@include font-size(2.5);
+			margin: 0 1em;
 
 		}
 		@include breakpoint(tablet-v) {
-			margin: 0 0 1.5em;
-			@include font-size(2);
-		}
-
-		cite {
-			margin-top: 1.5em;
-			@include font-size(1.375);
-
-			a {
-				letter-spacing: 1px;
-				@include font-size(1);
-			}
+			margin: 0;
 		}
 	}
 
@@ -142,6 +132,11 @@ body.single-exhibition {
 	}
 }
 
+.ex-sub-title {
+	margin-bottom: 1em;
+	@include font-size(1.25);
+	@include bigtext();
+}
 
 .ex-page-title {
 	line-height: 1;

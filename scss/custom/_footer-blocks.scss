@@ -47,11 +47,6 @@
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-
-	@include breakpoint(tablet-v) {
-		//top: auto;
-		//transform: none;
-	}
 }
 
 .footer-quote {
@@ -88,6 +83,13 @@
 
 		a {
 			@include font-size(1);
+		}
+
+		&:before {
+			content: '“';
+			position: relative;
+			left: .1875em;
+		    margin-left: -.625em;
 		}
 	}
 }

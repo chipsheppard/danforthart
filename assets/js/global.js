@@ -136,11 +136,11 @@ jQuery(function( $ ){
 	$('.course-row').find('.opener').click(function() {
 		$('.row-bottom').hide();
 		$('.course-row').removeClass('active');
-		if ( $(this).hasClass( 'plus' ) ) {
-			$('.opener').removeClass( 'minus' );
-			$('.opener').addClass( 'plus' );
-			$(this).removeClass( 'plus' );
-			$(this).addClass( 'minus' );
+		if ( $(this).hasClass('plus') ) {
+			$('.opener').removeClass('minus');
+			$('.opener').addClass('plus');
+			$(this).removeClass('plus');
+			$(this).addClass('minus');
 			$(this).closest('.course-row').addClass('active');
 			$(this).parents().children('.row-bottom').slideDown(200);
 		} else {
@@ -150,6 +150,25 @@ jQuery(function( $ ){
 		}
 	} );
 } );
+jQuery(function( $ ){
+	$('.course-row').find('.opener2').click(function() {
+		$('.row-bottom').hide();
+		$('.course-row').removeClass('active');
+		if ( $(this).closest('.course-row').find('.opener').hasClass('plus') ) {
+			$('.opener').removeClass('minus');
+			$('.opener').addClass('plus');
+			$(this).closest('.course-row').find('.opener').removeClass('plus');
+			$(this).closest('.course-row').find('.opener').addClass('minus');
+			$(this).closest('.course-row').addClass('active');
+			$(this).parents().children('.row-bottom').slideDown(200);
+		} else {
+			$(this).closest('.course-row').find('.opener').removeClass('minus');
+			$(this).closest('.course-row').find('.opener').addClass('plus');
+			$(this).parents().children('.row-bottom').slideUp(200);
+		}
+	} );
+} );
+
 
 // ACCORDIONs -------------------------------
 jQuery(function( $ ){

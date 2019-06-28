@@ -68,7 +68,7 @@ function da_permanent() {
 				<a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>"><span><?php the_field( 'link_text' ); ?></span></a>
 			</div>
 			<div class="date"><?php the_field( 'date', $post_object->ID ); ?></div>
-			<div class="text"><?php echo get_the_title( $post_object->ID ); ?></div>
+			<div class="text"><a href="<?php echo esc_url( get_permalink( $post_object->ID ) ); ?>"><?php echo get_the_title( $post_object->ID ); ?></a></div>
 		</div>
 	</div><!-- /inner-wrap -->
 </div><!-- /hero-wrap -->

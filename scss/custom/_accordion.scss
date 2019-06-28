@@ -1,11 +1,11 @@
 .accordion-block {
-	margin: 1em 0 8em;
+	padding: 1em 0 8em;
 
 	.ab-title {
 		padding: 0 0 3em 5em;
 
 		@include breakpoint(tablet-v) {
-			padding: 0 0 1em 0;
+			padding: 0 0 1em 1em;
 		}
 
 		h2 {

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template part for displaying the Variable images block.
+ * The template part for displaying a second Variable images block.
  *
  * @package    danforthart
  * @subpackage danforthart/template-parts
@@ -9,21 +9,21 @@
  * @license    GPL-2.0+
  */
 
-if ( have_rows( 'v_images' ) ) :
+if ( have_rows( 'v_images2' ) ) :
 	$rc = 0;
-	while ( have_rows( 'v_images' ) ) :
+	while ( have_rows( 'v_images2' ) ) :
 		$rc++;
 		the_row();
 	endwhile;
 	?>
-	<div class="variable-images rowof<?php echo esc_html( $rc ); ?>">
+	<div class="variable-images v2 rowof<?php echo esc_html( $rc ); ?>">
 	<?php
-	while ( have_rows( 'v_images' ) ) :
+	while ( have_rows( 'v_images2' ) ) :
 		the_row();
 		?>
 		<div class="variable-image img-<?php echo esc_html( $rc ); ?>">
 			<?php
-			$image = get_sub_field( 'v_image' );
+			$image = get_sub_field( 'v_image2' );
 			if ( ! empty( $image ) ) :
 				$alt = $image['alt'];
 				$caption = $image['caption'];

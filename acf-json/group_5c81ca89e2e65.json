@@ -329,7 +329,7 @@
         },
         {
             "key": "field_5c82a40d2337d",
-            "label": "Course List",
+            "label": "Above Classes",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -345,8 +345,8 @@
         },
         {
             "key": "field_5c81ca8a0c609",
-            "label": "Courses Intro",
-            "name": "courses_intro",
+            "label": "Above Intro",
+            "name": "above_intro",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -363,9 +363,9 @@
             "delay": 0
         },
         {
-            "key": "field_5c81ca8a0da66",
-            "label": "Course Filter",
-            "name": "course_filter",
+            "key": "field_5ce7170bc3e2a",
+            "label": "Above Left",
+            "name": "above_left",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -376,15 +376,15 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
+            "tabs": "all",
             "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
         },
         {
-            "key": "field_5c81ca8a0eb8a",
-            "label": "Course Filter Text",
-            "name": "course_filter_text",
+            "key": "field_5ce71ab0844c3",
+            "label": "Above Right",
+            "name": "above_right",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -396,9 +396,51 @@
             },
             "default_value": "",
             "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
+            "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5ce7173bc3e2b",
+            "label": "Above Button",
+            "name": "above_button",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "display": "Display",
+                "nodisplay": "Do not display",
+                "disabled": "Display disabled"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ce717b7c3e2c",
+            "label": "Column Headers",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5c82a497164b5",
@@ -414,7 +456,7 @@
                 "id": ""
             },
             "default_value": "Day + Time",
-            "placeholder": "",
+            "placeholder": "Day + Time",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -433,7 +475,7 @@
                 "id": ""
             },
             "default_value": "Instructor(s)",
-            "placeholder": "",
+            "placeholder": "Instructor(s)",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -451,8 +493,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Grade level + Class name",
-            "placeholder": "",
+            "default_value": "Class",
+            "placeholder": "Class",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -470,8 +512,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Price",
-            "placeholder": "",
+            "default_value": "Level",
+            "placeholder": "Level",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -489,11 +531,74 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Register",
-            "placeholder": "",
+            "default_value": "Price",
+            "placeholder": "Price",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5ce7183bc3e2d",
+            "label": "Below Classes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce5c43bd4200",
+            "label": "Below Left",
+            "name": "below_left",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ce5c44fd4201",
+            "label": "Below Button",
+            "name": "below_button",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "display": "Display",
+                "nodisplay": "Do not display",
+                "disabled": "Display disabled"
+            },
+            "default_value": [
+                "display"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5c82a3cb2337c",
@@ -584,6 +689,112 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_5ce5c46ad4202",
+            "label": "VacaWeek Registration Text",
+            "name": "vw_registration_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ce5c48fd4203",
+            "label": "VacaWeek Registration Button",
+            "name": "vw_button",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "display": "Display",
+                "nodisplay": "Do not display",
+                "disabled": "Display disabled"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5cf05e0bb21f2",
+            "label": "Images2 Block",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce5c55cd4204",
+            "label": "Variable Images 2",
+            "name": "v_images2",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5ce5c55cd4205",
+                    "label": "Image",
+                    "name": "v_image2",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         },
         {
             "key": "field_5c81ca8a1e419",
@@ -845,5 +1056,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1552073028
+    "modified": 1559255877
 }

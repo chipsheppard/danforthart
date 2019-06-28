@@ -80,97 +80,40 @@ function da_calendar() {
 </div>
 
 <div class="content-wrap">
-	<div class="inner-wrap mnp">
 
-		<?php
-		// EVENTS - - - - - - - - - - - - - - - - - - - -.
-		if ( have_rows( 'events' ) ) :
-		?>
+	<?php
+	// EVENTS - - - - - - - - - - - - - - - - - - - -.
+	if ( have_rows( 'events' ) ) :
+	?>
 
-		<div class="events">
-		<?php
-		while ( have_rows( 'events' ) ) :
-			the_row();
-			$e_post_object = get_sub_field( 'event' );
-			if ( $e_post_object ) :
-				// override $post.
-				$post = $e_post_object;
-				setup_postdata( $post );
-				?>
-				<div class="event">
-					<a href="<?php echo esc_url( get_permalink( $e_post_object->ID ) ); ?>">
-						<div class="e-upper">
-							<div class="col-1-4 e-image">
-								<?php
-								$e_image = get_sub_field( 'e_image' );
-								if ( ! empty( $e_image ) ) :
-									$alt = $e_image['alt'];
-									$size = 'medium';
-									$width = $e_image['sizes'][ $size . '-width' ];
-									$height = $e_image['sizes'][ $size . '-height' ];
-									$url = $e_image['sizes'][ $size ];
-									?>
-									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-								<?php
-								else :
-									echo get_the_post_thumbnail( $e_post_object->ID, 'medium', [
-										'class' => 'featured-image',
-										'title' => 'Feature image',
-									] );
-								endif;
-								?>
-							</div>
-							<div class="col-5-12 e-heading">
-								<div class="vc-wrap">
-									<h3><?php echo get_the_title( $e_post_object->ID ); ?></h3>
-								</div>
-							</div>
-							<div class="col-1-6 e-date"><?php the_field( 'e_date', $e_post_object->ID ); ?></div>
-							<div class="col-1-6 e-button">
-								<span class="cssicon-arrow-r"></span>
-							</div>
-						</div>
-					</a>
-				</div><!-- /event -->
-				<?php
-			endif;
-			wp_reset_postdata();
-		endwhile;
-		endif;
-		?>
-		</div><!-- /events -->
-
-		<?php
-		// EXTENDED EVENTS - - - - - - - - - - - - - - - - - - - -.
-		if ( have_rows( 'x_events' ) ) :
-		?>
-
-		<div class="x-events">
-		<?php
-		while ( have_rows( 'x_events' ) ) :
-			the_row();
-			$x_post_object = get_sub_field( 'x_event' );
-			if ( $x_post_object ) :
-				// override $post.
-				$post = $x_post_object;
-				setup_postdata( $post );
-				?>
-				<div class="event">
+	<div class="events">
+	<?php
+	while ( have_rows( 'events' ) ) :
+		the_row();
+		$e_post_object = get_sub_field( 'event' );
+		if ( $e_post_object ) :
+			// override $post.
+			$post = $e_post_object;
+			setup_postdata( $post );
+			?>
+			<div class="event">
+			<div class="inner-wrap">
+				<a href="<?php echo esc_url( get_permalink( $e_post_object->ID ) ); ?>">
 					<div class="e-upper">
 						<div class="col-1-4 e-image">
 							<?php
-							$xe_image = get_sub_field( 'xe_image' );
-							if ( ! empty( $xe_image ) ) :
-								$alt = $xe_image['alt'];
+							$e_image = get_sub_field( 'e_image' );
+							if ( ! empty( $e_image ) ) :
+								$alt = $e_image['alt'];
 								$size = 'medium';
-								$width = $xe_mage['sizes'][ $size . '-width' ];
-								$height = $xe_image['sizes'][ $size . '-height' ];
-								$url = $xe_image['sizes'][ $size ];
+								$width = $e_image['sizes'][ $size . '-width' ];
+								$height = $e_image['sizes'][ $size . '-height' ];
+								$url = $e_image['sizes'][ $size ];
 								?>
 								<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 							<?php
 							else :
-								echo get_the_post_thumbnail( $x_post_object->ID, 'medium', [
+								echo get_the_post_thumbnail( $e_post_object->ID, 'medium', [
 									'class' => 'featured-image',
 									'title' => 'Feature image',
 								] );
@@ -179,33 +122,94 @@ function da_calendar() {
 						</div>
 						<div class="col-5-12 e-heading">
 							<div class="vc-wrap">
-								<h3><?php echo get_the_title( $x_post_object->ID ); ?></h3>
+								<h3><?php echo get_the_title( $e_post_object->ID ); ?></h3>
 							</div>
 						</div>
-						<div class="col-1-6 e-date"><?php the_field( 'e_date', $x_post_object->ID ); ?></div>
+						<div class="col-1-6 e-date"><?php the_field( 'e_date', $e_post_object->ID ); ?></div>
 						<div class="col-1-6 e-button">
-							<a href="<?php echo esc_url( get_permalink( $x_post_object->ID ) ); ?>"><span class="cssicon-arrow-r"></span></a>
+							<span class="cssicon-arrow-r"></span>
 						</div>
 					</div>
-				</div><!-- /event -->
-				<?php
-			endif;
-			wp_reset_postdata();
-		endwhile;
-		?>
-		</div><!-- /x-events -->
-		<?php endif; ?>
-
-		<div class="vm-wrap">
+				</a>
+			</div>
+			</div><!-- /event -->
 			<?php
-			if ( have_rows( 'x_events' ) ) :
+		endif;
+		wp_reset_postdata();
+	endwhile;
+	endif;
+	?>
+	</div>
+
+	<?php
+	// EXTENDED EVENTS - - - - - - - - - - - - - - - - - - - -.
+	if ( have_rows( 'x_events' ) ) :
+	?>
+
+	<div class="x-events">
+	<?php
+	while ( have_rows( 'x_events' ) ) :
+		the_row();
+		$x_post_object = get_sub_field( 'x_event' );
+		if ( $x_post_object ) :
+			// override $post.
+			$post = $x_post_object;
+			setup_postdata( $post );
 			?>
+			<div class="event">
+			<div class="inner-wrap">
+				<div class="e-upper">
+					<div class="col-1-4 e-image">
+						<?php
+						$xe_image = get_sub_field( 'xe_image' );
+						if ( ! empty( $xe_image ) ) :
+							$alt = $xe_image['alt'];
+							$size = 'medium';
+							$width = $xe_mage['sizes'][ $size . '-width' ];
+							$height = $xe_image['sizes'][ $size . '-height' ];
+							$url = $xe_image['sizes'][ $size ];
+							?>
+							<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
+						<?php
+						else :
+							echo get_the_post_thumbnail( $x_post_object->ID, 'medium', [
+								'class' => 'featured-image',
+								'title' => 'Feature image',
+							] );
+						endif;
+						?>
+					</div>
+					<div class="col-5-12 e-heading">
+						<div class="vc-wrap">
+							<h3><?php echo get_the_title( $x_post_object->ID ); ?></h3>
+						</div>
+					</div>
+					<div class="col-1-6 e-date"><?php the_field( 'e_date', $x_post_object->ID ); ?></div>
+					<div class="col-1-6 e-button">
+						<a href="<?php echo esc_url( get_permalink( $x_post_object->ID ) ); ?>"><span class="cssicon-arrow-r"></span></a>
+					</div>
+				</div>
+			</div>
+			</div><!-- /event -->
+			<?php
+		endif;
+		wp_reset_postdata();
+	endwhile;
+	?>
+	</div><!-- /x-events -->
+	<?php endif; ?>
+
+	<div class="vm-wrap">
+		<?php
+		if ( have_rows( 'x_events' ) ) :
+		?>
+		<div class="inner-wrap">
 			<div class="viewmore-events">
 				<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
 			</div>
-			<?php endif; ?>
-		</div><!-- /inner-wrap -->
-	</div><!-- /inner-wrap -->
+		</div>
+		<?php endif; ?>
+	</div>
 
 </div><!-- /content-wrap -->
 
