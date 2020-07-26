@@ -66,8 +66,8 @@ jQuery(document).ready(function($) {
     });
 
 	$slickElement.slick({
-		nextArrow: '.next',
-		prevArrow: '.prev',
+		nextArrow: '.slick-next',
+		prevArrow: '.slick-prev',
 		infinite: true,
 		dots: false,
 		speed: 600,

@@ -23,6 +23,7 @@ body.visit {
 
 	.detail-block {
 		padding: 2em 0 6em;
+		@include font-size(1.125);
 	}
 	.detail-tl,
 	.detail-tr,
@@ -76,6 +77,7 @@ body.visit {
 
 	.contact-info {
 		margin-bottom: 10em;
+		@include font-size(1.125);
 
 		@include breakpoint(tablet-m) {
 			margin-bottom: 4em;
@@ -118,5 +120,12 @@ body.vis {
 			margin-bottom: 0;
 			@include font-size(1.25);
 		}
+	}
+}
+
+body.visit,
+body.vis {
+	.info-r {
+		@include font-size(1.125);
 	}
 }

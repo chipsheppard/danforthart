@@ -98,7 +98,8 @@ body.home {
 		background-color: $color__yellow;
 	}
 	.home-info {
-		padding: 5em 0 2em;
+		padding-top: 5em;
+		padding-bottom: 2em;
 		@include font-size(1.125);
 
 		@include breakpoint(tablet-v) {
@@ -151,23 +152,13 @@ body.home {
 	.social-block {
 		background-color: #ffffff;
 		padding: 2em 0;
-		text-align: right;
-
-		@include breakpoint(tablet-v) {
-			text-align: center;
-		}
 
 		.image-blocks {
-			display: inline-block;
+			margin: 0 auto;
 			width: 75%;
-			margin-right: -4em;
 
-			@include breakpoint(tablet-v) {
-				margin-right: 0;
-			}
 			@include breakpoint(phone-h) {
-				margin-left: -3%;
-				width: 106%;
+				width: 100%;
 			}
 		}
 		.col-1-3 {

@@ -14,30 +14,31 @@
 <div class="course-rows-wrap">
 	<?php
 	// Season, K-8.
-	$level = get_sub_field( 'c_level' );
-	$ls = $level->slug;
+	$level  = get_sub_field( 'c_level' );
+	$ls     = $level->slug;
 	$season = get_sub_field( 'c_season' );
-	$ss = $season->slug;
+	$ss     = $season->slug;
+
 	// WP_Query arguments.
 	$args = array(
-		'post_type'              => array( 'course' ),
-		'posts_per_page'         => 100,
-		'tax_query'              => array( // WPCS: slow query ok.
+		'post_type'      => array( 'course' ),
+		'posts_per_page' => 100,
+		'tax_query'      => array( // phpcs:ignore slow query ok.
 			array(
-				'taxonomy'         => 'level',
-				'terms'            => $level,
-				'field'            => 'slug',
+				'taxonomy' => 'level',
+				'terms'    => $level,
+				'field'    => 'slug',
 			),
 			array(
-				'taxonomy'         => 'level',
-				'terms'            => 'vacation-week',
-				'field'            => 'slug',
-				'operator'         => 'NOT IN',
+				'taxonomy' => 'level',
+				'terms'    => 'vacation-week',
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
 			),
 			array(
-				'taxonomy'         => 'season',
-				'terms'            => $season,
-				'field'            => 'slug',
+				'taxonomy' => 'season',
+				'terms'    => $season,
+				'field'    => 'slug',
 			),
 		),
 	);
@@ -66,30 +67,30 @@
 					<div class="col-2-5 course-col fb">
 						<div class="display-name">
 							<?php
-							$link = get_field( 'registration_link', 'option' );
-							if ( $link ) :
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
+							$c_link = get_field( 'registration_link', 'option' );
+							if ( $c_link ) :
+								$c_link_url    = $c_link['url'];
+								$c_link_title  = $c_link['title'];
+								$c_link_target = $c_link['target'] ? $c_link['target'] : '_self';
 								?>
-								<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php the_field( 'display_name' ); ?></a>
+								<a href="<?php echo esc_url( $c_link_url ); ?>" target="<?php echo esc_attr( $c_link_target ); ?>"><?php the_field( 'display_name' ); ?></a>
 							<?php else : ?>
 								<span><?php the_field( 'display_name' ); ?></span>
 							<?php endif; ?>
 						</div>
 					</div>
 					<div class="col-1-5 course-col fb">
-						<div class="level-o fb"><?php $terms = get_the_terms( $post->ID, 'level' ); ?>
-<?php
-if ( ! empty( $terms ) ) :
-	$levels = array();
-	foreach ( $terms as $term ) {
-		$levels[] = $term->name;
-	}
-	$level_list = join( ', ', $levels );
-	printf( '%s', esc_html( $level_list ) );
-endif;
-?>
+						<div class="level-o fb"><?php $c_terms = get_the_terms( $post->ID, 'level' ); ?>
+			<?php
+			if ( ! empty( $c_terms ) ) :
+				$levels = array();
+				foreach ( $c_terms as $c_term ) {
+					$levels[] = $c_term->name;
+				}
+				$level_list = join( ', ', $levels );
+				printf( '%s', esc_html( $level_list ) );
+			endif;
+			?>
 </div>
 						<div class="price-o fb"><?php the_field( 'price' ); ?></div>
 					</div>
@@ -99,7 +100,7 @@ endif;
 				</div>
 
 			</div><!-- / course-row -->
-		<?php
+			<?php
 		} // endwhile.
 	} else {
 		echo '<div class="no-results">No courses have been published for that criterea.</div>';

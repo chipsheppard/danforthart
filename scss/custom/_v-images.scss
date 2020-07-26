@@ -1,12 +1,11 @@
 .variable-images {
-	margin-bottom: 4em;
-
 	@include breakpoint(tablet-v) {
-		margin-bottom: 0;
+		margin-top: 2em;
 	}
 }
+
 .variable-image {
-	margin-bottom: 2em;
+	margin-bottom: 3rem;
 
 	img {
 		border: 1px solid $color__base;
@@ -23,8 +22,8 @@
 	}
 	&.img-2 {
 		float: left;
-		width: 49%;
-		&:last-of-type {
+		width: 48%;
+		&:nth-last-of-type(2) {
 			float: right;
 		}
 	}
@@ -32,7 +31,7 @@
 		float: left;
 		width: 32%;
 		margin-right: 2%;
-		&:last-of-type {
+		&:nth-last-of-type(3) {
 			float: right;
 			margin-right: 0;
 		}
@@ -41,35 +40,47 @@
 		float: left;
 		width: 23%;
 		margin-right: 2.625%;
-		&:last-of-type {
+		
+		&:nth-last-of-type(4) {
 			float: right;
 			margin-right: 0;
 		}
 	}
+	
 	@include breakpoint(tablet-v) {
+		margin-top: 2em;
+
 		&.img-1,
 		&.img-2,
 		&.img-3,
 		&.img-4 {
-			float: none;
 			width: 100%;
 			margin-right: 0;
 		}
+		&.img-2:nth-last-of-type(2) {float: left;}
+		&.img-3:nth-last-of-type(3) {float: left;}
+		&.img-4:nth-last-of-type(4) {float: left;}
 	}
 }
 
 .v2 {
 	.variable-image {
+		&.img-1 {
+			width: 70%;
+			margin: 0 auto;
+		}
 		&.img-2 {
-			float: right;
-			width: 30%;
-			margin-right: 3%;
+			float: left;
+			width: 48%;
+			&:nth-child(2) {
+				float: right;
+			}
 		}
 		&.img-3 {
 			float: left;
 			width: 32%;
 			margin-right: 2%;
-			&:last-of-type {
+			&:nth-child(3)  {
 				float: right;
 				margin-right: 0;
 			}
@@ -78,7 +89,7 @@
 			float: left;
 			width: 23%;
 			margin-right: 2.625%;
-			&:last-of-type {
+			&:nth-child(4)  {
 				float: right;
 				margin-right: 0;
 			}
@@ -88,10 +99,26 @@
 			&.img-2,
 			&.img-3,
 			&.img-4 {
-				float: none;
-				width: 100%;
+				float: left;
 				margin-right: 0;
+				width: 100%;
+			}
+			&.img-2:nth-child(2) {float: left;}
+			&.img-3:nth-child(3) {float: left;}
+			&.img-4:nth-child(4) {float: left;}
+		}
+	}
+}
+
+body.modules {
+	.variable-images {
+		&.rowof2 {
+			padding: 0 20% 0;
+
+			@include breakpoint(tablet-v) {
+				padding: 0;
 			}
 		}
 	}
+
 }

@@ -15,12 +15,24 @@ while ( have_rows( 'content_modules' ) ) :
 			require 'mod-intro.php';
 			break;
 
+		case 'headlineblock':
+			require 'mod-headline.php';
+			break;
+
 		case 'textblock':
 			require 'mod-text.php';
 			break;
 
+		case 'text2colblock':
+			require 'mod-text2col.php';
+			break;
+
 		case 'imageblock':
 			require 'v-images.php';
+			break;
+
+		case 'textimageblock':
+			require 'mod-textimage.php';
 			break;
 
 		case 'footnoteblock':

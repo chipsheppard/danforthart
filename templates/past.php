@@ -11,22 +11,28 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'seeart past' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'seeart past' ) );
+	}
+);
 
 /**
  * Past
  */
 function da_past() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'see-art-sub',
-			'container' => '',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'seeart',
+				'menu_id'        => 'seeart-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 
@@ -44,35 +50,39 @@ function da_past() {
 			// POST OBJECT.
 			$el_post_object = get_field( 'pel_object' );
 			if ( $el_post_object ) :
-			?>
+				?>
 			<div class="exhibit-left">
 				<div class="el-date"><?php the_field( 'date', $el_post_object->ID ); ?></div>
 				<div class="el-image">
 					<a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $el_post_object->ID ) ); ?>">
 					<span class="progbar big<?php if ( get_field( 'highlight_color', $el_post_object->ID ) ) : ?>
-<?php
-echo ' ';
-the_field( 'highlight_color', $el_post_object->ID );
-endif;
-?>
+						<?php
+						echo ' ';
+						the_field( 'highlight_color', $el_post_object->ID );
+						endif;
+											?>
 "></span>
 					<?php
 					// IMAGE.
 					$el_image = get_field( 'pel_image' );
 					if ( ! empty( $el_image ) ) :
-						$el_alt = $el_image['alt'];
-						$el_size = 'medium_large';
-						$el_width = $el_image['sizes'][ $el_size . '-width' ];
+						$el_alt    = $el_image['alt'];
+						$el_size   = 'medium_large';
+						$el_width  = $el_image['sizes'][ $el_size . '-width' ];
 						$el_height = $el_image['sizes'][ $el_size . '-height' ];
-						$el_url = $el_image['sizes'][ $el_size ];
+						$el_url    = $el_image['sizes'][ $el_size ];
 						?>
 						<img src="<?php echo esc_url( $el_url ); ?>" alt="<?php echo esc_attr( $el_alt ); ?>" width="<?php echo esc_attr( $el_width ); ?>" height="<?php echo esc_attr( $el_height ); ?>" />
-					<?php
+						<?php
 					else :
-						echo get_the_post_thumbnail( $el_post_object->ID, 'medium_large', [
-							'class' => 'featured-image',
-							'title' => 'Feature image',
-						] );
+						echo get_the_post_thumbnail(
+							$el_post_object->ID,
+							'medium_large',
+							[
+								'class' => 'featured-image',
+								'title' => 'Feature image',
+							]
+						);
 					endif;
 					?>
 					</a>
@@ -90,35 +100,39 @@ endif;
 			// POST OBJECT.
 			$ert_post_object = get_field( 'pert_object' );
 			if ( $ert_post_object ) :
-			?>
+				?>
 			<div class="exhibit-right-top">
 				<div class="ert-date"><?php the_field( 'date', $ert_post_object->ID ); ?></div>
 				<div class="ert-image">
 					<a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $ert_post_object->ID ) ); ?>">
 					<span class="progbar big<?php if ( get_field( 'highlight_color', $el_post_object->ID ) ) : ?>
-<?php
-echo ' ';
-the_field( 'highlight_color', $ert_post_object->ID );
-endif;
-?>
+						<?php
+						echo ' ';
+						the_field( 'highlight_color', $ert_post_object->ID );
+						endif;
+											?>
 "></span>
 					<?php
 					// NATIVE IMAGE.
 					$ert_image = get_field( 'pert_image' );
 					if ( ! empty( $ert_image ) ) :
-						$elrtalt = $ert_image['alt'];
-						$ert_size = 'medium_large';
-						$ert_width = $ert_image['sizes'][ $ert_size . '-width' ];
+						$elrtalt    = $ert_image['alt'];
+						$ert_size   = 'medium_large';
+						$ert_width  = $ert_image['sizes'][ $ert_size . '-width' ];
 						$ert_height = $ert_image['sizes'][ $ert_size . '-height' ];
-						$ert_url = $ert_image['sizes'][ $ert_size ];
+						$ert_url    = $ert_image['sizes'][ $ert_size ];
 						?>
 						<img src="<?php echo esc_url( $ert_url ); ?>" alt="<?php echo esc_attr( $ert_alt ); ?>" width="<?php echo esc_attr( $ert_width ); ?>" height="<?php echo esc_attr( $ert_height ); ?>" />
 						<?php
 					else :
-						echo get_the_post_thumbnail( $ert_post_object->ID, 'medium_large', [
-							'class' => 'featured-image',
-							'title' => 'Feature image',
-						] );
+						echo get_the_post_thumbnail(
+							$ert_post_object->ID,
+							'medium_large',
+							[
+								'class' => 'featured-image',
+								'title' => 'Feature image',
+							]
+						);
 					endif;
 					?>
 					</a>
@@ -134,37 +148,41 @@ endif;
 			// POST OBJECT.
 			$erb_post_object = get_field( 'perb_object' );
 			if ( $erb_post_object ) :
-			?>
+				?>
 			<div class="exhibit-right-bottom">
 				<div class="erb-date"><?php the_field( 'date', $erb_post_object->ID ); ?></div>
 				<div class="erb-image">
 					<a class="progbar-trigger" href="<?php echo esc_url( get_permalink( $erb_post_object->ID ) ); ?>">
 					<span class="progbar big<?php if ( get_field( 'highlight_color', $el_post_object->ID ) ) : ?>
-<?php
-echo ' ';
-the_field( 'highlight_color', $erb_post_object->ID );
-endif;
-?>
+						<?php
+						echo ' ';
+						the_field( 'highlight_color', $erb_post_object->ID );
+						endif;
+											?>
 "></span>
 					<?php
 					// NATIVE IMAGE.
 					$erb_image = get_field( 'perb_image' );
 					if ( ! empty( $erb_image ) ) :
-						$erb_alt = $erb_image['alt'];
-						$erb_width = $erb_image['width'];
+						$erb_alt    = $erb_image['alt'];
+						$erb_width  = $erb_image['width'];
 						$erb_height = $erb_image['height'];
-						$erb_size = 'medium_large';
-						$erb_width = $erb_image['sizes'][ $erb_size . '-width' ];
+						$erb_size   = 'medium_large';
+						$erb_width  = $erb_image['sizes'][ $erb_size . '-width' ];
 						$erb_height = $erb_image['sizes'][ $erb_size . '-height' ];
-						$erb_url = $erb_image['sizes'][ $erb_size ];
+						$erb_url    = $erb_image['sizes'][ $erb_size ];
 						?>
 						<img src="<?php echo esc_url( $erb_url ); ?>" alt="<?php echo esc_attr( $erb_alt ); ?>" width="<?php echo esc_attr( $erb_width ); ?>" height="<?php echo esc_attr( $erb_height ); ?>" />
-					<?php
+						<?php
 					else :
-						echo get_the_post_thumbnail( $erb_post_object->ID, 'medium_large', [
-							'class' => 'featured-image',
-							'title' => 'Feature image',
-						] );
+						echo get_the_post_thumbnail(
+							$erb_post_object->ID,
+							'medium_large',
+							[
+								'class' => 'featured-image',
+								'title' => 'Feature image',
+							]
+						);
 					endif;
 					?>
 					</a>
@@ -201,13 +219,13 @@ endif;
 			// POST OBJECT.
 			$post_object = get_sub_field( 'pe_object' );
 			if ( $post_object ) :
-			?>
+				?>
 			<div class="p-exhibit<?php if ( get_field( 'highlight_color', $post_object->ID ) ) : ?>
-<?php
-echo ' ';
-the_field( 'highlight_color', $post_object->ID );
-endif;
-?>
+				<?php
+				echo ' ';
+				the_field( 'highlight_color', $post_object->ID );
+				endif;
+									?>
 ">
 				<div class="inner-wrap">
 				<div class="pe-upper">
@@ -216,19 +234,23 @@ endif;
 						<?php
 						$p_image = get_sub_field( 'pe_image' );
 						if ( ! empty( $p_image ) ) :
-							$alt = $p_image['alt'];
-							$size = 'medium';
-							$width = $p_mage['sizes'][ $size . '-width' ];
+							$alt    = $p_image['alt'];
+							$size   = 'medium';
+							$width  = $p_mage['sizes'][ $size . '-width' ];
 							$height = $p_image['sizes'][ $size . '-height' ];
-							$url = $p_image['sizes'][ $size ];
+							$url    = $p_image['sizes'][ $size ];
 							?>
 							<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php
+							<?php
 						else :
-							echo get_the_post_thumbnail( $post_object->ID, 'medium', [
-								'class' => 'featured-image',
-								'title' => 'Feature image',
-							] );
+							echo get_the_post_thumbnail(
+								$post_object->ID,
+								'medium',
+								[
+									'class' => 'featured-image',
+									'title' => 'Feature image',
+								]
+							);
 						endif;
 						?>
 					</a>
@@ -250,7 +272,7 @@ endif;
 				</div>
 				</div>
 			</div>
-			<?php
+				<?php
 			endif;
 		endwhile;
 	endif;
@@ -262,7 +284,7 @@ endif;
 	<?php
 	// EXTENDED EXHIBITIONS - - - - - - - - - - - - - - - - - - - -.
 	if ( have_rows( 'x_past_exhibitions' ) ) :
-	?>
+		?>
 
 	<div class="x-past-exhibits">
 		<?php
@@ -271,13 +293,13 @@ endif;
 			// POST OBJECT.
 			$post_object = get_sub_field( 'xpe_object' );
 			if ( $post_object ) :
-			?>
+				?>
 			<div class="p-exhibit<?php if ( get_field( 'highlight_color', $post_object->ID ) ) : ?>
-<?php
-echo ' ';
-the_field( 'highlight_color', $post_object->ID );
-endif;
-?>
+				<?php
+				echo ' ';
+				the_field( 'highlight_color', $post_object->ID );
+				endif;
+									?>
 ">
 				<div class="inner-wrap">
 				<div class="pe-upper">
@@ -286,19 +308,23 @@ endif;
 						<?php
 						$xp_image = get_sub_field( 'xpe_image' );
 						if ( ! empty( $xp_image ) ) :
-							$alt = $xp_image['alt'];
-							$size = 'medium';
-							$width = $xp_mage['sizes'][ $size . '-width' ];
+							$alt    = $xp_image['alt'];
+							$size   = 'medium';
+							$width  = $xp_mage['sizes'][ $size . '-width' ];
 							$height = $xp_image['sizes'][ $size . '-height' ];
-							$url = $xp_image['sizes'][ $size ];
+							$url    = $xp_image['sizes'][ $size ];
 							?>
 							<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php
+							<?php
 						else :
-							echo get_the_post_thumbnail( $post_object->ID, 'medium', [
-								'class' => 'featured-image',
-								'title' => 'Feature image',
-							] );
+							echo get_the_post_thumbnail(
+								$post_object->ID,
+								'medium',
+								[
+									'class' => 'featured-image',
+									'title' => 'Feature image',
+								]
+							);
 						endif;
 						?>
 					</a>
@@ -318,7 +344,7 @@ endif;
 				</div>
 				</div>
 			</div>
-			<?php
+				<?php
 			endif;
 		endwhile;
 		?>
@@ -336,7 +362,7 @@ endif;
 
 </div>
 
-<?php
+	<?php
 }
 add_action( 'tha_entry_content_before', 'da_past' );
 

@@ -11,22 +11,28 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'vis calendar' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'vis calendar' ) );
+	}
+);
 
 /**
  * Learn Create page functions
  */
 function da_calendar() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'visit-sub',
-			'container' => '',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'visit',
+				'menu_id'        => 'visit-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 </div>
@@ -45,18 +51,22 @@ function da_calendar() {
 				<?php
 				$fe_image = get_field( 'fe_image' );
 				if ( ! empty( $fe_image ) ) :
-					$fe_url = $fe_image['url'];
-					$fe_alt = $fe_image['alt'];
-					$fe_width = $fe_image['width'];
+					$fe_url    = $fe_image['url'];
+					$fe_alt    = $fe_image['alt'];
+					$fe_width  = $fe_image['width'];
 					$fe_height = $fe_image['height'];
 					?>
 					<img src="<?php echo esc_url( $fe_url ); ?>" alt="<?php echo esc_attr( $fe_alt ); ?>" width="<?php echo esc_attr( $fe_width ); ?>" height="<?php echo esc_attr( $fe_height ); ?>" />
-				<?php
+					<?php
 				else :
-					echo get_the_post_thumbnail( $post_object->ID, 'full', [
-						'class' => 'featured-image',
-						'title' => 'Feature image',
-					] );
+					echo get_the_post_thumbnail(
+						$post_object->ID,
+						'full',
+						[
+							'class' => 'featured-image',
+							'title' => 'Feature image',
+						]
+					);
 				endif;
 			endif;
 			wp_reset_postdata();
@@ -84,18 +94,18 @@ function da_calendar() {
 	<?php
 	// EVENTS - - - - - - - - - - - - - - - - - - - -.
 	if ( have_rows( 'events' ) ) :
-	?>
+		?>
 
 	<div class="events">
-	<?php
-	while ( have_rows( 'events' ) ) :
-		the_row();
-		$e_post_object = get_sub_field( 'event' );
-		if ( $e_post_object ) :
-			// override $post.
-			$post = $e_post_object;
-			setup_postdata( $post );
-			?>
+		<?php
+		while ( have_rows( 'events' ) ) :
+			the_row();
+			$e_post_object = get_sub_field( 'event' );
+			if ( $e_post_object ) :
+				// override $post.
+				$post = $e_post_object;
+				setup_postdata( $post );
+				?>
 			<div class="event">
 			<div class="inner-wrap">
 				<a href="<?php echo esc_url( get_permalink( $e_post_object->ID ) ); ?>">
@@ -104,19 +114,23 @@ function da_calendar() {
 							<?php
 							$e_image = get_sub_field( 'e_image' );
 							if ( ! empty( $e_image ) ) :
-								$alt = $e_image['alt'];
-								$size = 'medium';
-								$width = $e_image['sizes'][ $size . '-width' ];
+								$alt    = $e_image['alt'];
+								$size   = 'medium';
+								$width  = $e_image['sizes'][ $size . '-width' ];
 								$height = $e_image['sizes'][ $size . '-height' ];
-								$url = $e_image['sizes'][ $size ];
+								$url    = $e_image['sizes'][ $size ];
 								?>
 								<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-							<?php
+								<?php
 							else :
-								echo get_the_post_thumbnail( $e_post_object->ID, 'medium', [
-									'class' => 'featured-image',
-									'title' => 'Feature image',
-								] );
+								echo get_the_post_thumbnail(
+									$e_post_object->ID,
+									'medium',
+									[
+										'class' => 'featured-image',
+										'title' => 'Feature image',
+									]
+								);
 							endif;
 							?>
 						</div>
@@ -133,10 +147,10 @@ function da_calendar() {
 				</a>
 			</div>
 			</div><!-- /event -->
-			<?php
-		endif;
-		wp_reset_postdata();
-	endwhile;
+				<?php
+			endif;
+			wp_reset_postdata();
+		endwhile;
 	endif;
 	?>
 	</div>
@@ -144,18 +158,18 @@ function da_calendar() {
 	<?php
 	// EXTENDED EVENTS - - - - - - - - - - - - - - - - - - - -.
 	if ( have_rows( 'x_events' ) ) :
-	?>
+		?>
 
 	<div class="x-events">
-	<?php
-	while ( have_rows( 'x_events' ) ) :
-		the_row();
-		$x_post_object = get_sub_field( 'x_event' );
-		if ( $x_post_object ) :
-			// override $post.
-			$post = $x_post_object;
-			setup_postdata( $post );
-			?>
+		<?php
+		while ( have_rows( 'x_events' ) ) :
+			the_row();
+			$x_post_object = get_sub_field( 'x_event' );
+			if ( $x_post_object ) :
+				// override $post.
+				$post = $x_post_object;
+				setup_postdata( $post );
+				?>
 			<div class="event">
 			<div class="inner-wrap">
 				<div class="e-upper">
@@ -163,19 +177,23 @@ function da_calendar() {
 						<?php
 						$xe_image = get_sub_field( 'xe_image' );
 						if ( ! empty( $xe_image ) ) :
-							$alt = $xe_image['alt'];
-							$size = 'medium';
-							$width = $xe_mage['sizes'][ $size . '-width' ];
+							$alt    = $xe_image['alt'];
+							$size   = 'medium';
+							$width  = $xe_mage['sizes'][ $size . '-width' ];
 							$height = $xe_image['sizes'][ $size . '-height' ];
-							$url = $xe_image['sizes'][ $size ];
+							$url    = $xe_image['sizes'][ $size ];
 							?>
 							<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php
+							<?php
 						else :
-							echo get_the_post_thumbnail( $x_post_object->ID, 'medium', [
-								'class' => 'featured-image',
-								'title' => 'Feature image',
-							] );
+							echo get_the_post_thumbnail(
+								$x_post_object->ID,
+								'medium',
+								[
+									'class' => 'featured-image',
+									'title' => 'Feature image',
+								]
+							);
 						endif;
 						?>
 					</div>
@@ -191,18 +209,18 @@ function da_calendar() {
 				</div>
 			</div>
 			</div><!-- /event -->
-			<?php
-		endif;
-		wp_reset_postdata();
+				<?php
+			endif;
+			wp_reset_postdata();
 	endwhile;
-	?>
+		?>
 	</div><!-- /x-events -->
 	<?php endif; ?>
 
 	<div class="vm-wrap">
 		<?php
 		if ( have_rows( 'x_events' ) ) :
-		?>
+			?>
 		<div class="inner-wrap">
 			<div class="viewmore-events">
 				<div class="viewmore">View more events <span class="cssicon-plusminus small plus"></span></div>
@@ -213,11 +231,10 @@ function da_calendar() {
 
 </div><!-- /content-wrap -->
 
-<?php get_template_part( 'template-parts/quote' ); ?>
-<?php get_template_part( 'template-parts/signup' ); ?>
+	<?php
+	get_template_part( 'template-parts/quote' );
+	get_template_part( 'template-parts/signup' );
 
-
-<?php
 }
 add_action( 'tha_entry_content_before', 'da_calendar' );
 

@@ -12,12 +12,12 @@
 ?>
 
 <div class="signup-block<?php if ( get_field( 'signup_color', 'option' ) ) : ?>
-<?php
-echo ' ';
-the_field( 'signup_color', 'option' );
-endif;
-?>
-">
+	<?php
+	echo ' ';
+	the_field( 'signup_color', 'option' );
+	endif;
+						?>
+	">
 <div class="inner-wrap mnp"><div class="flexme">
 	<div class="col-1-2 nm txtblk">
 		<div class="signup-form">
@@ -30,11 +30,11 @@ endif;
 		// IMAGE.
 		$image = get_field( 'image', 'option' );
 		if ( ! empty( $image ) ) :
-			$alt = $image['alt'];
-			$size = 'medium_large';
-			$width = $image['sizes'][ $size . '-width' ];
+			$alt    = $image['alt'];
+			$size   = 'medium_large';
+			$width  = $image['sizes'][ $size . '-width' ];
 			$height = $image['sizes'][ $size . '-height' ];
-			$url = $image['sizes'][ $size ];
+			$url    = $image['sizes'][ $size ];
 			?>
 			<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 		<?php endif; ?>

@@ -28,16 +28,17 @@
 			background-color: #fff;
 			bottom: 0;
 			display: inline-block;
+			font-weight: $font__weight-bold;
 			left: 0;
+			letter-spacing: 1px;
 			line-height: 1;
 			padding: 1em 1.25em 1em 1.75em;
 			position: absolute;
-			@include bigtext();
+			text-transform: uppercase;
 			@include font-size(1);
 		}
 	}
 }
-
 
 .accordion {
 	border-bottom: 1px solid $color__base;
@@ -59,26 +60,31 @@
 			cursor: pointer;
 		}
 	}
-	.acbot {
-		display: none;
-		padding: 1em 0 3em;
-	}
-
+	
 	.acc-title {
-		display: inline-block;
 		float: left;
 		width: calc(100% - 42px);
 		@include font-size(1.25);
-
-		@include breakpoint(tablet-v) {
-			@include font-size(1);
-			line-height: 1.375;
-		}
 	}
 	.acc-button {
-		display: inline-block;
 		float: right;
 		text-align: center;
 		width: 32px;
+	}
+	
+	.acbot {
+		display: none;
+		padding: 1em 0 3em;
+		@include font-size(1.125);
+	}
+
+}
+
+body.modules {
+	.mod-accordion {	
+		.accordion:hover,
+		.accordion.active {
+			background-color: $color__blue-lt;
+		}
 	}
 }

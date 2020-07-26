@@ -213,6 +213,25 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_5ef4bc4721f9c",
+                            "label": "Tab text",
+                            "name": "e_tab_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Event",
+                            "placeholder": "Event",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -257,6 +276,25 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_5ef4bc0721f9b",
+                            "label": "Tab text",
+                            "name": "l_tab_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Learn + Create",
+                            "placeholder": "Learn + Create",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -265,7 +303,7 @@
                 "layout_5c6b0592d77ec": {
                     "key": "layout_5c6b0592d77ec",
                     "name": "exhibit",
-                    "label": "Exhibit Card",
+                    "label": "Exhibition Card",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -334,6 +372,88 @@
                             },
                             "default_value": "",
                             "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ef4bb9f21f9a",
+                            "label": "Tab text",
+                            "name": "e_tab_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Exhibition",
+                            "placeholder": "Exhibition",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ef4bcc121f9d": {
+                    "key": "layout_5ef4bcc121f9d",
+                    "name": "join",
+                    "label": "Join+Support Card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ef4bcc121f9e",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5ef4bcc121f9f",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5ef4bcc121fa0",
+                            "label": "Tab text",
+                            "name": "j_tab_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Join + Support",
+                            "placeholder": "Join + Support",
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
@@ -576,5 +696,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558803666
+    "modified": 1593097592
 }

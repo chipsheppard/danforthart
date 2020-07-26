@@ -9,29 +9,36 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	if ( has_term( 'special-collection' ,'exhibition_type' ) ) {
-		$classes[] = 'special-collection';
+add_filter(
+	'body_class',
+	function( $classes ) {
+		if ( has_term( 'special-collection', 'exhibition_type' ) ) {
+			$classes[] = 'special-collection';
+		}
+		if ( has_term( 'past-exhibition', 'exhibition_type' ) ) {
+			$classes[] = 'past-exhibition';
+		}
+		$classes[] = 'seeart';
+		return $classes;
 	}
-	if ( has_term( 'past-exhibition' ,'exhibition_type' ) ) {
-		$classes[] = 'past-exhibition';
-	}
-	$classes[] = 'seeart';
-	return $classes;
-} );
+);
 
 /**
  * Home Function
  */
 function da_exhibition() {
-?>
+	?>
 	<div class="inner-wrap">
 
 		<div class="sub-navigation">
 			<?php
-			wp_nav_menu( array(
-				'menu' => 'see-art-sub',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => 'seeart',
+					'menu_id'        => 'seeart-menu',
+					'container'      => '',
+				)
+			);
 			?>
 		</div>
 
@@ -39,12 +46,12 @@ function da_exhibition() {
 		<?php
 		$body_classes = get_body_class();
 		if ( in_array( 'special-collection', $body_classes, true ) ) :
-		?>
-			<a href="<?php echo esc_url( site_url() ); ?>/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+			?>
+			<a href="<?php echo esc_url( home_url() ); ?>/seeart/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		<?php elseif ( in_array( 'past-exhibition', $body_classes, true ) ) : ?>
-			<a href="<?php echo esc_url( site_url() ); ?>/see-art/past-exhibitions/"><span class="cssicon-arrow-l"></span> View All Past</a>
+			<a href="<?php echo esc_url( home_url() ); ?>/see-art/past-exhibitions/"><span class="cssicon-arrow-l"></span> View All Past</a>
 		<?php else : ?>
-			<a href="<?php echo esc_url( site_url() ); ?>/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
+			<a href="<?php echo esc_url( home_url() ); ?>/see-art/"><span class="cssicon-arrow-l"></span> View All Current</a>
 		<?php endif; ?>
 		</div>
 
@@ -124,24 +131,27 @@ function da_exhibition() {
 								$color = '';
 							endif;
 							echo '<div class="artwork-img progbar-trigger"><a href="#' . esc_html( $c ) . '" class="modal-link" data-index="' . esc_html( $c ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
-							the_post_thumbnail( 'medium', [
-								'class' => 'artwork-image',
-							] );
+							the_post_thumbnail(
+								'medium',
+								[
+									'class' => 'artwork-image',
+								]
+							);
 							echo '</a></div>';
 						endif;
 						?>
 						<div class="artwork-info">
 							<strong><?php the_field( 'artist_name' ); ?></strong>,
 							<em><?php the_title(); ?></em><?php if ( get_field( 'date' ) ) : ?>
-<?php
-	echo ', ';
-	the_field( 'date' );
-endif;
-if ( get_field( 'medium' ) ) :
-	echo ', ';
-	the_field( 'medium' );
-endif;
-?>
+								<?php
+									echo ', ';
+									the_field( 'date' );
+								endif;
+								if ( get_field( 'medium' ) ) :
+									echo ', ';
+									the_field( 'medium' );
+								endif;
+								?>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -153,19 +163,19 @@ endif;
 			get_template_part( 'template-parts/exhibit-modal' );
 			?>
 
-<?php if ( get_field( 'quote' ) ) : ?>
+	<?php if ( get_field( 'quote' ) ) : ?>
 			<div class="quote-block">
 				<blockquote>
 					<?php the_field( 'quote' ); ?>
 					<cite>
-<?php
-the_field( 'quote_citation' );
-$link = get_field( 'citation_link' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
-?>
+		<?php
+		the_field( 'quote_citation' );
+		$link = get_field( 'citation_link' );
+		if ( $link ) :
+			$link_url    = $link['url'];
+			$link_title  = $link['title'];
+			$link_target = $link['target'] ? $link['target'] : '_self';
+			?>
 &mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 <?php endif; ?>
 					</cite>
@@ -193,7 +203,7 @@ if ( $link ) :
 		</div>
 
 	</div>
-<?php
+	<?php
 }
 add_action( 'tha_entry_content_before', 'da_exhibition' );
 

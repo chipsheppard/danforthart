@@ -26,17 +26,33 @@
 	}
 
 	.txtblk {
-		padding: 1em 3em;
+		padding: 1rem 3rem;
 
 		@include breakpoint(tablet-h) {
 			height: 450px;
 		}
 		@include breakpoint(tablet-v) {
-			padding: 1.5em;
+			padding: 1.5em 3%;
 		}
 		@include breakpoint(phone-h) {
-			padding: 1em;
+			padding: 1em 3%;
 			height: 300px;
+		}
+	}
+	.btn {
+		@include font-size(1);
+		
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: #000;
+			border-color: #fff;
+			color: #fff;
+
+			&:before,
+			&:after {
+				background-color: #fff;
+			}
 		}
 	}
 }
@@ -96,14 +112,17 @@
 
 .signup-block {
 	background-color: $color__yellow;
-	@include font-size(1.625);
+	line-height: 1.4;
+	@include font-size(2.25);
 
 	@include breakpoint(phone-h) {
-		@include font-size(1.375);
+		@include font-size(1.5);
 	}
+	
 	form {
 		line-height: 1;
 	}
+	
 	.form-submit {
 		input[type="submit"] {
 			padding-right: 3em;
@@ -119,12 +138,14 @@
 				padding-right: 2em;
 			}
 		}
+		
 		.cssicon-arrow-r {
 			color: #ffffff;
 			left: -2.125em;
 			top: 1px;
 			z-index: 5;
 		}
+		
 		&:hover,
 		&:focus,
 		&:active {

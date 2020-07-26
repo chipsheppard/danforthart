@@ -22,7 +22,7 @@
 </div></div>
 <div class="course-rows-wrap">
 	<?php
-	$level = get_field( 'c_level' );
+	$level  = get_field( 'c_level' );
 	$season = get_field( 'c_season' );
 	if ( ! $level ) :
 		$level = get_sub_field( 'c_level' );
@@ -32,9 +32,9 @@
 	endif;
 	// WP_Query arguments.
 	$args = array(
-		'post_type'              => array( 'course' ),
-		'posts_per_page'         => 100,
-		'tax_query'              => array( // WPCS: slow query ok.
+		'post_type'      => array( 'course' ),
+		'posts_per_page' => 100,
+		'tax_query'      => array( // phpcs:ignore slow query ok.
 			array(
 				'taxonomy'         => 'level',
 				'terms'            => $level,
@@ -42,15 +42,15 @@
 				'include_children' => true,
 			),
 			array(
-				'taxonomy'         => 'level',
-				'terms'            => 'vacation-week',
-				'field'            => 'slug',
-				'operator'         => 'NOT IN',
+				'taxonomy' => 'level',
+				'terms'    => 'vacation-week',
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
 			),
 			array(
-				'taxonomy'         => 'season',
-				'terms'            => $season,
-				'field'            => 'slug',
+				'taxonomy' => 'season',
+				'terms'    => $season,
+				'field'    => 'slug',
 			),
 		),
 	);
@@ -62,16 +62,16 @@
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			$terms = get_the_terms( $post->ID, 'level' );
-			if ( ! empty( $terms ) ) :
-				$levels = array();
-				$names = array();
-				foreach ( $terms as $term ) {
-					$levels[] = $term->slug;
-					$names[] = $term->name;
+			$c_terms = get_the_terms( $post->ID, 'level' );
+			if ( ! empty( $c_terms ) ) :
+				$levels  = array();
+				$c_names = array();
+				foreach ( $c_terms as $c_term ) {
+					$levels[]  = $c_term->slug;
+					$c_names[] = $c_term->name;
 				}
 				$level_list = join( ' ', $levels );
-				$name_list = join( ' ', $names );
+				$name_list  = join( ' ', $c_names );
 			endif;
 			?>
 			<div class="course-row<?php printf( ' %s', esc_html( $level_list ) ); ?>">
@@ -82,7 +82,7 @@
 					$ca = ' ca';
 					?>
 					<div class="alert"><?php the_field( 'course_alert' ); ?></div>
-				<?php
+					<?php
 				else :
 					$ca = '';
 				endif;
@@ -116,13 +116,13 @@
 					<div class="col-1-4 first course-col">
 						<div class="sessions">
 						<strong><?php the_field( 'sessions_amount' ); ?><?php if ( get_field( 'session_range' ) ) : ?>
-<?php
-echo ',</strong> ';
-the_field( 'session_range' );
-else :
-	echo '</strong>';
-endif;
-?>
+							<?php
+							echo ',</strong> ';
+							the_field( 'session_range' );
+							else :
+								echo '</strong>';
+							endif;
+							?>
 						</div>
 						<div class="session-note"><?php the_field( 'session_note' ); ?></div>
 					</div>
@@ -140,15 +140,15 @@ endif;
 						if ( $button && in_array( 'nodisplay', $button, true ) ) :
 							echo '';
 						else :
-							$link = get_field( 'registration_link', 'option' );
-							if ( $link ) :
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
+							$c_link = get_field( 'registration_link', 'option' );
+							if ( $c_link ) :
+								$c_link_url    = $c_link['url'];
+								$c_link_title  = $c_link['title'];
+								$c_link_target = $c_link['target'] ? $c_link['target'] : '_self';
 								?>
-								<a class="course-reg-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="course-reg-link" href="<?php echo esc_url( $c_link_url ); ?>" target="<?php echo esc_attr( $c_link_target ); ?>"><?php echo esc_html( $c_link_title ); ?></a>
 								<span class="cssicon-arrow-ne"></span>
-							<?php
+								<?php
 							else :
 								echo '';
 							endif;
@@ -168,22 +168,22 @@ endif;
 								<?php
 								$image = get_sub_field( 'image' );
 								if ( ! empty( $image ) ) :
-									$alt = $image['alt'];
+									$alt     = $image['alt'];
 									$caption = $image['caption'];
-									$size = 'medium';
-									$width = $image['sizes'][ $size . '-width' ];
-									$height = $image['sizes'][ $size . '-height' ];
-									$url = $image['sizes'][ $size ];
+									$size    = 'medium';
+									$width   = $image['sizes'][ $size . '-width' ];
+									$height  = $image['sizes'][ $size . '-height' ];
+									$url     = $image['sizes'][ $size ];
 									?>
 									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 									<?php if ( $caption ) : ?>
 										<div class="image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
-									<?php
+										<?php
 									endif;
 								endif;
 								?>
 							</div>
-						<?php
+							<?php
 						endwhile;
 					endif;
 					?>
@@ -193,7 +193,7 @@ endif;
 			</div>
 			</div>
 			</div>
-		<?php
+			<?php
 		} // endwhile.
 	}
 	wp_reset_postdata();

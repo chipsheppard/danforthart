@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /*
  * DISPLAY Branding
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'danforthart_display_branding' ) ) {
 	/**
@@ -25,11 +25,11 @@ if ( ! function_exists( 'danforthart_display_branding' ) ) {
 		echo '<div class="site-branding">';
 
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
-		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-		$sitename = get_bloginfo( 'name', 'display' );
-		$logoheight = absint( $logo[2] );
-		$logowidth = absint( $logo[1] );
-		$description = get_bloginfo( 'description', 'display' );
+		$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+		$sitename       = get_bloginfo( 'name', 'display' );
+		$logoheight     = absint( $logo[2] );
+		$logowidth      = absint( $logo[1] );
+		$description    = get_bloginfo( 'description', 'display' );
 
 		if ( has_custom_logo() ) {
 			echo '<div class="custom-logo">';
@@ -44,7 +44,7 @@ if ( ! function_exists( 'danforthart_display_branding' ) ) {
 		}
 
 		if ( $description || is_customize_preview() ) :
-			echo '<div class="site-description">' . $description . '</div>'; /* WPCS: xss ok. */
+			echo '<div class="site-description">' . esc_html( $description ) . '</div>';
 		endif;
 		echo '</div>';
 	}
@@ -54,7 +54,7 @@ add_action( 'tha_header_top', 'danforthart_display_branding' );
 
 /*
  * DISPLAY Navigation
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'danforthart_display_nav' ) ) {
 	/**
@@ -74,11 +74,13 @@ if ( ! function_exists( 'danforthart_display_nav' ) ) {
 			echo '</div>';
 			echo '<div class="menu-wrap">';
 
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'container' => '',
-				) );
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'container'      => '',
+					)
+				);
 
 			echo '</div>';
 		echo '</nav>';
@@ -88,7 +90,8 @@ add_action( 'tha_header_top', 'danforthart_display_nav' );
 
 
 /**
- * DISPLAY the parent page name ( in header )
+ * DISPLAY the parent page name ( in header )  ???????????????
+ * added esc_html() 06/19/2020
  */
 function display_parent() {
 	global $post;
@@ -106,9 +109,9 @@ function display_parent() {
 	else :
 		$parent = $post->post_parent;
 		if ( $parent ) :
-			printf( '<span class="section-title">%s</span>', get_the_title( $parent ) );
+			printf( '<span class="section-title">%s</span>', esc_html( get_the_title( $parent ) ) );
 		else :
-			printf( '<span class="section-title">%s</span>', get_the_title() );
+			printf( '<span class="section-title">%s</span>', esc_html( get_the_title() ) );
 		endif;
 	endif;
 }
@@ -123,7 +126,8 @@ if ( ! function_exists( 'danforthart_display_read_more' ) ) {
 	 */
 	function danforthart_display_read_more() {
 		if ( is_archive() || is_home() || is_search() ) :
-			$link = sprintf( '<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+			$link = sprintf(
+				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
 				get_permalink( get_the_ID() ),
 				/* translators: %s: Name of current post */
 				sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'danforthart' ), get_the_title( get_the_ID() ) )
@@ -137,31 +141,85 @@ add_action( 'tha_entry_bottom', 'danforthart_display_read_more' );
 
 
 /*
- * DISPLAY Site Footer
- -----------------------------------------------------------------
+ * TOP FOOTER
+ * -----------------------------------------------------------------
  */
-if ( ! function_exists( 'danforthart_display_site_footer' ) ) {
+if ( ! function_exists( 'danforthart_display_top_footer' ) ) {
 	/**
 	 * The Site Footer MArkup
 	 */
-	function danforthart_display_site_footer() {
-		if ( is_active_sidebar( 'footer' ) ) {
-			echo '<div class="site-info">';
-				dynamic_sidebar( 'footer' );
+	function danforthart_display_top_footer() {
+
+		if ( is_active_sidebar( 'footer-t1' ) || is_active_sidebar( 'footer-t2' ) || is_active_sidebar( 'footer-t3' ) ) {
+			echo '<div class="footer-widgets">';
+			echo '<div class="inner-wrap">';
+			echo '<div class="footer-top">';
+			if ( is_active_sidebar( 'footer-t0' ) ) {
+				dynamic_sidebar( 'footer-t0' );
+			}
 			echo '</div>';
-		} else {
-			echo '<div class="site-info">';
-				echo '<p>"' . esc_html( DANFORTHART_THEME_NAME ) . '" by <a href="' . esc_html( DANFORTHART_AUTHOR_LINK ) . '">' . esc_html( DANFORTHART_AUTHOR_NAME ) . '</a></p>';
+			echo '<div class="col-1-3 first">';
+			if ( is_active_sidebar( 'footer-t1' ) ) {
+				dynamic_sidebar( 'footer-t1' );
+			}
+			echo '</div>';
+			echo '<div class="col-1-3">';
+			if ( is_active_sidebar( 'footer-t2' ) ) {
+				dynamic_sidebar( 'footer-t2' );
+			}
+			echo '</div>';
+			echo '<div class="col-1-3">';
+			if ( is_active_sidebar( 'footer-t3' ) ) {
+				dynamic_sidebar( 'footer-t3' );
+			}
+			echo '</div>';
+			echo '<div class="cf"></div>';
+			echo '</div>';
 			echo '</div>';
 		}
 	}
 }
-add_action( 'tha_footer_top', 'danforthart_display_site_footer' );
+add_action( 'tha_footer_top', 'danforthart_display_top_footer' );
+
+/*
+ * LOWER FOOTER
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'danforthart_display_lower_footer' ) ) {
+	/**
+	 * The Site Footer MArkup
+	 */
+	function danforthart_display_lower_footer() {
+		if ( is_active_sidebar( 'footer-l1' ) || is_active_sidebar( 'footer-l3' ) ) {
+			echo '<div class="site-info">';
+			echo '<div class="inner-wrap">';
+			echo '<div class="col-1-3 first">';
+			if ( is_active_sidebar( 'footer-l1' ) ) {
+				dynamic_sidebar( 'footer-l1' );
+			}
+			echo '</div>';
+			echo '<div class="col-2-3">';
+			if ( is_active_sidebar( 'footer-l2' ) ) {
+				dynamic_sidebar( 'footer-l2' );
+			}
+			echo '</div>';
+			echo '<div class="cf"></div>';
+			echo '</div>';
+		} else {
+			echo '<div class="site-info">';
+			echo '<p>"' . esc_html( DANFORTHART_THEME_NAME ) . '" by <a href="' . esc_html( DANFORTHART_AUTHOR_LINK ) . '">' . esc_html( DANFORTHART_AUTHOR_NAME ) . '</a></p>';
+			echo '<div class="cf"></div>';
+			echo '</div>';
+			echo '</div>';
+		}
+	}
+}
+add_action( 'tha_footer_bottom', 'danforthart_display_lower_footer' );
 
 
 /*
  * DISPLAY Header Widget
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'danforthart_display_header_widget' ) ) {
 	/**

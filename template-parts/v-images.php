@@ -16,7 +16,7 @@ if ( have_rows( 'v_images' ) ) :
 		the_row();
 	endwhile;
 	?>
-	<div class="variable-images rowof<?php echo esc_html( $rc ); ?>">
+	<div class="variable-images v1 rowof<?php echo esc_html( $rc ); ?>">
 	<?php
 	while ( have_rows( 'v_images' ) ) :
 		the_row();
@@ -25,17 +25,17 @@ if ( have_rows( 'v_images' ) ) :
 			<?php
 			$image = get_sub_field( 'v_image' );
 			if ( ! empty( $image ) ) :
-				$alt = $image['alt'];
+				$alt     = $image['alt'];
 				$caption = $image['caption'];
-				$size = 'medium_large';
-				$width = $image['sizes'][ $size . '-width' ];
-				$height = $image['sizes'][ $size . '-height' ];
-				$url = $image['sizes'][ $size ];
+				$size    = 'medium_large';
+				$width   = $image['sizes'][ $size . '-width' ];
+				$height  = $image['sizes'][ $size . '-height' ];
+				$url     = $image['sizes'][ $size ];
 				?>
 				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 				<?php if ( $caption ) : ?>
 					<div class="caption"><?php echo esc_html( $caption ); ?></div>
-				<?php
+					<?php
 				else :
 					echo '&nbsp;';
 				endif;
@@ -43,6 +43,6 @@ if ( have_rows( 'v_images' ) ) :
 			?>
 		</div>
 	<?php endwhile; ?>
-<br clear="all">
+	<div class="cf"></div>
 </div>
 <?php endif; ?>

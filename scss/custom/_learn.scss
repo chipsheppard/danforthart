@@ -50,6 +50,7 @@ body.learncreate {
 	border-top: 1px solid $color__green;
 	border-bottom: 1px solid $color__green;
 	padding: 3em 0 6em;
+	@include font-size(1.125);
 
 	@include breakpoint(tablet-v) {
 		padding: 1.5em 0 2em;
@@ -300,7 +301,7 @@ body.learncreate {
 	color: #9a9a9a;
 	font-weight: $font__weight-bold;
 	letter-spacing: 2px;
-	padding: 1em 4% 2em;
+	padding: 1em 0 2em;
 	text-transform: uppercase;
 	@include font-size(.875);
 
@@ -338,16 +339,20 @@ body.learncreate {
 			padding-top: .5em;
 		}
 	}
+	
 	.row-bottom {
 		display: none;
 		padding-top: 3em;
+		@include font-size(1.125);
 	}
+	
 	.alert {
 		background-color: #000000;
 		color: #ffffff;
 		padding: .125em 1.5em;
 		@include font-size(.875);
 	}
+	
 	.course-images {
 		margin: 3em 0 4em;
 
@@ -482,6 +487,7 @@ body.learncreate {
 .reg-block {
 	margin-top: 1em;
 	margin-bottom: 6em;
+	@include font-size(1.125);
 
 	.reg-text {
 		padding-right: 2%;
@@ -508,6 +514,9 @@ body.learncreate {
 		font-weight: $font__weight-light;
 		@include font-size(1.625);
 	}
+	.vw-right {
+		@include font-size(1.125);
+	}
 }
 
 // -----------------------------------------------
@@ -520,16 +529,6 @@ body.learn-c {
 			padding: 0;
 		}
 	}
-
-/* MASONRY
-	.course-row {
-		display: none;
-
-		&.show {
-	 		display: block;
-		}
-	}
-*/
 
 	.page-title {
 		margin: 4em 0 6em;

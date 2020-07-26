@@ -13,7 +13,7 @@
 
 <div class="course-rows-wrap">
 	<?php
-	$level = get_field( 'c_level' );
+	$level  = get_field( 'c_level' );
 	$season = get_field( 'c_season' );
 	if ( ! $level ) :
 		$level = get_sub_field( 'c_level' );
@@ -23,9 +23,9 @@
 	endif;
 	// WP_Query arguments.
 	$args = array(
-		'post_type'              => array( 'course' ),
-		'posts_per_page'         => 100,
-		'tax_query'              => array( // WPCS: slow query ok.
+		'post_type'      => array( 'course' ),
+		'posts_per_page' => 100,
+		'tax_query'      => array( // phpcs:ignore slow query ok.
 			array(
 				'taxonomy'         => 'level',
 				'terms'            => $level,
@@ -39,9 +39,9 @@
 				'include_children' => true,
 			),
 			array(
-				'taxonomy'         => 'season',
-				'terms'            => $season,
-				'field'            => 'slug',
+				'taxonomy' => 'season',
+				'terms'    => $season,
+				'field'    => 'slug',
 			),
 		),
 	);
@@ -53,11 +53,11 @@
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			$terms = get_the_terms( $post->ID, 'level' );
-			if ( ! empty( $terms ) ) :
-				$term = $terms[0];
-				$term_slug = $term->slug;
-				$term_name = $term->name;
+			$v_terms = get_the_terms( $post->ID, 'level' );
+			if ( ! empty( $v_terms ) ) :
+				$v_term      = $v_terms[0];
+				$v_term_slug = $v_term->slug;
+				$v_term_name = $v_term->name;
 			endif;
 
 			$seasons = get_the_terms( $post->ID, 'season' );
@@ -96,7 +96,7 @@
 						<div class="control"><span class="opener cssicon-plusminus small plus"></span></div>
 					</div>
 					<div class="col-1-6 course-col fb">
-						<div class="level"><?php printf( '%s', esc_html( $term_name ) ); ?></div>
+						<div class="level"><?php printf( '%s', esc_html( $v_term_name ) ); ?></div>
 					</div>
 					<div class="col-1-12 course-col fb">
 						<div class="price"><?php the_field( 'price' ); ?></div>
@@ -108,13 +108,13 @@
 					<div class="col-1-6 first course-col fb">
 						<div class="sessions">
 						<strong><?php the_field( 'sessions_amount' ); ?><?php if ( get_field( 'session_range' ) ) : ?>
-<?php
-echo ',</strong> ';
-the_field( 'session_range' );
-else :
-	echo '</strong>';
-endif;
-?>
+							<?php
+							echo ',</strong> ';
+							the_field( 'session_range' );
+							else :
+								echo '</strong>';
+							endif;
+							?>
 						</div>
 						<div class="session-note"><?php the_field( 'session_note' ); ?></div>
 					</div>
@@ -138,22 +138,22 @@ endif;
 								<?php
 								$image = get_sub_field( 'image' );
 								if ( ! empty( $image ) ) :
-									$alt = $image['alt'];
+									$alt     = $image['alt'];
 									$caption = $image['caption'];
-									$size = 'medium';
-									$width = $image['sizes'][ $size . '-width' ];
-									$height = $image['sizes'][ $size . '-height' ];
-									$url = $image['sizes'][ $size ];
+									$size    = 'medium';
+									$width   = $image['sizes'][ $size . '-width' ];
+									$height  = $image['sizes'][ $size . '-height' ];
+									$url     = $image['sizes'][ $size ];
 									?>
 									<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 									<?php if ( $caption ) : ?>
 										<div class="image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
-									<?php
+										<?php
 									endif;
 								endif;
 								?>
 							</div>
-						<?php
+							<?php
 						endwhile;
 					endif;
 					?>
@@ -163,7 +163,7 @@ endif;
 			</div>
 			</div>
 			</div>
-		<?php
+			<?php
 		} // endwhile.
 	} else {
 		echo '<div class="inner-wrap no-courses">No courses have been published for that criterea.</div>';

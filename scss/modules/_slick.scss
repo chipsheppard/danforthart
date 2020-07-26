@@ -53,7 +53,6 @@
 	}
 }
 .slick-slide {
-	background-color: #ffffff;
 	float: left;
 	height: 100%;
 	min-height: 1px;
@@ -120,8 +119,8 @@
 	}
 }
 
-.prev,
-.next {
+.slick-prev,
+.slick-next {
 	background: transparent;
 	border: none;
 	color: transparent;
@@ -131,20 +130,19 @@
 	line-height: 0;
 	position: absolute;
 	z-index: 2;
-	top: 50%;
+	top: 0;
 	padding: 0;
-	margin-top: -10px\9; /*lte IE 8*/
 	transform: translate(0, -50%);
 	outline: none;
 }
 
-.prev.slick-disabled:before,
-.next.slick-disabled:before {
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
 	opacity: .15;
 }
 
-.prev:before,
-.next:before {
+.slick-prev:before,
+.slick-next:before {
 	background: transparent;
 	border: 0;
 	color: transparent;
@@ -163,23 +161,23 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.prev {
-	right: 50px;
+.slick-prev {
+	right: 80px;
 }
-.prev:before {
+.slick-prev:before {
 	border-left: 1px solid $color__base;
 	border-bottom: 1px solid $color__base;
 }
-.next {
-	right: 0;
+.slick-next {
+	right: 20px;
 }
-.next:before {
+.slick-next:before {
 	border-right: 1px solid $color__base;
 	border-top: 1px solid $color__base;
 }
 
-.prev:hover:before,
-.next:hover:before  {
+.slick-prev:hover:before,
+.slick-next:hover:before  {
 	outline: none;
 	opacity: .70;
 }

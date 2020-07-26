@@ -11,22 +11,28 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'meet team' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'meet team' ) );
+	}
+);
 
 /**
  * Team page functions
  */
 function da_team() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'meet-sub',
-			'container' => '',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'meet',
+				'menu_id'        => 'meet-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 </div>
@@ -53,10 +59,10 @@ function da_team() {
 							$c++;
 							?>
 							<div class="member mt<?php echo esc_html( $c ); ?> col-1-4<?php if ( 1 === $c ) : ?>
-<?php
-echo ' first';
-endif;
-?>
+								<?php
+								echo ' first';
+								endif;
+													?>
 " data-team="mem<?php echo esc_html( $c ); ?>">
 								<a name="<?php the_sub_field( 'page_target' ); ?>"></a>
 								<div class="mem-card">
@@ -64,15 +70,15 @@ endif;
 										<?php
 										$image = get_sub_field( 't_image' );
 										if ( ! empty( $image ) ) :
-											$alt = $image['alt'];
-											$size = 'medium_large';
-											$width = $image['sizes'][ $size . '-width' ];
+											$alt    = $image['alt'];
+											$size   = 'medium_large';
+											$width  = $image['sizes'][ $size . '-width' ];
 											$height = $image['sizes'][ $size . '-height' ];
-											$url = $image['sizes'][ $size ];
+											$url    = $image['sizes'][ $size ];
 											?>
 											<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 										<?php else : ?>
-											<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/t0.jpg" alt="Team Member" width="400" height="230" />
+											<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/t0.jpg' ); ?>" alt="Team Member" width="400" height="230" />
 										<?php endif; ?>
 									</div>
 									<div class="m-name"><?php the_sub_field( 'name' ); ?></div>
@@ -84,7 +90,7 @@ endif;
 									<div class="cf"></div>
 								</div>
 							</div>
-						<?php
+							<?php
 						endwhile;
 					endif;
 					?>
@@ -110,7 +116,7 @@ endif;
 								<div class="col-2-3 col-right"><?php the_sub_field( 'right_col' ); ?></div>
 								<div class="cf"></div>
 							</div>
-						<?php
+							<?php
 						endwhile;
 					endif;
 					?>
@@ -144,10 +150,10 @@ endif;
 								$c++;
 								?>
 								<div class="member mt<?php echo esc_html( $c ); ?> col-1-4<?php if ( 1 === $c ) : ?>
-<?php
-echo ' first';
-endif;
-?>
+									<?php
+									echo ' first';
+									endif;
+														?>
 " data-team="mem<?php echo esc_html( $c ); ?>">
 									<a name="<?php the_sub_field( 'page_target' ); ?>"></a>
 									<div class="mem-card">
@@ -155,15 +161,15 @@ endif;
 											<?php
 											$image = get_sub_field( 'image' );
 											if ( ! empty( $image ) ) :
-												$alt = $image['alt'];
-												$size = 'medium_large';
-												$width = $image['sizes'][ $size . '-width' ];
+												$alt    = $image['alt'];
+												$size   = 'medium_large';
+												$width  = $image['sizes'][ $size . '-width' ];
 												$height = $image['sizes'][ $size . '-height' ];
-												$url = $image['sizes'][ $size ];
+												$url    = $image['sizes'][ $size ];
 												?>
 												<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 											<?php else : ?>
-												<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/t0.jpg" alt="Team Member" width="400" height="230" />
+												<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/t0.jpg' ); ?>" alt="Team Member" width="400" height="230" />
 											<?php endif; ?>
 										</div>
 										<div class="m-name"><?php the_sub_field( 'name' ); ?></div>
@@ -174,7 +180,7 @@ endif;
 										<div class="cf"></div>
 									</div>
 								</div>
-							<?php
+								<?php
 							endwhile;
 						endif;
 						?>
@@ -200,7 +206,7 @@ endif;
 									<div class="col-2-3 col-right"><?php the_sub_field( 'right_col' ); ?></div>
 									<div class="cf"></div>
 								</div>
-							<?php
+								<?php
 							endwhile;
 						endif;
 						?>
@@ -216,7 +222,7 @@ endif;
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
 
-<?php
+	<?php
 }
 add_action( 'tha_entry_content_before', 'da_team' );
 

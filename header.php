@@ -8,21 +8,31 @@
  * @license  GPL-2.0+
  */
 
-echo '<!DOCTYPE html>';
-tha_html_before();
-echo '<html ' . get_language_attributes() . '>'; // WPCS: XSS OK.
+?><!doctype html>
+<?php tha_html_before(); ?>
+<html <?php language_attributes(); ?>>
+<head>
+<?php
+tha_head_top();
+wp_head();
+tha_head_bottom();
+?>
+</head>
+<body <?php body_class(); ?>>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+}
 
-echo '<head>';
-	tha_head_top();
-	wp_head();
-	tha_head_bottom();
-echo '</head>';
-
-echo '<body class="' . join( ' ', get_body_class() ) . '">'; // WPCS: XSS OK.
 tha_body_top();
-echo '<div id="page" class="site">';
-	echo '<a class="skip-link screen-reader-text" href="#content">' . esc_html__( 'Skip to content', 'danforthart' ) . '</a>';
 
+?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'danforthart' ); ?></a>
+
+	<?php
 	tha_header_before();
 	echo '<header id="masthead" class="site-header">';
 		echo '<div class="header-wrap">';
@@ -33,5 +43,6 @@ echo '<div id="page" class="site">';
 		echo '</div>';
 	echo '</header>';
 	tha_header_after();
+	?>
 
-	echo '<div id="content" class="site-content">';
+	<div id="content" class="site-content">

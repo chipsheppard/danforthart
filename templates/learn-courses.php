@@ -18,7 +18,7 @@
  */
 function add_slug_body_class( $classes ) {
 	$classes[] = 'learn-c';
-	$term = get_field( 'c_level' );
+	$term      = get_field( 'c_level' );
 	if ( $term ) {
 		$classes[] = $term->slug;
 	}
@@ -30,13 +30,17 @@ add_filter( 'body_class', 'add_slug_body_class' );
  * Learn+Create course page functions
  */
 function da_learn_c() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'learn-sub',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'learn',
+				'menu_id'        => 'learn-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 	<h1 class="page-title"><?php the_field( 'page_title' ); ?></h1>
@@ -45,11 +49,11 @@ function da_learn_c() {
 <div class="content-wrap">
 
 	<div class="tabs-wrap<?php if ( get_field( 'orientation' ) ) : ?>
-<?php
-echo ' ';
-the_field( 'orientation' );
-endif;
-?>
+		<?php
+		echo ' ';
+		the_field( 'orientation' );
+		endif;
+							?>
 ">
 
 		<div class="tab-tab tab-left"><div class="tableft-inner">
@@ -57,7 +61,7 @@ endif;
 			$l_link = get_field( 'tab_left_link' );
 			if ( $l_link ) :
 				$l_link_url = $l_link['url'];
-			?>
+				?>
 			<a href="<?php echo esc_url( $l_link_url ); ?>">
 			<?php endif; ?>
 			<h2><span><?php the_field( 'tab_left_title' ); ?></span></h2>
@@ -71,7 +75,7 @@ endif;
 			$r_link = get_field( 'tab_right_link' );
 			if ( $r_link ) :
 				$r_link_url = $r_link['url'];
-			?>
+				?>
 			<a href="<?php echo esc_url( $r_link_url ); ?>">
 			<?php endif; ?>
 			<h2><span><?php the_field( 'tab_right_title' ); ?></span></h2>
@@ -110,18 +114,18 @@ endif;
 						if ( $buttona && in_array( 'disabled', $buttona, true ) ) :
 							?>
 							<a class="btn disabled" href="#0">Register For Classes</a>
-						<?php
+							<?php
 						elseif ( $buttona && in_array( 'display', $buttona, true ) ) :
 							$link = get_field( 'registration_link', 'option' );
 							if ( $link ) :
-								$link_url = $link['url'];
-								$link_title = $link['title'];
+								$link_url    = $link['url'];
+								$link_title  = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
 								<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php else : ?>
 								<a class="btn disabled" href="#0">Register For Classes</a>
-							<?php
+								<?php
 							endif;
 						endif;
 						?>
@@ -144,18 +148,18 @@ endif;
 					if ( $buttonb && in_array( 'disabled', $buttonb, true ) ) :
 						?>
 						<a class="btn disabled" href="#0">Register For Classes</a>
-					<?php
+						<?php
 					elseif ( $buttonb && in_array( 'display', $buttonb, true ) ) :
 						$link = get_field( 'registration_link', 'option' );
 						if ( $link ) :
-							$link_url = $link['url'];
-							$link_title = $link['title'];
+							$link_url    = $link['url'];
+							$link_title  = $link['title'];
 							$link_target = $link['target'] ? $link['target'] : '_self';
 							?>
 							<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php else : ?>
 							<a class="btn disabled" href="#0">Register</a>
-						<?php
+							<?php
 						endif;
 					endif;
 					?>
@@ -187,18 +191,18 @@ endif;
 					if ( $buttonc && in_array( 'disabled', $buttonc, true ) ) :
 						?>
 						<a class="btn disabled" href="#0">Register For Classes</a>
-					<?php
+						<?php
 					elseif ( $buttonc && in_array( 'display', $buttonc, true ) ) :
 						$vw_link = get_field( 'registration_link', 'option' );
 						if ( $vw_link ) :
-							$vw_link_url = $vw_link['url'];
-							$vw_link_title = $vw_link['title'];
+							$vw_link_url    = $vw_link['url'];
+							$vw_link_title  = $vw_link['title'];
 							$vw_link_target = $vw_link['target'] ? $vw_link['target'] : '_self';
 							?>
 							<a class="btn" href="<?php echo esc_url( $vw_link_url ); ?>" target="<?php echo esc_attr( $vw_link_target ); ?>"><?php echo esc_html( $vw_link_title ); ?></a>
 						<?php else : ?>
 							<a class="btn disabled" href="#0">Register</a>
-						<?php
+							<?php
 						endif;
 					endif;
 					?>
@@ -222,11 +226,10 @@ endif;
 
 </div>
 
-<?php get_template_part( 'template-parts/quote' ); ?>
-<?php get_template_part( 'template-parts/signup' ); ?>
+	<?php
+	get_template_part( 'template-parts/quote' );
+	get_template_part( 'template-parts/signup' );
 
-
-<?php
 }
 add_action( 'tha_entry_content_before', 'da_learn_c' );
 

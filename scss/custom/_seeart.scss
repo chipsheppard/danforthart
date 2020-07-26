@@ -139,8 +139,9 @@ body.seeart {
 	}
 
 
-	.upcoming-exhibits { // WHERE IS THIS ???
+	.upcoming-exhibits {
 		margin-bottom: 16em;
+		@include font-size(1.125);
 
 		@include breakpoint(tablet-v) {
 			margin-bottom: 5em;

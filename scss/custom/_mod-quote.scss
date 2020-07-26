@@ -1,16 +1,30 @@
 .quote-block {
-	margin-top: 15em;
-	margin-bottom: 10em;
+	clear: both;
+	padding-top: 8em;
+	padding-bottom: 4em;
+	position: relative;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	width: auto;
+	max-width: 1000%;
 
-	@include breakpoint(tablet-h) {
-		margin-bottom: 4em;
-	}
+	&.orange {background-color: $color__orange;}
+	&.green {background-color: $color__green;}
+	&.yellow {background-color: $color__yellow;}
+	&.blue {background-color: $color__blue;}
+	&.tan {background-color: $color__tan;}
+	&.purple {background-color: $color__purple;}
+
 	@include breakpoint(tablet-v) {
-		margin-top: 5em;
-		margin-bottom: 0;
-	}
+		padding-top: 3em;
+		padding-left: 3%;
 
-	.large-link {
+		blockquote {
+			margin: 0;
+		}
+	}
+	
+	.large-link { // Used on Team template mid-quote.
 		padding: 2em 0 3em 3em;
 
 		a {

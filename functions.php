@@ -2,21 +2,21 @@
 /**
  * Main Functions File
  *
- * @package  danforthart
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @package danforthart
+ * @author  Chip Sheppard <chipsheppard@gmail.com>
+ * @license GPL-2.0+
+ * @since   1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 // Theme data.
-define( 'DANFORTHART_VERSION', '1.5.1' );
+define( 'DANFORTHART_VERSION', '2.0.0' );
 define( 'DANFORTHART_THEME_NAME', 'Danforth Art' );
 define( 'DANFORTHART_AUTHOR_NAME', 'Moth Design' );
-define( 'DANFORTHART_AUTHOR_LINK', 'http://www.mothdesign.net' );
+define( 'DANFORTHART_AUTHOR_LINK', 'http://mothdesign.net' );
 
 /**
  * Load the extra stuff.
@@ -25,7 +25,7 @@ require get_template_directory() . '/inc/tha-theme-hooks.php';
 require get_template_directory() . '/inc/wordpress-cleanup.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/entry-meta.php';
-// require get_template_directory() . '/inc/entry-footer.php';.
+// require get _template_directory() . '/inc/entry-footer.php';.
 require get_template_directory() . '/inc/theme-functions.php';
 require get_template_directory() . '/inc/loop.php';
 require get_template_directory() . '/inc/customizer.php';
@@ -33,7 +33,7 @@ require get_template_directory() . '/inc/class-bgcolor-metabox.php';
 require get_template_directory() . '/inc/class-danforthart-css.php';
 require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/css-output.php';
-// require get_template_directory() . '/inc/remove-menu-items.php';.
+// require get _template_directory() . '/inc/remove-menu-items.php';.
 require get_template_directory() . '/inc/google-analytics.php';
 /**
  * Enqueue scripts and styles.
@@ -62,6 +62,10 @@ function danforthart_scripts() {
 	if ( is_page_template( 'templates/faq.php' ) ) {
 		wp_enqueue_script( 'opm-js', get_template_directory_uri() . '/assets/js/opm-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
 	}
+	if ( ! is_page_template( array( 'templates/calendar.php', 'templates/home.php', 'templates/learn.php', 'templates/past.php', 'templates/permanent.php', 'templates/seeart.php', 'templates/team.php', 'templates/visit.php' ) ) ) {
+		wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+		wp_enqueue_script( 'vimages-js', get_template_directory_uri() . '/assets/js/slick-vimages-min.js', array( 'jquery' ), DANFORTHART_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
 
@@ -70,7 +74,7 @@ add_action( 'wp_enqueue_scripts', 'danforthart_scripts' );
  * Enqueue editor styles for Gutenberg
  */
 function danforthart_gutenberg_editor_styles() {
-	wp_enqueue_style( 'danforthart_gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css' );
+	wp_enqueue_style( 'danforthart_gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css', array(), DANFORTHART_VERSION );
 }
 add_action( 'enqueue_block_editor_assets', 'danforthart_gutenberg_editor_styles' );
 
@@ -96,17 +100,27 @@ if ( ! function_exists( 'danforthart_setup' ) ) :
 		$GLOBALS['content_width'] = apply_filters( 'danforthart_content_width', 1200 );
 
 		// Custom Logo.
-		add_theme_support( 'custom-logo', array(
-			'height'      => 80,
-			'width'       => 400,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 80,
+				'width'       => 400,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 
 		// wp_nav_menu() in 1 location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'danforthart' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary Menu', 'danforthart' ),
+				'visit'   => __( 'Visit sub Menu', 'danforthart' ),
+				'seeart'  => __( 'SeeArt sub Menu', 'danforthart' ),
+				'meet'    => __( 'MeetUs sub Menu', 'danforthart' ),
+				'learn'   => __( 'LearnCreate sub Menu', 'danforthart' ),
+				'join'    => __( 'JoinSupport sub Menu', 'danforthart' ),
+			)
+		);
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'danforthart', get_template_directory() . '/languages' );
@@ -161,31 +175,17 @@ add_filter( 'acf/fields/taxonomy/query/name=c_level', 'dfa_taxonomy_query', 10, 
  * @param array $classes The body classes.
  */
 function dfa_body_classes( $classes ) {
-	if ( is_singular() && ! is_singular( array( 'artwork', 'event', 'exhibition' ) ) && ! is_page_template( array(
-		'templates/calendar.php',
-		'templates/faq.php',
-		'templates/home.php',
-		'templates/learn.php',
-		'templates/learn-c.php',
-		'templates/learn-courses.php',
-		'templates/meet.php',
-		'templates/past.php',
-		'templates/permanent.php',
-		'templates/seeart.php',
-		'templates/team.php',
-		'templates/tours.php',
-		'templates/visit.php',
-	) ) ) {
+	if ( is_singular() && ! is_singular( array( 'artwork', 'event', 'exhibition' ) ) && ! is_page_template( array( 'templates/calendar.php', 'templates/faq.php', 'templates/home.php', 'templates/learn.php', 'templates/learn-c.php', 'templates/learn-courses.php', 'templates/meet.php', 'templates/past.php', 'templates/permanent.php', 'templates/seeart.php', 'templates/team.php', 'templates/tours.php', 'templates/visit.php' ) ) ) {
 		$classes[] = 'modules';
 	}
 
 	if ( get_field( 'sub_menu' ) ) {
-		$m = get_field( 'sub_menu' );
+		$m         = get_field( 'sub_menu' );
 		$classes[] = $m;
 	}
 	return $classes;
 }
-add_action( 'body_class','dfa_body_classes' );
+add_action( 'body_class', 'dfa_body_classes' );
 
 
 // Load Jetpack compatibility file.

@@ -25,17 +25,17 @@ if ( have_rows( 'v_images2' ) ) :
 			<?php
 			$image = get_sub_field( 'v_image2' );
 			if ( ! empty( $image ) ) :
-				$alt = $image['alt'];
+				$alt     = $image['alt'];
 				$caption = $image['caption'];
-				$size = 'medium_large';
-				$width = $image['sizes'][ $size . '-width' ];
-				$height = $image['sizes'][ $size . '-height' ];
-				$url = $image['sizes'][ $size ];
+				$size    = 'medium_large';
+				$width   = $image['sizes'][ $size . '-width' ];
+				$height  = $image['sizes'][ $size . '-height' ];
+				$url     = $image['sizes'][ $size ];
 				?>
 				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 				<?php if ( $caption ) : ?>
 					<div class="caption"><?php echo esc_html( $caption ); ?></div>
-				<?php
+					<?php
 				else :
 					echo '&nbsp;';
 				endif;
@@ -43,6 +43,6 @@ if ( have_rows( 'v_images2' ) ) :
 			?>
 		</div>
 	<?php endwhile; ?>
-<br clear="all">
+	<div class="cf"></div>
 </div>
 <?php endif; ?>

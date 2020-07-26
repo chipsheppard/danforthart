@@ -17,19 +17,25 @@
 if ( ! is_singular() && ! is_search() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'thumbnail', [
-		'class' => 'featured-image',
-		'title' => 'Feature image',
-	] );
+	the_post_thumbnail(
+		'thumbnail',
+		[
+			'class' => 'featured-image',
+			'title' => 'Feature image',
+		]
+	);
 	echo '</a>';
 
 elseif ( is_search() && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'thumbnail', [
-		'class' => 'featured-image',
-		'title' => 'Feature image',
-	] );
+	the_post_thumbnail(
+		'thumbnail',
+		[
+			'class' => 'featured-image',
+			'title' => 'Feature image',
+		]
+	);
 	echo '</a>';
 
 endif;
@@ -48,26 +54,49 @@ echo '<div class="entry-content">';
 
 tha_entry_content_before();
 
-if ( is_singular() ) : // single posts, attachments, pages NOT using content-acf.
-	// THE MODULES.
+if ( is_singular() ) :
 	if ( get_field( 'sub_menu' ) ) :
-		$m = get_field( 'sub_menu' );
-	?>
+		$mod = get_field( 'sub_menu' );
+		?>
 	<div class="inner-wrap">
 		<div class="sub-navigation">
 			<?php
-			wp_nav_menu( array(
-				'menu' => $m,
-				'container' => '',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => $mod,
+					'menu_id'        => $mod . '-menu',
+					'container'      => '',
+				)
+			);
 			?>
 		</div>
 	</div>
 	<?php endif; ?>
 
-	<div class="inner-wrap">
-		<h1 class="page-title"><?php the_content(); ?></h1>
-		<?php get_template_part( 'template-parts/v-images' ); ?>
+	<div class="heading-wrap">
+		<div class="inner-wrap">
+			<?php
+			if ( get_field( 'page_title' ) ) :
+				?>
+			<h1 class="page-title"><?php the_field( 'page_title' ); ?></h1>
+				<?php
+			endif;
+
+			$thecontent = get_the_content();
+			if ( ! empty( $thecontent ) ) :
+				?>
+				<div class="page-content"><?php the_content(); ?></div>
+			<?php endif; ?>
+			<?php get_template_part( 'template-parts/v-images' ); ?>
+			<div class="cf"></div>
+
+			<?php if ( get_field( 'secondary_content' ) ) : ?>
+				<div class="secondary-content">
+				<?php the_field( 'secondary_content' ); ?>
+				</div>
+			<?php endif; ?>
+
+		</div>
 	</div>
 
 	<div class="content-wrap">
@@ -82,6 +111,13 @@ if ( is_singular() ) : // single posts, attachments, pages NOT using content-acf
 	<?php get_template_part( 'template-parts/quote' ); ?>
 	<?php get_template_part( 'template-parts/signup' ); ?>
 	<?php
+	wp_link_pages(
+		array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'danforthart' ),
+			'after'  => '</div>',
+		)
+	);
+
 
 else : // archives & search.
 

@@ -1,0 +1,91 @@
+.mod-textimage {
+	clear: both;
+
+	.imgblk {
+		padding-top: 3em;
+		z-index: 2;
+		
+		img {
+			display: block;
+			width: 100%;
+			max-width: none;
+		}		
+	}
+
+	.txtblk {
+		font-weight: 300;
+		padding-top: 4.5em;
+		padding-bottom: 3em;
+		height: auto;
+		@include font-size(1.75);
+
+		h2,h3,h4,h5 {
+			line-height: 1.25; 
+			margin-bottom: 3rem;
+		}
+		h2 {@include font-size(4);}
+		h3 {@include font-size(3);}
+		h4 {@include font-size(2);}
+		h5 {@include font-size(1.75);}
+
+		&.orange {background-color: $color__orange;}
+		&.green {background-color: $color__green;}
+		&.yellow {background-color: $color__yellow;}
+		&.blue {background-color: $color__blue;}
+		&.tan {background-color: $color__tan;}
+		&.purple {background-color: $color__purple;}
+	}
+	
+	
+	
+	@include breakpoint(tablet-v) {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		@include font-size(1.5);
+
+		.inner-wrap {
+			padding: 0;
+		}
+		.txtblk {
+			padding: 1.5em 3% .5em;
+
+			h2 {@include font-size(3);}
+			h3 {@include font-size(2);}
+			h4 {@include font-size(1.5);}
+			h5 {@include font-size(1);}	
+		}
+	}
+	
+	@include breakpoint(tablet-min-v) {
+		.inner-wrap {
+			display: grid;
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 1fr 1fr;
+		}
+		.imgblk {
+			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+		}
+		.txtblk {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
+			padding-right: calc(50vw - 50%);
+			padding-left: calc(50vw + 3em);
+		}
+		.right {
+			.imgblk {
+				grid-row-start: 1;
+				grid-column-start: 2;
+				grid-row-end: 3;
+				grid-column-end: 3;
+			}
+		
+			.txtblk {
+				padding-right: calc(50vw + 3em);
+				padding-left: calc(50vw - 50%);
+			}
+		}
+	}
+}

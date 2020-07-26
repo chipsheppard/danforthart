@@ -15,8 +15,8 @@ blockquote {
 	position: relative;
 	quotes: "\201C""\201D""\201C""\201D";
 
-	@include breakpoint(phone-h) {
-		padding: 0 .5em 0;
+	@include breakpoint(tablet-v) {
+		padding: 0 3% 0;
 	}
 
 	&:after {

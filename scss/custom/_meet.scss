@@ -33,12 +33,17 @@ body.meetus {
 			.textblock {
 				height: auto;
 				padding: 0 4em;
+				
 				@include breakpoint(tablet-h) {
 					padding: 0 2em;
 				}
 				@include breakpoint(tablet-v) {
 					padding: 0 1em;
 				}
+			}
+
+			.l-content {
+				@include font-size(1.125);
 			}
 		}
 		.mid-right {

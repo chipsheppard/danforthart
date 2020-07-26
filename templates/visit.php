@@ -11,22 +11,28 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'vis visit' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'vis visit' ) );
+	}
+);
 
 /**
  * Visit page functions
  */
 function da_visit() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'visit-sub',
-			'container' => '',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'visit',
+				'menu_id'        => 'visit-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 </div>
@@ -109,10 +115,9 @@ function da_visit() {
 	</div><!-- /inner-wrap -->
 </div><!-- /content-wrap -->
 
-<?php get_template_part( 'template-parts/quote' ); ?>
-<?php get_template_part( 'template-parts/signup' ); ?>
-
-<?php
+	<?php
+	get_template_part( 'template-parts/quote' );
+	get_template_part( 'template-parts/signup' );
 }
 add_action( 'tha_entry_content_before', 'da_visit' );
 

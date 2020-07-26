@@ -11,11 +11,9 @@
 echo '</div>';
 
 tha_footer_before();
-echo '<div class="inner-wrap">';
 echo '<footer id="colophon" class="site-footer" role="contentinfo">';
 	tha_footer_top();
 	tha_footer_bottom();
-echo '</div>';
 echo '</footer>';
 tha_footer_after();
 

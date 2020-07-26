@@ -22,16 +22,17 @@
 		/**
 		 * Z global $post;
 		*/
-		foreach ( $mposts as $post ) :
-			setup_postdata( $post );
+		foreach ( $mposts as $mpost ) :
+			setup_postdata( $mpost );
 			?>
 			<div class="modal-art">
 				<div class="modal-img">
 					<?php
 					if ( has_post_thumbnail() ) :
-						the_post_thumbnail( 'large', [
-							'class' => 'modal-image',
-						] );
+						the_post_thumbnail(
+							'large',
+							[ 'class' => 'modal-image' ]
+						);
 					endif;
 					?>
 				</div>
@@ -53,7 +54,7 @@
 					?>
 				</div>
 			</div>
-		<?php
+			<?php
 		endforeach;
 		wp_reset_postdata();
 	endif;
@@ -61,9 +62,9 @@
 	</div>
 
 	<div class="modal-nav">
-		<button type="button" class="prev">Previous</button>
+		<button type="button" class="slick-prev">Previous</button>
 		<span class="pagingInfo"></span>
-		<button type="button" class="next">Next</button>
+		<button type="button" class="slick-next">Next</button>
 	</div>
 
 </div>

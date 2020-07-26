@@ -47,6 +47,23 @@
 	.artwork-info {
 		text-align: center;
 	}
+
+	.slick-prev,
+	.slick-next {
+		top: 50%;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: transparent;
+		}
+	}
+	.slick-prev {
+		right: 50px;
+	}
+	.slick-next {
+		right: 0;
+	}	
 }
 
 .modal-nav {

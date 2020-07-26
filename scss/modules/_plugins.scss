@@ -14,21 +14,24 @@ body.has-site-logo .site-description {display:none !important;}
 	}
 	.wpcf7-not-valid-tip {
 		position: absolute;
-		top: -20px;
-		left: 1.5em;
+		bottom: -32px;
+		left: 24px;
 		line-height: 1;
 		width: 100%;
-		@include font-size(1);
+		@include font-size(.75);
 	}
 }
 
 div.wpcf7-response-output {
+	visibility: hidden;
     border-color: transparent;
 	color: #c00;
 	line-height: 1;
-	margin: 1em 0 0;
+	position: absolute;
+	bottom: -28px;
+	left: 20px;
 	padding: 0;
-	@include font-size(1);
+	@include font-size(.75);
 }
 
 // WP SOCIAL SHARING

@@ -9,27 +9,34 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'single-artwork' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'single-artwork' ) );
+	}
+);
 
 /**
  * Home Function
  */
 function da_artwork() {
-?>
+	?>
 	<div class="inner-wrap">
 
 		<div class="sub-navigation">
 			<?php
-			wp_nav_menu( array(
-				'menu' => 'see-art-sub',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => 'seeart',
+					'menu_id'        => 'seeart-menu',
+					'container'      => '',
+				)
+			);
 			?>
 		</div>
 
 		<div class="return">
-			<a href="<?php echo esc_url( site_url() ); ?>/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
+			<a href="<?php echo esc_url( home_url() ); ?>/see-art/permanent-collection/"><span class="cssicon-arrow-l"></span> View Our Collection</a>
 		</div>
 		<div class="cf"></div>
 
@@ -52,9 +59,12 @@ function da_artwork() {
 		<div class="artwork-img">
 			<?php
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail( 'large', [
-					'class' => 'artwork-image aligncenter',
-				] );
+				the_post_thumbnail(
+					'large',
+					[
+						'class' => 'artwork-image aligncenter',
+					]
+				);
 			endif;
 			?>
 		</div>
@@ -70,7 +80,7 @@ function da_artwork() {
 				<h1 class="artwork-title"><?php the_title(); ?></h1>
 				<div class="artwork-info">
 					<span class="artwork-date"><?php the_field( 'date' ); ?></span>
-<?php if ( the_field( 'medium' ) ) : ?>
+	<?php if ( the_field( 'medium' ) ) : ?>
 &mdash;<span class="artwork-medium"><?php the_field( 'medium' ); ?></span>
 <?php endif; ?>
 				</div>
@@ -96,7 +106,7 @@ function da_artwork() {
 		</div></div>
 	</div>
 
-<?php
+	<?php
 }
 add_action( 'tha_entry_content_before', 'da_artwork' );
 

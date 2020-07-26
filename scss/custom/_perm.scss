@@ -56,10 +56,11 @@ body.permanent {
 		}
 
 		.artwork {
+		@include font-size(1.125);
 			width: 100%;
 			margin: 0;
 			padding-bottom: 3em;
-			@include font-size(1);
+			@include font-size(1.125);
 
 			@include breakpoint(tablet-v) {
 				padding-bottom: 0;

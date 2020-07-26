@@ -10,20 +10,25 @@
  */
 
 ?>
-<div class="col-4-5 silo quote-block">
-	<blockquote>
-		<?php the_sub_field( 'quote_text' ); ?>
-		<cite>
-<?php
-the_sub_field( 'quote_citation' );
-$link = get_sub_field( 'citation_link' );
-if ( $link ) :
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
-?>
-&mdash;<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-<?php endif; ?>
-		</cite>
-	</blockquote>
+<div class="quote-block<?php if ( get_sub_field( 'quote_background' ) ) : ?>
+<?php echo ' '; ?>
+<?php the_sub_field( 'quote_background' ); ?>
+<?php endif; ?>">
+	<div class="col-4-5 silo">
+		<blockquote>
+			<?php the_sub_field( 'quote_text' ); ?>
+			<cite>
+			<?php
+			the_sub_field( 'quote_citation' );
+			$q_link = get_sub_field( 'citation_link' );
+			if ( $q_link ) :
+				$q_link_url    = $q_link['url'];
+				$q_link_title  = $q_link['title'];
+				$q_link_target = $q_link['target'] ? $q_link['target'] : '_self';
+				?>
+			&mdash;<a href="<?php echo esc_url( $q_link_url ); ?>" target="<?php echo esc_attr( $q_link_target ); ?>"><?php echo esc_html( $q_link_title ); ?></a>
+			<?php endif; ?>
+			</cite>
+		</blockquote>
+	</div>
 </div>

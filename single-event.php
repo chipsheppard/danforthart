@@ -9,27 +9,34 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'vis single-event' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'vis single-event' ) );
+	}
+);
 
 /**
  * Home Function
  */
 function da_event() {
-?>
+	?>
 <div class="inner-wrap">
 
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'visit-sub',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'visit',
+				'menu_id'        => 'visit-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 
 	<div class="return">
-		<a href="<?php echo esc_url( site_url() ); ?>/visit/event-calendar/"><span class="cssicon-arrow-l"></span> View Full Calendar</a>
+		<a href="<?php echo esc_url( home_url() ); ?>/visit/event-calendar/"><span class="cssicon-arrow-l"></span> View Full Calendar</a>
 	</div>
 	<div class="cf"></div>
 </div>
@@ -38,10 +45,13 @@ function da_event() {
 	<div class="inner-wrap np">
 		<div class="heroimage">
 		<?php
-			the_post_thumbnail( 'full', [
-				'class' => 'featured-image',
-				'title' => 'Feature image',
-			] );
+			the_post_thumbnail(
+				'full',
+				[
+					'class' => 'featured-image',
+					'title' => 'Feature image',
+				]
+			);
 		?>
 		</div>
 		<div class="hero-callout">
@@ -63,8 +73,8 @@ function da_event() {
 		the_content();
 		$link = get_field( 'e_link' );
 		if ( $link ) :
-			$link_url = $link['url'];
-			$link_title = $link['title'];
+			$link_url    = $link['url'];
+			$link_title  = $link['title'];
 			$link_target = $link['target'] ? $link['target'] : '_self';
 			?>
 			<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
@@ -89,7 +99,7 @@ function da_event() {
 	<div class="cf"></div>
 </div>
 
-<?php
+	<?php
 }
 add_action( 'tha_entry_content_before', 'da_event' );
 

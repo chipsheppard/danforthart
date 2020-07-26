@@ -11,21 +11,28 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'seeart permanent' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'seeart permanent' ) );
+	}
+);
 
 /**
  * Permanent
  */
 function da_permanent() {
-?>
+	?>
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'see-art-sub',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'seeart',
+				'menu_id'        => 'seeart-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 </div>
@@ -47,18 +54,22 @@ function da_permanent() {
 			// IMAGE.
 			$image = get_field( 'fe_image' );
 			if ( ! empty( $image ) ) :
-				$url = $image['url'];
-				$alt = $image['alt'];
-				$width = $image['width'];
+				$url    = $image['url'];
+				$alt    = $image['alt'];
+				$width  = $image['width'];
 				$height = $image['height'];
 				?>
 				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 			<?php else : ?>
 				<?php
-				echo get_the_post_thumbnail( $post_object->ID, 'full', [
-					'class' => 'featured-image',
-					'title' => 'Feature image',
-				] );
+				echo get_the_post_thumbnail(
+					$post_object->ID,
+					'full',
+					[
+						'class' => 'featured-image',
+						'title' => 'Feature image',
+					]
+				);
 			endif;
 			?>
 			</a>
@@ -91,9 +102,9 @@ function da_permanent() {
 
 <div class="content-wrap">
 
-<?php
-if ( have_rows( 'collection_blocks' ) ) :
-	?>
+	<?php
+	if ( have_rows( 'collection_blocks' ) ) :
+		?>
 	<div class="opm">
 		<div class="inner-wrap">
 			<div class="onpage-menu">
@@ -164,9 +175,12 @@ if ( have_rows( 'collection_blocks' ) ) :
 												$color = '';
 											endif;
 											echo '<div class="artwork-img progbar-trigger"><a href="' . esc_url( get_the_permalink() ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
-											the_post_thumbnail( 'medium_large', [
-												'class' => 'artwork-image',
-											] );
+											the_post_thumbnail(
+												'medium_large',
+												[
+													'class' => 'artwork-image',
+												]
+											);
 											echo '</a></div>';
 										endif;
 										?>
@@ -174,7 +188,7 @@ if ( have_rows( 'collection_blocks' ) ) :
 											<strong><?php the_field( 'artist_name' ); ?></strong>,
 											<?php the_title(); ?>
 										</div>
-									<?php
+										<?php
 									endforeach;
 									wp_reset_postdata();
 									?>
@@ -188,7 +202,7 @@ if ( have_rows( 'collection_blocks' ) ) :
 							<div class="cf"></div>
 						</div><!-- /featured-artwork -->
 						<div class="cf"></div>
-					<?php
+						<?php
 					endif;
 
 					// ACF Relationship fields.
@@ -210,9 +224,12 @@ if ( have_rows( 'collection_blocks' ) ) :
 											$color = '';
 										endif;
 										echo '<div class="artwork-img progbar-trigger"><a href="' . esc_url( get_the_permalink() ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
-										the_post_thumbnail( 'medium', [
-											'class' => 'artwork-image',
-										] );
+										the_post_thumbnail(
+											'medium',
+											[
+												'class' => 'artwork-image',
+											]
+										);
 										echo '</a></div>';
 									endif;
 									?>
@@ -230,7 +247,7 @@ if ( have_rows( 'collection_blocks' ) ) :
 					?>
 				</div><!-- /perma-cat -->
 
-			<?php
+				<?php
 			endwhile;
 		endif;
 		?>
@@ -239,10 +256,9 @@ if ( have_rows( 'collection_blocks' ) ) :
 	</div>
 </div>
 
-<?php get_template_part( 'template-parts/quote' ); ?>
-<?php get_template_part( 'template-parts/signup' ); ?>
-
-<?php
+	<?php
+	get_template_part( 'template-parts/quote' );
+	get_template_part( 'template-parts/signup' );
 }
 add_action( 'tha_entry_content_before', 'da_permanent' );
 

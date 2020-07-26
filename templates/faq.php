@@ -11,9 +11,12 @@
  * @license    GPL-2.0+
  */
 
-add_filter( 'body_class', function( $classes ) {
-	return array_merge( $classes, array( 'vis faq' ) );
-} );
+add_filter(
+	'body_class',
+	function( $classes ) {
+		return array_merge( $classes, array( 'vis faq' ) );
+	}
+);
 
 /**
  * Learn Create page functions
@@ -23,10 +26,13 @@ function da_faq() {
 <div class="inner-wrap">
 	<div class="sub-navigation">
 		<?php
-		wp_nav_menu( array(
-			'menu' => 'visit-sub',
-			'container' => '',
-		) );
+		wp_nav_menu(
+			array(
+				'theme_location' => 'visit',
+				'menu_id'        => 'visit-menu',
+				'container'      => '',
+			)
+		);
 		?>
 	</div>
 </div>
