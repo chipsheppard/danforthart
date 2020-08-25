@@ -158,22 +158,23 @@ if ( ! function_exists( 'danforthart_display_top_footer' ) ) {
 				dynamic_sidebar( 'footer-t0' );
 			}
 			echo '</div>';
-			echo '<div class="col-1-3 first">';
+			echo '<div class="widget-row">';
+			echo '<div class="widget-row-widget">';
 			if ( is_active_sidebar( 'footer-t1' ) ) {
 				dynamic_sidebar( 'footer-t1' );
 			}
 			echo '</div>';
-			echo '<div class="col-1-3">';
+			echo '<div class="widget-row-widget">';
 			if ( is_active_sidebar( 'footer-t2' ) ) {
 				dynamic_sidebar( 'footer-t2' );
 			}
 			echo '</div>';
-			echo '<div class="col-1-3">';
+			echo '<div class="widget-row-widget">';
 			if ( is_active_sidebar( 'footer-t3' ) ) {
 				dynamic_sidebar( 'footer-t3' );
 			}
 			echo '</div>';
-			echo '<div class="cf"></div>';
+			echo '</div>';
 			echo '</div>';
 			echo '</div>';
 		}

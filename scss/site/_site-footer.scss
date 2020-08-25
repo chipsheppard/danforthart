@@ -15,16 +15,30 @@
 	
 	@include breakpoint(tablet-m) {
 		padding: 1.25em 0 1em;
-		
-		.col-1-3 {
-			clear: both;
-			display:block;
-			float:none;
-			margin:0;
-			width:100%;
-		}
 	}
 
+
+	.widget-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-left: -2%;
+		width: 102%;
+
+		.widget-row-widget {
+			flex: 1 0 31%;
+			flex-direction: row;
+			margin-left: 2%;
+			@include breakpoint(laptop-s) {
+				flex: 1 0 48%;
+			}
+			@include breakpoint(tablet-v) {
+				flex: 1 0 100%;
+				margin-left: 0;
+			}
+		}
+	}
+	
 	.footer-widget {
 		margin-bottom: 2.5em;
 		

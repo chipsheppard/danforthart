@@ -149,6 +149,26 @@ body.single-exhibition {
 	}
 }
 
+.ex-intro-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-left: -2%;
+	width: 102%;
+	@include breakpoint(tablet-v) {
+		width: 100%;
+	}
+	.ex-col {
+		flex: 1 0 48%;
+		flex-direction: row;
+		margin-left: 2%;
+		@include breakpoint(tablet-v) {
+			flex: 1 0 100%;
+			margin-left: 0;
+		}
+	}
+}
+
 .ex-intro {
 	font-weight: $font__weight-light;
 	padding: 0 0 4em 1em;
@@ -173,6 +193,7 @@ body.single-exhibition {
 		@include font-size(1);
 	}
 }
+
 .ex-info {
 	padding: 0 0 5em 2.5em;
 	@include font-size(1.125);

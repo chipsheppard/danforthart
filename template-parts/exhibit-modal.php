@@ -17,13 +17,13 @@
 
 	<div class="slickeroo">
 	<?php
-	$mposts = get_field( 'artworks' );
-	if ( $mposts ) :
+	$posts = get_field( 'artworks' );
+	if ( $posts ) :
 		/**
 		 * Z global $post;
 		*/
-		foreach ( $mposts as $mpost ) :
-			setup_postdata( $mpost );
+		foreach ( $posts as $post ) :
+			setup_postdata( $post );
 			?>
 			<div class="modal-art">
 				<div class="modal-img">
@@ -31,7 +31,7 @@
 					if ( has_post_thumbnail() ) :
 						the_post_thumbnail(
 							'large',
-							[ 'class' => 'modal-image' ]
+							array( 'class' => 'modal-image' )
 						);
 					endif;
 					?>

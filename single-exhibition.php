@@ -81,19 +81,20 @@ function da_exhibition() {
 			<?php the_title(); ?>
 		</h1>
 
-		<div class="col-1-2 first ex-intro">
-			<?php the_field( 'intro' ); ?>
+		<div class="ex-intro-wrap">
+			<div class="ex-col ex-intro">
+				<?php the_field( 'intro' ); ?>
+			</div>
+			<div class="ex-col ex-content">
+				<?php the_content(); ?>
+			</div>
 		</div>
-		<div class="col-1-2 ex-content">
-			<?php the_content(); ?>
-		</div>
-		<div class="cf"></div>
+
 	</div>
 
 	<hr />
 
 	<div class="inner-wrap">
-
 		<div class="col-1-2 first ex-info">
 			<div class="ex-gallery"><span>Gallery:</span> <?php the_field( 'gallery' ); ?></div>
 			<div class="ex-date"><span>Dates:</span> <?php the_field( 'date' ); ?></div>
@@ -133,9 +134,9 @@ function da_exhibition() {
 							echo '<div class="artwork-img progbar-trigger"><a href="#' . esc_html( $c ) . '" class="modal-link" data-index="' . esc_html( $c ) . '"><span class="progbar' . esc_html( $color ) . '"></span>';
 							the_post_thumbnail(
 								'medium',
-								[
+								array(
 									'class' => 'artwork-image',
-								]
+								)
 							);
 							echo '</a></div>';
 						endif;
